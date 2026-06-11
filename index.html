@@ -1,0 +1,787 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Funny J-POP — 日本のメロディを、世界のリズムで。</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=RocknRoll+One&family=Zen+Maru+Gothic:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#2a140e;
+  --bg2:#3a1d12;
+  --acc1:#ff6b35;
+  --acc2:#f5c04e;
+  --cream:#f6e8d5;
+  --ink:#1c0d08;
+  --card:#41231533;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{
+  font-family:'Zen Maru Gothic',sans-serif;
+  background:
+    radial-gradient(1200px 800px at 80% -10%, var(--bg2), transparent 60%),
+    var(--bg);
+  color:var(--cream);
+  overflow-x:hidden;
+  transition:background .25s linear;
+}
+h1,h2,h3,.disp{font-family:'RocknRoll One',sans-serif;font-weight:400}
+a{color:inherit}
+::selection{background:var(--acc1);color:var(--ink)}
+
+/* ---------- header ---------- */
+header{
+  display:flex;align-items:center;justify-content:space-between;
+  padding:18px clamp(16px,4vw,48px);
+  position:sticky;top:0;z-index:50;
+  background:color-mix(in srgb, var(--bg) 78%, transparent);
+  backdrop-filter:blur(10px);
+  border-bottom:2px dashed color-mix(in srgb, var(--cream) 25%, transparent);
+}
+.logo{display:flex;align-items:center;gap:10px;font-family:'RocknRoll One';font-size:clamp(16px,2.4vw,22px);letter-spacing:.04em}
+.logo .dot{
+  width:26px;height:26px;border-radius:50%;
+  background:repeating-radial-gradient(circle at 50% 50%, var(--ink) 0 2px, #3a2a20 2px 3px);
+  border:3px solid var(--acc2);position:relative;flex:none;
+  animation:spin 4s linear infinite;
+}
+.logo .dot::after{content:"";position:absolute;inset:8px;border-radius:50%;background:var(--acc1)}
+.btn{
+  display:inline-flex;align-items:center;gap:8px;
+  font-family:'RocknRoll One';font-size:14px;
+  background:var(--acc1);color:var(--ink);
+  padding:10px 18px;border-radius:999px;text-decoration:none;
+  border:3px solid var(--ink);
+  box-shadow:0 4px 0 var(--ink);
+  transition:transform .12s,box-shadow .12s,background .25s;
+}
+.btn:hover{transform:translateY(-2px);box-shadow:0 6px 0 var(--ink)}
+.btn:active{transform:translateY(2px);box-shadow:0 1px 0 var(--ink)}
+.btn.ghost{background:transparent;color:var(--cream);border-color:var(--cream);box-shadow:0 4px 0 color-mix(in srgb,var(--cream) 50%,transparent)}
+
+/* ---------- hero ---------- */
+.hero{
+  display:grid;grid-template-columns:1.05fr .95fr;gap:clamp(20px,4vw,56px);
+  align-items:center;
+  padding:clamp(32px,6vw,72px) clamp(16px,4vw,48px) clamp(24px,4vw,48px);
+  max-width:1200px;margin:0 auto;
+}
+.kicker{
+  display:inline-block;font-size:13px;letter-spacing:.18em;
+  color:var(--acc2);border:2px solid var(--acc2);border-radius:999px;
+  padding:5px 14px;margin-bottom:18px;font-family:'RocknRoll One';
+}
+.hero h1{
+  font-size:clamp(30px,5.2vw,56px);line-height:1.28;
+  text-shadow:3px 3px 0 color-mix(in srgb, var(--acc1) 45%, transparent);
+}
+.hero h1 .en{display:block;font-size:.42em;letter-spacing:.14em;color:var(--acc2);margin-top:14px}
+.hero p.lead{margin:20px 0 28px;font-size:clamp(14px,1.6vw,17px);line-height:2;max-width:46ch;color:color-mix(in srgb,var(--cream) 88%, transparent)}
+.hero .cta{display:flex;gap:14px;flex-wrap:wrap}
+.hint{margin-top:18px;font-size:12px;color:var(--acc2);letter-spacing:.08em}
+
+/* ---------- turntable ---------- */
+.deck{position:relative;aspect-ratio:1/1;max-width:480px;margin-inline:auto;width:100%}
+.platter{
+  position:absolute;inset:4%;border-radius:50%;
+  background:
+    radial-gradient(circle, #221512 0 17%, transparent 17%),
+    repeating-radial-gradient(circle at 50% 50%, #120a07 0 2px, #241511 2px 4px);
+  box-shadow:0 18px 40px rgba(0,0,0,.55), inset 0 0 0 6px #120a07;
+  touch-action:none;cursor:grab;user-select:none;
+}
+.platter:active{cursor:grabbing}
+.platter::before{ /* light sheen */
+  content:"";position:absolute;inset:0;border-radius:50%;
+  background:conic-gradient(from 210deg, transparent 0 40%, rgba(255,255,255,.07) 47%, transparent 55%, transparent 78%, rgba(255,255,255,.05) 84%, transparent 90%);
+  pointer-events:none;
+}
+.label{
+  position:absolute;inset:33%;border-radius:50%;
+  background:var(--acc1);
+  border:4px solid var(--cream);
+  display:flex;flex-direction:column;align-items:center;justify-content:center;
+  text-align:center;color:var(--ink);gap:2px;
+  transition:background .25s;
+}
+.label b{font-family:'RocknRoll One';font-size:clamp(13px,2vw,18px);letter-spacing:.05em}
+.label small{font-size:clamp(8px,1.2vw,11px);font-weight:700;letter-spacing:.14em}
+.label .hole{width:9px;height:9px;border-radius:50%;background:var(--ink);margin-top:4px}
+.tonearm{
+  position:absolute;top:-2%;right:-3%;width:46%;height:60%;
+  pointer-events:none;filter:drop-shadow(0 6px 6px rgba(0,0,0,.4));
+}
+.scratch-pop{
+  position:absolute;font-size:22px;pointer-events:none;
+  animation:pop 1s ease-out forwards;z-index:5;
+}
+@keyframes pop{0%{opacity:1;transform:translateY(0) scale(.7) rotate(0)}100%{opacity:0;transform:translateY(-70px) scale(1.4) rotate(20deg)}}
+@keyframes spin{to{transform:rotate(360deg)}}
+.sound-toggle{
+  position:absolute;bottom:-8px;left:50%;transform:translateX(-50%);
+  font-family:'RocknRoll One';font-size:12px;letter-spacing:.06em;
+  background:var(--cream);color:var(--ink);
+  border:3px solid var(--ink);border-radius:999px;padding:7px 16px;
+  box-shadow:0 3px 0 var(--ink);cursor:pointer;white-space:nowrap;
+  transition:transform .12s, box-shadow .12s, opacity .2s;
+}
+.sound-toggle:hover{transform:translateX(-50%) translateY(-2px);box-shadow:0 5px 0 var(--ink)}
+.sound-toggle[aria-pressed="false"]{opacity:.55}
+
+/* ---------- ticker ---------- */
+.ticker{
+  border-top:3px solid var(--acc2);border-bottom:3px solid var(--acc2);
+  background:var(--acc1);color:var(--ink);
+  overflow:hidden;white-space:nowrap;padding:10px 0;
+  font-family:'RocknRoll One';font-size:15px;letter-spacing:.12em;
+  transition:background .25s;
+}
+.ticker-inner{display:inline-block;animation:ticker 22s linear infinite}
+.ticker:hover .ticker-inner{animation-play-state:paused}
+@keyframes ticker{to{transform:translateX(-50%)}}
+
+/* ---------- sections ---------- */
+section{max-width:1200px;margin:0 auto;padding:clamp(44px,7vw,84px) clamp(16px,4vw,48px)}
+.sec-head{margin-bottom:34px}
+.sec-head h2{font-size:clamp(22px,3.4vw,34px);display:flex;align-items:center;gap:14px}
+.sec-head h2::before{content:"";width:34px;height:34px;flex:none;border-radius:50%;
+  background:repeating-radial-gradient(circle,var(--ink) 0 2px,var(--acc2) 2px 4px);border:3px solid var(--cream)}
+.sec-head p{margin-top:10px;color:color-mix(in srgb,var(--cream) 75%, transparent);font-size:14px;line-height:1.9}
+
+/* ---------- crossfader ---------- */
+.mixer{
+  background:var(--card);border:3px solid var(--cream);border-radius:24px;
+  padding:clamp(22px,4vw,40px);
+  box-shadow:8px 8px 0 color-mix(in srgb, var(--acc1) 55%, transparent);
+}
+.mixer-row{display:flex;align-items:center;gap:clamp(10px,3vw,28px);justify-content:space-between}
+.mix-side{font-family:'RocknRoll One';text-align:center;line-height:1.5;flex:none}
+.mix-side small{display:block;font-family:'Zen Maru Gothic';font-weight:700;font-size:11px;letter-spacing:.1em;opacity:.8}
+.mix-side.a{color:#f5c04e}.mix-side.b{color:#9ef01a}
+.fader-wrap{flex:1;position:relative;padding:8px 0}
+input[type=range].fader{
+  -webkit-appearance:none;appearance:none;width:100%;height:14px;border-radius:999px;
+  background:linear-gradient(90deg,#ff6b35,#ff4d6d 50%,#9ef01a);
+  border:3px solid var(--ink);outline-offset:4px;cursor:pointer;
+}
+input[type=range].fader::-webkit-slider-thumb{
+  -webkit-appearance:none;width:42px;height:42px;border-radius:12px;
+  background:var(--cream);border:4px solid var(--ink);
+  box-shadow:0 4px 0 var(--ink);cursor:grab;
+  background-image:linear-gradient(var(--ink),var(--ink)),linear-gradient(var(--ink),var(--ink)),linear-gradient(var(--ink),var(--ink));
+  background-size:3px 60%,3px 60%,3px 60%;background-repeat:no-repeat;
+  background-position:30% 50%,50% 50%,70% 50%;
+}
+input[type=range].fader::-moz-range-thumb{
+  width:42px;height:42px;border-radius:12px;background:var(--cream);
+  border:4px solid var(--ink);box-shadow:0 4px 0 var(--ink);cursor:grab;
+}
+.mix-now{text-align:center;margin-top:18px;font-size:13px;letter-spacing:.1em;color:var(--acc2);min-height:1.4em;font-weight:700}
+
+/* ---------- jam studio ---------- */
+.jam{display:grid;grid-template-columns:1.15fr .85fr;gap:clamp(18px,3vw,32px);align-items:stretch}
+.screen{display:flex;flex-direction:column;gap:12px;min-width:0}
+.screen-frame{
+  border:4px solid var(--ink);border-radius:18px;overflow:hidden;
+  background:#000;box-shadow:0 8px 0 var(--ink);
+  aspect-ratio:16/9;
+}
+.screen-frame iframe{width:100%;height:100%;display:block;border:0}
+.now{display:flex;justify-content:space-between;gap:12px;align-items:center;font-size:13px;font-weight:700;min-width:0}
+.now .nt{color:var(--acc2);overflow:hidden;text-overflow:ellipsis;white-space:nowrap;min-width:0}
+.now a{color:var(--cream);opacity:.8;white-space:nowrap;font-size:12px}
+.pads-wrap{display:flex;flex-direction:column;min-width:0}
+.pads{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;flex:1}
+.pad{
+  border:3px solid var(--ink);border-radius:14px;cursor:pointer;
+  min-height:76px;
+  font-family:'RocknRoll One';font-size:12px;color:var(--ink);
+  display:flex;flex-direction:column;align-items:center;justify-content:center;gap:5px;
+  box-shadow:0 5px 0 var(--ink);user-select:none;-webkit-user-select:none;touch-action:manipulation;
+  transition:transform .06s, box-shadow .06s, filter .06s;
+}
+.pad small{font-family:'Zen Maru Gothic';font-weight:700;font-size:10px;opacity:.75;border:2px solid currentColor;border-radius:6px;padding:0 7px;line-height:1.6}
+.pad svg{width:30px;height:30px;display:block}
+.pad.hit svg{animation:bonk .14s ease}
+@keyframes bonk{0%{transform:scale(1)}40%{transform:scale(1.25) rotate(-6deg)}100%{transform:scale(1)}}
+.pad.hit{transform:translateY(4px) scale(.96);box-shadow:0 1px 0 var(--ink);filter:brightness(1.18) saturate(1.2)}
+.pad-hint{margin-top:14px;font-size:12px;color:color-mix(in srgb,var(--cream) 78%,transparent);line-height:1.9}
+.embed-warn{
+  font-size:12px;line-height:1.9;font-weight:700;
+  background:color-mix(in srgb, var(--acc2) 18%, transparent);
+  border:2px dashed var(--acc2);border-radius:12px;
+  padding:10px 14px;color:var(--acc2);
+}
+
+/* ---------- hot videos (record sleeves) ---------- */
+.hot-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:26px}
+.sleeve{
+  position:relative;display:block;text-decoration:none;color:var(--ink);
+  border-radius:14px;
+}
+.sleeve .jacket{
+  display:block;position:relative;z-index:2;
+  background:var(--cream);border:3px solid var(--ink);border-radius:14px;
+  padding:10px 10px 12px;
+  box-shadow:0 6px 0 var(--ink);
+  transition:transform .18s, box-shadow .18s;
+}
+.sleeve:hover .jacket,.sleeve:focus-visible .jacket{
+  transform:translateY(-5px) rotate(-1deg);box-shadow:0 11px 0 var(--ink);
+}
+.sleeve .thumb{
+  display:block;position:relative;border:2px solid var(--ink);border-radius:9px;overflow:hidden;
+  aspect-ratio:16/9;background:#241511;
+}
+.sleeve .thumb img{width:100%;height:100%;object-fit:cover;display:block;transition:transform .25s}
+.sleeve .thumb.noimg{
+  display:flex;align-items:center;justify-content:center;
+  background:repeating-radial-gradient(circle at 50% 50%, #120a07 0 2px, #2c1a12 2px 4px);
+}
+.sleeve .thumb.noimg::after{
+  content:"FUNNY J-POP ▶";
+  font-family:'RocknRoll One';font-size:12px;letter-spacing:.14em;
+  color:var(--acc2);border:2px solid var(--acc2);
+  padding:6px 14px;border-radius:999px;
+}
+.sleeve:hover .thumb img{transform:scale(1.05)}
+.sleeve .play{
+  position:absolute;inset:0;display:flex;align-items:center;justify-content:center;
+  background:rgba(28,13,8,0);transition:background .2s;
+}
+.sleeve .play span{
+  width:52px;height:52px;border-radius:50%;
+  background:var(--acc1);border:3px solid var(--ink);
+  display:flex;align-items:center;justify-content:center;
+  font-size:18px;color:var(--ink);
+  opacity:0;transform:scale(.6);transition:opacity .2s,transform .2s;
+}
+.sleeve:hover .play{background:rgba(28,13,8,.3)}
+.sleeve:hover .play span,.sleeve:focus-visible .play span{opacity:1;transform:scale(1)}
+.sleeve .vtitle{
+  margin-top:10px;font-weight:700;font-size:13.5px;line-height:1.65;
+  min-height:3.2em;
+  display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden;
+}
+.sleeve .vmeta{display:block;font-family:'RocknRoll One';font-size:11px;letter-spacing:.12em;color:#7a5640;margin-top:6px}
+.hot-badge{
+  position:absolute;top:-13px;left:14px;z-index:3;
+  font-family:'RocknRoll One';font-size:12px;letter-spacing:.1em;
+  background:var(--acc1);color:var(--ink);
+  border:3px solid var(--ink);border-radius:999px;padding:3px 12px;
+  transition:background .25s;
+}
+.sleeve:hover .hot-badge{animation:flicker .5s ease-in-out infinite}
+@keyframes flicker{0%,100%{transform:rotate(-3deg) scale(1)}50%{transform:rotate(3deg) scale(1.1)}}
+.sleeve .disc{
+  position:absolute;top:16%;right:4px;width:44%;aspect-ratio:1/1;z-index:1;
+  border-radius:50%;
+  background:
+    radial-gradient(circle, var(--acc2) 0 16%, transparent 16%),
+    repeating-radial-gradient(circle at 50% 50%, #120a07 0 2px, #241511 2px 4px);
+  border:3px solid var(--ink);
+  transition:transform .25s ease;
+}
+.sleeve:hover .disc,.sleeve:focus-visible .disc{transform:translateX(18%) rotate(50deg)}
+@media (hover:none){
+  .sleeve .play span{opacity:1;transform:scale(1)}
+  .sleeve .disc{transform:translateX(10%)}
+}
+
+/* ---------- about ---------- */
+.about{display:grid;grid-template-columns:1fr 1fr;gap:clamp(20px,4vw,48px);align-items:start}
+.about-card{
+  border:3px dashed color-mix(in srgb,var(--cream) 45%, transparent);
+  border-radius:20px;padding:clamp(20px,3vw,32px);line-height:2;font-size:14px;
+}
+.about-card h3{color:var(--acc2);margin-bottom:12px;font-size:18px}
+.about-card .big{font-family:'RocknRoll One';font-size:clamp(20px,2.6vw,26px);line-height:1.7;color:var(--cream)}
+.eq{display:flex;align-items:flex-end;gap:6px;height:64px;margin-top:22px}
+.eq i{flex:1;background:linear-gradient(180deg,var(--acc2),var(--acc1));border-radius:4px 4px 0 0;height:20%;transition:height .18s ease}
+
+/* ---------- footer ---------- */
+footer{
+  margin-top:20px;border-top:3px solid var(--acc2);
+  background:color-mix(in srgb, var(--ink) 35%, var(--bg));
+  padding:clamp(40px,6vw,72px) clamp(16px,4vw,48px);text-align:center;
+}
+footer h2{font-size:clamp(24px,4vw,40px);margin-bottom:14px}
+footer p{font-size:14px;line-height:2;color:color-mix(in srgb,var(--cream) 80%, transparent);margin-bottom:26px}
+footer .cta{display:flex;gap:14px;justify-content:center;flex-wrap:wrap}
+footer .fine{margin-top:34px;font-size:11px;opacity:.55;line-height:1.9}
+
+@media (max-width:820px){
+  .hero{grid-template-columns:1fr;text-align:center}
+  .hero .cta{justify-content:center}
+  .hero p.lead{margin-inline:auto}
+  .deck{max-width:340px;margin-top:8px}
+  .about{grid-template-columns:1fr}
+  .jam{grid-template-columns:1fr}
+}
+@media (prefers-reduced-motion:reduce){
+  .ticker-inner,.logo .dot{animation:none!important}
+  .sleeve:hover .hot-badge{animation:none}
+}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="logo"><span class="dot"></span>FUNNY J-POP</div>
+  <a class="btn" href="https://www.youtube.com/@FunnyJ-POP?sub_confirmation=1" target="_blank" rel="noopener">▶ チャンネル登録</a>
+</header>
+
+<!-- ================= HERO ================= -->
+<div class="hero">
+  <div>
+    <span class="kicker">AI × HUMAN CREATIVITY</span>
+    <h1>日本のメロディを、<br>世界のリズムで。
+      <span class="en">JAPANESE MELODIES, GLOBAL GROOVES.</span>
+    </h1>
+    <p class="lead">80's＆90'sの名曲たちが、ソウル、ファンク、ゴスペル、アフロビートをまとって帰ってくる。Funny J-POPは、懐かしさと新しさを一枚のレコードに刻む実験的カバープロジェクトです。</p>
+    <div class="cta">
+      <a class="btn" href="#jam">🎧 スタジオで聴いてみる</a>
+      <a class="btn ghost" href="#mix">🎚 グルーヴを混ぜてみる</a>
+    </div>
+    <p class="hint">👉 となりのレコード、回したりスクラッチしたりできます（触るとスクラッチ音が鳴ります🔊）</p>
+  </div>
+
+  <div class="deck" id="deck">
+    <div class="platter" id="platter">
+      <div class="label">
+        <b>FUNNY J-POP</b>
+        <small>SIDE A ・ 45 RPM</small>
+        <small>'80s & '90s REVISITED</small>
+        <span class="hole"></span>
+      </div>
+    </div>
+    <svg class="tonearm" viewBox="0 0 200 260">
+      <circle cx="160" cy="36" r="26" fill="#1c0d08" stroke="#f5c04e" stroke-width="5"/>
+      <rect x="150" y="50" width="14" height="130" rx="7" fill="#1c0d08" transform="rotate(18 157 50)"/>
+      <rect x="106" y="168" width="40" height="18" rx="6" fill="#f5c04e" transform="rotate(18 126 177)" stroke="#1c0d08" stroke-width="4"/>
+    </svg>
+    <button class="sound-toggle" id="soundToggle" aria-pressed="true">🔊 サウンド ON</button>
+  </div>
+</div>
+
+<!-- ================= TICKER ================= -->
+<div class="ticker"><div class="ticker-inner" id="tickerInner"></div></div>
+
+<!-- ================= JAM STUDIO ================= -->
+<section id="jam">
+  <div class="sec-head">
+    <h2>🎛 JAM STUDIO — 観ながら、叩く。</h2>
+    <p>動画をこの場で再生しながら、右のパッドでパーカッションを重ねてアンサンブル。レコード（上のターンテーブル）のスクラッチも一緒に鳴らせます。</p>
+  </div>
+  <div class="jam">
+    <div class="screen">
+      <div class="screen-frame">
+        <iframe id="ytPlayer"
+          src="https://www.youtube.com/embed/qEd7D2Fej5M"
+          title="Funny J-POP player"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+          allowfullscreen referrerpolicy="origin"></iframe>
+      </div>
+      <div class="now">
+        <span class="nt" id="nowTitle">▶ 下のHOTからレコードを選んでね</span>
+        <a id="openYt" href="https://www.youtube.com/watch?v=qEd7D2Fej5M" target="_blank" rel="noopener">YouTubeで開く ↗</a>
+      </div>
+      <p class="embed-warn" id="embedWarn" hidden>⚠️ このページをファイルとして直接開いているため、YouTubeの仕様（エラー153）で埋め込み再生がブロックされています。Webサーバー経由（ホスティング先や http://localhost）で開くと再生できます。それまでは「YouTubeで開く ↗」をご利用ください。</p>
+    </div>
+    <div class="pads-wrap">
+      <div class="pads" id="pads"><!-- generated by JS --></div>
+      <p class="pad-hint">🥁 パッドをタップ、またはキーボードの <b>A S D F G H J K</b> で演奏。動画のグルーヴに合わせてどうぞ。音はすべてブラウザ内で合成しています。</p>
+    </div>
+  </div>
+</section>
+
+<!-- ================= MIXER ================= -->
+<section id="mix">
+  <div class="sec-head">
+    <h2>MIX IT YOURSELF</h2>
+    <p>フェーダーを左右にスライドすると、ページ全体のムードが「ソウルファンク」と「ラテングルーヴ」のあいだで混ざります。あなただけのバランスを見つけてください。</p>
+  </div>
+  <div class="mixer">
+    <div class="mixer-row">
+      <div class="mix-side a">SOUL FUNK<small>うねるベースとホーン</small></div>
+      <div class="fader-wrap">
+        <input class="fader" id="fader" type="range" min="0" max="100" value="20" aria-label="ページのムードを切り替えるクロスフェーダー">
+      </div>
+      <div class="mix-side b">LATIN GROOVE<small>情熱のクラーベ</small></div>
+    </div>
+    <div class="mix-now" id="mixNow"></div>
+  </div>
+</section>
+
+<!-- ================= HOT VIDEOS ================= -->
+<section>
+  <div class="sec-head">
+    <h2>🔥 HOT ON ROTATION</h2>
+    <p>いま熱い5枚。ジャケットをクリックすると、上のJAM STUDIOでそのまま再生されます。</p>
+  </div>
+  <div class="hot-grid" id="hotGrid">
+    <!-- generated by JS -->
+  </div>
+</section>
+
+<!-- ================= ABOUT ================= -->
+<section>
+  <div class="sec-head">
+    <h2>ABOUT THE PROJECT</h2>
+  </div>
+  <div class="about">
+    <div class="about-card">
+      <p class="big">80's＆90'sの魂よ、<br>鳴り響け。</p>
+      <p style="margin-top:14px">Funny J-POPは、名曲を「AI × 人の創造力」で再解釈する実験的プロジェクト。演奏・アレンジ・ミックスの一部にAI音楽生成ツールを活用しつつ、最終的な構成と表現は人間のディレクションと音楽的判断で仕上げています。</p>
+      <div class="eq" id="eq" aria-hidden="true"></div>
+    </div>
+    <div class="about-card">
+      <h3>たいせつにしていること</h3>
+      <p>🎵 原曲へのリスペクトを第一に、メロディの記憶はそのままに、リズムの景色だけを旅させること。</p>
+      <p>🤝 AIは楽器のひとつ。鳴らすのも、選ぶのも、仕上げるのも人間。</p>
+      <p>✅ 全作品はYouTubeのカバー／リミックスポリシーおよびAI透明性ガイドラインに準拠して運用しています。</p>
+    </div>
+  </div>
+</section>
+
+<!-- ================= FOOTER ================= -->
+<footer>
+  <h2>さあ、針を落とそう。</h2>
+  <p>新しいグルーヴは毎回チャンネルから。登録して、次の一曲を見逃さないでください。</p>
+  <div class="cta">
+    <a class="btn" href="https://www.youtube.com/@FunnyJ-POP?sub_confirmation=1" target="_blank" rel="noopener">▶ YouTubeでチャンネル登録</a>
+    <a class="btn ghost" href="mailto:funny.jpop.funny@gmail.com">📩 コラボ・お仕事のご依頼</a>
+  </div>
+  <p class="fine">Funny J-POP — Japanese melodies, global grooves.<br>An experimental project reimagining classics through AI × human creativity.</p>
+</footer>
+
+<script>
+/* ============ ticker ============ */
+const genres = ['SOUL FUNK','NEO SOUL','GOSPEL','AFROBEAT','MOTOWN','CITY GROOVE','J-POP CLASSICS'];
+const tickerText = genres.map(g=>g+'　✦　').join('');
+document.getElementById('tickerInner').textContent = (tickerText.repeat(4));
+
+/* ============ vinyl: spin + scratch ============ */
+const platter = document.getElementById('platter');
+const deck = document.getElementById('deck');
+const reduceMotion = matchMedia('(prefers-reduced-motion: reduce)').matches;
+let angle = 0, vel = reduceMotion ? 0 : 0.55, baseVel = vel;
+let dragging = false, lastPointerAngle = 0, lastMoveTime = 0;
+
+/* ---- scratch & crackle sound (Web Audio で合成、音源ファイル不使用) ---- */
+let audioCtx = null, scratchGain = null, scratchFilter = null, crackleGain = null;
+let soundOn = true;
+const soundToggle = document.getElementById('soundToggle');
+
+function makeNoiseBuffer(ctx, fill){
+  const len = ctx.sampleRate * 2;
+  const buf = ctx.createBuffer(1, len, ctx.sampleRate);
+  fill(buf.getChannelData(0), len);
+  return buf;
+}
+function initAudio(){
+  if(audioCtx) return;
+  const AC = window.AudioContext || window.webkitAudioContext;
+  if(!AC) return;
+  audioCtx = new AC();
+
+  /* スクラッチ: ホワイトノイズ → バンドパス。回す速さで音量と音程が変わる */
+  const noise = audioCtx.createBufferSource();
+  noise.buffer = makeNoiseBuffer(audioCtx, (d,len)=>{ for(let i=0;i<len;i++) d[i] = Math.random()*2-1; });
+  noise.loop = true;
+  scratchFilter = audioCtx.createBiquadFilter();
+  scratchFilter.type = 'bandpass'; scratchFilter.frequency.value = 700; scratchFilter.Q.value = 1.4;
+  scratchGain = audioCtx.createGain(); scratchGain.gain.value = 0;
+  noise.connect(scratchFilter); scratchFilter.connect(scratchGain); scratchGain.connect(audioCtx.destination);
+  noise.start();
+
+  /* クラックル: レコードのパチパチ。まばらなポップノイズをループ */
+  const crackle = audioCtx.createBufferSource();
+  crackle.buffer = makeNoiseBuffer(audioCtx, (d,len)=>{
+    for(let i=0;i<len;i++) d[i] = (Math.random() < 0.0012) ? (Math.random()*2-1)*0.9 : 0;
+  });
+  crackle.loop = true;
+  const lp = audioCtx.createBiquadFilter(); lp.type = 'lowpass'; lp.frequency.value = 4200;
+  crackleGain = audioCtx.createGain(); crackleGain.gain.value = soundOn ? 0.14 : 0;
+  crackle.connect(lp); lp.connect(crackleGain); crackleGain.connect(audioCtx.destination);
+  crackle.start();
+}
+function updateScratchSound(){
+  if(!audioCtx || !soundOn || !scratchGain) return;
+  const speed = Math.min(Math.abs(vel) / 9, 1);            // 0〜1
+  const g = dragging ? speed * 0.5 : Math.max(speed - 0.12, 0) * 0.25;
+  scratchGain.gain.setTargetAtTime(g, audioCtx.currentTime, 0.03);
+  scratchFilter.frequency.setTargetAtTime(300 + speed * 2400, audioCtx.currentTime, 0.03);
+}
+soundToggle.addEventListener('click', ()=>{
+  soundOn = !soundOn;
+  soundToggle.setAttribute('aria-pressed', soundOn);
+  soundToggle.textContent = soundOn ? '🔊 サウンド ON' : '🔇 サウンド OFF';
+  if(audioCtx){
+    crackleGain.gain.setTargetAtTime(soundOn ? 0.14 : 0, audioCtx.currentTime, 0.05);
+    if(!soundOn) scratchGain.gain.setTargetAtTime(0, audioCtx.currentTime, 0.05);
+  }
+});
+
+function center(){ const r = platter.getBoundingClientRect(); return {x:r.left+r.width/2, y:r.top+r.height/2}; }
+function pointerAngle(e){ const c = center(); return Math.atan2(e.clientY-c.y, e.clientX-c.x)*180/Math.PI; }
+
+platter.addEventListener('pointerdown', e=>{
+  dragging = true; platter.setPointerCapture(e.pointerId);
+  lastPointerAngle = pointerAngle(e); lastMoveTime = performance.now(); vel = 0;
+  initAudio();
+  if(audioCtx && audioCtx.state === 'suspended') audioCtx.resume();
+});
+platter.addEventListener('pointermove', e=>{
+  if(!dragging) return;
+  const a = pointerAngle(e);
+  let d = a - lastPointerAngle;
+  if(d > 180) d -= 360; if(d < -180) d += 360;
+  angle += d;
+  const now = performance.now(), dt = Math.max(now-lastMoveTime, 8);
+  vel = d/(dt/16.7);
+  lastPointerAngle = a; lastMoveTime = now;
+  if(Math.abs(d) > 14) spawnNote(e);
+});
+['pointerup','pointercancel'].forEach(ev=>platter.addEventListener(ev, ()=>{ dragging = false; }));
+
+const noteChars = ['🎵','🎶','✨','🪩','🎷'];
+let lastNote = 0;
+function spawnNote(e){
+  const now = performance.now();
+  if(now - lastNote < 140) return; lastNote = now;
+  const n = document.createElement('span');
+  n.className = 'scratch-pop';
+  n.textContent = noteChars[Math.floor(Math.random()*noteChars.length)];
+  const r = deck.getBoundingClientRect();
+  n.style.left = (e.clientX - r.left) + 'px';
+  n.style.top  = (e.clientY - r.top) + 'px';
+  deck.appendChild(n);
+  setTimeout(()=>n.remove(), 1000);
+}
+
+function tick(){
+  if(!dragging){
+    vel += (baseVel - vel) * 0.04;   // momentum eases back to steady 45rpm-ish spin
+  }
+  angle += vel;
+  platter.style.transform = 'rotate(' + angle + 'deg)';
+  updateScratchSound();
+  requestAnimationFrame(tick);
+}
+requestAnimationFrame(tick);
+
+/* ============ crossfader: theme blend ============ */
+const themes = {
+  a: { bg:[42,20,14],  bg2:[58,29,18],  acc1:[255,107,53], acc2:[245,192,78], cream:[246,232,213] }, /* SOUL FUNK */
+  b: { bg:[10,38,30],  bg2:[18,62,43],  acc1:[255,77,109], acc2:[158,240,26], cream:[234,246,226] }  /* LATIN GROOVE */
+};
+const fader = document.getElementById('fader');
+const mixNow = document.getElementById('mixNow');
+const root = document.documentElement;
+function lerp(a,b,t){ return Math.round(a+(b-a)*t); }
+function rgb(a,b,t){ return 'rgb('+lerp(a[0],b[0],t)+','+lerp(a[1],b[1],t)+','+lerp(a[2],b[2],t)+')'; }
+function applyMix(){
+  const t = fader.value/100;
+  for(const k of ['bg','bg2','acc1','acc2','cream']){
+    root.style.setProperty('--'+k, rgb(themes.a[k], themes.b[k], t));
+  }
+  mixNow.textContent =
+    t < 0.2 ? 'NOW PLAYING: ホーン全開、ソウルファンク・モード 🎷' :
+    t < 0.45 ? 'NOW PLAYING: ファンク多めのあったかブレンド 🔥' :
+    t < 0.7 ? 'NOW PLAYING: ちょうどいいクロスオーバー 🎚' :
+    t < 0.9 ? 'NOW PLAYING: クラーベが効いてきたラテン・ブレンド 🌴' :
+              'NOW PLAYING: 情熱全開、ラテングルーヴ・モード 💃';
+}
+fader.addEventListener('input', applyMix);
+applyMix();
+
+/* ============ hot videos → embedded player ============ */
+const hotVideos = ['qEd7D2Fej5M','eNlH5WDQiQM','4M1VCcnZ854','8r59SW1rpeM','aEhMkWyGGyg'];
+const hotGrid = document.getElementById('hotGrid');
+const ytPlayer = document.getElementById('ytPlayer');
+const nowTitle = document.getElementById('nowTitle');
+const openYt = document.getElementById('openYt');
+const titleCache = {};
+let currentVid = 'qEd7D2Fej5M';
+
+function loadVideo(id, autoplay){
+  currentVid = id;
+  ytPlayer.src = 'https://www.youtube.com/embed/' + id + (autoplay ? '?autoplay=1' : '');
+  openYt.href = 'https://www.youtube.com/watch?v=' + id;
+  nowTitle.textContent = titleCache[id] ? '▶ ' + titleCache[id] : '▶ NOW PLAYING';
+}
+
+hotVideos.forEach((id,i)=>{
+  const a = document.createElement('a');
+  a.className = 'sleeve';
+  a.href = 'https://www.youtube.com/watch?v=' + id;
+  a.target = '_blank'; a.rel = 'noopener';
+  a.innerHTML =
+    '<span class="hot-badge">HOT #'+(i+1)+'</span>'+
+    '<span class="disc" aria-hidden="true"></span>'+
+    '<span class="jacket">'+
+      '<span class="thumb">'+
+        /* maxres → mq → 画像がブロックされる環境ではレコード柄プレースホルダーに */
+        '<img src="https://i.ytimg.com/vi/'+id+'/maxresdefault.jpg" alt="" loading="lazy" '+
+        'onerror="if(!this.dataset.f){this.dataset.f=1;this.src=\'https://i.ytimg.com/vi/'+id+'/mqdefault.jpg\';}else{this.closest(\'.thumb\').classList.add(\'noimg\');this.remove();}">'+
+        '<span class="play"><span>▶</span></span>'+
+      '</span>'+
+      '<span class="vtitle" id="vt-'+id+'">YouTubeで再生する ▶</span>'+
+      '<span class="vmeta">FUNNY J-POP ・ 45 RPM</span>'+
+    '</span>';
+  /* 通常クリックはページ内のスタジオで再生（Ctrl/⌘クリック等はそのままYouTubeへ） */
+  a.addEventListener('click', e=>{
+    if(e.metaKey || e.ctrlKey || e.shiftKey || e.altKey || e.button === 1) return;
+    e.preventDefault();
+    loadVideo(id, true);
+    document.getElementById('jam').scrollIntoView({behavior:'smooth'});
+  });
+  hotGrid.appendChild(a);
+  /* タイトルをページ表示時に自動取得（取得できない場合は汎用ラベルのまま） */
+  fetch('https://noembed.com/embed?url=' + encodeURIComponent('https://www.youtube.com/watch?v=' + id))
+    .then(r=>r.json())
+    .then(d=>{
+      if(d && d.title){
+        titleCache[id] = d.title;
+        document.getElementById('vt-'+id).textContent = d.title;
+        a.setAttribute('aria-label', d.title);
+        if(currentVid === id && nowTitle.textContent.indexOf('▶ ') === 0 && nowTitle.textContent !== '▶ 下のHOTからレコードを選んでね'){
+          nowTitle.textContent = '▶ ' + d.title;
+        }
+      }
+    })
+    .catch(()=>{});
+});
+
+/* ============ drum pads (Web Audio 合成パーカッション) ============ */
+let whiteBuf = null;
+function ensureAudio(){
+  initAudio();
+  if(audioCtx && audioCtx.state === 'suspended') audioCtx.resume();
+  return audioCtx;
+}
+function noiseBurst(ctx, t, o){
+  if(!whiteBuf) whiteBuf = makeNoiseBuffer(ctx, (d,len)=>{ for(let i=0;i<len;i++) d[i]=Math.random()*2-1; });
+  const s = ctx.createBufferSource(); s.buffer = whiteBuf;
+  const f = ctx.createBiquadFilter(); f.type = o.type||'highpass'; f.frequency.value = o.freq||1000; f.Q.value = o.q||0.8;
+  const g = ctx.createGain();
+  g.gain.setValueAtTime(o.gain||0.8, t);
+  g.gain.exponentialRampToValueAtTime(0.001, t + (o.dur||0.2));
+  s.connect(f); f.connect(g); g.connect(ctx.destination);
+  s.start(t); s.stop(t + (o.dur||0.2) + 0.05);
+}
+function tone(ctx, t, o){
+  const osc = ctx.createOscillator(), g = ctx.createGain();
+  osc.type = o.type||'sine';
+  osc.frequency.setValueAtTime(o.f0, t);
+  if(o.f1) osc.frequency.exponentialRampToValueAtTime(o.f1, t + (o.slide||0.1));
+  g.gain.setValueAtTime(o.gain||0.8, t);
+  g.gain.exponentialRampToValueAtTime(0.001, t + o.dur);
+  osc.connect(g); g.connect(ctx.destination);
+  osc.start(t); osc.stop(t + o.dur + 0.02);
+}
+const drums = {
+  kick(ctx,t){ tone(ctx,t,{f0:160,f1:45,slide:0.12,dur:0.3,gain:1}); },
+  snare(ctx,t){ noiseBurst(ctx,t,{type:'highpass',freq:1800,dur:0.18,gain:0.6}); tone(ctx,t,{type:'triangle',f0:190,dur:0.12,gain:0.5}); },
+  clap(ctx,t){ [0,0.014,0.028].forEach(d=>noiseBurst(ctx,t+d,{type:'bandpass',freq:1400,q:1.5,dur:0.12,gain:0.55})); },
+  hat(ctx,t){ noiseBurst(ctx,t,{type:'highpass',freq:7500,dur:0.05,gain:0.45}); },
+  openhat(ctx,t){ noiseBurst(ctx,t,{type:'highpass',freq:6800,dur:0.38,gain:0.4}); },
+  conga(ctx,t){ tone(ctx,t,{f0:380,f1:235,slide:0.02,dur:0.22,gain:0.7}); },
+  cowbell(ctx,t){
+    [556,845].forEach(f=>{
+      const osc=ctx.createOscillator(), bp=ctx.createBiquadFilter(), g=ctx.createGain();
+      osc.type='square'; osc.frequency.value=f;
+      bp.type='bandpass'; bp.frequency.value=780; bp.Q.value=2;
+      g.gain.setValueAtTime(0.45,t); g.gain.exponentialRampToValueAtTime(0.001,t+0.24);
+      osc.connect(bp); bp.connect(g); g.connect(ctx.destination);
+      osc.start(t); osc.stop(t+0.26);
+    });
+  },
+  shaker(ctx,t){ noiseBurst(ctx,t,{type:'bandpass',freq:5600,q:1.2,dur:0.11,gain:0.4}); },
+};
+/* パッド用ミニイラスト（手描き風SVG） */
+const padIcons = {
+  kick:    '<svg viewBox="0 0 40 40" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round"><circle cx="18" cy="21" r="12"/><circle cx="18" cy="21" r="4" fill="currentColor" stroke="none"/><path d="M33 9l-8 8"/><circle cx="34" cy="8" r="3.2" fill="currentColor" stroke="none"/></svg>',
+  snare:   '<svg viewBox="0 0 40 40" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round"><ellipse cx="20" cy="18" rx="13" ry="5"/><path d="M7 18v8c0 2.8 5.8 5 13 5s13-2.2 13-5v-8"/><path d="M5 6l9 9M35 6l-9 9"/></svg>',
+  clap:    '<svg viewBox="0 0 40 40" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round"><path d="M14 36c-4-3-7-8-7-13l5-3 4 5V14l4-2 3 6 2-10 4 1-1 12c0 8-5 13-9 15z" /><path d="M30 8l4-4M33 14l5-2M26 5l1-5" /></svg>',
+  hat:     '<svg viewBox="0 0 40 40" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round"><ellipse cx="20" cy="14" rx="14" ry="3.5"/><ellipse cx="20" cy="19" rx="14" ry="3.5"/><path d="M20 22v13M14 35h12"/></svg>',
+  openhat: '<svg viewBox="0 0 40 40" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round"><ellipse cx="20" cy="9" rx="14" ry="3.5" transform="rotate(-8 20 9)"/><ellipse cx="20" cy="21" rx="14" ry="3.5"/><path d="M20 24v11M14 35h12"/></svg>',
+  conga:   '<svg viewBox="0 0 40 40" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round"><ellipse cx="20" cy="8" rx="9" ry="3.5"/><path d="M11 8c0 10 1 20 4 27h10c3-7 4-17 4-27"/><path d="M12 18h16M13.5 27h13"/></svg>',
+  cowbell: '<svg viewBox="0 0 40 40" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M15 7h10l5 24H10z"/><path d="M17 7V4h6v3"/><path d="M16 36h8"/></svg>',
+  shaker:  '<svg viewBox="0 0 40 40" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round"><rect x="12" y="6" width="16" height="28" rx="8"/><circle cx="17" cy="14" r="1.4" fill="currentColor" stroke="none"/><circle cx="23" cy="18" r="1.4" fill="currentColor" stroke="none"/><circle cx="18" cy="24" r="1.4" fill="currentColor" stroke="none"/><path d="M4 12l4 2M4 20h5M4 28l4-2" opacity=".7"/></svg>',
+};
+const padDefs = [
+  { n:'KICK',    k:'a', f:'kick',    c:'#ff6b35' },
+  { n:'SNARE',   k:'s', f:'snare',   c:'#f5c04e' },
+  { n:'CLAP',    k:'d', f:'clap',    c:'#ff4d8d' },
+  { n:'HAT',     k:'f', f:'hat',     c:'#4dd8ff' },
+  { n:'OPEN HAT',k:'g', f:'openhat', c:'#8ee08e' },
+  { n:'CONGA',   k:'h', f:'conga',   c:'#e8a06a' },
+  { n:'COWBELL', k:'j', f:'cowbell', c:'#c9a6ff' },
+  { n:'SHAKER',  k:'k', f:'shaker',  c:'#f6e8d5' },
+];
+const padsEl = document.getElementById('pads');
+const keyMap = {};
+padDefs.forEach(p=>{
+  const b = document.createElement('button');
+  b.className = 'pad'; b.type = 'button';
+  b.style.background = p.c;
+  b.innerHTML = padIcons[p.f] + p.n + '<small>' + p.k.toUpperCase() + '</small>';
+  b.addEventListener('pointerdown', e=>{ e.preventDefault(); hitPad(p, b); });
+  padsEl.appendChild(b);
+  keyMap[p.k] = { def:p, el:b };
+});
+
+/* file:// やClaudeのアーティファクト共有ページではYouTube埋め込み・外部画像がブロックされるため案内を表示 */
+const sandboxed = location.protocol === 'file:' ||
+  /claudeusercontent\.com|claude\.ai|claude\.site/i.test(location.hostname) ||
+  /claudeusercontent\.com|claude\.ai|claude\.site/i.test(document.referrer);
+if(sandboxed){
+  const w = document.getElementById('embedWarn');
+  w.hidden = false;
+  if(location.protocol !== 'file:'){
+    w.textContent = '⚠️ このプレビュー環境はセキュリティ設定でYouTube埋め込みと外部画像がブロックされます。GitHub PagesやNetlifyなど通常のWebサーバーで公開すると、プレーヤーもサムネイルも正常に表示されます。それまでは「YouTubeで開く ↗」をご利用ください。';
+  }
+}
+function hitPad(p, el){
+  const ctx = ensureAudio();
+  if(ctx && soundOn) drums[p.f](ctx, ctx.currentTime);
+  el.classList.add('hit');
+  setTimeout(()=>el.classList.remove('hit'), 110);
+}
+addEventListener('keydown', e=>{
+  if(e.repeat || e.metaKey || e.ctrlKey || e.altKey) return;
+  const tag = (e.target.tagName||'').toLowerCase();
+  if(tag === 'input' || tag === 'textarea' || tag === 'select') return;
+  const hit = keyMap[e.key.toLowerCase()];
+  if(hit) hitPad(hit.def, hit.el);
+});
+
+/* ============ equalizer (pointer-reactive) ============ */
+const eq = document.getElementById('eq');
+const BARS = 14;
+for(let i=0;i<BARS;i++){ eq.appendChild(document.createElement('i')); }
+const bars = [...eq.children];
+function idle(){
+  bars.forEach((b,i)=> b.style.height = (18 + Math.abs(Math.sin(performance.now()/420 + i))*40) + '%');
+  if(!eqHover) requestAnimationFrame(idle);
+}
+let eqHover = false;
+if(!reduceMotion) requestAnimationFrame(idle);
+eq.addEventListener('pointermove', e=>{
+  eqHover = true;
+  const r = eq.getBoundingClientRect();
+  const x = (e.clientX - r.left)/r.width;
+  bars.forEach((b,i)=>{
+    const d = Math.abs(i/(BARS-1) - x);
+    b.style.height = Math.max(14, 95 - d*220) + '%';
+  });
+});
+eq.addEventListener('pointerleave', ()=>{ eqHover = false; if(!reduceMotion) requestAnimationFrame(idle); });
+</script>
+</body>
+</html>
