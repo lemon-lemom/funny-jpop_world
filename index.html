@@ -238,6 +238,21 @@ input[type=range].fader::-moz-range-thumb{
   white-space:nowrap;overflow:hidden;text-overflow:ellipsis;
 }
 .score-feedback.flash{transform:scale(1.08);color:var(--cream)}
+.combo-shout{
+  position:absolute;left:50%;top:38%;transform:translate(-50%,-50%);
+  font-family:'RocknRoll One';font-size:clamp(28px,5vw,56px);
+  color:var(--acc2);white-space:nowrap;
+  text-shadow:4px 4px 0 var(--ink),-2px -2px 0 var(--ink),2px -2px 0 var(--ink),-2px 2px 0 var(--ink);
+  z-index:60;pointer-events:none;
+  animation:shout 2.2s cubic-bezier(.2,1.4,.4,1) forwards;
+}
+@keyframes shout{
+  0%{opacity:0;transform:translate(-50%,-50%) scale(.3) rotate(-8deg)}
+  18%{opacity:1;transform:translate(-50%,-50%) scale(1.15) rotate(3deg)}
+  30%{transform:translate(-50%,-50%) scale(1) rotate(-1deg)}
+  75%{opacity:1}
+  100%{opacity:0;transform:translate(-50%,-58%) scale(1.05)}
+}
 .embed-warn{
   font-size:12px;line-height:1.9;font-weight:700;
   background:color-mix(in srgb, var(--acc2) 18%, transparent);
@@ -366,7 +381,7 @@ footer .fine{margin-top:34px;font-size:11px;opacity:.55;line-height:1.9}
 }
 @media (prefers-reduced-motion:reduce){
   .ticker-inner,.logo .dot{animation:none!important}
-  .juke-lights i,.track.playing .pl{animation:none}
+  .juke-lights i,.track.playing .pl,.combo-shout{animation:none}
 }
 </style>
 </head>
@@ -717,6 +732,22 @@ function tone(ctx, t, o){
   osc.connect(g); g.connect(ctx.destination);
   osc.start(t); osc.stop(t + o.dur + 0.02);
 }
+/* シンバル用: 不協和な6つの矩形波をハイパスに通す(TR-808方式)。
+   低い基音は捨てて上の倍音だけ残すと、金属板らしいシャリ感になる */
+function metalBurst(ctx, t, o){
+  const hp = ctx.createBiquadFilter(); hp.type='highpass'; hp.frequency.value = o.hp;
+  const bp = ctx.createBiquadFilter(); bp.type='bandpass'; bp.frequency.value = o.bp; bp.Q.value = o.q||0.6;
+  const g = ctx.createGain();
+  g.gain.setValueAtTime(o.gain, t);
+  g.gain.exponentialRampToValueAtTime(0.001, t + o.dur);
+  hp.connect(bp); bp.connect(g); g.connect(ctx.destination);
+  [263,400,421,474,587,845].forEach(f=>{
+    const osc = ctx.createOscillator();
+    osc.type = 'square'; osc.frequency.value = f * (o.fmult||1);
+    osc.connect(hp);
+    osc.start(t); osc.stop(t + o.dur + 0.05);
+  });
+}
 const drums = {
   kick(ctx,t){ tone(ctx,t,{f0:160,f1:45,slide:0.12,dur:0.3,gain:1}); },
   snare(ctx,t){ noiseBurst(ctx,t,{type:'highpass',freq:1800,dur:0.18,gain:0.6}); tone(ctx,t,{type:'triangle',f0:190,dur:0.12,gain:0.5}); },
@@ -736,28 +767,13 @@ const drums = {
   },
   shaker(ctx,t){ noiseBurst(ctx,t,{type:'bandpass',freq:5600,q:1.2,dur:0.11,gain:0.4}); },
   ride(ctx,t){
-    [587,845,1680].forEach((f,i)=>{
-      const osc=ctx.createOscillator(), bp=ctx.createBiquadFilter(), g=ctx.createGain();
-      osc.type='square'; osc.frequency.value=f;
-      bp.type='bandpass'; bp.frequency.value=f; bp.Q.value=3;
-      g.gain.setValueAtTime(0.22/(i+1),t); g.gain.exponentialRampToValueAtTime(0.001,t+1.6);
-      osc.connect(bp); bp.connect(g); g.connect(ctx.destination);
-      osc.start(t); osc.stop(t+1.7);
-    });
-    noiseBurst(ctx,t,{type:'bandpass',freq:9000,q:0.5,dur:0.9,gain:0.3});
+    metalBurst(ctx,t,{hp:7500,bp:10500,q:0.5,gain:0.5,dur:0.1});   // チンッ(スティックのアタック)
+    metalBurst(ctx,t,{hp:6500,bp:9000,q:0.8,gain:0.16,dur:1.3});   // 余韻のシマー
   },
   crash(ctx,t){
-    /* 不協和な倍音をワイドに重ねて、ノイズ多めの「シャーン」 */
-    [438,694,1153,1660].forEach((f,i)=>{
-      const osc=ctx.createOscillator(), bp=ctx.createBiquadFilter(), g=ctx.createGain();
-      osc.type='square'; osc.frequency.value=f;
-      bp.type='bandpass'; bp.frequency.value=f*1.2; bp.Q.value=1.2;
-      g.gain.setValueAtTime(0.16/(i*0.7+1),t); g.gain.exponentialRampToValueAtTime(0.001,t+2.2);
-      osc.connect(bp); bp.connect(g); g.connect(ctx.destination);
-      osc.start(t); osc.stop(t+2.3);
-    });
-    noiseBurst(ctx,t,{type:'highpass',freq:3800,dur:1.9,gain:0.55});
-    noiseBurst(ctx,t,{type:'bandpass',freq:8500,q:0.4,dur:1.2,gain:0.35});
+    metalBurst(ctx,t,{hp:5200,bp:8000,q:0.4,gain:0.65,dur:0.3,fmult:1.23});  // アタック
+    metalBurst(ctx,t,{hp:4500,bp:7500,q:0.5,gain:0.28,dur:2.3,fmult:1.23});  // ウォッシュ
+    noiseBurst(ctx,t,{type:'highpass',freq:6000,dur:1.5,gain:0.22});         // 空気感
   },
 };
 /* パッド用ミニイラスト（手描き風SVG） */
@@ -823,10 +839,28 @@ const varietyValueEl = document.getElementById('varietyValue');
 const feedbackEl = document.getElementById('scoreFeedback');
 const RHYTHM = { score:0, combo:0, best:0, hits:[], sounds:[] };
 
+/* コンボのマイルストーン演出 */
+const COMBO_SHOUTS = {
+  25:    '🎶 いい感じ！',
+  100:   '🕺 GROOVY!!',
+  300:   '🪩 SUPER FUNKY!!',
+  1000:  '👑 GROOVE MASTER!!',
+  3000:  '🌋 リズム火山、噴火！！',
+  10000: '🛸 GROOVE LEGEND ─ 人類卒業！！',
+};
+function showShout(text){
+  const el = document.createElement('div');
+  el.className = 'combo-shout';
+  el.textContent = text;
+  document.querySelector('.jukebox').appendChild(el);
+  setTimeout(()=>el.remove(), 2300);
+}
+
 function resetRhythmScore(){
   const lastScore = RHYTHM.score;
   RHYTHM.score = 0; RHYTHM.combo = 0; RHYTHM.best = 0;
   RHYTHM.hits.length = 0; RHYTHM.sounds.length = 0;
+  RHYTHM.lastLabel = RHYTHM.lastBase = undefined;
   scoreValueEl.textContent = '0';
   comboValueEl.textContent = '0';
   varietyValueEl.textContent = '0';
@@ -854,33 +888,43 @@ function scorePad(soundName){
   if(last && now - last > 3000){ // 3秒沈黙でリセット
     RHYTHM.hits.length = 0; RHYTHM.sounds.length = 0; RHYTHM.combo = 0;
   }
-  RHYTHM.hits.push(now);
-  if(RHYTHM.hits.length > 16) RHYTHM.hits.shift();
   RHYTHM.sounds.push(soundName);
   if(RHYTHM.sounds.length > 10) RHYTHM.sounds.shift();
 
+  const prev = RHYTHM.hits[RHYTHM.hits.length-1];
+  /* 50ms以内の連打は「同時押し(コード)」: 1打目の判定を引き継ぎ、
+     BPM推定の履歴とコンボは進めない(間隔≈0msがOFF BEAT扱いになるのを防ぐ) */
+  const isChord = prev !== undefined && (now - prev) < 50;
   let label = 'NICE!', base = 60, onBeat = true;
-  const beat = estimateBeatMs();
-  if(beat && RHYTHM.hits.length >= 4){
-    const prev = RHYTHM.hits[RHYTHM.hits.length-2];
-    const grid = beat / 4;                    // 16分音符のグリッドで判定
-    const k = Math.max(1, Math.round((now - prev) / grid));
-    const predicted = prev + k * grid;
-    const offset = Math.abs(now - predicted);
-    /* 4分(♩)はそのまま、8分・16分は少しだけ控えめに加点 */
-    const sub = (k % 4 === 0) ? {mult:1,   tag:'♩'} :
-                (k % 2 === 0) ? {mult:0.9, tag:'♪8分'} :
-                                {mult:0.8, tag:'♬16分'};
-    /* 細かいグリッドほど判定窓も狭く */
-    const pTol = Math.min(55, grid*0.30), gTol = Math.min(115, grid*0.45), oTol = Math.min(190, grid*0.60);
-    if(offset < pTol){ label='PERFECT! ⭐ '+sub.tag; base=150*sub.mult; }
-    else if(offset < gTol){ label='GOOD! 🎯 '+sub.tag; base=100*sub.mult; }
-    else if(offset < oTol){ label='OK 👍 '+sub.tag; base=60*sub.mult; }
-    else { label='OFF BEAT'; base=20; onBeat=false; }
-  }
 
-  if(onBeat) RHYTHM.combo++; else RHYTHM.combo = 0;
-  if(RHYTHM.combo > RHYTHM.best) RHYTHM.best = RHYTHM.combo;
+  if(isChord){
+    label = RHYTHM.lastLabel || label;
+    base = RHYTHM.lastBase || base;
+  }else{
+    RHYTHM.hits.push(now);
+    if(RHYTHM.hits.length > 16) RHYTHM.hits.shift();
+    const beat = estimateBeatMs();
+    if(beat && RHYTHM.hits.length >= 4){
+      const grid = beat / 4;                    // 16分音符のグリッドで判定
+      const k = Math.max(1, Math.round((now - prev) / grid));
+      const predicted = prev + k * grid;
+      const offset = Math.abs(now - predicted);
+      /* 4分(♩)はそのまま、8分・16分は少しだけ控えめに加点 */
+      const sub = (k % 4 === 0) ? {mult:1,   tag:'♩'} :
+                  (k % 2 === 0) ? {mult:0.9, tag:'♪8分'} :
+                                  {mult:0.8, tag:'♬16分'};
+      /* 細かいグリッドほど判定窓も狭く */
+      const pTol = Math.min(55, grid*0.30), gTol = Math.min(115, grid*0.45), oTol = Math.min(190, grid*0.60);
+      if(offset < pTol){ label='PERFECT! ⭐ '+sub.tag; base=150*sub.mult; }
+      else if(offset < gTol){ label='GOOD! 🎯 '+sub.tag; base=100*sub.mult; }
+      else if(offset < oTol){ label='OK 👍 '+sub.tag; base=60*sub.mult; }
+      else { label='OFF BEAT'; base=20; onBeat=false; }
+    }
+    RHYTHM.lastLabel = label; RHYTHM.lastBase = base;
+    if(onBeat) RHYTHM.combo++; else RHYTHM.combo = 0;
+    if(RHYTHM.combo > RHYTHM.best) RHYTHM.best = RHYTHM.combo;
+    if(COMBO_SHOUTS[RHYTHM.combo]) showShout(COMBO_SHOUTS[RHYTHM.combo]);
+  }
 
   const unique = new Set(RHYTHM.sounds).size;
   const varietyMult = 1 + (unique - 1) * 0.15;          // 1.0x 〜 ~2.35x (10音)
