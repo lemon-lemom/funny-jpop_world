@@ -660,6 +660,7 @@ function loadVideo(id, autoplay){
   openYt.href = 'https://www.youtube.com/watch?v=' + id;
   nowTitle.textContent = titleCache[id] ? '▶ ' + titleCache[id] : '▶ NOW PLAYING';
   for(const k in trackEls) trackEls[k].classList.toggle('playing', k === id);
+  resetRhythmScore();   // 曲が変わったらBPM推定の履歴もスコアもリセット
 }
 
 jukeVideos.forEach((id,i)=>{
@@ -821,6 +822,19 @@ const comboValueEl = document.getElementById('comboValue');
 const varietyValueEl = document.getElementById('varietyValue');
 const feedbackEl = document.getElementById('scoreFeedback');
 const RHYTHM = { score:0, combo:0, best:0, hits:[], sounds:[] };
+
+function resetRhythmScore(){
+  const lastScore = RHYTHM.score;
+  RHYTHM.score = 0; RHYTHM.combo = 0; RHYTHM.best = 0;
+  RHYTHM.hits.length = 0; RHYTHM.sounds.length = 0;
+  scoreValueEl.textContent = '0';
+  comboValueEl.textContent = '0';
+  varietyValueEl.textContent = '0';
+  feedbackEl.textContent = lastScore > 0
+    ? '🏁 前の曲のスコア ' + lastScore.toLocaleString() + ' ─ 新しいレコードでリスタート！'
+    : '🎵 パッドを叩いてセッション開始';
+  feedbackEl.classList.remove('flash');
+}
 
 function estimateBeatMs(){
   if(RHYTHM.hits.length < 3) return null;
