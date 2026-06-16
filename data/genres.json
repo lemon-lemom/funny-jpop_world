@@ -5451,5 +5451,161 @@
     "weight": 1.0
    }
   ]
+ },
+ {
+  "genreId": "guqin",
+  "nameEn": "Guqin",
+  "nameJa": "古琴",
+  "parentGenreId": null,
+  "descriptionJa": "漢民族の文人が千年以上奏でてきた七絃の琴。中国最古級の伝統音楽",
+  "descriptionEn": "Ancient seven-string zither music of the Han literati",
+  "energy": 1,
+  "mood": "静寂/古雅/瞑想",
+  "keyInstruments": [
+   "guqin (seven-string zither)",
+   "xiao flute"
+  ],
+  "referenceArtists": [
+   "管平湖 (Guan Pinghu)",
+   "龔一 (Gong Yi)"
+  ],
+  "keywords": [
+   "guqin 古琴",
+   "guqin music meditation"
+  ],
+  "places": [
+   {
+    "placeId": "china_hangzhou",
+    "relationType": "origin",
+    "weight": 1.0
+   }
+  ]
+ },
+ {
+  "genreId": "cantopop",
+  "nameEn": "Cantopop",
+  "nameJa": "広東ポップ",
+  "parentGenreId": null,
+  "descriptionJa": "香港発の広東語ポップス。映画スターと結びついた黄金期を持つ",
+  "descriptionEn": "Cantonese-language pop from Hong Kong",
+  "energy": 3,
+  "mood": "都会的/メロウ/ドラマチック",
+  "keyInstruments": [
+   "synth",
+   "strings",
+   "band",
+   "vocals"
+  ],
+  "referenceArtists": [
+   "張國榮 (Leslie Cheung)",
+   "梅艷芳 (Anita Mui)",
+   "陳奕迅 (Eason Chan)"
+  ],
+  "keywords": [
+   "cantopop 廣東歌",
+   "leslie cheung cantopop"
+  ],
+  "places": [
+   {
+    "placeId": "hongkong_hk",
+    "relationType": "origin",
+    "weight": 1.0
+   }
+  ]
+ },
+ {
+  "genreId": "mandopop",
+  "nameEn": "Mandopop",
+  "nameJa": "華語ポップ",
+  "parentGenreId": null,
+  "descriptionJa": "台北を中心に華語圏へ広がる中国語ポップス",
+  "descriptionEn": "Mandarin-language pop centered on Taipei",
+  "energy": 3,
+  "mood": "キャッチー/抒情/モダン",
+  "keyInstruments": [
+   "piano",
+   "synth",
+   "strings",
+   "band"
+  ],
+  "referenceArtists": [
+   "鄧麗君 (Teresa Teng)",
+   "周杰倫 (Jay Chou)",
+   "王菲 (Faye Wong)"
+  ],
+  "keywords": [
+   "mandopop 華語流行",
+   "鄧麗君 teresa teng"
+  ],
+  "places": [
+   {
+    "placeId": "taiwan_taipei",
+    "relationType": "origin",
+    "weight": 1.0
+   }
+  ]
+ },
+ {
+  "genreId": "ghazal",
+  "nameEn": "Ghazal",
+  "nameJa": "ガザル",
+  "parentGenreId": null,
+  "descriptionJa": "ウルドゥー詩を優美に歌い上げる南アジアの抒情歌",
+  "descriptionEn": "Elegant Urdu sung-poetry of South Asia",
+  "energy": 2,
+  "mood": "抒情/恋情/夜",
+  "keyInstruments": [
+   "harmonium",
+   "tabla",
+   "sarangi",
+   "vocals"
+  ],
+  "referenceArtists": [
+   "Jagjit Singh",
+   "Begum Akhtar",
+   "Mehdi Hassan"
+  ],
+  "keywords": [
+   "ghazal jagjit singh",
+   "urdu ghazal"
+  ],
+  "places": [
+   {
+    "placeId": "india_delhi",
+    "relationType": "origin",
+    "weight": 1.0
+   }
+  ]
+ },
+ {
+  "genreId": "lavani",
+  "nameEn": "Lavani",
+  "nameJa": "ラーヴァニー",
+  "parentGenreId": null,
+  "descriptionJa": "マハラシュトラの艶やかで力強い女性舞踊歌",
+  "descriptionEn": "Sensual powerful Marathi dance-song of Maharashtra",
+  "energy": 4,
+  "mood": "艶やか/躍動/祝祭",
+  "keyInstruments": [
+   "dholki",
+   "harmonium",
+   "ghungroo",
+   "vocals"
+  ],
+  "referenceArtists": [
+   "Sulochana Chavan",
+   "Shakuntala Nagarkar"
+  ],
+  "keywords": [
+   "lavani marathi",
+   "lavani dance song"
+  ],
+  "places": [
+   {
+    "placeId": "india_pune",
+    "relationType": "origin",
+    "weight": 1.0
+   }
+  ]
  }
 ]

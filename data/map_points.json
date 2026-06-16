@@ -1268,5 +1268,60 @@
   "genreIds": [
    "fijian"
   ]
+ },
+ {
+  "placeId": "china_hangzhou",
+  "label": "Hangzhou",
+  "labelJa": "杭州",
+  "flag": "🇨🇳",
+  "lat": 30.2741,
+  "lon": 120.1551,
+  "genreIds": [
+   "guqin"
+  ]
+ },
+ {
+  "placeId": "hongkong_hk",
+  "label": "Hong Kong",
+  "labelJa": "香港",
+  "flag": "🇭🇰",
+  "lat": 22.3193,
+  "lon": 114.1694,
+  "genreIds": [
+   "cantopop"
+  ]
+ },
+ {
+  "placeId": "taiwan_taipei",
+  "label": "Taipei",
+  "labelJa": "台北",
+  "flag": "🇹🇼",
+  "lat": 25.033,
+  "lon": 121.5654,
+  "genreIds": [
+   "mandopop"
+  ]
+ },
+ {
+  "placeId": "india_delhi",
+  "label": "Delhi",
+  "labelJa": "デリー",
+  "flag": "🇮🇳",
+  "lat": 28.6139,
+  "lon": 77.209,
+  "genreIds": [
+   "ghazal"
+  ]
+ },
+ {
+  "placeId": "india_pune",
+  "label": "Pune",
+  "labelJa": "プネー",
+  "flag": "🇮🇳",
+  "lat": 18.5204,
+  "lon": 73.8567,
+  "genreIds": [
+   "lavani"
+  ]
  }
 ]

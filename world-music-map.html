@@ -89,11 +89,9 @@ header{
 }
 .hero h1 .en{display:block;font-size:.4em;letter-spacing:.14em;color:var(--acc2);margin-top:12px}
 .hero p.lead{margin:18px auto 0;font-size:clamp(13px,1.5vw,16px);line-height:1.95;max-width:60ch;color:color-mix(in srgb,var(--cream) 85%, transparent)}
-.hero .chips{margin-top:18px;display:flex;gap:8px;justify-content:center;flex-wrap:wrap}
-.hero .chips span{
-  font-size:12px;font-family:'RocknRoll One';letter-spacing:.06em;
-  background:var(--card);border:1px solid var(--line);border-radius:999px;padding:6px 13px;color:var(--acc2);
-}
+.hero .chips{margin-top:16px;display:flex;gap:10px;justify-content:center;flex-wrap:wrap;align-items:center}
+.hero .chips span{font-family:'RocknRoll One';font-size:clamp(13px,1.7vw,16px);letter-spacing:.04em;color:var(--cream)}
+.hero .chips .x{color:var(--teal);font-size:.8em;opacity:.7}
 .hero .stat{margin-top:16px;font-size:12px;color:color-mix(in srgb,var(--cream) 65%,transparent);letter-spacing:.05em}
 .hero .stat b{color:var(--teal);font-family:'RocknRoll One'}
 
@@ -250,6 +248,16 @@ header{
   display:inline-flex;align-items:center;gap:5px;transition:background .15s;
 }
 .genre-places button:hover{background:var(--teal);color:var(--ink)}
+.related{display:flex;flex-wrap:wrap;gap:7px}
+.related button{
+  font-size:11px;font-family:'Zen Maru Gothic';font-weight:700;cursor:pointer;
+  background:color-mix(in srgb,var(--teal) 12%,transparent);color:var(--cream);
+  border:1px solid color-mix(in srgb,var(--teal) 50%,transparent);border-radius:999px;padding:5px 11px;
+  display:inline-flex;align-items:center;gap:5px;transition:background .15s,border-color .15s;
+}
+.related button:hover{background:var(--teal);color:var(--ink)}
+.related button small{font-size:8.5px;letter-spacing:.06em;color:var(--acc2);border:1px solid currentColor;border-radius:5px;padding:1px 5px;font-family:'RocknRoll One'}
+.related button:hover small{color:var(--ink)}
 
 .tabs{display:flex;gap:6px;margin-bottom:14px;background:color-mix(in srgb,var(--ink) 35%,transparent);padding:5px;border-radius:12px}
 .tabs button{
@@ -366,7 +374,7 @@ footer .fine{margin-top:22px;font-size:11px;opacity:.5;line-height:1.9}
   </h1>
   <p class="lead">国ではなく <b>都市・地域</b> を起点に音楽ジャンルを発見するマップ。ハバナでワワンコ、ニューオーリンズでブラスバンド、キングストンでダブ──ピンを押して、土地に根ざしたジャンルからYouTubeを掘り進めましょう。</p>
   <div class="chips">
-    <span>都市</span><span>×</span><span>音楽ジャンル</span><span>×</span><span>YouTube動画</span><span>×</span><span>独自ランキング</span>
+    <span>都市</span><span class="x">×</span><span>音楽ジャンル</span><span class="x">×</span><span>YouTube動画</span><span class="x">×</span><span>独自ランキング</span>
   </div>
   <p class="stat" id="heroStat"></p>
 </div>
@@ -549,6 +557,19 @@ function showCity(pid){
   panelBody.scrollTop = 0;
 }
 
+/* 関連ジャンル: 親 / 系統(同じ親) / 派生(子) / 同郷(同じ発祥都市) */
+function relatedGenres(g){
+  const seen = new Set([g.id]);
+  const out = [];
+  const add = (id, kind)=>{ if(id && !seen.has(id) && genreById[id]){ seen.add(id); out.push({g:genreById[id], kind}); } };
+  if(g.parentGenreId) add(g.parentGenreId, '親');
+  if(g.parentGenreId) Object.values(genreById).forEach(o=>{ if(o.parentGenreId === g.parentGenreId) add(o.id, '系統'); });
+  Object.values(genreById).forEach(o=>{ if(o.parentGenreId === g.id) add(o.id, '派生'); });
+  const pid = g.places.length ? g.places[0][0] : null;
+  if(pid && genresByPlace[pid]) genresByPlace[pid].forEach(x=> add(x.g.id, '同郷'));
+  return out.slice(0, 8);
+}
+
 let activeTab = 'classic';
 function showGenre(gid, fromPid){
   const g = genreById[gid];
@@ -568,6 +589,11 @@ function showGenre(gid, fromPid){
   const moodTags = (g.mood||'').split('/').map(m=>m.trim()).filter(Boolean)
     .map(m=>'<span class="mood-tag">'+esc(m)+'</span>').join('');
 
+  const rel = relatedGenres(g);
+  const relHtml = rel.length ? ('<div class="genre-meta"><h4>🔗 関連ジャンル</h4><div class="related">'+
+    rel.map(r=>'<button data-gid="'+r.g.id+'">'+esc(r.g.ja)+'<small>'+r.kind+'</small></button>').join('')+
+    '</div></div>') : '';
+
   panelBody.innerHTML =
     '<h2 class="genre-title disp">'+esc(g.en)+'<small>'+esc(g.ja)+'</small></h2>'+
     '<div class="genre-tags">'+energyBadge+moodTags+'</div>'+
@@ -575,6 +601,7 @@ function showGenre(gid, fromPid){
     (g.refs && g.refs.length ? '<div class="genre-meta artists"><h4>🎤 代表アーティスト</h4><p>'+g.refs.map(esc).join(' ・ ')+'</p></div>' : '')+
     (g.instruments && g.instruments.length ? '<div class="genre-meta"><h4>🔑 主な楽器</h4><p>'+g.instruments.map(esc).join(' ・ ')+'</p></div>' : '')+
     '<div class="genre-places">'+placeBtns+'</div>'+
+    relHtml+
     '<div class="tabs">'+
       '<button data-tab="classic" class="active">CLASSIC<small>定番・再生数順</small></button>'+
       '<button data-tab="fresh">FRESH<small>新着90日</small></button>'+
@@ -585,6 +612,10 @@ function showGenre(gid, fromPid){
     '<p class="note"><b>※ 独自集計について：</b> 本ランキングは YouTube 公式ランキングではなく、各ジャンルに設定した検索キーワードに基づく独自集計です。数値は取得時点のもので、現在のYouTube上の値と異なる場合があります。</p>';
 
   panelBody.querySelectorAll('.genre-places button').forEach(b=>b.addEventListener('click', ()=>flyTo(b.dataset.pid)));
+  panelBody.querySelectorAll('.related button').forEach(b=>b.addEventListener('click', ()=>{
+    const rg = genreById[b.dataset.gid];
+    showGenre(b.dataset.gid, rg && rg.places.length ? rg.places[0][0] : fromPid);
+  }));
   panelBody.querySelectorAll('.tabs button').forEach(b=>b.addEventListener('click', ()=>{
     activeTab = b.dataset.tab;
     panelBody.querySelectorAll('.tabs button').forEach(x=>x.classList.toggle('active', x===b));
@@ -674,11 +705,12 @@ async function loadData(){
     fetch('data/genres.json').then(r=>r.json()),
   ]);
   places.forEach(p=>{
-    PLACES[p.placeId] = {ja:p.cityNameJa, en:p.cityNameEn, country:p.countryNameJa, flag:p.flag, lat:p.lat, lon:p.lon};
+    PLACES[p.placeId] = {ja:p.cityNameJa, en:p.cityNameEn, country:p.countryNameJa, countryEn:p.countryNameEn, flag:p.flag, lat:p.lat, lon:p.lon};
   });
   genres.forEach(g=>{
     genreById[g.genreId] = {
       id:g.genreId, en:g.nameEn, ja:g.nameJa, desc:g.descriptionJa,
+      parentGenreId:g.parentGenreId || null,
       energy:g.energy, mood:g.mood,
       instruments:g.keyInstruments||[], refs:g.referenceArtists||[],
       keywords:g.keywords||[], kw:(g.keywords&&g.keywords[0])||g.nameEn,
@@ -699,7 +731,7 @@ let searchIndex = [];
 function buildSearch(){
   searchIndex = [];
   Object.entries(PLACES).forEach(([id,p])=>{
-    if(genresByPlace[id]) searchIndex.push({type:'city', id, label:p.ja, en:p.en, sub:p.flag+' '+p.country});
+    if(genresByPlace[id]) searchIndex.push({type:'city', id, label:p.ja, en:p.en, country:p.country, countryEn:p.countryEn, sub:p.flag+' '+p.country});
   });
   Object.values(genreById).forEach(g=>{
     if(!g.places.length) return;
@@ -715,8 +747,12 @@ function buildSearch(){
     q = q.trim().toLowerCase();
     if(!q){ box.hidden = true; cur = []; return; }
     cur = searchIndex.filter(it =>
-      it.label.toLowerCase().includes(q) || (it.en||'').toLowerCase().includes(q)
-    ).sort((a,b)=> (a.label.toLowerCase().indexOf(q)) - (b.label.toLowerCase().indexOf(q))).slice(0,12);
+      it.label.toLowerCase().includes(q) || (it.en||'').toLowerCase().includes(q) ||
+      (it.country||'').toLowerCase().includes(q) || (it.countryEn||'').toLowerCase().includes(q)
+    ).sort((a,b)=> {
+      const ai = a.label.toLowerCase().indexOf(q), bi = b.label.toLowerCase().indexOf(q);
+      return (ai<0?99:ai) - (bi<0?99:bi);   // 名前先頭一致を優先(国ヒットは後ろ)
+    }).slice(0,12);
     sel = -1;
     if(!cur.length){ box.innerHTML = '<div class="search-empty">該当なし</div>'; box.hidden = false; return; }
     box.innerHTML = cur.map((it,i)=>

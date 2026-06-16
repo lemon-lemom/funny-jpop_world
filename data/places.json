@@ -1306,5 +1306,65 @@
   "lat": -18.1416,
   "lon": 178.4419,
   "descriptionJa": "フィジー音楽の中心"
+ },
+ {
+  "placeId": "china_hangzhou",
+  "countryCode": "CN",
+  "countryNameEn": "China",
+  "countryNameJa": "中国",
+  "cityNameEn": "Hangzhou",
+  "cityNameJa": "杭州",
+  "flag": "🇨🇳",
+  "lat": 30.2741,
+  "lon": 120.1551,
+  "descriptionJa": "古琴ゆかりの江南の都"
+ },
+ {
+  "placeId": "hongkong_hk",
+  "countryCode": "HK",
+  "countryNameEn": "Hong Kong",
+  "countryNameJa": "香港",
+  "cityNameEn": "Hong Kong",
+  "cityNameJa": "香港",
+  "flag": "🇭🇰",
+  "lat": 22.3193,
+  "lon": 114.1694,
+  "descriptionJa": "広東ポップの都"
+ },
+ {
+  "placeId": "taiwan_taipei",
+  "countryCode": "TW",
+  "countryNameEn": "Taiwan",
+  "countryNameJa": "台湾",
+  "cityNameEn": "Taipei",
+  "cityNameJa": "台北",
+  "flag": "🇹🇼",
+  "lat": 25.033,
+  "lon": 121.5654,
+  "descriptionJa": "華語ポップの中心"
+ },
+ {
+  "placeId": "india_delhi",
+  "countryCode": "IN",
+  "countryNameEn": "India",
+  "countryNameJa": "インド",
+  "cityNameEn": "Delhi",
+  "cityNameJa": "デリー",
+  "flag": "🇮🇳",
+  "lat": 28.6139,
+  "lon": 77.209,
+  "descriptionJa": "ガザルの都"
+ },
+ {
+  "placeId": "india_pune",
+  "countryCode": "IN",
+  "countryNameEn": "India",
+  "countryNameJa": "インド",
+  "cityNameEn": "Pune",
+  "cityNameJa": "プネー",
+  "flag": "🇮🇳",
+  "lat": 18.5204,
+  "lon": 73.8567,
+  "descriptionJa": "ラーヴァニーの拠点"
  }
 ]
