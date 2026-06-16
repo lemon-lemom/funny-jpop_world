@@ -5296,5 +5296,160 @@
     "weight": 1.0
    }
   ]
+ },
+ {
+  "genreId": "funana",
+  "nameEn": "Funaná",
+  "nameJa": "フナナ",
+  "parentGenreId": null,
+  "descriptionJa": "カーボベルデのアコーディオン(ガイタ)とフェリーニョが疾走する舞踏音楽",
+  "descriptionEn": "Fast Cape Verdean accordion-and-ferrinho dance music",
+  "energy": 4,
+  "mood": "陽気/疾走/祝祭",
+  "keyInstruments": [
+   "gaita accordion",
+   "ferrinho",
+   "bass",
+   "drums"
+  ],
+  "referenceArtists": [
+   "Ferro Gaita",
+   "Bulimundo"
+  ],
+  "keywords": [
+   "funaná cabo verde",
+   "ferro gaita funaná"
+  ],
+  "places": [
+   {
+    "placeId": "capeverde_praia",
+    "relationType": "origin",
+    "weight": 1.0
+   }
+  ]
+ },
+ {
+  "genreId": "coladeira",
+  "nameEn": "Coladeira",
+  "nameJa": "コラデイラ",
+  "parentGenreId": "morna",
+  "descriptionJa": "モルナの陽気で軽快な姉妹分。カーボベルデの大衆舞踏",
+  "descriptionEn": "The upbeat lighthearted cousin of morna from Cape Verde",
+  "energy": 3,
+  "mood": "陽気/洒脱/軽快",
+  "keyInstruments": [
+   "acoustic guitar",
+   "cavaquinho",
+   "brass",
+   "bass"
+  ],
+  "referenceArtists": [
+   "Cesária Évora",
+   "Tito Paris",
+   "Suzanna Lubrano"
+  ],
+  "keywords": [
+   "coladeira cabo verde",
+   "coladeira morabeza"
+  ],
+  "places": [
+   {
+    "placeId": "capeverde_mindelo",
+    "relationType": "origin",
+    "weight": 1.0
+   }
+  ]
+ },
+ {
+  "genreId": "batuku",
+  "nameEn": "Batuku",
+  "nameJa": "バトゥク",
+  "parentGenreId": null,
+  "descriptionJa": "サンティアゴ島の女性たちが布を叩いて生むポリリズム歌舞",
+  "descriptionEn": "Women's polyrhythmic cloth-drumming song-dance of Santiago island",
+  "energy": 4,
+  "mood": "大地的/祝祭/土着",
+  "keyInstruments": [
+   "tchabeta cloth percussion",
+   "cimboa",
+   "call-and-response vocals"
+  ],
+  "referenceArtists": [
+   "Nácia Gomi",
+   "Orlando Pantera"
+  ],
+  "keywords": [
+   "batuku cabo verde",
+   "batuko santiago"
+  ],
+  "places": [
+   {
+    "placeId": "capeverde_praia",
+    "relationType": "origin",
+    "weight": 1.0
+   }
+  ]
+ },
+ {
+  "genreId": "tahitian",
+  "nameEn": "Tahitian",
+  "nameJa": "タヒチアン",
+  "parentGenreId": null,
+  "descriptionJa": "トオエレ太鼓が刻むタヒチのオテア舞踊と島ポップ",
+  "descriptionEn": "Tahitian ʻōteʻa drum-dance and island pop",
+  "energy": 4,
+  "mood": "祝祭/海洋/躍動",
+  "keyInstruments": [
+   "toʻere drums",
+   "pahu",
+   "ukulele",
+   "group vocals"
+  ],
+  "referenceArtists": [
+   "Bobby Holcomb",
+   "Te Maeva"
+  ],
+  "keywords": [
+   "tahitian ote'a drums",
+   "musique tahitienne"
+  ],
+  "places": [
+   {
+    "placeId": "frenchpolynesia_papeete",
+    "relationType": "origin",
+    "weight": 1.0
+   }
+  ]
+ },
+ {
+  "genreId": "fijian",
+  "nameEn": "Fijian Meke",
+  "nameJa": "フィジー（メケ／ヴデ）",
+  "parentGenreId": null,
+  "descriptionJa": "詠唱と踊りのメケ、ポップ化したヴデを擁するフィジーの音楽",
+  "descriptionEn": "Fijian meke chant-dance and the pop style vude",
+  "energy": 3,
+  "mood": "海洋/祝祭/部族的",
+  "keyInstruments": [
+   "lali drum",
+   "derua",
+   "group harmony vocals",
+   "guitar"
+  ],
+  "referenceArtists": [
+   "Laisa Vulakoro",
+   "Black Rose"
+  ],
+  "keywords": [
+   "fijian meke",
+   "fiji vude music"
+  ],
+  "places": [
+   {
+    "placeId": "fiji_suva",
+    "relationType": "origin",
+    "weight": 1.0
+   }
+  ]
  }
 ]

@@ -1270,5 +1270,41 @@
   "lat": 46.8139,
   "lon": -71.208,
   "descriptionJa": "フランス語圏ケベックの中心"
+ },
+ {
+  "placeId": "capeverde_praia",
+  "countryCode": "CV",
+  "countryNameEn": "Cape Verde",
+  "countryNameJa": "カーボベルデ",
+  "cityNameEn": "Praia",
+  "cityNameJa": "プライア",
+  "flag": "🇨🇻",
+  "lat": 14.933,
+  "lon": -23.5133,
+  "descriptionJa": "フナナとバトゥクの拠点"
+ },
+ {
+  "placeId": "frenchpolynesia_papeete",
+  "countryCode": "PF",
+  "countryNameEn": "French Polynesia",
+  "countryNameJa": "フランス領ポリネシア",
+  "cityNameEn": "Papeete",
+  "cityNameJa": "パペーテ",
+  "flag": "🇵🇫",
+  "lat": -17.5516,
+  "lon": -149.5585,
+  "descriptionJa": "タヒチ音楽の中心"
+ },
+ {
+  "placeId": "fiji_suva",
+  "countryCode": "FJ",
+  "countryNameEn": "Fiji",
+  "countryNameJa": "フィジー",
+  "cityNameEn": "Suva",
+  "cityNameJa": "スバ",
+  "flag": "🇫🇯",
+  "lat": -18.1416,
+  "lon": 178.4419,
+  "descriptionJa": "フィジー音楽の中心"
  }
 ]
