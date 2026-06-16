@@ -282,6 +282,18 @@ header{
 .rank-card .rc-txt{flex:1;min-width:0}
 .rank-card .rc-txt b{display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden;font-size:12.5px;font-weight:700;line-height:1.5}
 .rank-card .rc-txt small{display:block;font-size:11px;color:color-mix(in srgb,var(--cream) 62%,transparent);margin-top:3px}
+.rank-card{cursor:pointer}
+.rank-card.playing{border-color:var(--acc1);background:color-mix(in srgb,var(--acc1) 16%,transparent)}
+.rank-card .rc-ext{flex:none;color:var(--acc2);text-decoration:none;font-size:15px;padding:2px 5px;border-radius:6px}
+.rank-card .rc-ext:hover{background:color-mix(in srgb,var(--acc2) 20%,transparent);color:var(--cream)}
+.genre-player{margin:0 0 12px;border:2px solid var(--ink);border-radius:12px;overflow:hidden;background:#000;box-shadow:0 5px 0 color-mix(in srgb,var(--ink) 70%,transparent)}
+.genre-player[hidden]{display:none}
+.genre-player .pf{position:relative;aspect-ratio:16/9}
+.genre-player .pf iframe{position:absolute;inset:0;width:100%;height:100%;border:0;display:block}
+.genre-player .pf-now{display:flex;gap:8px;align-items:center;justify-content:space-between;padding:7px 11px;background:color-mix(in srgb,var(--ink) 55%,transparent)}
+.genre-player .pf-now .nt{font-size:11px;font-weight:700;color:var(--cream);overflow:hidden;text-overflow:ellipsis;white-space:nowrap;min-width:0}
+.genre-player .pf-now a{flex:none;font-size:11px;color:var(--acc2);text-decoration:none;white-space:nowrap}
+.genre-player .pf-now a:hover{color:var(--cream)}
 
 .search-cta{
   display:flex;align-items:center;gap:11px;text-decoration:none;
@@ -571,6 +583,24 @@ function relatedGenres(g){
 }
 
 let activeTab = 'classic';
+let currentVid = null;   // 現在パネル内で再生中の動画ID
+
+function playVideo(videoId, url, title){
+  currentVid = videoId;
+  const pl = document.getElementById('genrePlayer');
+  if(pl){
+    pl.hidden = false;
+    pl.innerHTML =
+      '<div class="pf"><iframe src="https://www.youtube.com/embed/'+encodeURIComponent(videoId)+'?autoplay=1&rel=0" '+
+        'title="'+esc(title||'')+'" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" '+
+        'allowfullscreen referrerpolicy="origin"></iframe></div>'+
+      '<div class="pf-now"><span class="nt">▶ '+esc(title||'')+'</span>'+
+        '<a href="'+esc(url||('https://www.youtube.com/watch?v='+videoId))+'" target="_blank" rel="noopener">YouTubeで開く ↗</a></div>';
+    pl.scrollIntoView({block:'nearest'});
+  }
+  document.querySelectorAll('#rankBox .rank-card').forEach(c=>c.classList.toggle('playing', c.dataset.vid===videoId));
+}
+
 function showGenre(gid, fromPid){
   const g = genreById[gid];
   if(!g) return;
@@ -579,6 +609,7 @@ function showGenre(gid, fromPid){
   backBtn.hidden = false;
   backBtn.onclick = ()=>{ if(fromPid) showCity(fromPid); else showWelcome(); };
   activeTab = 'classic';
+  currentVid = null;   // 別ジャンルに移ったらプレーヤーをリセット
 
   const placeBtns = g.places.map(([pid,rel])=>{
     const p = PLACES[pid]; if(!p) return '';
@@ -602,6 +633,7 @@ function showGenre(gid, fromPid){
     (g.instruments && g.instruments.length ? '<div class="genre-meta"><h4>🔑 主な楽器</h4><p>'+g.instruments.map(esc).join(' ・ ')+'</p></div>' : '')+
     '<div class="genre-places">'+placeBtns+'</div>'+
     relHtml+
+    '<div class="genre-player" id="genrePlayer" hidden></div>'+
     '<div class="tabs">'+
       '<button data-tab="classic" class="active">CLASSIC<small>定番・再生数順</small></button>'+
       '<button data-tab="fresh">FRESH<small>新着90日</small></button>'+
@@ -667,18 +699,26 @@ function renderRanking(g){
   const items = data.rankings[tab];
   box.innerHTML =
     items.map(v=>
-      '<a class="rank-card" href="'+esc(v.url)+'" target="_blank" rel="noopener">'+
+      '<div class="rank-card'+(v.videoId===currentVid?' playing':'')+'" role="button" tabindex="0" '+
+        'data-vid="'+esc(v.videoId)+'" data-url="'+esc(v.url)+'" data-title="'+esc(v.title)+'">'+
         '<span class="rk">'+v.rank+'</span>'+
         '<img class="tmb" src="'+esc(v.thumbnailUrl)+'" alt="" loading="lazy" onerror="this.style.visibility=\'hidden\'">'+
         '<span class="rc-txt"><b>'+esc(v.title)+'</b><small>'+esc(v.channelTitle||'')+
           (v.views!=null?' ・ '+Number(v.views).toLocaleString()+' 回':'')+
           (tab==='hot'&&v.weeklyGrowth!=null?' ・ +'+Number(v.weeklyGrowth).toLocaleString():'')+
         '</small></span>'+
-      '</a>'
+        '<a class="rc-ext" href="'+esc(v.url)+'" target="_blank" rel="noopener" title="YouTubeで開く" aria-label="YouTubeで開く">↗</a>'+
+      '</div>'
     ).join('') +
     '<a class="search-cta" style="margin-top:4px" href="'+esc(ytSearch(query, tab))+'" target="_blank" rel="noopener">'+
       '<span class="yt">🔎</span><span><b>もっと探す</b><small>YouTubeで'+esc(tabJa)+'</small></span><span class="go">↗</span>'+
     '</a>';
+
+  box.querySelectorAll('.rank-card').forEach(c=>{
+    const play = ()=> playVideo(c.dataset.vid, c.dataset.url, c.dataset.title);
+    c.addEventListener('click', e=>{ if(e.target.closest('.rc-ext')) return; play(); });
+    c.addEventListener('keydown', e=>{ if(e.key==='Enter'||e.key===' '){ e.preventDefault(); play(); } });
+  });
 }
 
 /* ============ featured strip ============ */
