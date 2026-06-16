@@ -418,6 +418,7 @@
   "lat": -8.839,
   "lon": 13.2894,
   "genreIds": [
+   "kizomba",
    "kuduro",
    "semba"
   ]
@@ -431,7 +432,8 @@
   "lon": 28.0473,
   "genreIds": [
    "amapiano",
-   "kwaito"
+   "kwaito",
+   "mbaqanga"
   ]
  },
  {
@@ -443,7 +445,8 @@
   "lon": 31.0218,
   "genreIds": [
    "gqom",
-   "isicathamiya"
+   "isicathamiya",
+   "maskandi"
   ]
  },
  {
@@ -701,7 +704,8 @@
   "lat": -6.2088,
   "lon": 106.8456,
   "genreIds": [
-   "dangdut"
+   "dangdut",
+   "keroncong"
   ]
  },
  {
@@ -1322,6 +1326,83 @@
   "lon": 73.8567,
   "genreIds": [
    "lavani"
+  ]
+ },
+ {
+  "placeId": "philippines_manila",
+  "label": "Manila",
+  "labelJa": "マニラ",
+  "flag": "🇵🇭",
+  "lat": 14.5995,
+  "lon": 120.9842,
+  "genreIds": [
+   "kundiman"
+  ]
+ },
+ {
+  "placeId": "cambodia_phnompenh",
+  "label": "Phnom Penh",
+  "labelJa": "プノンペン",
+  "flag": "🇰🇭",
+  "lat": 11.5564,
+  "lon": 104.9282,
+  "genreIds": [
+   "cambodian_rock"
+  ]
+ },
+ {
+  "placeId": "mozambique_maputo",
+  "label": "Maputo",
+  "labelJa": "マプート",
+  "flag": "🇲🇿",
+  "lat": -25.9692,
+  "lon": 32.5732,
+  "genreIds": [
+   "marrabenta"
+  ]
+ },
+ {
+  "placeId": "algeria_oran",
+  "label": "Oran",
+  "labelJa": "オラン",
+  "flag": "🇩🇿",
+  "lat": 35.6976,
+  "lon": -0.6337,
+  "genreIds": [
+   "rai"
+  ]
+ },
+ {
+  "placeId": "lebanon_beirut",
+  "label": "Beirut",
+  "labelJa": "ベイルート",
+  "flag": "🇱🇧",
+  "lat": 33.8938,
+  "lon": 35.5018,
+  "genreIds": [
+   "dabke"
+  ]
+ },
+ {
+  "placeId": "iraq_baghdad",
+  "label": "Baghdad",
+  "labelJa": "バグダード",
+  "flag": "🇮🇶",
+  "lat": 33.3152,
+  "lon": 44.3661,
+  "genreIds": [
+   "iraqi_maqam"
+  ]
+ },
+ {
+  "placeId": "tunisia_tunis",
+  "label": "Tunis",
+  "labelJa": "チュニス",
+  "flag": "🇹🇳",
+  "lat": 36.8065,
+  "lon": 10.1815,
+  "genreIds": [
+   "mezwed"
   ]
  }
 ]

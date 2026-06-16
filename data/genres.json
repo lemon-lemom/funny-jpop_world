@@ -5607,5 +5607,350 @@
     "weight": 1.0
    }
   ]
+ },
+ {
+  "genreId": "kundiman",
+  "nameEn": "Kundiman",
+  "nameJa": "クンディマン",
+  "parentGenreId": null,
+  "descriptionJa": "タガログ語で愛を歌うフィリピンの抒情的アートソング",
+  "descriptionEn": "Romantic Tagalog art song of the Philippines",
+  "energy": 2,
+  "mood": "抒情/恋情/郷愁",
+  "keyInstruments": [
+   "guitar",
+   "strings",
+   "piano",
+   "vocals"
+  ],
+  "referenceArtists": [
+   "Nicanor Abelardo",
+   "Sylvia La Torre"
+  ],
+  "keywords": [
+   "kundiman filipino",
+   "kundiman classic"
+  ],
+  "places": [
+   {
+    "placeId": "philippines_manila",
+    "relationType": "origin",
+    "weight": 1.0
+   }
+  ]
+ },
+ {
+  "genreId": "cambodian_rock",
+  "nameEn": "Cambodian Rock",
+  "nameJa": "カンボジアン・ロック",
+  "parentGenreId": null,
+  "descriptionJa": "60〜70年代プノンペンで花開いたサイケなクメール・ロック",
+  "descriptionEn": "Psychedelic Khmer rock of 1960s-70s Phnom Penh",
+  "energy": 3,
+  "mood": "サイケ/レトロ/哀愁",
+  "keyInstruments": [
+   "fuzz guitar",
+   "organ",
+   "drums",
+   "vocals"
+  ],
+  "referenceArtists": [
+   "Sinn Sisamouth",
+   "Ros Serey Sothea",
+   "Pan Ron"
+  ],
+  "keywords": [
+   "cambodian rock 60s",
+   "sinn sisamouth"
+  ],
+  "places": [
+   {
+    "placeId": "cambodia_phnompenh",
+    "relationType": "origin",
+    "weight": 1.0
+   }
+  ]
+ },
+ {
+  "genreId": "keroncong",
+  "nameEn": "Keroncong",
+  "nameJa": "クロンチョン",
+  "parentGenreId": null,
+  "descriptionJa": "ポルトガル由来の小型ギターが爪弾くインドネシアの古謡",
+  "descriptionEn": "Portuguese-rooted Indonesian song with a ukulele-like cak",
+  "energy": 2,
+  "mood": "郷愁/優雅/まったり",
+  "keyInstruments": [
+   "keroncong ukulele",
+   "pizzicato cello",
+   "flute",
+   "violin"
+  ],
+  "referenceArtists": [
+   "Gesang",
+   "Waldjinah"
+  ],
+  "keywords": [
+   "keroncong indonesia",
+   "keroncong gesang"
+  ],
+  "places": [
+   {
+    "placeId": "indonesia_jakarta",
+    "relationType": "origin",
+    "weight": 1.0
+   }
+  ]
+ },
+ {
+  "genreId": "mbaqanga",
+  "nameEn": "Mbaqanga",
+  "nameJa": "ムバカンガ",
+  "parentGenreId": null,
+  "descriptionJa": "60年代南アのタウンシップで生まれたうねるジャイヴ",
+  "descriptionEn": "Rolling township jive from 1960s South Africa",
+  "energy": 4,
+  "mood": "グルーヴ/土着/陽気",
+  "keyInstruments": [
+   "electric guitar",
+   "groaning bass vocals",
+   "sax",
+   "drums"
+  ],
+  "referenceArtists": [
+   "Mahlathini & Mahotella Queens"
+  ],
+  "keywords": [
+   "mbaqanga south africa",
+   "mahlathini mahotella queens"
+  ],
+  "places": [
+   {
+    "placeId": "southafrica_johannesburg",
+    "relationType": "origin",
+    "weight": 1.0
+   }
+  ]
+ },
+ {
+  "genreId": "maskandi",
+  "nameEn": "Maskandi",
+  "nameJa": "マスカンディ",
+  "parentGenreId": null,
+  "descriptionJa": "ズールーの吟遊ギターが語るクワズール・ナタールの音楽",
+  "descriptionEn": "Zulu troubadour guitar music of KwaZulu-Natal",
+  "energy": 3,
+  "mood": "物語/土着/郷愁",
+  "keyInstruments": [
+   "maskandi guitar",
+   "concertina",
+   "bass",
+   "vocals"
+  ],
+  "referenceArtists": [
+   "Phuzekhemisi",
+   "Mfaz Omnyama"
+  ],
+  "keywords": [
+   "maskandi zulu",
+   "phuzekhemisi maskandi"
+  ],
+  "places": [
+   {
+    "placeId": "southafrica_durban",
+    "relationType": "origin",
+    "weight": 1.0
+   }
+  ]
+ },
+ {
+  "genreId": "marrabenta",
+  "nameEn": "Marrabenta",
+  "nameJa": "マラベンタ",
+  "parentGenreId": null,
+  "descriptionJa": "マプートの陽気なギター・ダンス音楽",
+  "descriptionEn": "Upbeat guitar dance music of Maputo",
+  "energy": 4,
+  "mood": "陽気/祝祭/ダンサブル",
+  "keyInstruments": [
+   "guitar",
+   "homemade bass",
+   "percussion",
+   "vocals"
+  ],
+  "referenceArtists": [
+   "Orchestra Marrabenta Star",
+   "Wazimbo"
+  ],
+  "keywords": [
+   "marrabenta mozambique",
+   "orquestra marrabenta"
+  ],
+  "places": [
+   {
+    "placeId": "mozambique_maputo",
+    "relationType": "origin",
+    "weight": 1.0
+   }
+  ]
+ },
+ {
+  "genreId": "kizomba",
+  "nameEn": "Kizomba",
+  "nameJa": "キゾンバ",
+  "parentGenreId": null,
+  "descriptionJa": "アンゴラ発の甘く官能的なスロー・ダンス音楽",
+  "descriptionEn": "Sensual slow dance music from Angola",
+  "energy": 2,
+  "mood": "官能的/メロウ/ロマンティック",
+  "keyInstruments": [
+   "synth",
+   "programmed drums",
+   "guitar",
+   "vocals"
+  ],
+  "referenceArtists": [
+   "Bonga",
+   "Anselmo Ralph"
+  ],
+  "keywords": [
+   "kizomba angola",
+   "kizomba mix"
+  ],
+  "places": [
+   {
+    "placeId": "angola_luanda",
+    "relationType": "origin",
+    "weight": 1.0
+   }
+  ]
+ },
+ {
+  "genreId": "rai",
+  "nameEn": "Raï",
+  "nameJa": "ライ",
+  "parentGenreId": null,
+  "descriptionJa": "オランの労働者が歌う北アフリカの大衆音楽。世界へ広がった",
+  "descriptionEn": "North African popular music from working-class Oran",
+  "energy": 4,
+  "mood": "情熱/反骨/ダンサブル",
+  "keyInstruments": [
+   "accordion",
+   "gasba flute",
+   "synth",
+   "derbouka",
+   "vocals"
+  ],
+  "referenceArtists": [
+   "Cheb Khaled",
+   "Cheb Mami",
+   "Cheikha Rimitti"
+  ],
+  "keywords": [
+   "rai algerien",
+   "cheb khaled rai"
+  ],
+  "places": [
+   {
+    "placeId": "algeria_oran",
+    "relationType": "origin",
+    "weight": 1.0
+   }
+  ]
+ },
+ {
+  "genreId": "dabke",
+  "nameEn": "Dabke",
+  "nameJa": "ダブケ",
+  "parentGenreId": null,
+  "descriptionJa": "肩を組んで地を踏み鳴らすレヴァントの祝祭ライン・ダンス",
+  "descriptionEn": "Levantine festive line-dance music",
+  "energy": 4,
+  "mood": "祝祭/躍動/団結",
+  "keyInstruments": [
+   "mijwiz",
+   "derbeke",
+   "oud",
+   "synth",
+   "vocals"
+  ],
+  "referenceArtists": [
+   "Omar Souleyman",
+   "traditional Levantine groups"
+  ],
+  "keywords": [
+   "دبكة",
+   "dabke debke"
+  ],
+  "places": [
+   {
+    "placeId": "lebanon_beirut",
+    "relationType": "origin",
+    "weight": 1.0
+   }
+  ]
+ },
+ {
+  "genreId": "iraqi_maqam",
+  "nameEn": "Iraqi Maqam",
+  "nameJa": "イラク・マカーム",
+  "parentGenreId": null,
+  "descriptionJa": "バグダードに伝わる格調高いアラブ古典声楽",
+  "descriptionEn": "Stately classical Arabic vocal art of Baghdad",
+  "energy": 2,
+  "mood": "荘厳/恍惚/古典",
+  "keyInstruments": [
+   "santur",
+   "joza",
+   "oud",
+   "def",
+   "vocals"
+  ],
+  "referenceArtists": [
+   "Mohammed al-Qubanchi",
+   "Nazem al-Ghazali"
+  ],
+  "keywords": [
+   "maqam iraqi",
+   "iraqi maqam nazem al ghazali"
+  ],
+  "places": [
+   {
+    "placeId": "iraq_baghdad",
+    "relationType": "origin",
+    "weight": 1.0
+   }
+  ]
+ },
+ {
+  "genreId": "mezwed",
+  "nameEn": "Mezwed",
+  "nameJa": "メズウェド",
+  "parentGenreId": null,
+  "descriptionJa": "チュニジアのバグパイプ(メズウェド)が唸る大衆ダンス音楽",
+  "descriptionEn": "Tunisian bagpipe popular dance music",
+  "energy": 4,
+  "mood": "祝祭/土着/熱狂",
+  "keyInstruments": [
+   "mezoued bagpipe",
+   "bendir",
+   "darbuka",
+   "vocals"
+  ],
+  "referenceArtists": [
+   "Hedi Habbouba",
+   "Samir Loussif"
+  ],
+  "keywords": [
+   "مزود تونسي",
+   "mezwed tunisien"
+  ],
+  "places": [
+   {
+    "placeId": "tunisia_tunis",
+    "relationType": "origin",
+    "weight": 1.0
+   }
+  ]
  }
 ]
