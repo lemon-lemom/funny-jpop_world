@@ -1,0 +1,169 @@
+genre_id,name_en,name_ja,parent_genre_id,description_ja,description_en,energy,mood,key_instruments,reference_artists,is_active,display_order
+guaguanco,Guaguancó,ワワンコ,rumba_cubana,キューバ・ルンバを代表する形式。求愛を踊りで描く,A leading form of Cuban rumba depicting courtship,4,情熱/求愛/祝祭,congas / cajón / clave / palmas,Los Muñequitos de Matanzas,1,10
+rumba_cubana,Rumba Cubana,ルンバ・クバーナ,,アフロキューバの打楽器と歌・踊りの世俗音楽,Afro-Cuban secular drumming song and dance,4,祝祭/土着/情熱,congas / quinto / clave / vocals,Los Muñequitos de Matanzas / Yoruba Andabo,1,20
+afro_cuban_jazz,Afro-Cuban Jazz,アフロキューバン・ジャズ,,ジャズとキューバのクラーベが融合したラテンジャズの源流,Root of Latin jazz fusing jazz harmony and clave,4,洗練/情熱/グルーヴ,congas / piano montuno / brass / clave,Chano Pozo / Dizzy Gillespie / Chucho Valdés,1,30
+rumba_columbia,Rumba Columbia,ルンバ・コルンビア,rumba_cubana,マタンサス発祥の高速で男性的なルンバ,Fast male solo rumba from Matanzas,4,高速/男性的/技巧,quinto / clave / palmas / vocals,Los Muñequitos de Matanzas,1,40
+son_cubano,Son Cubano,ソン・クバーノ,,弦楽器とアフリカの打楽器が出会ったキューバ音楽の根幹,Backbone of Cuban music and mother of salsa,3,ノスタルジック/陽気/温かい,tres / bongos / maracas / upright bass / trumpet,Buena Vista Social Club / Compay Segundo,1,50
+trova,Trova,トローバ,,ギターの弾き語りで詩情を歌う伝統,Guitar troubadour song tradition,2,詩的/哀愁/親密,acoustic guitar / vocals,Silvio Rodríguez / Pablo Milanés,1,60
+salsa_cubana,Salsa Cubana,サルサ・クバーナ,son_cubano,ソンを母体に発展したキューバ流ダンス・サルサ,Cuban dance salsa including timba,4,情熱/祝祭/ダンサブル,congas / timbales / piano montuno / brass,Los Van Van / NG La Banda,1,70
+bolero_cubano,Bolero Cubano,ボレロ・クバーノ,,サンティアゴ起源のロマンティックなバラード,Romantic ballad form from Santiago,2,ロマンティック/切ない/夜,nylon guitar / bongos / strings / piano,Trío Matamoros / Beny Moré,1,80
+mambo,Mambo,マンボ,,キューバ発の華麗なビッグバンド・ダンス音楽,Flashy Cuban big-band dance music,5,爆発/祝祭/ゴージャス,big band brass / timbales / congas / cowbell,Pérez Prado / Tito Puente / Machito,1,90
+chacha,Cha-Cha-Chá,チャチャチャ,,軽快でエレガントなキューバの50年代ダンス,Elegant lighthearted 1950s Cuban dance,3,エレガント/軽快/キュート,güiro / timbales / flute / violins / piano,Enrique Jorrín / Orquesta Aragón,1,100
+new_orleans_jazz,New Orleans Jazz,ニューオーリンズ・ジャズ,,ジャズ発祥の地の集団即興スタイル,Collective-improvisation jazz from its birthplace,4,祝祭/即興/陽気,cornet / clarinet / trombone / banjo / tuba,Louis Armstrong / King Oliver,1,110
+dixieland,Dixieland Jazz,ディキシーランド・ジャズ,new_orleans_jazz,初期ジャズを継承したアップテンポな合奏,Up-tempo early-jazz ensemble style,4,陽気/レトロ/賑やか,trumpet / clarinet / trombone / banjo,Original Dixieland Jass Band,1,120
+brass_band,Brass Band,ブラスバンド,,ニューオーリンズの金管バンド文化,New Orleans brass-band and second-line culture,4,パレード/祝祭/ファンキー,sousaphone / trumpet / trombone / snare,Rebirth Brass Band / Dirty Dozen Brass Band,1,130
+new_orleans_funk,New Orleans Funk,ニューオーリンズ・ファンク,funk,セカンドラインのリズムが効いた南部のファンク,Southern funk built on second-line rhythm,4,パレード/祝祭/ファンキー,second line drums / sousaphone / brass / piano,The Meters / Dr. John / Trombone Shorty,1,140
+zydeco,Zydeco,ザイデコ,,ルイジアナのクレオールが生んだアコーディオン・ダンス,Creole accordion dance music of Louisiana,4,陽気/田舎/パーティー,accordion / rubboard / fiddle / electric guitar,Clifton Chenier / Buckwheat Zydeco,1,150
+bebop,Bebop,ビバップ,,1940年代NY発の高速で複雑なモダンジャズ革命,Fast complex modern-jazz revolution of 1940s NY,3,高速/技巧/都会,alto sax / trumpet / piano / upright bass,Charlie Parker / Dizzy Gillespie,1,160
+hard_bop,Hard Bop,ハードバップ,bebop,ビバップにブルースとゴスペルを注いだ50年代ジャズ,1950s jazz adding blues and gospel to bebop,3,ブルージー/熱い/都会,tenor sax / trumpet / piano / drums,Art Blakey / Horace Silver,1,170
+swing_big_band,Swing / Big Band,スウィング/ビッグバンド,,30〜40年代のダンサブルなビッグバンド・ジャズ,Danceable big-band jazz of the 30s and 40s,4,華やか/祝祭/スイング,big band brass / walking bass / swing drums / piano,Duke Ellington / Count Basie / Benny Goodman,1,180
+gypsy_jazz,Gypsy Jazz,ジプシー・ジャズ,,パリのロマがジャンゴと共に生んだ弦のスウィング,String swing born of Paris Romani and Django,3,軽快/洒脱/技巧,acoustic guitar / violin / upright bass,Django Reinhardt / Stéphane Grappelli,1,190
+acid_jazz,Acid Jazz,アシッド・ジャズ,,ファンク・ソウル・ジャズをクラブ感覚で繋いだ英国の潮流,UK club blend of funk soul and jazz,3,おしゃれ/グルーヴ/都会,organ / funky drums / samples / horns,Jamiroquai / Incognito / Brand New Heavies,1,200
+smooth_jazz,Smooth Jazz,スムース・ジャズ,,聴きやすく洗練されたフュージョン系ジャズ,Polished easy-listening fusion jazz,2,洗練/リラックス/夜,soprano sax / electric piano / smooth bass / guitar,Grover Washington Jr. / George Benson,1,210
+jazz_fusion,Jazz Fusion,ジャズ・フュージョン,,ジャズにロック・ファンクの電化サウンドを融合,Jazz fused with electric rock and funk,4,技巧/疾走/都会,electric piano / distorted guitar / synth / funk bass,Weather Report / Herbie Hancock / Mahavishnu Orchestra,1,220
+west_coast_jazz,West Coast Jazz,ウェストコースト・ジャズ,,LA周辺のクールで編曲志向の50年代ジャズ,Cool arrangement-minded 1950s jazz around LA,2,クール/洗練/編曲的,vibes / flute / brush drums / muted trumpet,Chet Baker / Gerry Mulligan / Dave Brubeck,1,230
+chicago_blues,Chicago Blues,シカゴ・ブルース,,デルタブルースが電化された都市型ブルース,Electrified urban blues from Delta blues,3,渋い/都会/エレキ,electric guitar / harmonica / organ / bass,Muddy Waters / Howlin' Wolf / Buddy Guy,1,240
+delta_blues,Delta Blues,デルタ・ブルース,,ミシシッピ・デルタのアコースティック原始ブルース,Raw acoustic blues of the Mississippi Delta,2,哀愁/孤独/魂,slide guitar / acoustic guitar / vocals / harmonica,Robert Johnson / Son House / Charley Patton,1,250
+memphis_blues,Memphis Blues,メンフィス・ブルース,,ビール・ストリートで育まれた都市ブルース,Urban blues nurtured on Beale Street,3,渋い/都会/ロックの祖,electric guitar / piano / horns / vocals,B.B. King / Bobby Bland,1,260
+house,House,ハウス,,80年代シカゴ発の4つ打ちダンス音楽の源流,Root of four-on-the-floor dance music from Chicago,4,多幸感/反復/ダンス,four-on-the-floor / synth bass / piano stabs / vocal samples,Frankie Knuckles / Marshall Jefferson,1,270
+disco,Disco,ディスコ,,70年代NYのフロアを輝かせた華やかなダンス音楽,Glamorous dance music of 1970s NY floors,4,華やか/パーティー/ゴージャス,four-on-the-floor / lush strings / brass / bass guitar,Chic / Donna Summer / Bee Gees,1,280
+motown,Motown,モータウン,,デトロイトのレーベルが量産した洗練ソウル・ポップ,Polished soul-pop from the Detroit label,4,キャッチー/スイート/グルーヴ,tambourine / hand claps / bass / vibraphone / strings,The Supremes / Stevie Wonder / Marvin Gaye,1,290
+detroit_techno,Detroit Techno,デトロイト・テクノ,,機械都市発の未来志向エレクトロニック・ダンス,Futuristic electronic dance music born in Detroit,4,未来的/反復/硬質,drum machine / synth / sequencer / pads,Juan Atkins / Derrick May / Underground Resistance,1,300
+soul,Soul,ソウル,,ゴスペルとR&Bが融合した黒人音楽,Black music fusing gospel and R&B,4,感情的/力強い/温かい,horns / organ / electric piano / bass / strings,Otis Redding / Aretha Franklin / Al Green,1,310
+gospel,Gospel,ゴスペル,,教会から生まれた荘厳で高揚する合唱音楽,Soaring church-born choral music,4,荘厳/感動/希望,organ / piano / choir / tambourine / bass,Mahalia Jackson / Kirk Franklin / Andraé Crouch,1,320
+rnb_neo_soul,R&B / Neo Soul,R&B/ネオソウル,soul,ソウルを現代的に更新した都会的でセクシーな音,Soul updated into smooth modern urban sound,2,おしゃれ/セクシー/都会,Rhodes piano / muted guitar / programmed drums / warm pads,D'Angelo / Erykah Badu / Frank Ocean,1,330
+funk,Funk,ファンク,,グルーヴ最優先のリズム革命,A groove-first rhythm revolution,5,グルーヴ/ファンキー/パワフル,slap bass / wah guitar / clavinet / horn stabs,James Brown / Parliament-Funkadelic / Earth Wind & Fire,1,340
+country,Country,カントリー,,ナッシュビルを中心とするアメリカン・ルーツ音楽,American roots music centered on Nashville,3,素朴/物語/牧歌,acoustic guitar / fiddle / pedal steel / banjo,Hank Williams / Johnny Cash / Dolly Parton,1,350
+bluegrass,Bluegrass,ブルーグラス,country,バンジョーが疾走するアパラチア由来の弦楽,Fast Appalachian string-band music,3,素朴/疾走/牧歌,banjo / fiddle / mandolin / dobro / upright bass,Bill Monroe / Flatt & Scruggs / Alison Krauss,1,360
+appalachian_folk,Appalachian Folk,アパラチアン・フォーク,,アパラチア山脈の古い唱歌と弦の伝統,Old song and string tradition of Appalachia,2,素朴/古い/哀愁,Appalachian dulcimer / clawhammer banjo / fiddle / guitar,Jean Ritchie / Doc Watson,1,370
+surf_rock,Surf Rock,サーフロック,,リバーブ全開のギターが夏を呼ぶ西海岸ロック,Reverb-soaked West Coast summer rock,4,爽快/夏/レトロ,reverb guitar / tremolo picking / drums / bass,Dick Dale / The Ventures / The Beach Boys,1,380
+doo_wop,Doo-Wop,ドゥーワップ,,街角のコーラスが彩る50年代の甘いポップ,Sweet 1950s pop of street-corner harmony,2,レトロ/ロマンティック/郷愁,vocal harmonies / finger snaps / piano / upright bass,The Platters / The Drifters / Frankie Lymon,1,390
+salsa_ny,Salsa,サルサ（NY）,,NYで結晶化したラテンダンス音楽,Latin dance music crystallized in New York,4,情熱/祝祭/都会,congas / timbales / piano montuno / brass / bass,Héctor Lavoe / Willie Colón / Celia Cruz,1,400
+boogaloo,Boogaloo,ブーガルー,,ラテンとR&Bが出会った60年代NYのパーティー音楽,1960s NY party fusion of Latin and R&B,4,ファンキー/パーティー/レトロ,Latin percussion / organ / brass / English vocals,Joe Cuba / Pete Rodríguez,1,410
+hawaiian,Hawaiian Music,ハワイアン,,スラックキー・ギターが響くハワイの音楽,Hawaiian music of slack-key guitar,2,穏やか/楽園/波,slack-key guitar / ukulele / steel guitar / bass,Israel Kamakawiwoʻole / Gabby Pahinui,1,420
+samba,Samba,サンバ,,リオのカーニバルを彩るブラジル国民音楽,Brazil national carnival music from Rio,5,祝祭/歓喜/情熱,surdo / tamborim / cuíca / pandeiro / cavaquinho,Cartola / Beth Carvalho / Martinho da Vila,1,430
+bossa_nova,Bossa Nova,ボサノヴァ,,サンバとジャズが融合した洗練,Sophisticated fusion of samba and jazz,2,しっとり/洗練/メランコリック,nylon guitar / brushed drums / upright bass / piano,João Gilberto / Tom Jobim / Astrud Gilberto,1,440
+choro,Choro,ショーロ,,19世紀リオ生まれの器楽音楽,Instrumental music born in 19th-century Rio,3,技巧/哀愁/陽気,cavaquinho / 7-string guitar / flute / pandeiro,Pixinguinha / Jacob do Bandolim,1,450
+mpb,MPB,エミ・ペー・ベー,,多彩なブラジル現代ポピュラー音楽の総称,Umbrella term for modern Brazilian popular music,3,知的/詩的/多彩,acoustic guitar / piano / strings / percussion,Caetano Veloso / Gilberto Gil / Elis Regina,1,460
+forro,Forró,フォホー,,北東部のアコーディオン・ダンス音楽,Accordion dance music of northeastern Brazil,4,陽気/田舎/ダンス,accordion / zabumba / triangle / bass,Luiz Gonzaga / Dominguinhos,1,470
+baiao,Baião,バイアォン,,ブラジル北東部の大地的なアコーディオン・リズム,Earthy accordion rhythm of NE Brazil,3,大地的/素朴/リズミカル,accordion / zabumba / triangle / acoustic guitar,Luiz Gonzaga / Gilberto Gil,1,480
+axe,Axé,アシェー,,バイーアのカーニバル発のポップなダンス音楽,Pop dance music from Bahia carnival,4,陽気/祝祭/ダンス,timbau / surdo / brass / electric guitar,Ivete Sangalo / Daniela Mercury,1,490
+samba_reggae,Samba-Reggae,サンバ・ヘギ,,サルヴァドールの黒人ブロコが生んだ重い打楽器サンバ,Heavy percussive samba from Salvador blocos,4,祝祭/力強い/打楽器,surdo / timbau / repique / vocals,Olodum / Timbalada,1,500
+frevo,Frevo,フレーヴォ,,レシフェのカーニバルの超高速ブラス＆ダンス,Ultra-fast brass and dance from Recife carnival,5,高速/祝祭/熱狂,brass section / snare / trombone / clarinet,Spok Frevo Orquestra,1,510
+maracatu,Maracatu,マラカトゥ,,レシフェのアフロ・ブラジル儀礼に根ざす打楽器行進,Afro-Brazilian percussive processional from Recife,4,荘厳/儀礼/打楽器,alfaia drums / gonguê / agbê / vocals,Nação Estrela Brilhante,1,520
+reggae,Reggae,レゲエ,,オフビートと低音が世界を変えたジャマイカ音楽,Jamaican music whose offbeat and bass changed the world,3,レイドバック/平和/グルーヴ,skank guitar / dub bass / one-drop drums / organ,Bob Marley / Peter Tosh / Jimmy Cliff,1,530
+dub,Dub,ダブ,reggae,ミキシング卓で再構築したレゲエの実験,Studio reconstruction of reggae,2,空間的/瞑想/トリッピー,sub-bass / reverb / echo delay / sparse drums,King Tubby / Lee Scratch Perry / Mad Professor,1,540
+ska,Ska,スカ,,跳ねるアフタービートが陽気な60年代ジャマイカ音楽,Upbeat 1960s Jamaican music with a bouncing afterbeat,4,陽気/跳ねる/パンキッシュ,upstroke guitar / walking bass / brass / drums,The Skatalites / Desmond Dekker,1,550
+rocksteady,Rocksteady,ロックステディ,,スカとレゲエの間のスローでソウルフルな音楽,Slow soulful music between ska and reggae,3,スイート/メロウ/ロマンティック,bass groove / organ / sweet harmonies / skank guitar,Alton Ellis / The Paragons,1,560
+dancehall,Dancehall,ダンスホール,reggae,デジタル化したレゲエのDJ中心クラブ音楽,DJ-led club music from digital reggae,4,アーバン/セクシー/パーティー,dembow riddim / digital drums / synth bass / DJ vocals,Shabba Ranks / Beenie Man / Sean Paul,1,570
+calypso,Calypso,カリプソ,,トリニダードの風刺と祝祭の歌,Trinidad satirical festive song,4,陽気/風刺/カーニバル,steel pan / acoustic guitar / brass / shaker,Lord Kitchener / Mighty Sparrow / Harry Belafonte,1,580
+soca,Soca,ソカ,calypso,カリプソから派生した高速カーニバル音楽,Fast carnival music derived from calypso,5,爆発/パーティー/カーニバル,electronic beats / brass / steel pan / bass,Machel Montano / Bunji Garlin,1,590
+steelpan,Steelpan,スティールパン,,ドラム缶から生まれた旋律打楽器音楽,Melodic music of oil-drum steel pans,3,祝祭/旋律的/カーニバル,steel pans / iron / drum kit / bass,Trinidad All Stars / Desperadoes,1,600
+merengue,Merengue,メレンゲ,,ドミニカ共和国の高速ダンス音楽,Fast dance music of the Dominican Republic,5,陽気/パーティー/疾走,tambora / güira / accordion / brass / bass,Juan Luis Guerra / Wilfrido Vargas,1,610
+bachata,Bachata,バチャータ,,ドミニカのギター主体のロマンス音楽,Guitar-led romantic music of the Dominican Republic,3,ロマンティック/切ない/セクシー,requinto guitar / rhythm guitar / bongos / güira,Romeo Santos / Aventura / Juan Luis Guerra,1,620
+reggaeton,Reggaeton,レゲトン,dancehall,パナマで生まれプエルトリコで花開いたデンボウ・ビートのアーバン音楽,Urban dembow music born in Panama and popularized in Puerto Rico,4,アーバン/セクシー/パーティー,dembow beat / 808 bass / synth / hi-hats,El General / Daddy Yankee / Bad Bunny,1,630
+bomba,Bomba,ボンバ,,プエルトリコのアフロ系打楽器音楽,Afro-Puerto Rican percussion music,3,土着/祝祭/打楽器,barril drums / maracas / cuá / vocals,Los Pleneros de la 21,1,640
+plena,Plena,プレーナ,,プエルトリコの語り歌的フォーク,Narrative folk song of Puerto Rico,3,語り/祝祭/庶民的,panderos / güiro / accordion / vocals,Manuel Jiménez Canario,1,650
+afro_peruvian,Afro-Peruvian,アフロ・ペルー音楽,,ペルー海岸部の黒人音楽,Black music of coastal Peru,3,郷愁/土着/グルーヴ,cajón / quijada / acoustic guitar / vocals,Susana Baca / Chabuca Granda / Eva Ayllón,1,660
+chicha,Chicha,チチャ,cumbia,ペルーのアマゾン・クンビア,Peruvian Amazonian cumbia,3,陽気/サイケ/ダンサブル,electric guitar / farfisa organ / timbales / bass,Los Mirlos / Juaneco y su Combo,1,670
+tango,Tango,タンゴ,,ブエノスアイレス生まれの情熱と哀愁のダンス音楽,Passionate melancholic dance music from Buenos Aires,4,情熱/哀愁/ドラマチック,bandoneón / violin / piano / upright bass,Astor Piazzolla / Carlos Gardel / Gotan Project,1,680
+milonga,Milonga,ミロンガ,tango,タンゴの素朴で郷愁的な兄弟分,The rustic nostalgic cousin of tango,3,郷愁/素朴/哀愁,guitar / bandoneón / gentle rhythm / vocals,Carlos Gardel / Sebastián Piana,1,690
+cumbia,Cumbia,クンビア,,コロンビア発でラテン全域に広がったダンス音楽,Dance music from Colombia spread across Latin America,3,陽気/ほのぼの/ダンサブル,accordion / gaita flute / guacharaca / alegre drum,Totó la Momposina / Lucho Bermúdez / Aníbal Velásquez,1,700
+salsa_calena,Salsa Caleña,サルサ・カレーニャ,,カリの超高速で華麗なサルサ,Ultra-fast flashy salsa of Cali,4,高速/華麗/祝祭,congas / timbales / piano montuno / brass,Grupo Niche / Guayacán,1,710
+champeta,Champeta,チャンペータ,,カルタヘナのアフロ・コロンビアン・ストリート・ダンス,Afro-Colombian street dance of Cartagena,4,アフリカン/ダンサブル/ストリート,African guitar / synth bass / drum machine / vocals,Charles King / Louis Towers,1,720
+son_jarocho,Son Jarocho,ソン・ハローチョ,,ベラクルスのアフロ・メスティーソ音楽,Afro-mestizo music of Veracruz,3,祝祭/土着/陽気,jarana / requinto jarocho / harp / zapateado,Mono Blanco / Los Lobos,1,730
+mariachi,Mariachi,マリアッチ,,誇り高きメキシコの祝祭バンド音楽,Proud festive Mexican band music,4,情熱/祝祭/誇り,trumpet / vihuela / guitarrón / violins,Vicente Fernández / Mariachi Vargas de Tecalitlán,1,740
+ranchera,Ranchera,ランチェーラ,,情念を歌い上げるメキシコの大衆歌,Heartfelt Mexican folk ballad,3,哀愁/男気/情熱,trumpet / guitar / vihuela / dramatic vocal,José Alfredo Jiménez / Chavela Vargas,1,750
+norteno,Norteño,ノルテーニョ,,メキシコ北部のアコーディオン・カントリー,Accordion country music of northern Mexico,3,陽気/素朴/物語,accordion / bajo sexto / bass / drums,Los Tigres del Norte / Ramón Ayala,1,760
+andean_folk,Andean Folk,アンデス・フォルクローレ,,高原に響くケーナとサンポーニャの郷愁,Highland nostalgia of quena and panpipes,3,郷愁/高原/素朴,charango / quena / zampoña / bombo / guitar,Los Kjarkas / Inti-Illimani,1,770
+afrobeat,Afrobeat,アフロビート,,Fela Kuti が創出したファンク×ヨルバの大河グルーヴ,Fela Kuti funk-meets-Yoruba groove,4,陽気/グルーヴ/力強い,talking drums / shekere / horn section / funk guitar,Fela Kuti / Tony Allen / Burna Boy,1,780
+juju,Jùjú,ジュジュ,,ヨルバの語り太鼓が多層に重なる祝祭音楽,Yoruba talking-drum praise music,3,催眠的/祝祭/多層的,talking drum ensemble / pedal steel guitar / shekere / agogo,King Sunny Adé / Ebenezer Obey,1,790
+highlife,Highlife,ハイライフ,,ギターとホーンが踊る西アフリカ音楽の源流,A root of West African popular music,3,軽快/ノスタルジック/陽だまり,palm-wine guitar / trumpet / trombone / congas,E.T. Mensah / Ebo Taylor / Pat Thomas,1,800
+soukous,Soukous,スークース,,コンゴのギターが弾むダンス音楽,Congolese guitar dance music,4,祝祭/歓喜/ダンサブル,sebene guitar / rhythm guitar / congas / brass,Franco / Papa Wemba / Koffi Olomidé,1,810
+makossa,Makossa,マコッサ,,カメルーンのファンキーなダンス音楽,Funky dance music of Cameroon,4,陽気/ファンキー/ダンサブル,funky bass / cowbell / brass section / congas,Manu Dibango / Richard Bona,1,820
+benga,Benga,ベンガ,,ケニアの速弾きギターが弾む大衆音楽,Fast-picking guitar pop of Kenya,3,軽快/明るい/リズミカル,nyatiti / fast guitar / bass guitar / vocals,D.O. Misiani / Shirati Jazz,1,830
+mbalax,Mbalax,ンバラ,,セネガルのサバール太鼓が躍るポップ,Senegalese pop driven by sabar drums,4,激情/祝祭/トランス,sabar drums / tama / electric guitar / synth,Youssou N'Dour / Baaba Maal,1,840
+desert_blues,Desert Blues,デザート・ブルース,,サハラのトゥアレグによる砂漠のギター,Saharan Tuareg desert guitar blues,3,広大/孤独/郷愁,electric guitar / calabash / bass drone / vocals,Tinariwen / Ali Farka Touré / Mdou Moctar,1,850
+ethio_jazz,Ethio-jazz,エチオ・ジャズ,,エチオピア音階とジャズの融合,Fusion of Ethiopian scales and jazz,3,神秘/哀愁/エキゾチック,vibraphone / organ / tenor sax / congas / flute,Mulatu Astatke / Mahmoud Ahmed,1,860
+chimurenga,Chimurenga,チムレンガ,,ムビラの祈りが宿るジンバブエの抵抗歌,Zimbabwe protest music carrying mbira prayer,3,力強い/大地的/祈り,mbira / hosho / electric guitar / bass,Thomas Mapfumo / Stella Chiweshe,1,870
+isicathamiya,Isicathamiya,イシカタミヤ,,ズールーの男声が織る静かなアカペラ合唱,Soft Zulu a-cappella male harmony,2,荘厳/温かい/ハーモニー,male a-cappella chorus / bass voice / tenor lead,Ladysmith Black Mambazo,1,880
+gnawa,Gnawa,グナワ,,モロッコの黒人霊的音楽,Moroccan Black spiritual trance music,3,トランス/神秘/スピリチュアル,guembri / qraqeb / hand claps / vocals,Maâlem Mahmoud Gania / Hassan Hakmoun,1,890
+mahraganat,Mahraganat,マハラガナート,,カイロのストリート発エレクトロ・シャアビ,Cairo street electro-shaabi,4,ストリート/熱狂/エレクトロ,autotune vocals / synth / drum machine / 808,Sadat / Oka Wi Ortega,1,900
+arabic_tarab,Arabic Tarab,アラビック/タラブ,,マカームと歌の恍惚を追うアラブ古典歌謡,Classic Arabic song chasing maqam ecstasy,3,恍惚/情熱/哀愁,oud / qanun / nay / riq / violin section,Umm Kulthum / Fairuz / Abdel Halim Hafez,1,910
+khaleeji,Khaleeji,ハリージ,,湾岸アラブの荘厳でリズミカルな音楽,Stately rhythmic music of the Arab Gulf,3,砂漠/祝祭/荘厳,oud / mirwas / tabl / hand claps / vocals,Abdul Majeed Abdullah / Ahlam,1,920
+kwaito,Kwaito,クワイト,,南ア発のスローなハウス派生,Slow house offshoot from South Africa,3,アーバン/レイドバック/グルーヴ,slowed house beats / deep bass / synth pads / chants,Mandoza / Boom Shaka,1,930
+amapiano,Amapiano,アマピアノ,,南ア発のログドラムが響くハウス,South African house with log-drum bass,4,おしゃれ/ラウンジ/パーティー,log drum / jazzy piano / shaker / synth pads,Kabza De Small / DJ Maphorisa,1,940
+gqom,Gqom,ゴム,,ダーバン発の硬質ミニマルなダンス,Raw minimal dance music from Durban,4,硬質/ミニマル/ダーク,raw drums / sub-bass / minimal synth / chants,DJ Lag / Babes Wodumo,1,950
+kuduro,Kuduro,クドゥーロ,,アンゴラの高速エレクトロ・ダンス,Fast Angolan electronic dance music,5,高速/エレクトロ/爆発,fast electronic beats / percussion / shouts / synth,Dog Murras / Os Lambas,1,960
+semba,Semba,センバ,,アンゴラのサンバの祖となった音楽,Angolan music ancestral to samba,3,陽気/土着/祝祭,dikanza / guitar / accordion / percussion,Bonga / Waldemar Bastos,1,970
+morna,Morna,モルナ,,カーボベルデの哀愁の歌,Melancholic song of Cape Verde,2,哀愁/サウダージ/夜,acoustic guitar / cavaquinho / violin / piano,Cesária Évora,1,980
+ottoman_classical,Ottoman Classical,オスマン古典音楽,,トルコ宮廷のマカームに基づく荘厳な器楽歌曲,Stately Turkish court makam music,2,荘厳/宮廷/瞑想,ney / kanun / tanbur / kemençe / vocals,Tanburi Cemil Bey / Münir Nurettin Selçuk,1,990
+anatolian_rock,Anatolian Rock,アナトリアン・ロック,,トルコ民謡とロックの融合,Fusion of Turkish folk and rock,4,サイケ/民謡/熱情,bağlama / electric guitar / organ / drums,Barış Manço / Selda Bağcan / Erkin Koray,1,1000
+sufi,Sufi / Whirling,スーフィー/旋舞,,旋舞とともに高まるトランス的な祈りの音楽,Trance prayer music of the whirling dervishes,2,トランス/神秘/祈り,ney / frame drum / chanting / drone,Mevlana ensembles / Mercan Dede,1,1010
+persian,Persian Classical,ペルシャ古典音楽,,ラディーフに基づくイランの詩的で瞑想的な音楽,Poetic meditative Iranian radif music,2,詩的/神秘/瞑想,tar / setar / santur / tombak / kamancheh,Mohammad Reza Shajarian / Shahram Nazeri,1,1020
+israeli_fusion,Middle Eastern Fusion,中東フュージョン,,中東の音階と西洋ポップが交わる多文化サウンド,Multicultural blend of Middle Eastern scales and Western pop,4,多文化/エネルギッシュ/ダンサブル,darbuka / oud / electric bass / synth,Idan Raichel / Balkan Beat Box,1,1030
+flamenco,Flamenco,フラメンコ,,アンダルシアの歌・ギター・踊りの激情,Andalusian passion of song guitar and dance,4,情熱/哀愁/ドラマチック,flamenco guitar / palmas / cajón / castanets,Paco de Lucía / Camarón de la Isla,1,1040
+fado,Fado,ファド,,リスボンに響く宿命の歌,Lisbon songs of saudade and fate,2,哀愁/サウダージ/運命,Portuguese guitar / classical guitar / upright bass,Amália Rodrigues / Mariza,1,1050
+chanson,Chanson,シャンソン,,歌詞を重んじるフランスの歌,French song that prizes lyrics,3,洗練/ロマンティック/パリ,accordion / piano / upright bass / strings,Edith Piaf / Jacques Brel / Charles Aznavour,1,1060
+musette,Musette,ミュゼット,,アコーディオンが彩るパリの舞踏音楽,Parisian accordion dance music,3,ノスタルジック/街角/ワルツ,musette accordion / violin / guitar / upright bass,Yvette Horner / Jo Privat,1,1070
+canzone_napoletana,Neapolitan Song,カンツォーネ・ナポレターナ,,ナポリの伝統歌曲,Traditional song of Naples,3,ロマンティック/太陽/朗らか,mandolin / guitar / accordion / strings,Roberto Murolo / Sergio Bruni,1,1080
+tarantella,Tarantella,タランテラ,,加速していく南イタリアの熱狂的な舞踏,Frenzied accelerating dance of southern Italy,5,狂騒/祝祭/加速,mandolin / tambourine / accordion / violin,Canzoniere Grecanico Salentino,1,1090
+rebetiko,Rebetiko,レベティコ,,ギリシャの都市下層が生んだブルース的歌,Greek urban blues-like song,3,哀愁/アウトロー/酒場,bouzouki / baglamas / guitar / violin,Markos Vamvakaris / Vassilis Tsitsanis,1,1100
+irish_folk,Irish Folk,アイリッシュ・フォーク,,アイルランドの伝統音楽,Traditional music of Ireland,3,郷愁/酒場/壮大,tin whistle / uilleann pipes / fiddle / bodhrán,The Chieftains / Planxty / Clannad,1,1110
+polka,Polka,ポルカ,,ビアホールを跳ねさせる中欧の陽気な2拍子,Cheerful Central European beer-hall dance,4,陽気/お祭り/ビアホール,accordion / tuba / clarinet / trumpet,Czech and German brass bands,1,1120
+balkan_brass,Balkan Brass,バルカン・ブラス,,変拍子で疾走するバルカンの狂騒ブラス,Frenzied odd-meter Balkan brass,5,狂騒/祝祭/カオス,trumpet ensemble / tuba / zurna / snare,Fanfare Ciocărlia / Boban Marković / Goran Bregović,1,1130
+klezmer,Klezmer,クレズマー,,泣き笑うクラリネットの東欧ユダヤ音楽,Eastern European Jewish music of the wailing clarinet,4,哀愁/狂喜/泣き笑い,clarinet / violin / accordion / tsimbl,The Klezmatics / Giora Feidman,1,1140
+gypsy_romani,Gypsy / Romani,ジプシー/ロマ音楽,,自由と哀愁が乱舞する超絶技巧のロマ音楽,Virtuosic Romani music of freedom and longing,4,哀愁/情熱/自由,violin / cimbalom / accordion / upright bass,Taraf de Haïdouks / Kočani Orkestar,1,1150
+csardas,Csárdás,チャールダーシュ,,静から狂へ加速するハンガリーの舞踏,Hungarian dance accelerating from slow to wild,4,哀愁→狂喜/加速,virtuosic violin / cimbalom / clarinet / bass,Hungarian Roma ensembles,1,1160
+bulgarian_voices,Bulgarian Voices,ブルガリアン・ヴォイス,,不協和な女声が異界を開くブルガリア合唱,Otherworldly dissonant Bulgarian female choir,2,神秘/荘厳/異界的,women's chorus / drone / gadulka / kaval,Le Mystère des Voix Bulgares,1,1170
+russian_folk,Russian Folk,ロシア民謡,,哀愁と壮大さが同居するロシアの歌,Russian song of longing and grandeur,3,哀愁/壮大/冬,balalaika / bayan / domra / choir,Red Army Choir / Pyatnitsky Choir,1,1180
+nordic_folk,Nordic Folk,北欧フォーク,,森と静寂が宿る北欧の澄んだ民俗音楽,Clear Nordic folk of forest and silence,2,澄んだ/静寂/冬,Hardanger fiddle / nyckelharpa / kantele / drone,Wardruna / Hedningarna / Garmarna,1,1190
+estonian_choral,Baltic Choral,バルト合唱,,祈りのように透明なバルトの合唱,Translucent prayer-like Baltic choral music,2,透明/祈り/静謐,mixed choir / kannel / organ,Arvo Pärt / Veljo Tormis,1,1200
+sami_joik,Sami Joik,サーミ・ヨイク,,自然そのものを描く北欧サーミの原初の歌,Primal Sami chant that depicts nature itself,2,原始的/自然/スピリチュアル,unaccompanied vocal chant / frame drum / drone,Mari Boine / Wimme Saari,1,1210
+filmi,Filmi,フィルミー,,インド映画の劇中歌。ボリウッドの中心,Indian film songs at the heart of Bollywood,5,ゴージャス/祝祭/ドラマチック,tabla / dholak / sitar / strings / dhol,A.R. Rahman / Lata Mangeshkar / Kishore Kumar,1,1220
+hindustani,Hindustani Classical,ヒンドゥスターニー音楽,,北インドの古典音楽,North Indian classical music,3,瞑想/宇宙的/深遠,sitar / tabla / tanpura / sarangi / bansuri,Ravi Shankar / Zakir Hussain / Hariprasad Chaurasia,1,1230
+carnatic,Carnatic Music,カルナーティック音楽,,南インドの古典音楽,South Indian classical music,3,技巧的/精緻/数学的,veena / mridangam / violin / ghatam / kanjira,M.S. Subbulakshmi / T.M. Krishna,1,1240
+bhangra,Bhangra,バングラー,,パンジャブの収穫祭発の躍動ダンス音楽,Punjabi harvest dance music,5,祝祭/パーティー/爆発,dhol / tumbi / chimta / electronic beats,Daler Mehndi / Panjabi MC,1,1250
+baul,Baul,バウル,,ベンガルの吟遊詩人による神秘の歌,Mystic songs of Bengal wandering minstrels,3,スピリチュアル/放浪/自由,ektara / dotara / duggi / ankle bells,Purna Das Baul / Parvathy Baul,1,1260
+rajasthani,Rajasthani Folk,ラジャスタン民謡,,砂漠の放浪楽師が奏でる華やかな民俗音楽,Vibrant desert folk of Rajasthan,3,砂漠/放浪/華やか,sarangi / morchang / dholak / khartaal,Manganiyar musicians / Langa musicians,1,1270
+goa_trance,Goa Trance,ゴア・トランス,,ゴアのビーチ発の幻想的トランス,Psychedelic trance born on Goa beaches,4,幻想/反復/トランス,acid synth / 303 bass / four-on-the-floor / pads,Goa Gil / Astral Projection,1,1280
+qawwali,Qawwali,カッワーリー,,スーフィーの熱狂的な宗教歌,Ecstatic Sufi devotional song,4,スピリチュアル/恍惚/トランス,harmonium / tabla / dholak / hand claps / vocals,Nusrat Fateh Ali Khan / Sabri Brothers,1,1290
+gamelan,Gamelan,ガムラン,,打楽器合奏によるジャワ・バリの伝統音楽,Javanese and Balinese percussion orchestra music,3,神秘/トランス/王宮的,metallophones / gongs / kendang / suling,Javanese and Balinese gamelan ensembles,1,1300
+dangdut,Dangdut,ダンドゥット,,インドネシアの大衆ポップ,Indonesia popular dance-pop,4,ポップ/ダンサブル/庶民的,tabla / flute / mandolin / electric guitar / gendang,Rhoma Irama / Inul Daratista,1,1310
+thai_luk_thung,Luk Thung,ルークトゥン,,哀愁とメロドラマを歌うタイの大衆歌謡,Melodramatic Thai country song,3,哀愁/田舎/メロドラマ,phin / khlui / ranat / Western band,Pumpuang Duangjan / Suraphol Sombatcharoen,1,1320
+vietnamese,Vietnamese Traditional,ベトナム伝統音楽,,水墨画のように繊細なベトナムの伝統音楽,Delicate ink-wash-like Vietnamese tradition,2,繊細/哀愁/水墨画的,đàn tranh / đàn bầu / sáo / đàn nguyệt,traditional ca trù ensembles,1,1330
+chinese_traditional,Chinese Traditional,中国伝統音楽,,二胡と古筝が描く悠久の中国伝統音楽,Timeless Chinese tradition of erhu and guzheng,2,雅/悠久/大陸的,erhu / pipa / guzheng / dizi / yangqin,女子十二楽坊,1,1340
+peking_opera,Peking Opera,京劇,,銅鑼と裏声が劇的に交錯する中国の伝統劇,Dramatic Chinese opera of gongs and falsetto,4,劇的/華麗/戦闘的,jinghu / gongs / cymbals / wooden clappers,Mei Lanfang,1,1350
+shidaiqu,Shidaiqu,時代曲,,上海発の中国ポップの源流,The root of Chinese pop from Shanghai,3,ノスタルジック/退廃/上海,jazz band / strings / Chinese melody / vocals,周璇 / 白光,1,1360
+chinese_rock,Chinese Rock,中国ロック,,北京を中心に育った中国語ロック,Chinese-language rock centered on Beijing,4,反骨/熱情/ロック,electric guitar / bass / drums / vocals,崔健 / 唐朝,1,1370
+kpop,K-Pop,K-POP,,韓国発の世界的ポップ,Global pop from South Korea,4,モダン/キャッチー/プロダクション,crisp synth / 808 / layered vocals / EDM drops,BTS / BLACKPINK / SEVENTEEN,1,1380
+trot,Trot,トロット,,韓国最古のポピュラー歌謡,Korea oldest popular song genre,3,哀愁/こぶし/レトロ,brass / strings / electronic beat / vocals,이미자 / 나훈아,1,1390
+city_pop,City Pop,シティ・ポップ,,80年代東京の都会的でメロウなポップス,Mellow urban Tokyo pop of the 1980s,3,おしゃれ/レトロ/メロウ,chorus guitar / slap bass / electric piano / LinnDrum,山下達郎 / 竹内まりや / 大貫妙子,1,1400
+jp_jazz_fusion,Japanese Jazz Fusion,和ジャズ・フュージョン,jazz_fusion,70〜80年代日本のクロスオーバー,Japanese crossover-fusion of the 70s and 80s,4,技巧/疾走/都会,electric piano / guitar / synth / funk bass,Casiopea / T-Square / 渡辺香津美,1,1410
+shibuya_kei,Shibuya-kei,渋谷系,,90年代渋谷発のおしゃれな折衷ポップ,Stylish eclectic pop from 1990s Shibuya,3,おしゃれ/折衷/レトロ,bossa samples / strings / vintage synth / breakbeat,Pizzicato Five / Cornelius / Flipper's Guitar,1,1420
+kayokyoku,Kayōkyoku,歌謡曲,,昭和の日本ポピュラー歌謡,Shōwa-era Japanese popular song,3,歌謡/メロディ/昭和,strings / brass / band / vocals,美空ひばり / 山口百恵 / 沢田研二,1,1430
+jp_funk,Japanese Funk,和ファンク,funk,世界のディガーに人気の和モノ・ファンク,Japanese funk prized by global diggers,4,グルーヴ/和モノ/ファンキー,slap bass / wah guitar / horns / drums,鈴木茂 / 久保田麻琴,1,1440
+enka,Enka,演歌,,こぶしと情念で日本の心を歌う大衆歌謡,Japanese ballad of vibrato and deep sentiment,3,こぶし/情念/日本的,shamisen / shakuhachi / strings / vocals,美空ひばり / 北島三郎 / 八代亜紀,1,1450
+gagaku,Gagaku,雅楽,,千年を超えて受け継がれる日本の宮廷雅楽,Japan millennium-old imperial court music,1,荘厳/古代/神聖,shō / hichiriki / ryūteki / biwa / kakko,宮内庁式部職楽部,1,1460
+okinawan_folk,Okinawan Folk,沖縄民謡,,三線と琉球音階が彩る沖縄の伝統音楽,Okinawan traditional music of sanshin and Ryukyu scales,2,海/島/郷愁,sanshin / island drum / Ryukyu scale / vocals,嘉手苅林昌 / りんけんバンド,1,1470
+shimauta,Shimauta,島唄,,奄美・沖縄の島々に伝わる唄,Island songs of Amami and Okinawa,2,島/郷愁/祝祭,sanshin / hayashi / vocals,朝崎郁恵 / 元ちとせ,1,1480
+khoomei,Khoomei,ホーミー,,モンゴルの喉歌（倍音唱法）,Mongolian throat singing,2,原始的/自然/神秘,morin khuur / throat singing / drone,Batzorig Vaanchig / Khusugtun,1,1490
+polynesian,Polynesian,ポリネシアン,,海と大地を讃える太平洋諸島の合唱,Pacific-island harmony praising sea and land,3,海洋/壮大/部族的,log drum / ukulele / group vocals / conch shell,Te Vaka,1,1500
+maori_haka,Maori Haka,マオリ・ハカ,,大地を踏み鳴らすマオリの力の歌,Maori chant of power and unity,5,威嚇/力/団結,body percussion / foot stomping / group chant,Kapa haka groups,1,1510
+aboriginal,Aboriginal,アボリジナル,,ディジュリドゥが鳴るオーストラリア先住民の音,Indigenous Australian sound of the didgeridoo,2,原始/大地/ドリームタイム,didgeridoo / clapsticks / body percussion / drone,Yothu Yindi / Gurrumul,1,1520
+grime,Grime,グライム,,ロンドン発の高速エレクトロニック・ラップ,Fast electronic rap from London,4,アーバン/攻撃的/疾走,140bpm beats / sub-bass / synth stabs / MC vocals,Wiley / Skepta / Stormzy,1,1530
+uk_garage,UK Garage,UKガラージ,,ロンドンのクラブ発の跳ねるダンス音楽,Bouncy London club dance music,4,アーバン/おしゃれ/跳ねる,2-step beats / sub-bass / soulful vocals / synth,MJ Cole / Artful Dodger,1,1540
+jungle,Jungle,ジャングル,,切り刻んだブレイクと重低音の英国ダンス,UK dance of chopped breaks and heavy bass,4,疾走/アーバン/ダーク,breakbeats / sub-bass / amen break / reggae samples,Goldie / LTJ Bukem,1,1550
+trip_hop,Trip Hop,トリップ・ホップ,,ブリストル発の陰鬱でダウンテンポなサウンド,Moody downtempo sound from Bristol,2,ダーク/アーバン/けだるい,slow beats / turntablism / dark atmosphere / samples,Massive Attack / Portishead / Tricky,1,1560
+berlin_techno,Berlin Techno,ベルリン・テクノ,,壁崩壊後のベルリンで育った硬派テクノ,Hard techno that grew in post-wall Berlin,4,硬質/反復/ダーク,driving kick / analog synth / hypnotic loops / hi-hats,Ben Klock / Marcel Dettmann,1,1570
+krautrock,Krautrock,クラウトロック,,反復と実験のドイツ実験ロック,German experimental rock of repetition,3,反復/実験/宇宙的,motorik drums / analog synth / electric guitar / sequencer,Can / Neu! / Kraftwerk,1,1580
+quebecois_folk,Québécois Folk,ケベック伝統音楽,,フランス系カナダの足踊りとフィドルが弾む伝統音楽,Foot-tapping fiddle folk of French Canada,3,陽気/素朴/祝祭,fiddle / accordion / foot percussion / spoons,La Bottine Souriante / Le Vent du Nord,1,1590
+inuit_throat_singing,Inuit Throat Singing,イヌイットの喉歌,,二人一組で息を交わすカナダ北極圏の喉歌,Inuit katajjaq throat-singing duets of the Arctic,2,原始的/遊戯的/親密,paired throat singing / breath rhythm / vocal games,Tanya Tagaq,1,1600
+russian_rock,Russian Rock,ロシアン・ロック,,ソ連末期のレニングラードで燃えた詩的なロック,Poetic rock from late-Soviet Leningrad,4,反骨/詩的/哀愁,electric guitar / bass / drums / vocals,Kino / Aquarium / DDT,1,1610
+tuvan_throat_singing,Tuvan Throat Singing,トゥバ喉歌,,シベリア・トゥバの大地に響く倍音の喉歌,Harmonic throat singing of Siberian Tuva,2,原始的/大地的/神秘,igil / doshpuluur / throat singing / drone,Huun-Huur-Tu / Yat-Kha,1,1620
+yodel,Yodel,ヨーデル,,アルプスにこだまする裏声の切り替え唱法,Alpine falsetto-switching mountain song,3,牧歌/澄んだ/祝祭,yodeling vocals / alphorn / accordion / hand bells,Swiss Naturjodel ensembles,1,1630
+scottish_folk,Scottish / Celtic,スコティッシュ/ケルト,,バグパイプが勇壮に鳴るスコットランドのケルト音楽,Stirring Scottish Celtic music of the bagpipes,3,勇壮/郷愁/祝祭,Highland bagpipes / fiddle / bodhrán / accordion,Runrig / Capercaillie / Battlefield Band,1,1640
+breton_celtic,Breton Celtic,ブルトン/ケルト音楽,,ブルターニュのケルト復興とフェスト・ノーズの舞踏,Breton Celtic revival and fest-noz dance,3,郷愁/祝祭/神秘,bombarde / biniou / Celtic harp / fiddle,Alan Stivell / Tri Yann,1,1650
+galician_celtic,Galician Celtic,ガリシア/ケルト音楽,,スペイン北西部に残るガイタのケルト音楽,Galician bagpipe Celtic music of NW Spain,3,郷愁/祝祭/大地的,gaita / tamboril / hurdy-gurdy / pandeireta,Carlos Núñez / Luar na Lubre,1,1660
+georgian_polyphony,Georgian Polyphony,ジョージア多声合唱,,男声が幾重にも重なるジョージアの古代多声合唱,Ancient Georgian polyphonic male choral singing,2,荘厳/神秘/大地的,a-cappella male choir / drone / close harmony,Rustavi Choir / Ensemble Basiani,1,1670
+chanson_quebecoise,Chanson Québécoise,シャンソン・ケベコワ,,フランス語で歌うケベックの抒情的なシャンソン／ポップ。アイデンティティの象徴,French-language Québécois chanson and song — an emblem of identity,3,抒情/郷愁/誇り,acoustic guitar / piano / accordion / strings,Félix Leclerc / Gilles Vigneault / Robert Charlebois,1,1680

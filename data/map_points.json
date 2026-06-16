@@ -1,0 +1,1237 @@
+[
+ {
+  "placeId": "cuba_havana",
+  "label": "Havana",
+  "labelJa": "ハバナ",
+  "flag": "🇨🇺",
+  "lat": 23.1136,
+  "lon": -82.3666,
+  "genreIds": [
+   "afro_cuban_jazz",
+   "bolero_cubano",
+   "chacha",
+   "mambo",
+   "salsa_cubana",
+   "guaguanco",
+   "rumba_cubana",
+   "son_cubano"
+  ]
+ },
+ {
+  "placeId": "cuba_matanzas",
+  "label": "Matanzas",
+  "labelJa": "マタンサス",
+  "flag": "🇨🇺",
+  "lat": 23.0411,
+  "lon": -81.5775,
+  "genreIds": [
+   "guaguanco",
+   "rumba_columbia",
+   "rumba_cubana"
+  ]
+ },
+ {
+  "placeId": "cuba_santiago",
+  "label": "Santiago de Cuba",
+  "labelJa": "サンティアゴ・デ・クーバ",
+  "flag": "🇨🇺",
+  "lat": 20.0247,
+  "lon": -75.8219,
+  "genreIds": [
+   "son_cubano",
+   "trova"
+  ]
+ },
+ {
+  "placeId": "usa_new_orleans",
+  "label": "New Orleans",
+  "labelJa": "ニューオーリンズ",
+  "flag": "🇺🇸",
+  "lat": 29.9511,
+  "lon": -90.0715,
+  "genreIds": [
+   "brass_band",
+   "dixieland",
+   "new_orleans_funk",
+   "new_orleans_jazz"
+  ]
+ },
+ {
+  "placeId": "usa_new_york",
+  "label": "New York",
+  "labelJa": "ニューヨーク",
+  "flag": "🇺🇸",
+  "lat": 40.7128,
+  "lon": -74.006,
+  "genreIds": [
+   "bebop",
+   "boogaloo",
+   "disco",
+   "doo_wop",
+   "hard_bop",
+   "jazz_fusion",
+   "swing_big_band",
+   "rnb_neo_soul",
+   "salsa_ny"
+  ]
+ },
+ {
+  "placeId": "usa_chicago",
+  "label": "Chicago",
+  "labelJa": "シカゴ",
+  "flag": "🇺🇸",
+  "lat": 41.8781,
+  "lon": -87.6298,
+  "genreIds": [
+   "chicago_blues",
+   "gospel",
+   "house"
+  ]
+ },
+ {
+  "placeId": "usa_detroit",
+  "label": "Detroit",
+  "labelJa": "デトロイト",
+  "flag": "🇺🇸",
+  "lat": 42.3314,
+  "lon": -83.0458,
+  "genreIds": [
+   "detroit_techno",
+   "motown"
+  ]
+ },
+ {
+  "placeId": "usa_nashville",
+  "label": "Nashville",
+  "labelJa": "ナッシュビル",
+  "flag": "🇺🇸",
+  "lat": 36.1627,
+  "lon": -86.7816,
+  "genreIds": [
+   "bluegrass",
+   "country"
+  ]
+ },
+ {
+  "placeId": "usa_los_angeles",
+  "label": "Los Angeles",
+  "labelJa": "ロサンゼルス",
+  "flag": "🇺🇸",
+  "lat": 34.0522,
+  "lon": -118.2437,
+  "genreIds": [
+   "smooth_jazz",
+   "surf_rock",
+   "west_coast_jazz",
+   "funk"
+  ]
+ },
+ {
+  "placeId": "usa_memphis",
+  "label": "Memphis",
+  "labelJa": "メンフィス",
+  "flag": "🇺🇸",
+  "lat": 35.1495,
+  "lon": -90.049,
+  "genreIds": [
+   "memphis_blues",
+   "soul"
+  ]
+ },
+ {
+  "placeId": "usa_honolulu",
+  "label": "Honolulu",
+  "labelJa": "ホノルル",
+  "flag": "🇺🇸",
+  "lat": 21.3069,
+  "lon": -157.8583,
+  "genreIds": [
+   "hawaiian"
+  ]
+ },
+ {
+  "placeId": "brazil_rio",
+  "label": "Rio de Janeiro",
+  "labelJa": "リオデジャネイロ",
+  "flag": "🇧🇷",
+  "lat": -22.9068,
+  "lon": -43.1729,
+  "genreIds": [
+   "bossa_nova",
+   "choro",
+   "samba"
+  ]
+ },
+ {
+  "placeId": "brazil_bahia",
+  "label": "Salvador (Bahia)",
+  "labelJa": "サルヴァドール（バイーア）",
+  "flag": "🇧🇷",
+  "lat": -12.9777,
+  "lon": -38.5016,
+  "genreIds": [
+   "axe",
+   "samba_reggae"
+  ]
+ },
+ {
+  "placeId": "brazil_recife",
+  "label": "Recife",
+  "labelJa": "レシフェ",
+  "flag": "🇧🇷",
+  "lat": -8.0476,
+  "lon": -34.877,
+  "genreIds": [
+   "frevo",
+   "maracatu"
+  ]
+ },
+ {
+  "placeId": "brazil_sao_paulo",
+  "label": "São Paulo",
+  "labelJa": "サンパウロ",
+  "flag": "🇧🇷",
+  "lat": -23.5505,
+  "lon": -46.6333,
+  "genreIds": [
+   "mpb"
+  ]
+ },
+ {
+  "placeId": "brazil_fortaleza",
+  "label": "Fortaleza",
+  "labelJa": "フォルタレザ",
+  "flag": "🇧🇷",
+  "lat": -3.7319,
+  "lon": -38.5267,
+  "genreIds": [
+   "baiao",
+   "forro"
+  ]
+ },
+ {
+  "placeId": "jamaica_kingston",
+  "label": "Kingston",
+  "labelJa": "キングストン",
+  "flag": "🇯🇲",
+  "lat": 17.9714,
+  "lon": -76.792,
+  "genreIds": [
+   "dancehall",
+   "dub",
+   "reggae",
+   "rocksteady",
+   "ska"
+  ]
+ },
+ {
+  "placeId": "japan_tokyo",
+  "label": "Tokyo",
+  "labelJa": "東京",
+  "flag": "🇯🇵",
+  "lat": 35.6762,
+  "lon": 139.6503,
+  "genreIds": [
+   "city_pop",
+   "shibuya_kei",
+   "jp_jazz_fusion"
+  ]
+ },
+ {
+  "placeId": "japan_osaka",
+  "label": "Osaka",
+  "labelJa": "大阪",
+  "flag": "🇯🇵",
+  "lat": 34.6937,
+  "lon": 135.5023,
+  "genreIds": [
+   "enka",
+   "jp_funk",
+   "kayokyoku"
+  ]
+ },
+ {
+  "placeId": "japan_okinawa",
+  "label": "Naha (Okinawa)",
+  "labelJa": "那覇（沖縄）",
+  "flag": "🇯🇵",
+  "lat": 26.2124,
+  "lon": 127.6809,
+  "genreIds": [
+   "okinawan_folk",
+   "shimauta"
+  ]
+ },
+ {
+  "placeId": "argentina_buenos",
+  "label": "Buenos Aires",
+  "labelJa": "ブエノスアイレス",
+  "flag": "🇦🇷",
+  "lat": -34.6037,
+  "lon": -58.3816,
+  "genreIds": [
+   "milonga",
+   "tango"
+  ]
+ },
+ {
+  "placeId": "colombia_cartagena",
+  "label": "Cartagena",
+  "labelJa": "カルタヘナ",
+  "flag": "🇨🇴",
+  "lat": 10.391,
+  "lon": -75.4794,
+  "genreIds": [
+   "champeta",
+   "cumbia"
+  ]
+ },
+ {
+  "placeId": "colombia_cali",
+  "label": "Cali",
+  "labelJa": "カリ",
+  "flag": "🇨🇴",
+  "lat": 3.4516,
+  "lon": -76.532,
+  "genreIds": [
+   "salsa_calena"
+  ]
+ },
+ {
+  "placeId": "mexico_veracruz",
+  "label": "Veracruz",
+  "labelJa": "ベラクルス",
+  "flag": "🇲🇽",
+  "lat": 19.1738,
+  "lon": -96.1342,
+  "genreIds": [
+   "son_jarocho"
+  ]
+ },
+ {
+  "placeId": "nigeria_lagos",
+  "label": "Lagos",
+  "labelJa": "ラゴス",
+  "flag": "🇳🇬",
+  "lat": 6.5244,
+  "lon": 3.3792,
+  "genreIds": [
+   "afrobeat",
+   "juju"
+  ]
+ },
+ {
+  "placeId": "ghana_accra",
+  "label": "Accra",
+  "labelJa": "アクラ",
+  "flag": "🇬🇭",
+  "lat": 5.6037,
+  "lon": -0.187,
+  "genreIds": [
+   "highlife"
+  ]
+ },
+ {
+  "placeId": "mali_bamako",
+  "label": "Bamako",
+  "labelJa": "バマコ",
+  "flag": "🇲🇱",
+  "lat": 12.6392,
+  "lon": -8.0029,
+  "genreIds": [
+   "desert_blues"
+  ]
+ },
+ {
+  "placeId": "senegal_dakar",
+  "label": "Dakar",
+  "labelJa": "ダカール",
+  "flag": "🇸🇳",
+  "lat": 14.7167,
+  "lon": -17.4677,
+  "genreIds": [
+   "mbalax"
+  ]
+ },
+ {
+  "placeId": "capeverde_mindelo",
+  "label": "Mindelo",
+  "labelJa": "ミンデロ",
+  "flag": "🇨🇻",
+  "lat": 16.8866,
+  "lon": -24.9956,
+  "genreIds": [
+   "morna"
+  ]
+ },
+ {
+  "placeId": "morocco_essaouira",
+  "label": "Essaouira",
+  "labelJa": "エッサウィラ",
+  "flag": "🇲🇦",
+  "lat": 31.5085,
+  "lon": -9.7595,
+  "genreIds": [
+   "gnawa"
+  ]
+ },
+ {
+  "placeId": "egypt_cairo",
+  "label": "Cairo",
+  "labelJa": "カイロ",
+  "flag": "🇪🇬",
+  "lat": 30.0444,
+  "lon": 31.2357,
+  "genreIds": [
+   "arabic_tarab",
+   "mahraganat"
+  ]
+ },
+ {
+  "placeId": "ethiopia_addis",
+  "label": "Addis Ababa",
+  "labelJa": "アディスアベバ",
+  "flag": "🇪🇹",
+  "lat": 9.03,
+  "lon": 38.74,
+  "genreIds": [
+   "ethio_jazz"
+  ]
+ },
+ {
+  "placeId": "congo_kinshasa",
+  "label": "Kinshasa",
+  "labelJa": "キンシャサ",
+  "flag": "🇨🇩",
+  "lat": -4.4419,
+  "lon": 15.2663,
+  "genreIds": [
+   "soukous"
+  ]
+ },
+ {
+  "placeId": "angola_luanda",
+  "label": "Luanda",
+  "labelJa": "ルアンダ",
+  "flag": "🇦🇴",
+  "lat": -8.839,
+  "lon": 13.2894,
+  "genreIds": [
+   "kuduro",
+   "semba"
+  ]
+ },
+ {
+  "placeId": "southafrica_johannesburg",
+  "label": "Johannesburg",
+  "labelJa": "ヨハネスブルグ",
+  "flag": "🇿🇦",
+  "lat": -26.2041,
+  "lon": 28.0473,
+  "genreIds": [
+   "amapiano",
+   "kwaito"
+  ]
+ },
+ {
+  "placeId": "southafrica_durban",
+  "label": "Durban",
+  "labelJa": "ダーバン",
+  "flag": "🇿🇦",
+  "lat": -29.8587,
+  "lon": 31.0218,
+  "genreIds": [
+   "gqom",
+   "isicathamiya"
+  ]
+ },
+ {
+  "placeId": "portugal_lisbon",
+  "label": "Lisbon",
+  "labelJa": "リスボン",
+  "flag": "🇵🇹",
+  "lat": 38.7223,
+  "lon": -9.1393,
+  "genreIds": [
+   "fado",
+   "morna"
+  ]
+ },
+ {
+  "placeId": "spain_seville",
+  "label": "Seville",
+  "labelJa": "セビリア",
+  "flag": "🇪🇸",
+  "lat": 37.3891,
+  "lon": -5.9845,
+  "genreIds": [
+   "flamenco"
+  ]
+ },
+ {
+  "placeId": "france_paris",
+  "label": "Paris",
+  "labelJa": "パリ",
+  "flag": "🇫🇷",
+  "lat": 48.8566,
+  "lon": 2.3522,
+  "genreIds": [
+   "chanson",
+   "gypsy_jazz",
+   "musette"
+  ]
+ },
+ {
+  "placeId": "germany_berlin",
+  "label": "Berlin",
+  "labelJa": "ベルリン",
+  "flag": "🇩🇪",
+  "lat": 52.52,
+  "lon": 13.405,
+  "genreIds": [
+   "berlin_techno",
+   "krautrock"
+  ]
+ },
+ {
+  "placeId": "italy_naples",
+  "label": "Naples",
+  "labelJa": "ナポリ",
+  "flag": "🇮🇹",
+  "lat": 40.8518,
+  "lon": 14.2681,
+  "genreIds": [
+   "canzone_napoletana",
+   "tarantella"
+  ]
+ },
+ {
+  "placeId": "greece_athens",
+  "label": "Athens",
+  "labelJa": "アテネ",
+  "flag": "🇬🇷",
+  "lat": 37.9838,
+  "lon": 23.7275,
+  "genreIds": [
+   "rebetiko"
+  ]
+ },
+ {
+  "placeId": "ireland_dublin",
+  "label": "Dublin",
+  "labelJa": "ダブリン",
+  "flag": "🇮🇪",
+  "lat": 53.3498,
+  "lon": -6.2603,
+  "genreIds": [
+   "irish_folk"
+  ]
+ },
+ {
+  "placeId": "uk_london",
+  "label": "London",
+  "labelJa": "ロンドン",
+  "flag": "🇬🇧",
+  "lat": 51.5074,
+  "lon": -0.1278,
+  "genreIds": [
+   "acid_jazz",
+   "grime",
+   "jungle",
+   "uk_garage",
+   "bhangra"
+  ]
+ },
+ {
+  "placeId": "uk_bristol",
+  "label": "Bristol",
+  "labelJa": "ブリストル",
+  "flag": "🇬🇧",
+  "lat": 51.4545,
+  "lon": -2.5879,
+  "genreIds": [
+   "trip_hop"
+  ]
+ },
+ {
+  "placeId": "turkey_istanbul",
+  "label": "Istanbul",
+  "labelJa": "イスタンブール",
+  "flag": "🇹🇷",
+  "lat": 41.0082,
+  "lon": 28.9784,
+  "genreIds": [
+   "anatolian_rock",
+   "ottoman_classical"
+  ]
+ },
+ {
+  "placeId": "trinidad_pos",
+  "label": "Port of Spain",
+  "labelJa": "ポートオブスペイン",
+  "flag": "🇹🇹",
+  "lat": 10.6549,
+  "lon": -61.5019,
+  "genreIds": [
+   "calypso",
+   "soca",
+   "steelpan"
+  ]
+ },
+ {
+  "placeId": "dominican_santo_domingo",
+  "label": "Santo Domingo",
+  "labelJa": "サントドミンゴ",
+  "flag": "🇩🇴",
+  "lat": 18.4861,
+  "lon": -69.9312,
+  "genreIds": [
+   "bachata",
+   "merengue"
+  ]
+ },
+ {
+  "placeId": "puertorico_san_juan",
+  "label": "San Juan",
+  "labelJa": "サンファン",
+  "flag": "🇵🇷",
+  "lat": 18.4655,
+  "lon": -66.1057,
+  "genreIds": [
+   "bomba",
+   "plena",
+   "reggaeton"
+  ]
+ },
+ {
+  "placeId": "peru_lima",
+  "label": "Lima",
+  "labelJa": "リマ",
+  "flag": "🇵🇪",
+  "lat": -12.0464,
+  "lon": -77.0428,
+  "genreIds": [
+   "afro_peruvian",
+   "chicha"
+  ]
+ },
+ {
+  "placeId": "india_mumbai",
+  "label": "Mumbai",
+  "labelJa": "ムンバイ",
+  "flag": "🇮🇳",
+  "lat": 19.076,
+  "lon": 72.8777,
+  "genreIds": [
+   "filmi"
+  ]
+ },
+ {
+  "placeId": "india_chennai",
+  "label": "Chennai",
+  "labelJa": "チェンナイ",
+  "flag": "🇮🇳",
+  "lat": 13.0827,
+  "lon": 80.2707,
+  "genreIds": [
+   "carnatic"
+  ]
+ },
+ {
+  "placeId": "india_kolkata",
+  "label": "Kolkata",
+  "labelJa": "コルカタ",
+  "flag": "🇮🇳",
+  "lat": 22.5726,
+  "lon": 88.3639,
+  "genreIds": [
+   "baul"
+  ]
+ },
+ {
+  "placeId": "india_amritsar",
+  "label": "Amritsar",
+  "labelJa": "アムリトサル",
+  "flag": "🇮🇳",
+  "lat": 31.634,
+  "lon": 74.8723,
+  "genreIds": [
+   "bhangra"
+  ]
+ },
+ {
+  "placeId": "india_varanasi",
+  "label": "Varanasi",
+  "labelJa": "ワーラーナシー",
+  "flag": "🇮🇳",
+  "lat": 25.3176,
+  "lon": 82.9739,
+  "genreIds": [
+   "hindustani"
+  ]
+ },
+ {
+  "placeId": "india_goa",
+  "label": "Panaji (Goa)",
+  "labelJa": "パナジ（ゴア）",
+  "flag": "🇮🇳",
+  "lat": 15.4909,
+  "lon": 73.8278,
+  "genreIds": [
+   "goa_trance"
+  ]
+ },
+ {
+  "placeId": "pakistan_lahore",
+  "label": "Lahore",
+  "labelJa": "ラホール",
+  "flag": "🇵🇰",
+  "lat": 31.5497,
+  "lon": 74.3436,
+  "genreIds": [
+   "qawwali"
+  ]
+ },
+ {
+  "placeId": "indonesia_jakarta",
+  "label": "Jakarta",
+  "labelJa": "ジャカルタ",
+  "flag": "🇮🇩",
+  "lat": -6.2088,
+  "lon": 106.8456,
+  "genreIds": [
+   "dangdut"
+  ]
+ },
+ {
+  "placeId": "indonesia_bali",
+  "label": "Denpasar (Bali)",
+  "labelJa": "デンパサール（バリ）",
+  "flag": "🇮🇩",
+  "lat": -8.6705,
+  "lon": 115.2126,
+  "genreIds": [
+   "gamelan"
+  ]
+ },
+ {
+  "placeId": "korea_seoul",
+  "label": "Seoul",
+  "labelJa": "ソウル",
+  "flag": "🇰🇷",
+  "lat": 37.5665,
+  "lon": 126.978,
+  "genreIds": [
+   "kpop",
+   "trot"
+  ]
+ },
+ {
+  "placeId": "china_shanghai",
+  "label": "Shanghai",
+  "labelJa": "上海",
+  "flag": "🇨🇳",
+  "lat": 31.2304,
+  "lon": 121.4737,
+  "genreIds": [
+   "shidaiqu"
+  ]
+ },
+ {
+  "placeId": "china_beijing",
+  "label": "Beijing",
+  "labelJa": "北京",
+  "flag": "🇨🇳",
+  "lat": 39.9042,
+  "lon": 116.4074,
+  "genreIds": [
+   "chinese_rock",
+   "peking_opera"
+  ]
+ },
+ {
+  "placeId": "mongolia_ulaanbaatar",
+  "label": "Ulaanbaatar",
+  "labelJa": "ウランバートル",
+  "flag": "🇲🇳",
+  "lat": 47.8864,
+  "lon": 106.9057,
+  "genreIds": [
+   "khoomei"
+  ]
+ },
+ {
+  "placeId": "cameroon_douala",
+  "label": "Douala",
+  "labelJa": "ドゥアラ",
+  "flag": "🇨🇲",
+  "lat": 4.0511,
+  "lon": 9.7679,
+  "genreIds": [
+   "makossa"
+  ]
+ },
+ {
+  "placeId": "kenya_nairobi",
+  "label": "Nairobi",
+  "labelJa": "ナイロビ",
+  "flag": "🇰🇪",
+  "lat": -1.2921,
+  "lon": 36.8219,
+  "genreIds": [
+   "benga"
+  ]
+ },
+ {
+  "placeId": "zimbabwe_harare",
+  "label": "Harare",
+  "labelJa": "ハラレ",
+  "flag": "🇿🇼",
+  "lat": -17.8252,
+  "lon": 31.0335,
+  "genreIds": [
+   "chimurenga"
+  ]
+ },
+ {
+  "placeId": "mexico_guadalajara",
+  "label": "Guadalajara",
+  "labelJa": "グアダラハラ",
+  "flag": "🇲🇽",
+  "lat": 20.6597,
+  "lon": -103.3496,
+  "genreIds": [
+   "mariachi",
+   "ranchera"
+  ]
+ },
+ {
+  "placeId": "mexico_monterrey",
+  "label": "Monterrey",
+  "labelJa": "モンテレイ",
+  "flag": "🇲🇽",
+  "lat": 25.6866,
+  "lon": -100.3161,
+  "genreIds": [
+   "norteno"
+  ]
+ },
+ {
+  "placeId": "bolivia_lapaz",
+  "label": "La Paz",
+  "labelJa": "ラパス",
+  "flag": "🇧🇴",
+  "lat": -16.5,
+  "lon": -68.1193,
+  "genreIds": [
+   "andean_folk"
+  ]
+ },
+ {
+  "placeId": "usa_lafayette",
+  "label": "Lafayette",
+  "labelJa": "ラファイエット",
+  "flag": "🇺🇸",
+  "lat": 30.2241,
+  "lon": -92.0198,
+  "genreIds": [
+   "zydeco"
+  ]
+ },
+ {
+  "placeId": "usa_clarksdale",
+  "label": "Clarksdale",
+  "labelJa": "クラークスデール",
+  "flag": "🇺🇸",
+  "lat": 34.2001,
+  "lon": -90.5712,
+  "genreIds": [
+   "delta_blues"
+  ]
+ },
+ {
+  "placeId": "usa_asheville",
+  "label": "Asheville",
+  "labelJa": "アッシュビル",
+  "flag": "🇺🇸",
+  "lat": 35.5951,
+  "lon": -82.5515,
+  "genreIds": [
+   "appalachian_folk"
+  ]
+ },
+ {
+  "placeId": "czech_prague",
+  "label": "Prague",
+  "labelJa": "プラハ",
+  "flag": "🇨🇿",
+  "lat": 50.0755,
+  "lon": 14.4378,
+  "genreIds": [
+   "polka"
+  ]
+ },
+ {
+  "placeId": "serbia_belgrade",
+  "label": "Belgrade",
+  "labelJa": "ベオグラード",
+  "flag": "🇷🇸",
+  "lat": 44.7866,
+  "lon": 20.4489,
+  "genreIds": [
+   "balkan_brass"
+  ]
+ },
+ {
+  "placeId": "poland_krakow",
+  "label": "Kraków",
+  "labelJa": "クラクフ",
+  "flag": "🇵🇱",
+  "lat": 50.0647,
+  "lon": 19.945,
+  "genreIds": [
+   "klezmer"
+  ]
+ },
+ {
+  "placeId": "romania_bucharest",
+  "label": "Bucharest",
+  "labelJa": "ブカレスト",
+  "flag": "🇷🇴",
+  "lat": 44.4268,
+  "lon": 26.1025,
+  "genreIds": [
+   "gypsy_romani"
+  ]
+ },
+ {
+  "placeId": "bulgaria_sofia",
+  "label": "Sofia",
+  "labelJa": "ソフィア",
+  "flag": "🇧🇬",
+  "lat": 42.6977,
+  "lon": 23.3219,
+  "genreIds": [
+   "bulgarian_voices"
+  ]
+ },
+ {
+  "placeId": "russia_moscow",
+  "label": "Moscow",
+  "labelJa": "モスクワ",
+  "flag": "🇷🇺",
+  "lat": 55.7558,
+  "lon": 37.6173,
+  "genreIds": [
+   "russian_folk"
+  ]
+ },
+ {
+  "placeId": "norway_oslo",
+  "label": "Oslo",
+  "labelJa": "オスロ",
+  "flag": "🇳🇴",
+  "lat": 59.9139,
+  "lon": 10.7522,
+  "genreIds": [
+   "nordic_folk"
+  ]
+ },
+ {
+  "placeId": "norway_tromso",
+  "label": "Tromsø",
+  "labelJa": "トロムソ",
+  "flag": "🇳🇴",
+  "lat": 69.6492,
+  "lon": 18.9553,
+  "genreIds": [
+   "sami_joik"
+  ]
+ },
+ {
+  "placeId": "estonia_tallinn",
+  "label": "Tallinn",
+  "labelJa": "タリン",
+  "flag": "🇪🇪",
+  "lat": 59.437,
+  "lon": 24.7536,
+  "genreIds": [
+   "estonian_choral"
+  ]
+ },
+ {
+  "placeId": "hungary_budapest",
+  "label": "Budapest",
+  "labelJa": "ブダペスト",
+  "flag": "🇭🇺",
+  "lat": 47.4979,
+  "lon": 19.0402,
+  "genreIds": [
+   "csardas"
+  ]
+ },
+ {
+  "placeId": "uae_dubai",
+  "label": "Dubai",
+  "labelJa": "ドバイ",
+  "flag": "🇦🇪",
+  "lat": 25.2048,
+  "lon": 55.2708,
+  "genreIds": [
+   "khaleeji"
+  ]
+ },
+ {
+  "placeId": "iran_tehran",
+  "label": "Tehran",
+  "labelJa": "テヘラン",
+  "flag": "🇮🇷",
+  "lat": 35.6892,
+  "lon": 51.389,
+  "genreIds": [
+   "persian"
+  ]
+ },
+ {
+  "placeId": "israel_telaviv",
+  "label": "Tel Aviv",
+  "labelJa": "テルアビブ",
+  "flag": "🇮🇱",
+  "lat": 32.0853,
+  "lon": 34.7818,
+  "genreIds": [
+   "israeli_fusion"
+  ]
+ },
+ {
+  "placeId": "turkey_konya",
+  "label": "Konya",
+  "labelJa": "コンヤ",
+  "flag": "🇹🇷",
+  "lat": 37.8746,
+  "lon": 32.4932,
+  "genreIds": [
+   "sufi"
+  ]
+ },
+ {
+  "placeId": "india_jaisalmer",
+  "label": "Jaisalmer",
+  "labelJa": "ジャイサルメール",
+  "flag": "🇮🇳",
+  "lat": 26.9157,
+  "lon": 70.9083,
+  "genreIds": [
+   "rajasthani"
+  ]
+ },
+ {
+  "placeId": "thailand_bangkok",
+  "label": "Bangkok",
+  "labelJa": "バンコク",
+  "flag": "🇹🇭",
+  "lat": 13.7563,
+  "lon": 100.5018,
+  "genreIds": [
+   "thai_luk_thung"
+  ]
+ },
+ {
+  "placeId": "vietnam_hanoi",
+  "label": "Hanoi",
+  "labelJa": "ハノイ",
+  "flag": "🇻🇳",
+  "lat": 21.0285,
+  "lon": 105.8542,
+  "genreIds": [
+   "vietnamese"
+  ]
+ },
+ {
+  "placeId": "china_xian",
+  "label": "Xi'an",
+  "labelJa": "西安",
+  "flag": "🇨🇳",
+  "lat": 34.3416,
+  "lon": 108.9398,
+  "genreIds": [
+   "chinese_traditional"
+  ]
+ },
+ {
+  "placeId": "japan_kyoto",
+  "label": "Kyoto",
+  "labelJa": "京都",
+  "flag": "🇯🇵",
+  "lat": 35.0116,
+  "lon": 135.7681,
+  "genreIds": [
+   "gagaku"
+  ]
+ },
+ {
+  "placeId": "samoa_apia",
+  "label": "Apia",
+  "labelJa": "アピア",
+  "flag": "🇼🇸",
+  "lat": -13.8333,
+  "lon": -171.7667,
+  "genreIds": [
+   "polynesian"
+  ]
+ },
+ {
+  "placeId": "nz_auckland",
+  "label": "Auckland",
+  "labelJa": "オークランド",
+  "flag": "🇳🇿",
+  "lat": -36.8485,
+  "lon": 174.7633,
+  "genreIds": [
+   "maori_haka"
+  ]
+ },
+ {
+  "placeId": "australia_alice",
+  "label": "Alice Springs",
+  "labelJa": "アリススプリングス",
+  "flag": "🇦🇺",
+  "lat": -23.698,
+  "lon": 133.8807,
+  "genreIds": [
+   "aboriginal"
+  ]
+ },
+ {
+  "placeId": "canada_montreal",
+  "label": "Montreal",
+  "labelJa": "モントリオール",
+  "flag": "🇨🇦",
+  "lat": 45.5019,
+  "lon": -73.5674,
+  "genreIds": [
+   "quebecois_folk"
+  ]
+ },
+ {
+  "placeId": "canada_iqaluit",
+  "label": "Iqaluit",
+  "labelJa": "イカルイット",
+  "flag": "🇨🇦",
+  "lat": 63.7467,
+  "lon": -68.517,
+  "genreIds": [
+   "inuit_throat_singing"
+  ]
+ },
+ {
+  "placeId": "russia_spb",
+  "label": "Saint Petersburg",
+  "labelJa": "サンクトペテルブルク",
+  "flag": "🇷🇺",
+  "lat": 59.9311,
+  "lon": 30.3609,
+  "genreIds": [
+   "russian_rock"
+  ]
+ },
+ {
+  "placeId": "russia_kyzyl",
+  "label": "Kyzyl",
+  "labelJa": "クズル",
+  "flag": "🇷🇺",
+  "lat": 51.7191,
+  "lon": 94.4378,
+  "genreIds": [
+   "tuvan_throat_singing"
+  ]
+ },
+ {
+  "placeId": "switzerland_appenzell",
+  "label": "Appenzell",
+  "labelJa": "アッペンツェル",
+  "flag": "🇨🇭",
+  "lat": 47.33,
+  "lon": 9.41,
+  "genreIds": [
+   "yodel"
+  ]
+ },
+ {
+  "placeId": "uk_edinburgh",
+  "label": "Edinburgh",
+  "labelJa": "エディンバラ",
+  "flag": "🇬🇧",
+  "lat": 55.9533,
+  "lon": -3.1883,
+  "genreIds": [
+   "scottish_folk"
+  ]
+ },
+ {
+  "placeId": "france_brest",
+  "label": "Brest",
+  "labelJa": "ブレスト",
+  "flag": "🇫🇷",
+  "lat": 48.3904,
+  "lon": -4.4861,
+  "genreIds": [
+   "breton_celtic"
+  ]
+ },
+ {
+  "placeId": "spain_santiago",
+  "label": "Santiago de Compostela",
+  "labelJa": "サンティアゴ・デ・コンポステーラ",
+  "flag": "🇪🇸",
+  "lat": 42.8782,
+  "lon": -8.5448,
+  "genreIds": [
+   "galician_celtic"
+  ]
+ },
+ {
+  "placeId": "georgia_tbilisi",
+  "label": "Tbilisi",
+  "labelJa": "トビリシ",
+  "flag": "🇬🇪",
+  "lat": 41.7151,
+  "lon": 44.8271,
+  "genreIds": [
+   "georgian_polyphony"
+  ]
+ },
+ {
+  "placeId": "panama_city",
+  "label": "Panama City",
+  "labelJa": "パナマシティ",
+  "flag": "🇵🇦",
+  "lat": 8.9824,
+  "lon": -79.5199,
+  "genreIds": [
+   "reggaeton"
+  ]
+ },
+ {
+  "placeId": "usa_owensboro",
+  "label": "Owensboro",
+  "labelJa": "オーウェンズボロ",
+  "flag": "🇺🇸",
+  "lat": 37.7742,
+  "lon": -87.1133,
+  "genreIds": [
+   "bluegrass"
+  ]
+ },
+ {
+  "placeId": "canada_quebec_city",
+  "label": "Quebec City",
+  "labelJa": "ケベックシティ",
+  "flag": "🇨🇦",
+  "lat": 46.8139,
+  "lon": -71.208,
+  "genreIds": [
+   "chanson_quebecoise"
+  ]
+ }
+]

@@ -1,0 +1,5300 @@
+[
+ {
+  "genreId": "guaguanco",
+  "nameEn": "Guaguancó",
+  "nameJa": "ワワンコ",
+  "parentGenreId": "rumba_cubana",
+  "descriptionJa": "キューバ・ルンバを代表する形式。求愛を踊りで描く",
+  "descriptionEn": "A leading form of Cuban rumba depicting courtship",
+  "energy": 4,
+  "mood": "情熱/求愛/祝祭",
+  "keyInstruments": [
+   "congas",
+   "cajón",
+   "clave",
+   "palmas"
+  ],
+  "referenceArtists": [
+   "Los Muñequitos de Matanzas"
+  ],
+  "keywords": [
+   "guaguancó rumba cubana",
+   "guaguanco",
+   "ルンバ ワワンコ"
+  ],
+  "places": [
+   {
+    "placeId": "cuba_matanzas",
+    "relationType": "origin",
+    "weight": 1.0
+   },
+   {
+    "placeId": "cuba_havana",
+    "relationType": "important",
+    "weight": 0.8
+   }
+  ]
+ },
+ {
+  "genreId": "rumba_cubana",
+  "nameEn": "Rumba Cubana",
+  "nameJa": "ルンバ・クバーナ",
+  "parentGenreId": null,
+  "descriptionJa": "アフロキューバの打楽器と歌・踊りの世俗音楽",
+  "descriptionEn": "Afro-Cuban secular drumming song and dance",
+  "energy": 4,
+  "mood": "祝祭/土着/情熱",
+  "keyInstruments": [
+   "congas",
+   "quinto",
+   "clave",
+   "vocals"
+  ],
+  "referenceArtists": [
+   "Los Muñequitos de Matanzas",
+   "Yoruba Andabo"
+  ],
+  "keywords": [
+   "rumba cubana tradicional",
+   "cuban rumba"
+  ],
+  "places": [
+   {
+    "placeId": "cuba_matanzas",
+    "relationType": "origin",
+    "weight": 1.0
+   },
+   {
+    "placeId": "cuba_havana",
+    "relationType": "important",
+    "weight": 0.8
+   }
+  ]
+ },
+ {
+  "genreId": "afro_cuban_jazz",
+  "nameEn": "Afro-Cuban Jazz",
+  "nameJa": "アフロキューバン・ジャズ",
+  "parentGenreId": null,
+  "descriptionJa": "ジャズとキューバのクラーベが融合したラテンジャズの源流",
+  "descriptionEn": "Root of Latin jazz fusing jazz harmony and clave",
+  "energy": 4,
+  "mood": "洗練/情熱/グルーヴ",
+  "keyInstruments": [
+   "congas",
+   "piano montuno",
+   "brass",
+   "clave"
+  ],
+  "referenceArtists": [
+   "Chano Pozo",
+   "Dizzy Gillespie",
+   "Chucho Valdés"
+  ],
+  "keywords": [
+   "afro cuban jazz",
+   "latin jazz cuba"
+  ],
+  "places": [
+   {
+    "placeId": "cuba_havana",
+    "relationType": "origin",
+    "weight": 1.0
+   }
+  ]
+ },
+ {
+  "genreId": "rumba_columbia",
+  "nameEn": "Rumba Columbia",
+  "nameJa": "ルンバ・コルンビア",
+  "parentGenreId": "rumba_cubana",
+  "descriptionJa": "マタンサス発祥の高速で男性的なルンバ",
+  "descriptionEn": "Fast male solo rumba from Matanzas",
+  "energy": 4,
+  "mood": "高速/男性的/技巧",
+  "keyInstruments": [
+   "quinto",
+   "clave",
+   "palmas",
+   "vocals"
+  ],
+  "referenceArtists": [
+   "Los Muñequitos de Matanzas"
+  ],
+  "keywords": [
+   "rumba columbia cuba",
+   "columbia rumba matanzas"
+  ],
+  "places": [
+   {
+    "placeId": "cuba_matanzas",
+    "relationType": "origin",
+    "weight": 1.0
+   }
+  ]
+ },
+ {
+  "genreId": "son_cubano",
+  "nameEn": "Son Cubano",
+  "nameJa": "ソン・クバーノ",
+  "parentGenreId": null,
+  "descriptionJa": "弦楽器とアフリカの打楽器が出会ったキューバ音楽の根幹",
+  "descriptionEn": "Backbone of Cuban music and mother of salsa",
+  "energy": 3,
+  "mood": "ノスタルジック/陽気/温かい",
+  "keyInstruments": [
+   "tres",
+   "bongos",
+   "maracas",
+   "upright bass",
+   "trumpet"
+  ],
+  "referenceArtists": [
+   "Buena Vista Social Club",
+   "Compay Segundo"
+  ],
+  "keywords": [
+   "son cubano tradicional",
+   "son cubano",
+   "ソン・クバーノ"
+  ],
+  "places": [
+   {
+    "placeId": "cuba_santiago",
+    "relationType": "origin",
+    "weight": 1.0
+   },
+   {
+    "placeId": "cuba_havana",
+    "relationType": "important",
+    "weight": 0.8
+   }
+  ]
+ },
+ {
+  "genreId": "trova",
+  "nameEn": "Trova",
+  "nameJa": "トローバ",
+  "parentGenreId": null,
+  "descriptionJa": "ギターの弾き語りで詩情を歌う伝統",
+  "descriptionEn": "Guitar troubadour song tradition",
+  "energy": 2,
+  "mood": "詩的/哀愁/親密",
+  "keyInstruments": [
+   "acoustic guitar",
+   "vocals"
+  ],
+  "referenceArtists": [
+   "Silvio Rodríguez",
+   "Pablo Milanés"
+  ],
+  "keywords": [
+   "trova cubana",
+   "nueva trova"
+  ],
+  "places": [
+   {
+    "placeId": "cuba_santiago",
+    "relationType": "origin",
+    "weight": 1.0
+   }
+  ]
+ },
+ {
+  "genreId": "salsa_cubana",
+  "nameEn": "Salsa Cubana",
+  "nameJa": "サルサ・クバーナ",
+  "parentGenreId": "son_cubano",
+  "descriptionJa": "ソンを母体に発展したキューバ流ダンス・サルサ",
+  "descriptionEn": "Cuban dance salsa including timba",
+  "energy": 4,
+  "mood": "情熱/祝祭/ダンサブル",
+  "keyInstruments": [
+   "congas",
+   "timbales",
+   "piano montuno",
+   "brass"
+  ],
+  "referenceArtists": [
+   "Los Van Van",
+   "NG La Banda"
+  ],
+  "keywords": [
+   "salsa cubana",
+   "timba cuba"
+  ],
+  "places": [
+   {
+    "placeId": "cuba_havana",
+    "relationType": "origin",
+    "weight": 1.0
+   }
+  ]
+ },
+ {
+  "genreId": "bolero_cubano",
+  "nameEn": "Bolero Cubano",
+  "nameJa": "ボレロ・クバーノ",
+  "parentGenreId": null,
+  "descriptionJa": "サンティアゴ起源のロマンティックなバラード",
+  "descriptionEn": "Romantic ballad form from Santiago",
+  "energy": 2,
+  "mood": "ロマンティック/切ない/夜",
+  "keyInstruments": [
+   "nylon guitar",
+   "bongos",
+   "strings",
+   "piano"
+  ],
+  "referenceArtists": [
+   "Trío Matamoros",
+   "Beny Moré"
+  ],
+  "keywords": [
+   "bolero cubano clásico",
+   "bolero cuba"
+  ],
+  "places": [
+   {
+    "placeId": "cuba_havana",
+    "relationType": "origin",
+    "weight": 1.0
+   }
+  ]
+ },
+ {
+  "genreId": "mambo",
+  "nameEn": "Mambo",
+  "nameJa": "マンボ",
+  "parentGenreId": null,
+  "descriptionJa": "キューバ発の華麗なビッグバンド・ダンス音楽",
+  "descriptionEn": "Flashy Cuban big-band dance music",
+  "energy": 5,
+  "mood": "爆発/祝祭/ゴージャス",
+  "keyInstruments": [
+   "big band brass",
+   "timbales",
+   "congas",
+   "cowbell"
+  ],
+  "referenceArtists": [
+   "Pérez Prado",
+   "Tito Puente",
+   "Machito"
+  ],
+  "keywords": [
+   "mambo cubano",
+   "perez prado mambo"
+  ],
+  "places": [
+   {
+    "placeId": "cuba_havana",
+    "relationType": "origin",
+    "weight": 1.0
+   }
+  ]
+ },
+ {
+  "genreId": "chacha",
+  "nameEn": "Cha-Cha-Chá",
+  "nameJa": "チャチャチャ",
+  "parentGenreId": null,
+  "descriptionJa": "軽快でエレガントなキューバの50年代ダンス",
+  "descriptionEn": "Elegant lighthearted 1950s Cuban dance",
+  "energy": 3,
+  "mood": "エレガント/軽快/キュート",
+  "keyInstruments": [
+   "güiro",
+   "timbales",
+   "flute",
+   "violins",
+   "piano"
+  ],
+  "referenceArtists": [
+   "Enrique Jorrín",
+   "Orquesta Aragón"
+  ],
+  "keywords": [
+   "cha cha cha cuba",
+   "orquesta aragón cha cha chá"
+  ],
+  "places": [
+   {
+    "placeId": "cuba_havana",
+    "relationType": "origin",
+    "weight": 1.0
+   }
+  ]
+ },
+ {
+  "genreId": "new_orleans_jazz",
+  "nameEn": "New Orleans Jazz",
+  "nameJa": "ニューオーリンズ・ジャズ",
+  "parentGenreId": null,
+  "descriptionJa": "ジャズ発祥の地の集団即興スタイル",
+  "descriptionEn": "Collective-improvisation jazz from its birthplace",
+  "energy": 4,
+  "mood": "祝祭/即興/陽気",
+  "keyInstruments": [
+   "cornet",
+   "clarinet",
+   "trombone",
+   "banjo",
+   "tuba"
+  ],
+  "referenceArtists": [
+   "Louis Armstrong",
+   "King Oliver"
+  ],
+  "keywords": [
+   "new orleans jazz traditional",
+   "new orleans jazz"
+  ],
+  "places": [
+   {
+    "placeId": "usa_new_orleans",
+    "relationType": "origin",
+    "weight": 1.0
+   }
+  ]
+ },
+ {
+  "genreId": "dixieland",
+  "nameEn": "Dixieland Jazz",
+  "nameJa": "ディキシーランド・ジャズ",
+  "parentGenreId": "new_orleans_jazz",
+  "descriptionJa": "初期ジャズを継承したアップテンポな合奏",
+  "descriptionEn": "Up-tempo early-jazz ensemble style",
+  "energy": 4,
+  "mood": "陽気/レトロ/賑やか",
+  "keyInstruments": [
+   "trumpet",
+   "clarinet",
+   "trombone",
+   "banjo"
+  ],
+  "referenceArtists": [
+   "Original Dixieland Jass Band"
+  ],
+  "keywords": [
+   "dixieland jazz",
+   "traditional dixieland"
+  ],
+  "places": [
+   {
+    "placeId": "usa_new_orleans",
+    "relationType": "origin",
+    "weight": 1.0
+   }
+  ]
+ },
+ {
+  "genreId": "brass_band",
+  "nameEn": "Brass Band",
+  "nameJa": "ブラスバンド",
+  "parentGenreId": null,
+  "descriptionJa": "ニューオーリンズの金管バンド文化",
+  "descriptionEn": "New Orleans brass-band and second-line culture",
+  "energy": 4,
+  "mood": "パレード/祝祭/ファンキー",
+  "keyInstruments": [
+   "sousaphone",
+   "trumpet",
+   "trombone",
+   "snare"
+  ],
+  "referenceArtists": [
+   "Rebirth Brass Band",
+   "Dirty Dozen Brass Band"
+  ],
+  "keywords": [
+   "new orleans brass band",
+   "second line brass band"
+  ],
+  "places": [
+   {
+    "placeId": "usa_new_orleans",
+    "relationType": "origin",
+    "weight": 1.0
+   }
+  ]
+ },
+ {
+  "genreId": "new_orleans_funk",
+  "nameEn": "New Orleans Funk",
+  "nameJa": "ニューオーリンズ・ファンク",
+  "parentGenreId": "funk",
+  "descriptionJa": "セカンドラインのリズムが効いた南部のファンク",
+  "descriptionEn": "Southern funk built on second-line rhythm",
+  "energy": 4,
+  "mood": "パレード/祝祭/ファンキー",
+  "keyInstruments": [
+   "second line drums",
+   "sousaphone",
+   "brass",
+   "piano"
+  ],
+  "referenceArtists": [
+   "The Meters",
+   "Dr. John",
+   "Trombone Shorty"
+  ],
+  "keywords": [
+   "new orleans funk",
+   "the meters funk"
+  ],
+  "places": [
+   {
+    "placeId": "usa_new_orleans",
+    "relationType": "origin",
+    "weight": 1.0
+   }
+  ]
+ },
+ {
+  "genreId": "zydeco",
+  "nameEn": "Zydeco",
+  "nameJa": "ザイデコ",
+  "parentGenreId": null,
+  "descriptionJa": "ルイジアナのクレオールが生んだアコーディオン・ダンス",
+  "descriptionEn": "Creole accordion dance music of Louisiana",
+  "energy": 4,
+  "mood": "陽気/田舎/パーティー",
+  "keyInstruments": [
+   "accordion",
+   "rubboard",
+   "fiddle",
+   "electric guitar"
+  ],
+  "referenceArtists": [
+   "Clifton Chenier",
+   "Buckwheat Zydeco"
+  ],
+  "keywords": [
+   "zydeco louisiana",
+   "clifton chenier zydeco"
+  ],
+  "places": [
+   {
+    "placeId": "usa_lafayette",
+    "relationType": "origin",
+    "weight": 1.0
+   }
+  ]
+ },
+ {
+  "genreId": "bebop",
+  "nameEn": "Bebop",
+  "nameJa": "ビバップ",
+  "parentGenreId": null,
+  "descriptionJa": "1940年代NY発の高速で複雑なモダンジャズ革命",
+  "descriptionEn": "Fast complex modern-jazz revolution of 1940s NY",
+  "energy": 3,
+  "mood": "高速/技巧/都会",
+  "keyInstruments": [
+   "alto sax",
+   "trumpet",
+   "piano",
+   "upright bass"
+  ],
+  "referenceArtists": [
+   "Charlie Parker",
+   "Dizzy Gillespie"
+  ],
+  "keywords": [
+   "bebop jazz",
+   "charlie parker bebop",
+   "dizzy gillespie bebop"
+  ],
+  "places": [
+   {
+    "placeId": "usa_new_york",
+    "relationType": "origin",
+    "weight": 1.0
+   }
+  ]
+ },
+ {
+  "genreId": "hard_bop",
+  "nameEn": "Hard Bop",
+  "nameJa": "ハードバップ",
+  "parentGenreId": "bebop",
+  "descriptionJa": "ビバップにブルースとゴスペルを注いだ50年代ジャズ",
+  "descriptionEn": "1950s jazz adding blues and gospel to bebop",
+  "energy": 3,
+  "mood": "ブルージー/熱い/都会",
+  "keyInstruments": [
+   "tenor sax",
+   "trumpet",
+   "piano",
+   "drums"
+  ],
+  "referenceArtists": [
+   "Art Blakey",
+   "Horace Silver"
+  ],
+  "keywords": [
+   "hard bop jazz",
+   "art blakey hard bop"
+  ],
+  "places": [
+   {
+    "placeId": "usa_new_york",
+    "relationType": "origin",
+    "weight": 1.0
+   }
+  ]
+ },
+ {
+  "genreId": "swing_big_band",
+  "nameEn": "Swing / Big Band",
+  "nameJa": "スウィング/ビッグバンド",
+  "parentGenreId": null,
+  "descriptionJa": "30〜40年代のダンサブルなビッグバンド・ジャズ",
+  "descriptionEn": "Danceable big-band jazz of the 30s and 40s",
+  "energy": 4,
+  "mood": "華やか/祝祭/スイング",
+  "keyInstruments": [
+   "big band brass",
+   "walking bass",
+   "swing drums",
+   "piano"
+  ],
+  "referenceArtists": [
+   "Duke Ellington",
+   "Count Basie",
+   "Benny Goodman"
+  ],
+  "keywords": [
+   "big band swing",
+   "duke ellington swing"
+  ],
+  "places": [
+   {
+    "placeId": "usa_new_york",
+    "relationType": "origin",
+    "weight": 1.0
+   }
+  ]
+ },
+ {
+  "genreId": "gypsy_jazz",
+  "nameEn": "Gypsy Jazz",
+  "nameJa": "ジプシー・ジャズ",
+  "parentGenreId": null,
+  "descriptionJa": "パリのロマがジャンゴと共に生んだ弦のスウィング",
+  "descriptionEn": "String swing born of Paris Romani and Django",
+  "energy": 3,
+  "mood": "軽快/洒脱/技巧",
+  "keyInstruments": [
+   "acoustic guitar",
+   "violin",
+   "upright bass"
+  ],
+  "referenceArtists": [
+   "Django Reinhardt",
+   "Stéphane Grappelli"
+  ],
+  "keywords": [
+   "gypsy jazz manouche",
+   "django reinhardt"
+  ],
+  "places": [
+   {
+    "placeId": "france_paris",
+    "relationType": "origin",
+    "weight": 1.0
+   }
+  ]
+ },
+ {
+  "genreId": "acid_jazz",
+  "nameEn": "Acid Jazz",
+  "nameJa": "アシッド・ジャズ",
+  "parentGenreId": null,
+  "descriptionJa": "ファンク・ソウル・ジャズをクラブ感覚で繋いだ英国の潮流",
+  "descriptionEn": "UK club blend of funk soul and jazz",
+  "energy": 3,
+  "mood": "おしゃれ/グルーヴ/都会",
+  "keyInstruments": [
+   "organ",
+   "funky drums",
+   "samples",
+   "horns"
+  ],
+  "referenceArtists": [
+   "Jamiroquai",
+   "Incognito",
+   "Brand New Heavies"
+  ],
+  "keywords": [
+   "acid jazz",
+   "jamiroquai acid jazz"
+  ],
+  "places": [
+   {
+    "placeId": "uk_london",
+    "relationType": "origin",
+    "weight": 1.0
+   }
+  ]
+ },
+ {
+  "genreId": "smooth_jazz",
+  "nameEn": "Smooth Jazz",
+  "nameJa": "スムース・ジャズ",
+  "parentGenreId": null,
+  "descriptionJa": "聴きやすく洗練されたフュージョン系ジャズ",
+  "descriptionEn": "Polished easy-listening fusion jazz",
+  "energy": 2,
+  "mood": "洗練/リラックス/夜",
+  "keyInstruments": [
+   "soprano sax",
+   "electric piano",
+   "smooth bass",
+   "guitar"
+  ],
+  "referenceArtists": [
+   "Grover Washington Jr.",
+   "George Benson"
+  ],
+  "keywords": [
+   "smooth jazz",
+   "grover washington jr"
+  ],
+  "places": [
+   {
+    "placeId": "usa_los_angeles",
+    "relationType": "origin",
+    "weight": 1.0
+   }
+  ]
+ },
+ {
+  "genreId": "jazz_fusion",
+  "nameEn": "Jazz Fusion",
+  "nameJa": "ジャズ・フュージョン",
+  "parentGenreId": null,
+  "descriptionJa": "ジャズにロック・ファンクの電化サウンドを融合",
+  "descriptionEn": "Jazz fused with electric rock and funk",
+  "energy": 4,
+  "mood": "技巧/疾走/都会",
+  "keyInstruments": [
+   "electric piano",
+   "distorted guitar",
+   "synth",
+   "funk bass"
+  ],
+  "referenceArtists": [
+   "Weather Report",
+   "Herbie Hancock",
+   "Mahavishnu Orchestra"
+  ],
+  "keywords": [
+   "jazz fusion",
+   "weather report fusion"
+  ],
+  "places": [
+   {
+    "placeId": "usa_new_york",
+    "relationType": "origin",
+    "weight": 1.0
+   }
+  ]
+ },
+ {
+  "genreId": "west_coast_jazz",
+  "nameEn": "West Coast Jazz",
+  "nameJa": "ウェストコースト・ジャズ",
+  "parentGenreId": null,
+  "descriptionJa": "LA周辺のクールで編曲志向の50年代ジャズ",
+  "descriptionEn": "Cool arrangement-minded 1950s jazz around LA",
+  "energy": 2,
+  "mood": "クール/洗練/編曲的",
+  "keyInstruments": [
+   "vibes",
+   "flute",
+   "brush drums",
+   "muted trumpet"
+  ],
+  "referenceArtists": [
+   "Chet Baker",
+   "Gerry Mulligan",
+   "Dave Brubeck"
+  ],
+  "keywords": [
+   "west coast jazz",
+   "cool jazz west coast"
+  ],
+  "places": [
+   {
+    "placeId": "usa_los_angeles",
+    "relationType": "origin",
+    "weight": 1.0
+   }
+  ]
+ },
+ {
+  "genreId": "chicago_blues",
+  "nameEn": "Chicago Blues",
+  "nameJa": "シカゴ・ブルース",
+  "parentGenreId": null,
+  "descriptionJa": "デルタブルースが電化された都市型ブルース",
+  "descriptionEn": "Electrified urban blues from Delta blues",
+  "energy": 3,
+  "mood": "渋い/都会/エレキ",
+  "keyInstruments": [
+   "electric guitar",
+   "harmonica",
+   "organ",
+   "bass"
+  ],
+  "referenceArtists": [
+   "Muddy Waters",
+   "Howlin' Wolf",
+   "Buddy Guy"
+  ],
+  "keywords": [
+   "chicago blues",
+   "electric chicago blues"
+  ],
+  "places": [
+   {
+    "placeId": "usa_chicago",
+    "relationType": "origin",
+    "weight": 1.0
+   }
+  ]
+ },
+ {
+  "genreId": "delta_blues",
+  "nameEn": "Delta Blues",
+  "nameJa": "デルタ・ブルース",
+  "parentGenreId": null,
+  "descriptionJa": "ミシシッピ・デルタのアコースティック原始ブルース",
+  "descriptionEn": "Raw acoustic blues of the Mississippi Delta",
+  "energy": 2,
+  "mood": "哀愁/孤独/魂",
+  "keyInstruments": [
+   "slide guitar",
+   "acoustic guitar",
+   "vocals",
+   "harmonica"
+  ],
+  "referenceArtists": [
+   "Robert Johnson",
+   "Son House",
+   "Charley Patton"
+  ],
+  "keywords": [
+   "delta blues",
+   "robert johnson delta blues"
+  ],
+  "places": [
+   {
+    "placeId": "usa_clarksdale",
+    "relationType": "origin",
+    "weight": 1.0
+   }
+  ]
+ },
+ {
+  "genreId": "memphis_blues",
+  "nameEn": "Memphis Blues",
+  "nameJa": "メンフィス・ブルース",
+  "parentGenreId": null,
+  "descriptionJa": "ビール・ストリートで育まれた都市ブルース",
+  "descriptionEn": "Urban blues nurtured on Beale Street",
+  "energy": 3,
+  "mood": "渋い/都会/ロックの祖",
+  "keyInstruments": [
+   "electric guitar",
+   "piano",
+   "horns",
+   "vocals"
+  ],
+  "referenceArtists": [
+   "B.B. King",
+   "Bobby Bland"
+  ],
+  "keywords": [
+   "memphis blues",
+   "beale street blues"
+  ],
+  "places": [
+   {
+    "placeId": "usa_memphis",
+    "relationType": "origin",
+    "weight": 1.0
+   }
+  ]
+ },
+ {
+  "genreId": "house",
+  "nameEn": "House",
+  "nameJa": "ハウス",
+  "parentGenreId": null,
+  "descriptionJa": "80年代シカゴ発の4つ打ちダンス音楽の源流",
+  "descriptionEn": "Root of four-on-the-floor dance music from Chicago",
+  "energy": 4,
+  "mood": "多幸感/反復/ダンス",
+  "keyInstruments": [
+   "four-on-the-floor",
+   "synth bass",
+   "piano stabs",
+   "vocal samples"
+  ],
+  "referenceArtists": [
+   "Frankie Knuckles",
+   "Marshall Jefferson"
+  ],
+  "keywords": [
+   "chicago house music",
+   "classic house chicago"
+  ],
+  "places": [
+   {
+    "placeId": "usa_chicago",
+    "relationType": "origin",
+    "weight": 1.0
+   }
+  ]
+ },
+ {
+  "genreId": "disco",
+  "nameEn": "Disco",
+  "nameJa": "ディスコ",
+  "parentGenreId": null,
+  "descriptionJa": "70年代NYのフロアを輝かせた華やかなダンス音楽",
+  "descriptionEn": "Glamorous dance music of 1970s NY floors",
+  "energy": 4,
+  "mood": "華やか/パーティー/ゴージャス",
+  "keyInstruments": [
+   "four-on-the-floor",
+   "lush strings",
+   "brass",
+   "bass guitar"
+  ],
+  "referenceArtists": [
+   "Chic",
+   "Donna Summer",
+   "Bee Gees"
+  ],
+  "keywords": [
+   "disco 70s",
+   "classic disco"
+  ],
+  "places": [
+   {
+    "placeId": "usa_new_york",
+    "relationType": "origin",
+    "weight": 1.0
+   }
+  ]
+ },
+ {
+  "genreId": "motown",
+  "nameEn": "Motown",
+  "nameJa": "モータウン",
+  "parentGenreId": null,
+  "descriptionJa": "デトロイトのレーベルが量産した洗練ソウル・ポップ",
+  "descriptionEn": "Polished soul-pop from the Detroit label",
+  "energy": 4,
+  "mood": "キャッチー/スイート/グルーヴ",
+  "keyInstruments": [
+   "tambourine",
+   "hand claps",
+   "bass",
+   "vibraphone",
+   "strings"
+  ],
+  "referenceArtists": [
+   "The Supremes",
+   "Stevie Wonder",
+   "Marvin Gaye"
+  ],
+  "keywords": [
+   "motown classics",
+   "motown soul"
+  ],
+  "places": [
+   {
+    "placeId": "usa_detroit",
+    "relationType": "origin",
+    "weight": 1.0
+   }
+  ]
+ },
+ {
+  "genreId": "detroit_techno",
+  "nameEn": "Detroit Techno",
+  "nameJa": "デトロイト・テクノ",
+  "parentGenreId": null,
+  "descriptionJa": "機械都市発の未来志向エレクトロニック・ダンス",
+  "descriptionEn": "Futuristic electronic dance music born in Detroit",
+  "energy": 4,
+  "mood": "未来的/反復/硬質",
+  "keyInstruments": [
+   "drum machine",
+   "synth",
+   "sequencer",
+   "pads"
+  ],
+  "referenceArtists": [
+   "Juan Atkins",
+   "Derrick May",
+   "Underground Resistance"
+  ],
+  "keywords": [
+   "detroit techno",
+   "classic detroit techno"
+  ],
+  "places": [
+   {
+    "placeId": "usa_detroit",
+    "relationType": "origin",
+    "weight": 1.0
+   }
+  ]
+ },
+ {
+  "genreId": "soul",
+  "nameEn": "Soul",
+  "nameJa": "ソウル",
+  "parentGenreId": null,
+  "descriptionJa": "ゴスペルとR&Bが融合した黒人音楽",
+  "descriptionEn": "Black music fusing gospel and R&B",
+  "energy": 4,
+  "mood": "感情的/力強い/温かい",
+  "keyInstruments": [
+   "horns",
+   "organ",
+   "electric piano",
+   "bass",
+   "strings"
+  ],
+  "referenceArtists": [
+   "Otis Redding",
+   "Aretha Franklin",
+   "Al Green"
+  ],
+  "keywords": [
+   "memphis soul stax",
+   "southern soul"
+  ],
+  "places": [
+   {
+    "placeId": "usa_memphis",
+    "relationType": "important",
+    "weight": 0.9
+   }
+  ]
+ },
+ {
+  "genreId": "gospel",
+  "nameEn": "Gospel",
+  "nameJa": "ゴスペル",
+  "parentGenreId": null,
+  "descriptionJa": "教会から生まれた荘厳で高揚する合唱音楽",
+  "descriptionEn": "Soaring church-born choral music",
+  "energy": 4,
+  "mood": "荘厳/感動/希望",
+  "keyInstruments": [
+   "organ",
+   "piano",
+   "choir",
+   "tambourine",
+   "bass"
+  ],
+  "referenceArtists": [
+   "Mahalia Jackson",
+   "Kirk Franklin",
+   "Andraé Crouch"
+  ],
+  "keywords": [
+   "gospel choir",
+   "traditional gospel music"
+  ],
+  "places": [
+   {
+    "placeId": "usa_chicago",
+    "relationType": "origin",
+    "weight": 1.0
+   }
+  ]
+ },
+ {
+  "genreId": "rnb_neo_soul",
+  "nameEn": "R&B / Neo Soul",
+  "nameJa": "R&B/ネオソウル",
+  "parentGenreId": "soul",
+  "descriptionJa": "ソウルを現代的に更新した都会的でセクシーな音",
+  "descriptionEn": "Soul updated into smooth modern urban sound",
+  "energy": 2,
+  "mood": "おしゃれ/セクシー/都会",
+  "keyInstruments": [
+   "Rhodes piano",
+   "muted guitar",
+   "programmed drums",
+   "warm pads"
+  ],
+  "referenceArtists": [
+   "D'Angelo",
+   "Erykah Badu",
+   "Frank Ocean"
+  ],
+  "keywords": [
+   "neo soul",
+   "d'angelo neo soul"
+  ],
+  "places": [
+   {
+    "placeId": "usa_new_york",
+    "relationType": "important",
+    "weight": 0.8
+   }
+  ]
+ },
+ {
+  "genreId": "funk",
+  "nameEn": "Funk",
+  "nameJa": "ファンク",
+  "parentGenreId": null,
+  "descriptionJa": "グルーヴ最優先のリズム革命",
+  "descriptionEn": "A groove-first rhythm revolution",
+  "energy": 5,
+  "mood": "グルーヴ/ファンキー/パワフル",
+  "keyInstruments": [
+   "slap bass",
+   "wah guitar",
+   "clavinet",
+   "horn stabs"
+  ],
+  "referenceArtists": [
+   "James Brown",
+   "Parliament-Funkadelic",
+   "Earth Wind & Fire"
+  ],
+  "keywords": [
+   "funk music 70s",
+   "classic funk"
+  ],
+  "places": [
+   {
+    "placeId": "usa_los_angeles",
+    "relationType": "important",
+    "weight": 0.8
+   }
+  ]
+ },
+ {
+  "genreId": "country",
+  "nameEn": "Country",
+  "nameJa": "カントリー",
+  "parentGenreId": null,
+  "descriptionJa": "ナッシュビルを中心とするアメリカン・ルーツ音楽",
+  "descriptionEn": "American roots music centered on Nashville",
+  "energy": 3,
+  "mood": "素朴/物語/牧歌",
+  "keyInstruments": [
+   "acoustic guitar",
+   "fiddle",
+   "pedal steel",
+   "banjo"
+  ],
+  "referenceArtists": [
+   "Hank Williams",
+   "Johnny Cash",
+   "Dolly Parton"
+  ],
+  "keywords": [
+   "classic country music",
+   "nashville country"
+  ],
+  "places": [
+   {
+    "placeId": "usa_nashville",
+    "relationType": "important",
+    "weight": 0.9
+   }
+  ]
+ },
+ {
+  "genreId": "bluegrass",
+  "nameEn": "Bluegrass",
+  "nameJa": "ブルーグラス",
+  "parentGenreId": "country",
+  "descriptionJa": "バンジョーが疾走するアパラチア由来の弦楽",
+  "descriptionEn": "Fast Appalachian string-band music",
+  "energy": 3,
+  "mood": "素朴/疾走/牧歌",
+  "keyInstruments": [
+   "banjo",
+   "fiddle",
+   "mandolin",
+   "dobro",
+   "upright bass"
+  ],
+  "referenceArtists": [
+   "Bill Monroe",
+   "Flatt & Scruggs",
+   "Alison Krauss"
+  ],
+  "keywords": [
+   "bluegrass music",
+   "bill monroe bluegrass"
+  ],
+  "places": [
+   {
+    "placeId": "usa_owensboro",
+    "relationType": "origin",
+    "weight": 1.0
+   },
+   {
+    "placeId": "usa_nashville",
+    "relationType": "important",
+    "weight": 0.8
+   }
+  ]
+ },
+ {
+  "genreId": "appalachian_folk",
+  "nameEn": "Appalachian Folk",
+  "nameJa": "アパラチアン・フォーク",
+  "parentGenreId": null,
+  "descriptionJa": "アパラチア山脈の古い唱歌と弦の伝統",
+  "descriptionEn": "Old song and string tradition of Appalachia",
+  "energy": 2,
+  "mood": "素朴/古い/哀愁",
+  "keyInstruments": [
+   "Appalachian dulcimer",
+   "clawhammer banjo",
+   "fiddle",
+   "guitar"
+  ],
+  "referenceArtists": [
+   "Jean Ritchie",
+   "Doc Watson"
+  ],
+  "keywords": [
+   "appalachian folk",
+   "old time appalachian music"
+  ],
+  "places": [
+   {
+    "placeId": "usa_asheville",
+    "relationType": "origin",
+    "weight": 1.0
+   }
+  ]
+ },
+ {
+  "genreId": "surf_rock",
+  "nameEn": "Surf Rock",
+  "nameJa": "サーフロック",
+  "parentGenreId": null,
+  "descriptionJa": "リバーブ全開のギターが夏を呼ぶ西海岸ロック",
+  "descriptionEn": "Reverb-soaked West Coast summer rock",
+  "energy": 4,
+  "mood": "爽快/夏/レトロ",
+  "keyInstruments": [
+   "reverb guitar",
+   "tremolo picking",
+   "drums",
+   "bass"
+  ],
+  "referenceArtists": [
+   "Dick Dale",
+   "The Ventures",
+   "The Beach Boys"
+  ],
+  "keywords": [
+   "surf rock instrumental",
+   "dick dale surf"
+  ],
+  "places": [
+   {
+    "placeId": "usa_los_angeles",
+    "relationType": "origin",
+    "weight": 1.0
+   }
+  ]
+ },
+ {
+  "genreId": "doo_wop",
+  "nameEn": "Doo-Wop",
+  "nameJa": "ドゥーワップ",
+  "parentGenreId": null,
+  "descriptionJa": "街角のコーラスが彩る50年代の甘いポップ",
+  "descriptionEn": "Sweet 1950s pop of street-corner harmony",
+  "energy": 2,
+  "mood": "レトロ/ロマンティック/郷愁",
+  "keyInstruments": [
+   "vocal harmonies",
+   "finger snaps",
+   "piano",
+   "upright bass"
+  ],
+  "referenceArtists": [
+   "The Platters",
+   "The Drifters",
+   "Frankie Lymon"
+  ],
+  "keywords": [
+   "doo wop 50s",
+   "doo wop classics"
+  ],
+  "places": [
+   {
+    "placeId": "usa_new_york",
+    "relationType": "origin",
+    "weight": 1.0
+   }
+  ]
+ },
+ {
+  "genreId": "salsa_ny",
+  "nameEn": "Salsa",
+  "nameJa": "サルサ（NY）",
+  "parentGenreId": null,
+  "descriptionJa": "NYで結晶化したラテンダンス音楽",
+  "descriptionEn": "Latin dance music crystallized in New York",
+  "energy": 4,
+  "mood": "情熱/祝祭/都会",
+  "keyInstruments": [
+   "congas",
+   "timbales",
+   "piano montuno",
+   "brass",
+   "bass"
+  ],
+  "referenceArtists": [
+   "Héctor Lavoe",
+   "Willie Colón",
+   "Celia Cruz"
+  ],
+  "keywords": [
+   "salsa new york fania",
+   "nuyorican salsa"
+  ],
+  "places": [
+   {
+    "placeId": "usa_new_york",
+    "relationType": "important",
+    "weight": 0.8
+   }
+  ]
+ },
+ {
+  "genreId": "boogaloo",
+  "nameEn": "Boogaloo",
+  "nameJa": "ブーガルー",
+  "parentGenreId": null,
+  "descriptionJa": "ラテンとR&Bが出会った60年代NYのパーティー音楽",
+  "descriptionEn": "1960s NY party fusion of Latin and R&B",
+  "energy": 4,
+  "mood": "ファンキー/パーティー/レトロ",
+  "keyInstruments": [
+   "Latin percussion",
+   "organ",
+   "brass",
+   "English vocals"
+  ],
+  "referenceArtists": [
+   "Joe Cuba",
+   "Pete Rodríguez"
+  ],
+  "keywords": [
+   "latin boogaloo",
+   "joe cuba boogaloo"
+  ],
+  "places": [
+   {
+    "placeId": "usa_new_york",
+    "relationType": "origin",
+    "weight": 1.0
+   }
+  ]
+ },
+ {
+  "genreId": "hawaiian",
+  "nameEn": "Hawaiian Music",
+  "nameJa": "ハワイアン",
+  "parentGenreId": null,
+  "descriptionJa": "スラックキー・ギターが響くハワイの音楽",
+  "descriptionEn": "Hawaiian music of slack-key guitar",
+  "energy": 2,
+  "mood": "穏やか/楽園/波",
+  "keyInstruments": [
+   "slack-key guitar",
+   "ukulele",
+   "steel guitar",
+   "bass"
+  ],
+  "referenceArtists": [
+   "Israel Kamakawiwoʻole",
+   "Gabby Pahinui"
+  ],
+  "keywords": [
+   "hawaiian slack key guitar",
+   "traditional hawaiian music"
+  ],
+  "places": [
+   {
+    "placeId": "usa_honolulu",
+    "relationType": "origin",
+    "weight": 1.0
+   }
+  ]
+ },
+ {
+  "genreId": "samba",
+  "nameEn": "Samba",
+  "nameJa": "サンバ",
+  "parentGenreId": null,
+  "descriptionJa": "リオのカーニバルを彩るブラジル国民音楽",
+  "descriptionEn": "Brazil national carnival music from Rio",
+  "energy": 5,
+  "mood": "祝祭/歓喜/情熱",
+  "keyInstruments": [
+   "surdo",
+   "tamborim",
+   "cuíca",
+   "pandeiro",
+   "cavaquinho"
+  ],
+  "referenceArtists": [
+   "Cartola",
+   "Beth Carvalho",
+   "Martinho da Vila"
+  ],
+  "keywords": [
+   "samba de roda",
+   "samba brasil",
+   "サンバ"
+  ],
+  "places": [
+   {
+    "placeId": "brazil_rio",
+    "relationType": "origin",
+    "weight": 1.0
+   }
+  ]
+ },
+ {
+  "genreId": "bossa_nova",
+  "nameEn": "Bossa Nova",
+  "nameJa": "ボサノヴァ",
+  "parentGenreId": null,
+  "descriptionJa": "サンバとジャズが融合した洗練",
+  "descriptionEn": "Sophisticated fusion of samba and jazz",
+  "energy": 2,
+  "mood": "しっとり/洗練/メランコリック",
+  "keyInstruments": [
+   "nylon guitar",
+   "brushed drums",
+   "upright bass",
+   "piano"
+  ],
+  "referenceArtists": [
+   "João Gilberto",
+   "Tom Jobim",
+   "Astrud Gilberto"
+  ],
+  "keywords": [
+   "bossa nova",
+   "bossa nova classics"
+  ],
+  "places": [
+   {
+    "placeId": "brazil_rio",
+    "relationType": "origin",
+    "weight": 1.0
+   }
+  ]
+ },
+ {
+  "genreId": "choro",
+  "nameEn": "Choro",
+  "nameJa": "ショーロ",
+  "parentGenreId": null,
+  "descriptionJa": "19世紀リオ生まれの器楽音楽",
+  "descriptionEn": "Instrumental music born in 19th-century Rio",
+  "energy": 3,
+  "mood": "技巧/哀愁/陽気",
+  "keyInstruments": [
+   "cavaquinho",
+   "7-string guitar",
+   "flute",
+   "pandeiro"
+  ],
+  "referenceArtists": [
+   "Pixinguinha",
+   "Jacob do Bandolim"
+  ],
+  "keywords": [
+   "choro brasileiro",
+   "choro instrumental"
+  ],
+  "places": [
+   {
+    "placeId": "brazil_rio",
+    "relationType": "origin",
+    "weight": 1.0
+   }
+  ]
+ },
+ {
+  "genreId": "mpb",
+  "nameEn": "MPB",
+  "nameJa": "エミ・ペー・ベー",
+  "parentGenreId": null,
+  "descriptionJa": "多彩なブラジル現代ポピュラー音楽の総称",
+  "descriptionEn": "Umbrella term for modern Brazilian popular music",
+  "energy": 3,
+  "mood": "知的/詩的/多彩",
+  "keyInstruments": [
+   "acoustic guitar",
+   "piano",
+   "strings",
+   "percussion"
+  ],
+  "referenceArtists": [
+   "Caetano Veloso",
+   "Gilberto Gil",
+   "Elis Regina"
+  ],
+  "keywords": [
+   "mpb música popular brasileira",
+   "mpb clássicos"
+  ],
+  "places": [
+   {
+    "placeId": "brazil_sao_paulo",
+    "relationType": "important",
+    "weight": 0.8
+   }
+  ]
+ },
+ {
+  "genreId": "forro",
+  "nameEn": "Forró",
+  "nameJa": "フォホー",
+  "parentGenreId": null,
+  "descriptionJa": "北東部のアコーディオン・ダンス音楽",
+  "descriptionEn": "Accordion dance music of northeastern Brazil",
+  "energy": 4,
+  "mood": "陽気/田舎/ダンス",
+  "keyInstruments": [
+   "accordion",
+   "zabumba",
+   "triangle",
+   "bass"
+  ],
+  "referenceArtists": [
+   "Luiz Gonzaga",
+   "Dominguinhos"
+  ],
+  "keywords": [
+   "forró pé de serra",
+   "forró tradicional"
+  ],
+  "places": [
+   {
+    "placeId": "brazil_fortaleza",
+    "relationType": "important",
+    "weight": 0.8
+   }
+  ]
+ },
+ {
+  "genreId": "baiao",
+  "nameEn": "Baião",
+  "nameJa": "バイアォン",
+  "parentGenreId": null,
+  "descriptionJa": "ブラジル北東部の大地的なアコーディオン・リズム",
+  "descriptionEn": "Earthy accordion rhythm of NE Brazil",
+  "energy": 3,
+  "mood": "大地的/素朴/リズミカル",
+  "keyInstruments": [
+   "accordion",
+   "zabumba",
+   "triangle",
+   "acoustic guitar"
+  ],
+  "referenceArtists": [
+   "Luiz Gonzaga",
+   "Gilberto Gil"
+  ],
+  "keywords": [
+   "baião nordeste",
+   "luiz gonzaga baião"
+  ],
+  "places": [
+   {
+    "placeId": "brazil_fortaleza",
+    "relationType": "origin",
+    "weight": 1.0
+   }
+  ]
+ },
+ {
+  "genreId": "axe",
+  "nameEn": "Axé",
+  "nameJa": "アシェー",
+  "parentGenreId": null,
+  "descriptionJa": "バイーアのカーニバル発のポップなダンス音楽",
+  "descriptionEn": "Pop dance music from Bahia carnival",
+  "energy": 4,
+  "mood": "陽気/祝祭/ダンス",
+  "keyInstruments": [
+   "timbau",
+   "surdo",
+   "brass",
+   "electric guitar"
+  ],
+  "referenceArtists": [
+   "Ivete Sangalo",
+   "Daniela Mercury"
+  ],
+  "keywords": [
+   "axé music bahia",
+   "axé brasil"
+  ],
+  "places": [
+   {
+    "placeId": "brazil_bahia",
+    "relationType": "origin",
+    "weight": 1.0
+   }
+  ]
+ },
+ {
+  "genreId": "samba_reggae",
+  "nameEn": "Samba-Reggae",
+  "nameJa": "サンバ・ヘギ",
+  "parentGenreId": null,
+  "descriptionJa": "サルヴァドールの黒人ブロコが生んだ重い打楽器サンバ",
+  "descriptionEn": "Heavy percussive samba from Salvador blocos",
+  "energy": 4,
+  "mood": "祝祭/力強い/打楽器",
+  "keyInstruments": [
+   "surdo",
+   "timbau",
+   "repique",
+   "vocals"
+  ],
+  "referenceArtists": [
+   "Olodum",
+   "Timbalada"
+  ],
+  "keywords": [
+   "samba reggae olodum",
+   "samba-reggae bahia"
+  ],
+  "places": [
+   {
+    "placeId": "brazil_bahia",
+    "relationType": "origin",
+    "weight": 1.0
+   }
+  ]
+ },
+ {
+  "genreId": "frevo",
+  "nameEn": "Frevo",
+  "nameJa": "フレーヴォ",
+  "parentGenreId": null,
+  "descriptionJa": "レシフェのカーニバルの超高速ブラス＆ダンス",
+  "descriptionEn": "Ultra-fast brass and dance from Recife carnival",
+  "energy": 5,
+  "mood": "高速/祝祭/熱狂",
+  "keyInstruments": [
+   "brass section",
+   "snare",
+   "trombone",
+   "clarinet"
+  ],
+  "referenceArtists": [
+   "Spok Frevo Orquestra"
+  ],
+  "keywords": [
+   "frevo pernambuco",
+   "frevo recife"
+  ],
+  "places": [
+   {
+    "placeId": "brazil_recife",
+    "relationType": "origin",
+    "weight": 1.0
+   }
+  ]
+ },
+ {
+  "genreId": "maracatu",
+  "nameEn": "Maracatu",
+  "nameJa": "マラカトゥ",
+  "parentGenreId": null,
+  "descriptionJa": "レシフェのアフロ・ブラジル儀礼に根ざす打楽器行進",
+  "descriptionEn": "Afro-Brazilian percussive processional from Recife",
+  "energy": 4,
+  "mood": "荘厳/儀礼/打楽器",
+  "keyInstruments": [
+   "alfaia drums",
+   "gonguê",
+   "agbê",
+   "vocals"
+  ],
+  "referenceArtists": [
+   "Nação Estrela Brilhante"
+  ],
+  "keywords": [
+   "maracatu nação",
+   "maracatu recife"
+  ],
+  "places": [
+   {
+    "placeId": "brazil_recife",
+    "relationType": "origin",
+    "weight": 1.0
+   }
+  ]
+ },
+ {
+  "genreId": "reggae",
+  "nameEn": "Reggae",
+  "nameJa": "レゲエ",
+  "parentGenreId": null,
+  "descriptionJa": "オフビートと低音が世界を変えたジャマイカ音楽",
+  "descriptionEn": "Jamaican music whose offbeat and bass changed the world",
+  "energy": 3,
+  "mood": "レイドバック/平和/グルーヴ",
+  "keyInstruments": [
+   "skank guitar",
+   "dub bass",
+   "one-drop drums",
+   "organ"
+  ],
+  "referenceArtists": [
+   "Bob Marley",
+   "Peter Tosh",
+   "Jimmy Cliff"
+  ],
+  "keywords": [
+   "roots reggae",
+   "reggae classics",
+   "レゲエ"
+  ],
+  "places": [
+   {
+    "placeId": "jamaica_kingston",
+    "relationType": "origin",
+    "weight": 1.0
+   }
+  ]
+ },
+ {
+  "genreId": "dub",
+  "nameEn": "Dub",
+  "nameJa": "ダブ",
+  "parentGenreId": "reggae",
+  "descriptionJa": "ミキシング卓で再構築したレゲエの実験",
+  "descriptionEn": "Studio reconstruction of reggae",
+  "energy": 2,
+  "mood": "空間的/瞑想/トリッピー",
+  "keyInstruments": [
+   "sub-bass",
+   "reverb",
+   "echo delay",
+   "sparse drums"
+  ],
+  "referenceArtists": [
+   "King Tubby",
+   "Lee Scratch Perry",
+   "Mad Professor"
+  ],
+  "keywords": [
+   "dub reggae",
+   "king tubby dub"
+  ],
+  "places": [
+   {
+    "placeId": "jamaica_kingston",
+    "relationType": "origin",
+    "weight": 1.0
+   }
+  ]
+ },
+ {
+  "genreId": "ska",
+  "nameEn": "Ska",
+  "nameJa": "スカ",
+  "parentGenreId": null,
+  "descriptionJa": "跳ねるアフタービートが陽気な60年代ジャマイカ音楽",
+  "descriptionEn": "Upbeat 1960s Jamaican music with a bouncing afterbeat",
+  "energy": 4,
+  "mood": "陽気/跳ねる/パンキッシュ",
+  "keyInstruments": [
+   "upstroke guitar",
+   "walking bass",
+   "brass",
+   "drums"
+  ],
+  "referenceArtists": [
+   "The Skatalites",
+   "Desmond Dekker"
+  ],
+  "keywords": [
+   "ska jamaica",
+   "skatalites ska"
+  ],
+  "places": [
+   {
+    "placeId": "jamaica_kingston",
+    "relationType": "origin",
+    "weight": 1.0
+   }
+  ]
+ },
+ {
+  "genreId": "rocksteady",
+  "nameEn": "Rocksteady",
+  "nameJa": "ロックステディ",
+  "parentGenreId": null,
+  "descriptionJa": "スカとレゲエの間のスローでソウルフルな音楽",
+  "descriptionEn": "Slow soulful music between ska and reggae",
+  "energy": 3,
+  "mood": "スイート/メロウ/ロマンティック",
+  "keyInstruments": [
+   "bass groove",
+   "organ",
+   "sweet harmonies",
+   "skank guitar"
+  ],
+  "referenceArtists": [
+   "Alton Ellis",
+   "The Paragons"
+  ],
+  "keywords": [
+   "rocksteady jamaica",
+   "rocksteady classics"
+  ],
+  "places": [
+   {
+    "placeId": "jamaica_kingston",
+    "relationType": "origin",
+    "weight": 1.0
+   }
+  ]
+ },
+ {
+  "genreId": "dancehall",
+  "nameEn": "Dancehall",
+  "nameJa": "ダンスホール",
+  "parentGenreId": "reggae",
+  "descriptionJa": "デジタル化したレゲエのDJ中心クラブ音楽",
+  "descriptionEn": "DJ-led club music from digital reggae",
+  "energy": 4,
+  "mood": "アーバン/セクシー/パーティー",
+  "keyInstruments": [
+   "dembow riddim",
+   "digital drums",
+   "synth bass",
+   "DJ vocals"
+  ],
+  "referenceArtists": [
+   "Shabba Ranks",
+   "Beenie Man",
+   "Sean Paul"
+  ],
+  "keywords": [
+   "dancehall classic",
+   "jamaican dancehall"
+  ],
+  "places": [
+   {
+    "placeId": "jamaica_kingston",
+    "relationType": "origin",
+    "weight": 1.0
+   }
+  ]
+ },
+ {
+  "genreId": "calypso",
+  "nameEn": "Calypso",
+  "nameJa": "カリプソ",
+  "parentGenreId": null,
+  "descriptionJa": "トリニダードの風刺と祝祭の歌",
+  "descriptionEn": "Trinidad satirical festive song",
+  "energy": 4,
+  "mood": "陽気/風刺/カーニバル",
+  "keyInstruments": [
+   "steel pan",
+   "acoustic guitar",
+   "brass",
+   "shaker"
+  ],
+  "referenceArtists": [
+   "Lord Kitchener",
+   "Mighty Sparrow",
+   "Harry Belafonte"
+  ],
+  "keywords": [
+   "calypso trinidad",
+   "classic calypso"
+  ],
+  "places": [
+   {
+    "placeId": "trinidad_pos",
+    "relationType": "origin",
+    "weight": 1.0
+   }
+  ]
+ },
+ {
+  "genreId": "soca",
+  "nameEn": "Soca",
+  "nameJa": "ソカ",
+  "parentGenreId": "calypso",
+  "descriptionJa": "カリプソから派生した高速カーニバル音楽",
+  "descriptionEn": "Fast carnival music derived from calypso",
+  "energy": 5,
+  "mood": "爆発/パーティー/カーニバル",
+  "keyInstruments": [
+   "electronic beats",
+   "brass",
+   "steel pan",
+   "bass"
+  ],
+  "referenceArtists": [
+   "Machel Montano",
+   "Bunji Garlin"
+  ],
+  "keywords": [
+   "soca music",
+   "trinidad soca"
+  ],
+  "places": [
+   {
+    "placeId": "trinidad_pos",
+    "relationType": "origin",
+    "weight": 1.0
+   }
+  ]
+ },
+ {
+  "genreId": "steelpan",
+  "nameEn": "Steelpan",
+  "nameJa": "スティールパン",
+  "parentGenreId": null,
+  "descriptionJa": "ドラム缶から生まれた旋律打楽器音楽",
+  "descriptionEn": "Melodic music of oil-drum steel pans",
+  "energy": 3,
+  "mood": "祝祭/旋律的/カーニバル",
+  "keyInstruments": [
+   "steel pans",
+   "iron",
+   "drum kit",
+   "bass"
+  ],
+  "referenceArtists": [
+   "Trinidad All Stars",
+   "Desperadoes"
+  ],
+  "keywords": [
+   "steelpan trinidad",
+   "steelband panorama"
+  ],
+  "places": [
+   {
+    "placeId": "trinidad_pos",
+    "relationType": "origin",
+    "weight": 1.0
+   }
+  ]
+ },
+ {
+  "genreId": "merengue",
+  "nameEn": "Merengue",
+  "nameJa": "メレンゲ",
+  "parentGenreId": null,
+  "descriptionJa": "ドミニカ共和国の高速ダンス音楽",
+  "descriptionEn": "Fast dance music of the Dominican Republic",
+  "energy": 5,
+  "mood": "陽気/パーティー/疾走",
+  "keyInstruments": [
+   "tambora",
+   "güira",
+   "accordion",
+   "brass",
+   "bass"
+  ],
+  "referenceArtists": [
+   "Juan Luis Guerra",
+   "Wilfrido Vargas"
+  ],
+  "keywords": [
+   "merengue dominicano",
+   "merengue clásico"
+  ],
+  "places": [
+   {
+    "placeId": "dominican_santo_domingo",
+    "relationType": "origin",
+    "weight": 1.0
+   }
+  ]
+ },
+ {
+  "genreId": "bachata",
+  "nameEn": "Bachata",
+  "nameJa": "バチャータ",
+  "parentGenreId": null,
+  "descriptionJa": "ドミニカのギター主体のロマンス音楽",
+  "descriptionEn": "Guitar-led romantic music of the Dominican Republic",
+  "energy": 3,
+  "mood": "ロマンティック/切ない/セクシー",
+  "keyInstruments": [
+   "requinto guitar",
+   "rhythm guitar",
+   "bongos",
+   "güira"
+  ],
+  "referenceArtists": [
+   "Romeo Santos",
+   "Aventura",
+   "Juan Luis Guerra"
+  ],
+  "keywords": [
+   "bachata dominicana",
+   "bachata clásica"
+  ],
+  "places": [
+   {
+    "placeId": "dominican_santo_domingo",
+    "relationType": "origin",
+    "weight": 1.0
+   }
+  ]
+ },
+ {
+  "genreId": "reggaeton",
+  "nameEn": "Reggaeton",
+  "nameJa": "レゲトン",
+  "parentGenreId": "dancehall",
+  "descriptionJa": "パナマで生まれプエルトリコで花開いたデンボウ・ビートのアーバン音楽",
+  "descriptionEn": "Urban dembow music born in Panama and popularized in Puerto Rico",
+  "energy": 4,
+  "mood": "アーバン/セクシー/パーティー",
+  "keyInstruments": [
+   "dembow beat",
+   "808 bass",
+   "synth",
+   "hi-hats"
+  ],
+  "referenceArtists": [
+   "El General",
+   "Daddy Yankee",
+   "Bad Bunny"
+  ],
+  "keywords": [
+   "reggaeton clásico",
+   "reggaeton old school"
+  ],
+  "places": [
+   {
+    "placeId": "panama_city",
+    "relationType": "origin",
+    "weight": 1.0
+   },
+   {
+    "placeId": "puertorico_san_juan",
+    "relationType": "important",
+    "weight": 0.8
+   }
+  ]
+ },
+ {
+  "genreId": "bomba",
+  "nameEn": "Bomba",
+  "nameJa": "ボンバ",
+  "parentGenreId": null,
+  "descriptionJa": "プエルトリコのアフロ系打楽器音楽",
+  "descriptionEn": "Afro-Puerto Rican percussion music",
+  "energy": 3,
+  "mood": "土着/祝祭/打楽器",
+  "keyInstruments": [
+   "barril drums",
+   "maracas",
+   "cuá",
+   "vocals"
+  ],
+  "referenceArtists": [
+   "Los Pleneros de la 21"
+  ],
+  "keywords": [
+   "bomba puerto rico",
+   "bomba y plena"
+  ],
+  "places": [
+   {
+    "placeId": "puertorico_san_juan",
+    "relationType": "origin",
+    "weight": 1.0
+   }
+  ]
+ },
+ {
+  "genreId": "plena",
+  "nameEn": "Plena",
+  "nameJa": "プレーナ",
+  "parentGenreId": null,
+  "descriptionJa": "プエルトリコの語り歌的フォーク",
+  "descriptionEn": "Narrative folk song of Puerto Rico",
+  "energy": 3,
+  "mood": "語り/祝祭/庶民的",
+  "keyInstruments": [
+   "panderos",
+   "güiro",
+   "accordion",
+   "vocals"
+  ],
+  "referenceArtists": [
+   "Manuel Jiménez Canario"
+  ],
+  "keywords": [
+   "plena puerto rico",
+   "plena tradicional"
+  ],
+  "places": [
+   {
+    "placeId": "puertorico_san_juan",
+    "relationType": "origin",
+    "weight": 1.0
+   }
+  ]
+ },
+ {
+  "genreId": "afro_peruvian",
+  "nameEn": "Afro-Peruvian",
+  "nameJa": "アフロ・ペルー音楽",
+  "parentGenreId": null,
+  "descriptionJa": "ペルー海岸部の黒人音楽",
+  "descriptionEn": "Black music of coastal Peru",
+  "energy": 3,
+  "mood": "郷愁/土着/グルーヴ",
+  "keyInstruments": [
+   "cajón",
+   "quijada",
+   "acoustic guitar",
+   "vocals"
+  ],
+  "referenceArtists": [
+   "Susana Baca",
+   "Chabuca Granda",
+   "Eva Ayllón"
+  ],
+  "keywords": [
+   "música afroperuana",
+   "afro peruvian music"
+  ],
+  "places": [
+   {
+    "placeId": "peru_lima",
+    "relationType": "origin",
+    "weight": 1.0
+   }
+  ]
+ },
+ {
+  "genreId": "chicha",
+  "nameEn": "Chicha",
+  "nameJa": "チチャ",
+  "parentGenreId": "cumbia",
+  "descriptionJa": "ペルーのアマゾン・クンビア",
+  "descriptionEn": "Peruvian Amazonian cumbia",
+  "energy": 3,
+  "mood": "陽気/サイケ/ダンサブル",
+  "keyInstruments": [
+   "electric guitar",
+   "farfisa organ",
+   "timbales",
+   "bass"
+  ],
+  "referenceArtists": [
+   "Los Mirlos",
+   "Juaneco y su Combo"
+  ],
+  "keywords": [
+   "chicha peruana cumbia",
+   "cumbia amazónica"
+  ],
+  "places": [
+   {
+    "placeId": "peru_lima",
+    "relationType": "origin",
+    "weight": 1.0
+   }
+  ]
+ },
+ {
+  "genreId": "tango",
+  "nameEn": "Tango",
+  "nameJa": "タンゴ",
+  "parentGenreId": null,
+  "descriptionJa": "ブエノスアイレス生まれの情熱と哀愁のダンス音楽",
+  "descriptionEn": "Passionate melancholic dance music from Buenos Aires",
+  "energy": 4,
+  "mood": "情熱/哀愁/ドラマチック",
+  "keyInstruments": [
+   "bandoneón",
+   "violin",
+   "piano",
+   "upright bass"
+  ],
+  "referenceArtists": [
+   "Astor Piazzolla",
+   "Carlos Gardel",
+   "Gotan Project"
+  ],
+  "keywords": [
+   "tango argentino",
+   "tango clásico",
+   "タンゴ"
+  ],
+  "places": [
+   {
+    "placeId": "argentina_buenos",
+    "relationType": "origin",
+    "weight": 1.0
+   }
+  ]
+ },
+ {
+  "genreId": "milonga",
+  "nameEn": "Milonga",
+  "nameJa": "ミロンガ",
+  "parentGenreId": "tango",
+  "descriptionJa": "タンゴの素朴で郷愁的な兄弟分",
+  "descriptionEn": "The rustic nostalgic cousin of tango",
+  "energy": 3,
+  "mood": "郷愁/素朴/哀愁",
+  "keyInstruments": [
+   "guitar",
+   "bandoneón",
+   "gentle rhythm",
+   "vocals"
+  ],
+  "referenceArtists": [
+   "Carlos Gardel",
+   "Sebastián Piana"
+  ],
+  "keywords": [
+   "milonga argentina",
+   "milonga criolla"
+  ],
+  "places": [
+   {
+    "placeId": "argentina_buenos",
+    "relationType": "origin",
+    "weight": 1.0
+   }
+  ]
+ },
+ {
+  "genreId": "cumbia",
+  "nameEn": "Cumbia",
+  "nameJa": "クンビア",
+  "parentGenreId": null,
+  "descriptionJa": "コロンビア発でラテン全域に広がったダンス音楽",
+  "descriptionEn": "Dance music from Colombia spread across Latin America",
+  "energy": 3,
+  "mood": "陽気/ほのぼの/ダンサブル",
+  "keyInstruments": [
+   "accordion",
+   "gaita flute",
+   "guacharaca",
+   "alegre drum"
+  ],
+  "referenceArtists": [
+   "Totó la Momposina",
+   "Lucho Bermúdez",
+   "Aníbal Velásquez"
+  ],
+  "keywords": [
+   "cumbia colombiana",
+   "cumbia clásica"
+  ],
+  "places": [
+   {
+    "placeId": "colombia_cartagena",
+    "relationType": "origin",
+    "weight": 1.0
+   }
+  ]
+ },
+ {
+  "genreId": "salsa_calena",
+  "nameEn": "Salsa Caleña",
+  "nameJa": "サルサ・カレーニャ",
+  "parentGenreId": null,
+  "descriptionJa": "カリの超高速で華麗なサルサ",
+  "descriptionEn": "Ultra-fast flashy salsa of Cali",
+  "energy": 4,
+  "mood": "高速/華麗/祝祭",
+  "keyInstruments": [
+   "congas",
+   "timbales",
+   "piano montuno",
+   "brass"
+  ],
+  "referenceArtists": [
+   "Grupo Niche",
+   "Guayacán"
+  ],
+  "keywords": [
+   "salsa caleña",
+   "salsa cali colombia"
+  ],
+  "places": [
+   {
+    "placeId": "colombia_cali",
+    "relationType": "origin",
+    "weight": 1.0
+   }
+  ]
+ },
+ {
+  "genreId": "champeta",
+  "nameEn": "Champeta",
+  "nameJa": "チャンペータ",
+  "parentGenreId": null,
+  "descriptionJa": "カルタヘナのアフロ・コロンビアン・ストリート・ダンス",
+  "descriptionEn": "Afro-Colombian street dance of Cartagena",
+  "energy": 4,
+  "mood": "アフリカン/ダンサブル/ストリート",
+  "keyInstruments": [
+   "African guitar",
+   "synth bass",
+   "drum machine",
+   "vocals"
+  ],
+  "referenceArtists": [
+   "Charles King",
+   "Louis Towers"
+  ],
+  "keywords": [
+   "champeta cartagena",
+   "champeta africana"
+  ],
+  "places": [
+   {
+    "placeId": "colombia_cartagena",
+    "relationType": "origin",
+    "weight": 1.0
+   }
+  ]
+ },
+ {
+  "genreId": "son_jarocho",
+  "nameEn": "Son Jarocho",
+  "nameJa": "ソン・ハローチョ",
+  "parentGenreId": null,
+  "descriptionJa": "ベラクルスのアフロ・メスティーソ音楽",
+  "descriptionEn": "Afro-mestizo music of Veracruz",
+  "energy": 3,
+  "mood": "祝祭/土着/陽気",
+  "keyInstruments": [
+   "jarana",
+   "requinto jarocho",
+   "harp",
+   "zapateado"
+  ],
+  "referenceArtists": [
+   "Mono Blanco",
+   "Los Lobos"
+  ],
+  "keywords": [
+   "son jarocho veracruz",
+   "son jarocho tradicional"
+  ],
+  "places": [
+   {
+    "placeId": "mexico_veracruz",
+    "relationType": "origin",
+    "weight": 1.0
+   }
+  ]
+ },
+ {
+  "genreId": "mariachi",
+  "nameEn": "Mariachi",
+  "nameJa": "マリアッチ",
+  "parentGenreId": null,
+  "descriptionJa": "誇り高きメキシコの祝祭バンド音楽",
+  "descriptionEn": "Proud festive Mexican band music",
+  "energy": 4,
+  "mood": "情熱/祝祭/誇り",
+  "keyInstruments": [
+   "trumpet",
+   "vihuela",
+   "guitarrón",
+   "violins"
+  ],
+  "referenceArtists": [
+   "Vicente Fernández",
+   "Mariachi Vargas de Tecalitlán"
+  ],
+  "keywords": [
+   "mariachi mexicano",
+   "mariachi vargas"
+  ],
+  "places": [
+   {
+    "placeId": "mexico_guadalajara",
+    "relationType": "origin",
+    "weight": 1.0
+   }
+  ]
+ },
+ {
+  "genreId": "ranchera",
+  "nameEn": "Ranchera",
+  "nameJa": "ランチェーラ",
+  "parentGenreId": null,
+  "descriptionJa": "情念を歌い上げるメキシコの大衆歌",
+  "descriptionEn": "Heartfelt Mexican folk ballad",
+  "energy": 3,
+  "mood": "哀愁/男気/情熱",
+  "keyInstruments": [
+   "trumpet",
+   "guitar",
+   "vihuela",
+   "dramatic vocal"
+  ],
+  "referenceArtists": [
+   "José Alfredo Jiménez",
+   "Chavela Vargas"
+  ],
+  "keywords": [
+   "ranchera mexicana",
+   "josé alfredo jiménez ranchera"
+  ],
+  "places": [
+   {
+    "placeId": "mexico_guadalajara",
+    "relationType": "origin",
+    "weight": 1.0
+   }
+  ]
+ },
+ {
+  "genreId": "norteno",
+  "nameEn": "Norteño",
+  "nameJa": "ノルテーニョ",
+  "parentGenreId": null,
+  "descriptionJa": "メキシコ北部のアコーディオン・カントリー",
+  "descriptionEn": "Accordion country music of northern Mexico",
+  "energy": 3,
+  "mood": "陽気/素朴/物語",
+  "keyInstruments": [
+   "accordion",
+   "bajo sexto",
+   "bass",
+   "drums"
+  ],
+  "referenceArtists": [
+   "Los Tigres del Norte",
+   "Ramón Ayala"
+  ],
+  "keywords": [
+   "música norteña",
+   "norteño acordeón"
+  ],
+  "places": [
+   {
+    "placeId": "mexico_monterrey",
+    "relationType": "origin",
+    "weight": 1.0
+   }
+  ]
+ },
+ {
+  "genreId": "andean_folk",
+  "nameEn": "Andean Folk",
+  "nameJa": "アンデス・フォルクローレ",
+  "parentGenreId": null,
+  "descriptionJa": "高原に響くケーナとサンポーニャの郷愁",
+  "descriptionEn": "Highland nostalgia of quena and panpipes",
+  "energy": 3,
+  "mood": "郷愁/高原/素朴",
+  "keyInstruments": [
+   "charango",
+   "quena",
+   "zampoña",
+   "bombo",
+   "guitar"
+  ],
+  "referenceArtists": [
+   "Los Kjarkas",
+   "Inti-Illimani"
+  ],
+  "keywords": [
+   "música andina",
+   "folklore andino charango"
+  ],
+  "places": [
+   {
+    "placeId": "bolivia_lapaz",
+    "relationType": "origin",
+    "weight": 1.0
+   }
+  ]
+ },
+ {
+  "genreId": "afrobeat",
+  "nameEn": "Afrobeat",
+  "nameJa": "アフロビート",
+  "parentGenreId": null,
+  "descriptionJa": "Fela Kuti が創出したファンク×ヨルバの大河グルーヴ",
+  "descriptionEn": "Fela Kuti funk-meets-Yoruba groove",
+  "energy": 4,
+  "mood": "陽気/グルーヴ/力強い",
+  "keyInstruments": [
+   "talking drums",
+   "shekere",
+   "horn section",
+   "funk guitar"
+  ],
+  "referenceArtists": [
+   "Fela Kuti",
+   "Tony Allen",
+   "Burna Boy"
+  ],
+  "keywords": [
+   "afrobeat fela kuti",
+   "classic afrobeat"
+  ],
+  "places": [
+   {
+    "placeId": "nigeria_lagos",
+    "relationType": "origin",
+    "weight": 1.0
+   }
+  ]
+ },
+ {
+  "genreId": "juju",
+  "nameEn": "Jùjú",
+  "nameJa": "ジュジュ",
+  "parentGenreId": null,
+  "descriptionJa": "ヨルバの語り太鼓が多層に重なる祝祭音楽",
+  "descriptionEn": "Yoruba talking-drum praise music",
+  "energy": 3,
+  "mood": "催眠的/祝祭/多層的",
+  "keyInstruments": [
+   "talking drum ensemble",
+   "pedal steel guitar",
+   "shekere",
+   "agogo"
+  ],
+  "referenceArtists": [
+   "King Sunny Adé",
+   "Ebenezer Obey"
+  ],
+  "keywords": [
+   "juju music nigeria",
+   "king sunny ade juju"
+  ],
+  "places": [
+   {
+    "placeId": "nigeria_lagos",
+    "relationType": "origin",
+    "weight": 1.0
+   }
+  ]
+ },
+ {
+  "genreId": "highlife",
+  "nameEn": "Highlife",
+  "nameJa": "ハイライフ",
+  "parentGenreId": null,
+  "descriptionJa": "ギターとホーンが踊る西アフリカ音楽の源流",
+  "descriptionEn": "A root of West African popular music",
+  "energy": 3,
+  "mood": "軽快/ノスタルジック/陽だまり",
+  "keyInstruments": [
+   "palm-wine guitar",
+   "trumpet",
+   "trombone",
+   "congas"
+  ],
+  "referenceArtists": [
+   "E.T. Mensah",
+   "Ebo Taylor",
+   "Pat Thomas"
+  ],
+  "keywords": [
+   "highlife ghana",
+   "classic highlife"
+  ],
+  "places": [
+   {
+    "placeId": "ghana_accra",
+    "relationType": "origin",
+    "weight": 1.0
+   }
+  ]
+ },
+ {
+  "genreId": "soukous",
+  "nameEn": "Soukous",
+  "nameJa": "スークース",
+  "parentGenreId": null,
+  "descriptionJa": "コンゴのギターが弾むダンス音楽",
+  "descriptionEn": "Congolese guitar dance music",
+  "energy": 4,
+  "mood": "祝祭/歓喜/ダンサブル",
+  "keyInstruments": [
+   "sebene guitar",
+   "rhythm guitar",
+   "congas",
+   "brass"
+  ],
+  "referenceArtists": [
+   "Franco",
+   "Papa Wemba",
+   "Koffi Olomidé"
+  ],
+  "keywords": [
+   "soukous congo",
+   "congolese rumba soukous"
+  ],
+  "places": [
+   {
+    "placeId": "congo_kinshasa",
+    "relationType": "origin",
+    "weight": 1.0
+   }
+  ]
+ },
+ {
+  "genreId": "makossa",
+  "nameEn": "Makossa",
+  "nameJa": "マコッサ",
+  "parentGenreId": null,
+  "descriptionJa": "カメルーンのファンキーなダンス音楽",
+  "descriptionEn": "Funky dance music of Cameroon",
+  "energy": 4,
+  "mood": "陽気/ファンキー/ダンサブル",
+  "keyInstruments": [
+   "funky bass",
+   "cowbell",
+   "brass section",
+   "congas"
+  ],
+  "referenceArtists": [
+   "Manu Dibango",
+   "Richard Bona"
+  ],
+  "keywords": [
+   "makossa cameroun",
+   "manu dibango makossa"
+  ],
+  "places": [
+   {
+    "placeId": "cameroon_douala",
+    "relationType": "origin",
+    "weight": 1.0
+   }
+  ]
+ },
+ {
+  "genreId": "benga",
+  "nameEn": "Benga",
+  "nameJa": "ベンガ",
+  "parentGenreId": null,
+  "descriptionJa": "ケニアの速弾きギターが弾む大衆音楽",
+  "descriptionEn": "Fast-picking guitar pop of Kenya",
+  "energy": 3,
+  "mood": "軽快/明るい/リズミカル",
+  "keyInstruments": [
+   "nyatiti",
+   "fast guitar",
+   "bass guitar",
+   "vocals"
+  ],
+  "referenceArtists": [
+   "D.O. Misiani",
+   "Shirati Jazz"
+  ],
+  "keywords": [
+   "benga kenya",
+   "benga guitar"
+  ],
+  "places": [
+   {
+    "placeId": "kenya_nairobi",
+    "relationType": "origin",
+    "weight": 1.0
+   }
+  ]
+ },
+ {
+  "genreId": "mbalax",
+  "nameEn": "Mbalax",
+  "nameJa": "ンバラ",
+  "parentGenreId": null,
+  "descriptionJa": "セネガルのサバール太鼓が躍るポップ",
+  "descriptionEn": "Senegalese pop driven by sabar drums",
+  "energy": 4,
+  "mood": "激情/祝祭/トランス",
+  "keyInstruments": [
+   "sabar drums",
+   "tama",
+   "electric guitar",
+   "synth"
+  ],
+  "referenceArtists": [
+   "Youssou N'Dour",
+   "Baaba Maal"
+  ],
+  "keywords": [
+   "mbalax senegal",
+   "youssou ndour mbalax"
+  ],
+  "places": [
+   {
+    "placeId": "senegal_dakar",
+    "relationType": "origin",
+    "weight": 1.0
+   }
+  ]
+ },
+ {
+  "genreId": "desert_blues",
+  "nameEn": "Desert Blues",
+  "nameJa": "デザート・ブルース",
+  "parentGenreId": null,
+  "descriptionJa": "サハラのトゥアレグによる砂漠のギター",
+  "descriptionEn": "Saharan Tuareg desert guitar blues",
+  "energy": 3,
+  "mood": "広大/孤独/郷愁",
+  "keyInstruments": [
+   "electric guitar",
+   "calabash",
+   "bass drone",
+   "vocals"
+  ],
+  "referenceArtists": [
+   "Tinariwen",
+   "Ali Farka Touré",
+   "Mdou Moctar"
+  ],
+  "keywords": [
+   "desert blues mali",
+   "tuareg desert blues"
+  ],
+  "places": [
+   {
+    "placeId": "mali_bamako",
+    "relationType": "origin",
+    "weight": 1.0
+   }
+  ]
+ },
+ {
+  "genreId": "ethio_jazz",
+  "nameEn": "Ethio-jazz",
+  "nameJa": "エチオ・ジャズ",
+  "parentGenreId": null,
+  "descriptionJa": "エチオピア音階とジャズの融合",
+  "descriptionEn": "Fusion of Ethiopian scales and jazz",
+  "energy": 3,
+  "mood": "神秘/哀愁/エキゾチック",
+  "keyInstruments": [
+   "vibraphone",
+   "organ",
+   "tenor sax",
+   "congas",
+   "flute"
+  ],
+  "referenceArtists": [
+   "Mulatu Astatke",
+   "Mahmoud Ahmed"
+  ],
+  "keywords": [
+   "ethio jazz",
+   "mulatu astatke ethio jazz"
+  ],
+  "places": [
+   {
+    "placeId": "ethiopia_addis",
+    "relationType": "origin",
+    "weight": 1.0
+   }
+  ]
+ },
+ {
+  "genreId": "chimurenga",
+  "nameEn": "Chimurenga",
+  "nameJa": "チムレンガ",
+  "parentGenreId": null,
+  "descriptionJa": "ムビラの祈りが宿るジンバブエの抵抗歌",
+  "descriptionEn": "Zimbabwe protest music carrying mbira prayer",
+  "energy": 3,
+  "mood": "力強い/大地的/祈り",
+  "keyInstruments": [
+   "mbira",
+   "hosho",
+   "electric guitar",
+   "bass"
+  ],
+  "referenceArtists": [
+   "Thomas Mapfumo",
+   "Stella Chiweshe"
+  ],
+  "keywords": [
+   "chimurenga zimbabwe",
+   "thomas mapfumo mbira"
+  ],
+  "places": [
+   {
+    "placeId": "zimbabwe_harare",
+    "relationType": "origin",
+    "weight": 1.0
+   }
+  ]
+ },
+ {
+  "genreId": "isicathamiya",
+  "nameEn": "Isicathamiya",
+  "nameJa": "イシカタミヤ",
+  "parentGenreId": null,
+  "descriptionJa": "ズールーの男声が織る静かなアカペラ合唱",
+  "descriptionEn": "Soft Zulu a-cappella male harmony",
+  "energy": 2,
+  "mood": "荘厳/温かい/ハーモニー",
+  "keyInstruments": [
+   "male a-cappella chorus",
+   "bass voice",
+   "tenor lead"
+  ],
+  "referenceArtists": [
+   "Ladysmith Black Mambazo"
+  ],
+  "keywords": [
+   "isicathamiya",
+   "ladysmith black mambazo"
+  ],
+  "places": [
+   {
+    "placeId": "southafrica_durban",
+    "relationType": "origin",
+    "weight": 1.0
+   }
+  ]
+ },
+ {
+  "genreId": "gnawa",
+  "nameEn": "Gnawa",
+  "nameJa": "グナワ",
+  "parentGenreId": null,
+  "descriptionJa": "モロッコの黒人霊的音楽",
+  "descriptionEn": "Moroccan Black spiritual trance music",
+  "energy": 3,
+  "mood": "トランス/神秘/スピリチュアル",
+  "keyInstruments": [
+   "guembri",
+   "qraqeb",
+   "hand claps",
+   "vocals"
+  ],
+  "referenceArtists": [
+   "Maâlem Mahmoud Gania",
+   "Hassan Hakmoun"
+  ],
+  "keywords": [
+   "gnawa music morocco",
+   "gnawa essaouira"
+  ],
+  "places": [
+   {
+    "placeId": "morocco_essaouira",
+    "relationType": "origin",
+    "weight": 1.0
+   }
+  ]
+ },
+ {
+  "genreId": "mahraganat",
+  "nameEn": "Mahraganat",
+  "nameJa": "マハラガナート",
+  "parentGenreId": null,
+  "descriptionJa": "カイロのストリート発エレクトロ・シャアビ",
+  "descriptionEn": "Cairo street electro-shaabi",
+  "energy": 4,
+  "mood": "ストリート/熱狂/エレクトロ",
+  "keyInstruments": [
+   "autotune vocals",
+   "synth",
+   "drum machine",
+   "808"
+  ],
+  "referenceArtists": [
+   "Sadat",
+   "Oka Wi Ortega"
+  ],
+  "keywords": [
+   "مهرجانات",
+   "electro shaabi egypt"
+  ],
+  "places": [
+   {
+    "placeId": "egypt_cairo",
+    "relationType": "origin",
+    "weight": 1.0
+   }
+  ]
+ },
+ {
+  "genreId": "arabic_tarab",
+  "nameEn": "Arabic Tarab",
+  "nameJa": "アラビック/タラブ",
+  "parentGenreId": null,
+  "descriptionJa": "マカームと歌の恍惚を追うアラブ古典歌謡",
+  "descriptionEn": "Classic Arabic song chasing maqam ecstasy",
+  "energy": 3,
+  "mood": "恍惚/情熱/哀愁",
+  "keyInstruments": [
+   "oud",
+   "qanun",
+   "nay",
+   "riq",
+   "violin section"
+  ],
+  "referenceArtists": [
+   "Umm Kulthum",
+   "Fairuz",
+   "Abdel Halim Hafez"
+  ],
+  "keywords": [
+   "طرب أم كلثوم",
+   "umm kulthum tarab"
+  ],
+  "places": [
+   {
+    "placeId": "egypt_cairo",
+    "relationType": "origin",
+    "weight": 1.0
+   }
+  ]
+ },
+ {
+  "genreId": "khaleeji",
+  "nameEn": "Khaleeji",
+  "nameJa": "ハリージ",
+  "parentGenreId": null,
+  "descriptionJa": "湾岸アラブの荘厳でリズミカルな音楽",
+  "descriptionEn": "Stately rhythmic music of the Arab Gulf",
+  "energy": 3,
+  "mood": "砂漠/祝祭/荘厳",
+  "keyInstruments": [
+   "oud",
+   "mirwas",
+   "tabl",
+   "hand claps",
+   "vocals"
+  ],
+  "referenceArtists": [
+   "Abdul Majeed Abdullah",
+   "Ahlam"
+  ],
+  "keywords": [
+   "خليجي طرب",
+   "khaleeji music"
+  ],
+  "places": [
+   {
+    "placeId": "uae_dubai",
+    "relationType": "origin",
+    "weight": 1.0
+   }
+  ]
+ },
+ {
+  "genreId": "kwaito",
+  "nameEn": "Kwaito",
+  "nameJa": "クワイト",
+  "parentGenreId": null,
+  "descriptionJa": "南ア発のスローなハウス派生",
+  "descriptionEn": "Slow house offshoot from South Africa",
+  "energy": 3,
+  "mood": "アーバン/レイドバック/グルーヴ",
+  "keyInstruments": [
+   "slowed house beats",
+   "deep bass",
+   "synth pads",
+   "chants"
+  ],
+  "referenceArtists": [
+   "Mandoza",
+   "Boom Shaka"
+  ],
+  "keywords": [
+   "kwaito south africa",
+   "classic kwaito"
+  ],
+  "places": [
+   {
+    "placeId": "southafrica_johannesburg",
+    "relationType": "origin",
+    "weight": 1.0
+   }
+  ]
+ },
+ {
+  "genreId": "amapiano",
+  "nameEn": "Amapiano",
+  "nameJa": "アマピアノ",
+  "parentGenreId": null,
+  "descriptionJa": "南ア発のログドラムが響くハウス",
+  "descriptionEn": "South African house with log-drum bass",
+  "energy": 4,
+  "mood": "おしゃれ/ラウンジ/パーティー",
+  "keyInstruments": [
+   "log drum",
+   "jazzy piano",
+   "shaker",
+   "synth pads"
+  ],
+  "referenceArtists": [
+   "Kabza De Small",
+   "DJ Maphorisa"
+  ],
+  "keywords": [
+   "amapiano",
+   "amapiano mix south africa"
+  ],
+  "places": [
+   {
+    "placeId": "southafrica_johannesburg",
+    "relationType": "origin",
+    "weight": 1.0
+   }
+  ]
+ },
+ {
+  "genreId": "gqom",
+  "nameEn": "Gqom",
+  "nameJa": "ゴム",
+  "parentGenreId": null,
+  "descriptionJa": "ダーバン発の硬質ミニマルなダンス",
+  "descriptionEn": "Raw minimal dance music from Durban",
+  "energy": 4,
+  "mood": "硬質/ミニマル/ダーク",
+  "keyInstruments": [
+   "raw drums",
+   "sub-bass",
+   "minimal synth",
+   "chants"
+  ],
+  "referenceArtists": [
+   "DJ Lag",
+   "Babes Wodumo"
+  ],
+  "keywords": [
+   "gqom durban",
+   "gqom south africa"
+  ],
+  "places": [
+   {
+    "placeId": "southafrica_durban",
+    "relationType": "origin",
+    "weight": 1.0
+   }
+  ]
+ },
+ {
+  "genreId": "kuduro",
+  "nameEn": "Kuduro",
+  "nameJa": "クドゥーロ",
+  "parentGenreId": null,
+  "descriptionJa": "アンゴラの高速エレクトロ・ダンス",
+  "descriptionEn": "Fast Angolan electronic dance music",
+  "energy": 5,
+  "mood": "高速/エレクトロ/爆発",
+  "keyInstruments": [
+   "fast electronic beats",
+   "percussion",
+   "shouts",
+   "synth"
+  ],
+  "referenceArtists": [
+   "Dog Murras",
+   "Os Lambas"
+  ],
+  "keywords": [
+   "kuduro angola",
+   "kuduro music"
+  ],
+  "places": [
+   {
+    "placeId": "angola_luanda",
+    "relationType": "origin",
+    "weight": 1.0
+   }
+  ]
+ },
+ {
+  "genreId": "semba",
+  "nameEn": "Semba",
+  "nameJa": "センバ",
+  "parentGenreId": null,
+  "descriptionJa": "アンゴラのサンバの祖となった音楽",
+  "descriptionEn": "Angolan music ancestral to samba",
+  "energy": 3,
+  "mood": "陽気/土着/祝祭",
+  "keyInstruments": [
+   "dikanza",
+   "guitar",
+   "accordion",
+   "percussion"
+  ],
+  "referenceArtists": [
+   "Bonga",
+   "Waldemar Bastos"
+  ],
+  "keywords": [
+   "semba angola",
+   "semba angolano"
+  ],
+  "places": [
+   {
+    "placeId": "angola_luanda",
+    "relationType": "origin",
+    "weight": 1.0
+   }
+  ]
+ },
+ {
+  "genreId": "morna",
+  "nameEn": "Morna",
+  "nameJa": "モルナ",
+  "parentGenreId": null,
+  "descriptionJa": "カーボベルデの哀愁の歌",
+  "descriptionEn": "Melancholic song of Cape Verde",
+  "energy": 2,
+  "mood": "哀愁/サウダージ/夜",
+  "keyInstruments": [
+   "acoustic guitar",
+   "cavaquinho",
+   "violin",
+   "piano"
+  ],
+  "referenceArtists": [
+   "Cesária Évora"
+  ],
+  "keywords": [
+   "morna cabo verde",
+   "cesária évora morna"
+  ],
+  "places": [
+   {
+    "placeId": "capeverde_mindelo",
+    "relationType": "origin",
+    "weight": 1.0
+   },
+   {
+    "placeId": "portugal_lisbon",
+    "relationType": "current",
+    "weight": 0.5
+   }
+  ]
+ },
+ {
+  "genreId": "ottoman_classical",
+  "nameEn": "Ottoman Classical",
+  "nameJa": "オスマン古典音楽",
+  "parentGenreId": null,
+  "descriptionJa": "トルコ宮廷のマカームに基づく荘厳な器楽歌曲",
+  "descriptionEn": "Stately Turkish court makam music",
+  "energy": 2,
+  "mood": "荘厳/宮廷/瞑想",
+  "keyInstruments": [
+   "ney",
+   "kanun",
+   "tanbur",
+   "kemençe",
+   "vocals"
+  ],
+  "referenceArtists": [
+   "Tanburi Cemil Bey",
+   "Münir Nurettin Selçuk"
+  ],
+  "keywords": [
+   "osmanlı klasik müziği",
+   "ottoman classical music"
+  ],
+  "places": [
+   {
+    "placeId": "turkey_istanbul",
+    "relationType": "origin",
+    "weight": 1.0
+   }
+  ]
+ },
+ {
+  "genreId": "anatolian_rock",
+  "nameEn": "Anatolian Rock",
+  "nameJa": "アナトリアン・ロック",
+  "parentGenreId": null,
+  "descriptionJa": "トルコ民謡とロックの融合",
+  "descriptionEn": "Fusion of Turkish folk and rock",
+  "energy": 4,
+  "mood": "サイケ/民謡/熱情",
+  "keyInstruments": [
+   "bağlama",
+   "electric guitar",
+   "organ",
+   "drums"
+  ],
+  "referenceArtists": [
+   "Barış Manço",
+   "Selda Bağcan",
+   "Erkin Koray"
+  ],
+  "keywords": [
+   "anadolu rock",
+   "anatolian rock"
+  ],
+  "places": [
+   {
+    "placeId": "turkey_istanbul",
+    "relationType": "origin",
+    "weight": 1.0
+   }
+  ]
+ },
+ {
+  "genreId": "sufi",
+  "nameEn": "Sufi / Whirling",
+  "nameJa": "スーフィー/旋舞",
+  "parentGenreId": null,
+  "descriptionJa": "旋舞とともに高まるトランス的な祈りの音楽",
+  "descriptionEn": "Trance prayer music of the whirling dervishes",
+  "energy": 2,
+  "mood": "トランス/神秘/祈り",
+  "keyInstruments": [
+   "ney",
+   "frame drum",
+   "chanting",
+   "drone"
+  ],
+  "referenceArtists": [
+   "Mevlana ensembles",
+   "Mercan Dede"
+  ],
+  "keywords": [
+   "sufi music whirling",
+   "mevlana sufi ney"
+  ],
+  "places": [
+   {
+    "placeId": "turkey_konya",
+    "relationType": "origin",
+    "weight": 1.0
+   }
+  ]
+ },
+ {
+  "genreId": "persian",
+  "nameEn": "Persian Classical",
+  "nameJa": "ペルシャ古典音楽",
+  "parentGenreId": null,
+  "descriptionJa": "ラディーフに基づくイランの詩的で瞑想的な音楽",
+  "descriptionEn": "Poetic meditative Iranian radif music",
+  "energy": 2,
+  "mood": "詩的/神秘/瞑想",
+  "keyInstruments": [
+   "tar",
+   "setar",
+   "santur",
+   "tombak",
+   "kamancheh"
+  ],
+  "referenceArtists": [
+   "Mohammad Reza Shajarian",
+   "Shahram Nazeri"
+  ],
+  "keywords": [
+   "موسیقی سنتی ایرانی",
+   "persian classical shajarian"
+  ],
+  "places": [
+   {
+    "placeId": "iran_tehran",
+    "relationType": "origin",
+    "weight": 1.0
+   }
+  ]
+ },
+ {
+  "genreId": "israeli_fusion",
+  "nameEn": "Middle Eastern Fusion",
+  "nameJa": "中東フュージョン",
+  "parentGenreId": null,
+  "descriptionJa": "中東の音階と西洋ポップが交わる多文化サウンド",
+  "descriptionEn": "Multicultural blend of Middle Eastern scales and Western pop",
+  "energy": 4,
+  "mood": "多文化/エネルギッシュ/ダンサブル",
+  "keyInstruments": [
+   "darbuka",
+   "oud",
+   "electric bass",
+   "synth"
+  ],
+  "referenceArtists": [
+   "Idan Raichel",
+   "Balkan Beat Box"
+  ],
+  "keywords": [
+   "middle eastern fusion music",
+   "idan raichel"
+  ],
+  "places": [
+   {
+    "placeId": "israel_telaviv",
+    "relationType": "origin",
+    "weight": 1.0
+   }
+  ]
+ },
+ {
+  "genreId": "flamenco",
+  "nameEn": "Flamenco",
+  "nameJa": "フラメンコ",
+  "parentGenreId": null,
+  "descriptionJa": "アンダルシアの歌・ギター・踊りの激情",
+  "descriptionEn": "Andalusian passion of song guitar and dance",
+  "energy": 4,
+  "mood": "情熱/哀愁/ドラマチック",
+  "keyInstruments": [
+   "flamenco guitar",
+   "palmas",
+   "cajón",
+   "castanets"
+  ],
+  "referenceArtists": [
+   "Paco de Lucía",
+   "Camarón de la Isla"
+  ],
+  "keywords": [
+   "flamenco puro",
+   "flamenco sevilla",
+   "フラメンコ"
+  ],
+  "places": [
+   {
+    "placeId": "spain_seville",
+    "relationType": "origin",
+    "weight": 1.0
+   }
+  ]
+ },
+ {
+  "genreId": "fado",
+  "nameEn": "Fado",
+  "nameJa": "ファド",
+  "parentGenreId": null,
+  "descriptionJa": "リスボンに響く宿命の歌",
+  "descriptionEn": "Lisbon songs of saudade and fate",
+  "energy": 2,
+  "mood": "哀愁/サウダージ/運命",
+  "keyInstruments": [
+   "Portuguese guitar",
+   "classical guitar",
+   "upright bass"
+  ],
+  "referenceArtists": [
+   "Amália Rodrigues",
+   "Mariza"
+  ],
+  "keywords": [
+   "fado português",
+   "fado de lisboa",
+   "ファド"
+  ],
+  "places": [
+   {
+    "placeId": "portugal_lisbon",
+    "relationType": "origin",
+    "weight": 1.0
+   }
+  ]
+ },
+ {
+  "genreId": "chanson",
+  "nameEn": "Chanson",
+  "nameJa": "シャンソン",
+  "parentGenreId": null,
+  "descriptionJa": "歌詞を重んじるフランスの歌",
+  "descriptionEn": "French song that prizes lyrics",
+  "energy": 3,
+  "mood": "洗練/ロマンティック/パリ",
+  "keyInstruments": [
+   "accordion",
+   "piano",
+   "upright bass",
+   "strings"
+  ],
+  "referenceArtists": [
+   "Edith Piaf",
+   "Jacques Brel",
+   "Charles Aznavour"
+  ],
+  "keywords": [
+   "chanson française",
+   "chanson classique"
+  ],
+  "places": [
+   {
+    "placeId": "france_paris",
+    "relationType": "origin",
+    "weight": 1.0
+   }
+  ]
+ },
+ {
+  "genreId": "musette",
+  "nameEn": "Musette",
+  "nameJa": "ミュゼット",
+  "parentGenreId": null,
+  "descriptionJa": "アコーディオンが彩るパリの舞踏音楽",
+  "descriptionEn": "Parisian accordion dance music",
+  "energy": 3,
+  "mood": "ノスタルジック/街角/ワルツ",
+  "keyInstruments": [
+   "musette accordion",
+   "violin",
+   "guitar",
+   "upright bass"
+  ],
+  "referenceArtists": [
+   "Yvette Horner",
+   "Jo Privat"
+  ],
+  "keywords": [
+   "musette accordéon",
+   "valse musette"
+  ],
+  "places": [
+   {
+    "placeId": "france_paris",
+    "relationType": "origin",
+    "weight": 1.0
+   }
+  ]
+ },
+ {
+  "genreId": "canzone_napoletana",
+  "nameEn": "Neapolitan Song",
+  "nameJa": "カンツォーネ・ナポレターナ",
+  "parentGenreId": null,
+  "descriptionJa": "ナポリの伝統歌曲",
+  "descriptionEn": "Traditional song of Naples",
+  "energy": 3,
+  "mood": "ロマンティック/太陽/朗らか",
+  "keyInstruments": [
+   "mandolin",
+   "guitar",
+   "accordion",
+   "strings"
+  ],
+  "referenceArtists": [
+   "Roberto Murolo",
+   "Sergio Bruni"
+  ],
+  "keywords": [
+   "canzone napoletana",
+   "napoli classica"
+  ],
+  "places": [
+   {
+    "placeId": "italy_naples",
+    "relationType": "origin",
+    "weight": 1.0
+   }
+  ]
+ },
+ {
+  "genreId": "tarantella",
+  "nameEn": "Tarantella",
+  "nameJa": "タランテラ",
+  "parentGenreId": null,
+  "descriptionJa": "加速していく南イタリアの熱狂的な舞踏",
+  "descriptionEn": "Frenzied accelerating dance of southern Italy",
+  "energy": 5,
+  "mood": "狂騒/祝祭/加速",
+  "keyInstruments": [
+   "mandolin",
+   "tambourine",
+   "accordion",
+   "violin"
+  ],
+  "referenceArtists": [
+   "Canzoniere Grecanico Salentino"
+  ],
+  "keywords": [
+   "tarantella napoletana",
+   "pizzica salento"
+  ],
+  "places": [
+   {
+    "placeId": "italy_naples",
+    "relationType": "origin",
+    "weight": 1.0
+   }
+  ]
+ },
+ {
+  "genreId": "rebetiko",
+  "nameEn": "Rebetiko",
+  "nameJa": "レベティコ",
+  "parentGenreId": null,
+  "descriptionJa": "ギリシャの都市下層が生んだブルース的歌",
+  "descriptionEn": "Greek urban blues-like song",
+  "energy": 3,
+  "mood": "哀愁/アウトロー/酒場",
+  "keyInstruments": [
+   "bouzouki",
+   "baglamas",
+   "guitar",
+   "violin"
+  ],
+  "referenceArtists": [
+   "Markos Vamvakaris",
+   "Vassilis Tsitsanis"
+  ],
+  "keywords": [
+   "ρεμπέτικο",
+   "rebetiko"
+  ],
+  "places": [
+   {
+    "placeId": "greece_athens",
+    "relationType": "origin",
+    "weight": 1.0
+   }
+  ]
+ },
+ {
+  "genreId": "irish_folk",
+  "nameEn": "Irish Folk",
+  "nameJa": "アイリッシュ・フォーク",
+  "parentGenreId": null,
+  "descriptionJa": "アイルランドの伝統音楽",
+  "descriptionEn": "Traditional music of Ireland",
+  "energy": 3,
+  "mood": "郷愁/酒場/壮大",
+  "keyInstruments": [
+   "tin whistle",
+   "uilleann pipes",
+   "fiddle",
+   "bodhrán"
+  ],
+  "referenceArtists": [
+   "The Chieftains",
+   "Planxty",
+   "Clannad"
+  ],
+  "keywords": [
+   "irish traditional music",
+   "irish folk session"
+  ],
+  "places": [
+   {
+    "placeId": "ireland_dublin",
+    "relationType": "important",
+    "weight": 0.8
+   }
+  ]
+ },
+ {
+  "genreId": "polka",
+  "nameEn": "Polka",
+  "nameJa": "ポルカ",
+  "parentGenreId": null,
+  "descriptionJa": "ビアホールを跳ねさせる中欧の陽気な2拍子",
+  "descriptionEn": "Cheerful Central European beer-hall dance",
+  "energy": 4,
+  "mood": "陽気/お祭り/ビアホール",
+  "keyInstruments": [
+   "accordion",
+   "tuba",
+   "clarinet",
+   "trumpet"
+  ],
+  "referenceArtists": [
+   "Czech and German brass bands"
+  ],
+  "keywords": [
+   "polka music",
+   "böhmische polka"
+  ],
+  "places": [
+   {
+    "placeId": "czech_prague",
+    "relationType": "origin",
+    "weight": 1.0
+   }
+  ]
+ },
+ {
+  "genreId": "balkan_brass",
+  "nameEn": "Balkan Brass",
+  "nameJa": "バルカン・ブラス",
+  "parentGenreId": null,
+  "descriptionJa": "変拍子で疾走するバルカンの狂騒ブラス",
+  "descriptionEn": "Frenzied odd-meter Balkan brass",
+  "energy": 5,
+  "mood": "狂騒/祝祭/カオス",
+  "keyInstruments": [
+   "trumpet ensemble",
+   "tuba",
+   "zurna",
+   "snare"
+  ],
+  "referenceArtists": [
+   "Fanfare Ciocărlia",
+   "Boban Marković",
+   "Goran Bregović"
+  ],
+  "keywords": [
+   "balkan brass band",
+   "fanfare ciocarlia"
+  ],
+  "places": [
+   {
+    "placeId": "serbia_belgrade",
+    "relationType": "origin",
+    "weight": 1.0
+   }
+  ]
+ },
+ {
+  "genreId": "klezmer",
+  "nameEn": "Klezmer",
+  "nameJa": "クレズマー",
+  "parentGenreId": null,
+  "descriptionJa": "泣き笑うクラリネットの東欧ユダヤ音楽",
+  "descriptionEn": "Eastern European Jewish music of the wailing clarinet",
+  "energy": 4,
+  "mood": "哀愁/狂喜/泣き笑い",
+  "keyInstruments": [
+   "clarinet",
+   "violin",
+   "accordion",
+   "tsimbl"
+  ],
+  "referenceArtists": [
+   "The Klezmatics",
+   "Giora Feidman"
+  ],
+  "keywords": [
+   "klezmer music",
+   "klezmer clarinet"
+  ],
+  "places": [
+   {
+    "placeId": "poland_krakow",
+    "relationType": "origin",
+    "weight": 1.0
+   }
+  ]
+ },
+ {
+  "genreId": "gypsy_romani",
+  "nameEn": "Gypsy / Romani",
+  "nameJa": "ジプシー/ロマ音楽",
+  "parentGenreId": null,
+  "descriptionJa": "自由と哀愁が乱舞する超絶技巧のロマ音楽",
+  "descriptionEn": "Virtuosic Romani music of freedom and longing",
+  "energy": 4,
+  "mood": "哀愁/情熱/自由",
+  "keyInstruments": [
+   "violin",
+   "cimbalom",
+   "accordion",
+   "upright bass"
+  ],
+  "referenceArtists": [
+   "Taraf de Haïdouks",
+   "Kočani Orkestar"
+  ],
+  "keywords": [
+   "romani gypsy music",
+   "taraf de haidouks"
+  ],
+  "places": [
+   {
+    "placeId": "romania_bucharest",
+    "relationType": "origin",
+    "weight": 1.0
+   }
+  ]
+ },
+ {
+  "genreId": "csardas",
+  "nameEn": "Csárdás",
+  "nameJa": "チャールダーシュ",
+  "parentGenreId": null,
+  "descriptionJa": "静から狂へ加速するハンガリーの舞踏",
+  "descriptionEn": "Hungarian dance accelerating from slow to wild",
+  "energy": 4,
+  "mood": "哀愁→狂喜/加速",
+  "keyInstruments": [
+   "virtuosic violin",
+   "cimbalom",
+   "clarinet",
+   "bass"
+  ],
+  "referenceArtists": [
+   "Hungarian Roma ensembles"
+  ],
+  "keywords": [
+   "csárdás hungarian",
+   "hungarian gypsy csardas"
+  ],
+  "places": [
+   {
+    "placeId": "hungary_budapest",
+    "relationType": "origin",
+    "weight": 1.0
+   }
+  ]
+ },
+ {
+  "genreId": "bulgarian_voices",
+  "nameEn": "Bulgarian Voices",
+  "nameJa": "ブルガリアン・ヴォイス",
+  "parentGenreId": null,
+  "descriptionJa": "不協和な女声が異界を開くブルガリア合唱",
+  "descriptionEn": "Otherworldly dissonant Bulgarian female choir",
+  "energy": 2,
+  "mood": "神秘/荘厳/異界的",
+  "keyInstruments": [
+   "women's chorus",
+   "drone",
+   "gadulka",
+   "kaval"
+  ],
+  "referenceArtists": [
+   "Le Mystère des Voix Bulgares"
+  ],
+  "keywords": [
+   "bulgarian women's choir",
+   "le mystere des voix bulgares"
+  ],
+  "places": [
+   {
+    "placeId": "bulgaria_sofia",
+    "relationType": "origin",
+    "weight": 1.0
+   }
+  ]
+ },
+ {
+  "genreId": "russian_folk",
+  "nameEn": "Russian Folk",
+  "nameJa": "ロシア民謡",
+  "parentGenreId": null,
+  "descriptionJa": "哀愁と壮大さが同居するロシアの歌",
+  "descriptionEn": "Russian song of longing and grandeur",
+  "energy": 3,
+  "mood": "哀愁/壮大/冬",
+  "keyInstruments": [
+   "balalaika",
+   "bayan",
+   "domra",
+   "choir"
+  ],
+  "referenceArtists": [
+   "Red Army Choir",
+   "Pyatnitsky Choir"
+  ],
+  "keywords": [
+   "russian folk music",
+   "русская народная песня"
+  ],
+  "places": [
+   {
+    "placeId": "russia_moscow",
+    "relationType": "origin",
+    "weight": 1.0
+   }
+  ]
+ },
+ {
+  "genreId": "nordic_folk",
+  "nameEn": "Nordic Folk",
+  "nameJa": "北欧フォーク",
+  "parentGenreId": null,
+  "descriptionJa": "森と静寂が宿る北欧の澄んだ民俗音楽",
+  "descriptionEn": "Clear Nordic folk of forest and silence",
+  "energy": 2,
+  "mood": "澄んだ/静寂/冬",
+  "keyInstruments": [
+   "Hardanger fiddle",
+   "nyckelharpa",
+   "kantele",
+   "drone"
+  ],
+  "referenceArtists": [
+   "Wardruna",
+   "Hedningarna",
+   "Garmarna"
+  ],
+  "keywords": [
+   "nordic folk music",
+   "scandinavian folk"
+  ],
+  "places": [
+   {
+    "placeId": "norway_oslo",
+    "relationType": "origin",
+    "weight": 1.0
+   }
+  ]
+ },
+ {
+  "genreId": "estonian_choral",
+  "nameEn": "Baltic Choral",
+  "nameJa": "バルト合唱",
+  "parentGenreId": null,
+  "descriptionJa": "祈りのように透明なバルトの合唱",
+  "descriptionEn": "Translucent prayer-like Baltic choral music",
+  "energy": 2,
+  "mood": "透明/祈り/静謐",
+  "keyInstruments": [
+   "mixed choir",
+   "kannel",
+   "organ"
+  ],
+  "referenceArtists": [
+   "Arvo Pärt",
+   "Veljo Tormis"
+  ],
+  "keywords": [
+   "estonian choral music",
+   "arvo pärt choir"
+  ],
+  "places": [
+   {
+    "placeId": "estonia_tallinn",
+    "relationType": "origin",
+    "weight": 1.0
+   }
+  ]
+ },
+ {
+  "genreId": "sami_joik",
+  "nameEn": "Sami Joik",
+  "nameJa": "サーミ・ヨイク",
+  "parentGenreId": null,
+  "descriptionJa": "自然そのものを描く北欧サーミの原初の歌",
+  "descriptionEn": "Primal Sami chant that depicts nature itself",
+  "energy": 2,
+  "mood": "原始的/自然/スピリチュアル",
+  "keyInstruments": [
+   "unaccompanied vocal chant",
+   "frame drum",
+   "drone"
+  ],
+  "referenceArtists": [
+   "Mari Boine",
+   "Wimme Saari"
+  ],
+  "keywords": [
+   "sami joik",
+   "joik mari boine"
+  ],
+  "places": [
+   {
+    "placeId": "norway_tromso",
+    "relationType": "origin",
+    "weight": 1.0
+   }
+  ]
+ },
+ {
+  "genreId": "filmi",
+  "nameEn": "Filmi",
+  "nameJa": "フィルミー",
+  "parentGenreId": null,
+  "descriptionJa": "インド映画の劇中歌。ボリウッドの中心",
+  "descriptionEn": "Indian film songs at the heart of Bollywood",
+  "energy": 5,
+  "mood": "ゴージャス/祝祭/ドラマチック",
+  "keyInstruments": [
+   "tabla",
+   "dholak",
+   "sitar",
+   "strings",
+   "dhol"
+  ],
+  "referenceArtists": [
+   "A.R. Rahman",
+   "Lata Mangeshkar",
+   "Kishore Kumar"
+  ],
+  "keywords": [
+   "bollywood songs",
+   "हिंदी फ़िल्मी गीत"
+  ],
+  "places": [
+   {
+    "placeId": "india_mumbai",
+    "relationType": "origin",
+    "weight": 1.0
+   }
+  ]
+ },
+ {
+  "genreId": "hindustani",
+  "nameEn": "Hindustani Classical",
+  "nameJa": "ヒンドゥスターニー音楽",
+  "parentGenreId": null,
+  "descriptionJa": "北インドの古典音楽",
+  "descriptionEn": "North Indian classical music",
+  "energy": 3,
+  "mood": "瞑想/宇宙的/深遠",
+  "keyInstruments": [
+   "sitar",
+   "tabla",
+   "tanpura",
+   "sarangi",
+   "bansuri"
+  ],
+  "referenceArtists": [
+   "Ravi Shankar",
+   "Zakir Hussain",
+   "Hariprasad Chaurasia"
+  ],
+  "keywords": [
+   "hindustani classical music",
+   "north indian classical raga"
+  ],
+  "places": [
+   {
+    "placeId": "india_varanasi",
+    "relationType": "origin",
+    "weight": 1.0
+   }
+  ]
+ },
+ {
+  "genreId": "carnatic",
+  "nameEn": "Carnatic Music",
+  "nameJa": "カルナーティック音楽",
+  "parentGenreId": null,
+  "descriptionJa": "南インドの古典音楽",
+  "descriptionEn": "South Indian classical music",
+  "energy": 3,
+  "mood": "技巧的/精緻/数学的",
+  "keyInstruments": [
+   "veena",
+   "mridangam",
+   "violin",
+   "ghatam",
+   "kanjira"
+  ],
+  "referenceArtists": [
+   "M.S. Subbulakshmi",
+   "T.M. Krishna"
+  ],
+  "keywords": [
+   "carnatic music",
+   "south indian classical kacheri"
+  ],
+  "places": [
+   {
+    "placeId": "india_chennai",
+    "relationType": "origin",
+    "weight": 1.0
+   }
+  ]
+ },
+ {
+  "genreId": "bhangra",
+  "nameEn": "Bhangra",
+  "nameJa": "バングラー",
+  "parentGenreId": null,
+  "descriptionJa": "パンジャブの収穫祭発の躍動ダンス音楽",
+  "descriptionEn": "Punjabi harvest dance music",
+  "energy": 5,
+  "mood": "祝祭/パーティー/爆発",
+  "keyInstruments": [
+   "dhol",
+   "tumbi",
+   "chimta",
+   "electronic beats"
+  ],
+  "referenceArtists": [
+   "Daler Mehndi",
+   "Panjabi MC"
+  ],
+  "keywords": [
+   "punjabi bhangra",
+   "ਭੰਗੜਾ"
+  ],
+  "places": [
+   {
+    "placeId": "india_amritsar",
+    "relationType": "origin",
+    "weight": 1.0
+   },
+   {
+    "placeId": "uk_london",
+    "relationType": "current",
+    "weight": 0.6
+   }
+  ]
+ },
+ {
+  "genreId": "baul",
+  "nameEn": "Baul",
+  "nameJa": "バウル",
+  "parentGenreId": null,
+  "descriptionJa": "ベンガルの吟遊詩人による神秘の歌",
+  "descriptionEn": "Mystic songs of Bengal wandering minstrels",
+  "energy": 3,
+  "mood": "スピリチュアル/放浪/自由",
+  "keyInstruments": [
+   "ektara",
+   "dotara",
+   "duggi",
+   "ankle bells"
+  ],
+  "referenceArtists": [
+   "Purna Das Baul",
+   "Parvathy Baul"
+  ],
+  "keywords": [
+   "baul gaan",
+   "baul song bengal"
+  ],
+  "places": [
+   {
+    "placeId": "india_kolkata",
+    "relationType": "origin",
+    "weight": 1.0
+   }
+  ]
+ },
+ {
+  "genreId": "rajasthani",
+  "nameEn": "Rajasthani Folk",
+  "nameJa": "ラジャスタン民謡",
+  "parentGenreId": null,
+  "descriptionJa": "砂漠の放浪楽師が奏でる華やかな民俗音楽",
+  "descriptionEn": "Vibrant desert folk of Rajasthan",
+  "energy": 3,
+  "mood": "砂漠/放浪/華やか",
+  "keyInstruments": [
+   "sarangi",
+   "morchang",
+   "dholak",
+   "khartaal"
+  ],
+  "referenceArtists": [
+   "Manganiyar musicians",
+   "Langa musicians"
+  ],
+  "keywords": [
+   "rajasthani folk music",
+   "manganiyar rajasthan"
+  ],
+  "places": [
+   {
+    "placeId": "india_jaisalmer",
+    "relationType": "origin",
+    "weight": 1.0
+   }
+  ]
+ },
+ {
+  "genreId": "goa_trance",
+  "nameEn": "Goa Trance",
+  "nameJa": "ゴア・トランス",
+  "parentGenreId": null,
+  "descriptionJa": "ゴアのビーチ発の幻想的トランス",
+  "descriptionEn": "Psychedelic trance born on Goa beaches",
+  "energy": 4,
+  "mood": "幻想/反復/トランス",
+  "keyInstruments": [
+   "acid synth",
+   "303 bass",
+   "four-on-the-floor",
+   "pads"
+  ],
+  "referenceArtists": [
+   "Goa Gil",
+   "Astral Projection"
+  ],
+  "keywords": [
+   "goa trance",
+   "classic goa trance"
+  ],
+  "places": [
+   {
+    "placeId": "india_goa",
+    "relationType": "origin",
+    "weight": 1.0
+   }
+  ]
+ },
+ {
+  "genreId": "qawwali",
+  "nameEn": "Qawwali",
+  "nameJa": "カッワーリー",
+  "parentGenreId": null,
+  "descriptionJa": "スーフィーの熱狂的な宗教歌",
+  "descriptionEn": "Ecstatic Sufi devotional song",
+  "energy": 4,
+  "mood": "スピリチュアル/恍惚/トランス",
+  "keyInstruments": [
+   "harmonium",
+   "tabla",
+   "dholak",
+   "hand claps",
+   "vocals"
+  ],
+  "referenceArtists": [
+   "Nusrat Fateh Ali Khan",
+   "Sabri Brothers"
+  ],
+  "keywords": [
+   "qawwali sufi",
+   "nusrat fateh ali khan qawwali"
+  ],
+  "places": [
+   {
+    "placeId": "pakistan_lahore",
+    "relationType": "origin",
+    "weight": 1.0
+   }
+  ]
+ },
+ {
+  "genreId": "gamelan",
+  "nameEn": "Gamelan",
+  "nameJa": "ガムラン",
+  "parentGenreId": null,
+  "descriptionJa": "打楽器合奏によるジャワ・バリの伝統音楽",
+  "descriptionEn": "Javanese and Balinese percussion orchestra music",
+  "energy": 3,
+  "mood": "神秘/トランス/王宮的",
+  "keyInstruments": [
+   "metallophones",
+   "gongs",
+   "kendang",
+   "suling"
+  ],
+  "referenceArtists": [
+   "Javanese and Balinese gamelan ensembles"
+  ],
+  "keywords": [
+   "gamelan bali",
+   "javanese gamelan"
+  ],
+  "places": [
+   {
+    "placeId": "indonesia_bali",
+    "relationType": "origin",
+    "weight": 1.0
+   }
+  ]
+ },
+ {
+  "genreId": "dangdut",
+  "nameEn": "Dangdut",
+  "nameJa": "ダンドゥット",
+  "parentGenreId": null,
+  "descriptionJa": "インドネシアの大衆ポップ",
+  "descriptionEn": "Indonesia popular dance-pop",
+  "energy": 4,
+  "mood": "ポップ/ダンサブル/庶民的",
+  "keyInstruments": [
+   "tabla",
+   "flute",
+   "mandolin",
+   "electric guitar",
+   "gendang"
+  ],
+  "referenceArtists": [
+   "Rhoma Irama",
+   "Inul Daratista"
+  ],
+  "keywords": [
+   "dangdut koplo",
+   "dangdut indonesia"
+  ],
+  "places": [
+   {
+    "placeId": "indonesia_jakarta",
+    "relationType": "origin",
+    "weight": 1.0
+   }
+  ]
+ },
+ {
+  "genreId": "thai_luk_thung",
+  "nameEn": "Luk Thung",
+  "nameJa": "ルークトゥン",
+  "parentGenreId": null,
+  "descriptionJa": "哀愁とメロドラマを歌うタイの大衆歌謡",
+  "descriptionEn": "Melodramatic Thai country song",
+  "energy": 3,
+  "mood": "哀愁/田舎/メロドラマ",
+  "keyInstruments": [
+   "phin",
+   "khlui",
+   "ranat",
+   "Western band"
+  ],
+  "referenceArtists": [
+   "Pumpuang Duangjan",
+   "Suraphol Sombatcharoen"
+  ],
+  "keywords": [
+   "ลูกทุ่ง",
+   "luk thung thai"
+  ],
+  "places": [
+   {
+    "placeId": "thailand_bangkok",
+    "relationType": "origin",
+    "weight": 1.0
+   }
+  ]
+ },
+ {
+  "genreId": "vietnamese",
+  "nameEn": "Vietnamese Traditional",
+  "nameJa": "ベトナム伝統音楽",
+  "parentGenreId": null,
+  "descriptionJa": "水墨画のように繊細なベトナムの伝統音楽",
+  "descriptionEn": "Delicate ink-wash-like Vietnamese tradition",
+  "energy": 2,
+  "mood": "繊細/哀愁/水墨画的",
+  "keyInstruments": [
+   "đàn tranh",
+   "đàn bầu",
+   "sáo",
+   "đàn nguyệt"
+  ],
+  "referenceArtists": [
+   "traditional ca trù ensembles"
+  ],
+  "keywords": [
+   "nhạc dân tộc việt nam",
+   "vietnamese traditional music"
+  ],
+  "places": [
+   {
+    "placeId": "vietnam_hanoi",
+    "relationType": "origin",
+    "weight": 1.0
+   }
+  ]
+ },
+ {
+  "genreId": "chinese_traditional",
+  "nameEn": "Chinese Traditional",
+  "nameJa": "中国伝統音楽",
+  "parentGenreId": null,
+  "descriptionJa": "二胡と古筝が描く悠久の中国伝統音楽",
+  "descriptionEn": "Timeless Chinese tradition of erhu and guzheng",
+  "energy": 2,
+  "mood": "雅/悠久/大陸的",
+  "keyInstruments": [
+   "erhu",
+   "pipa",
+   "guzheng",
+   "dizi",
+   "yangqin"
+  ],
+  "referenceArtists": [
+   "女子十二楽坊"
+  ],
+  "keywords": [
+   "中国传统音乐 二胡",
+   "guzheng traditional"
+  ],
+  "places": [
+   {
+    "placeId": "china_xian",
+    "relationType": "origin",
+    "weight": 1.0
+   }
+  ]
+ },
+ {
+  "genreId": "peking_opera",
+  "nameEn": "Peking Opera",
+  "nameJa": "京劇",
+  "parentGenreId": null,
+  "descriptionJa": "銅鑼と裏声が劇的に交錯する中国の伝統劇",
+  "descriptionEn": "Dramatic Chinese opera of gongs and falsetto",
+  "energy": 4,
+  "mood": "劇的/華麗/戦闘的",
+  "keyInstruments": [
+   "jinghu",
+   "gongs",
+   "cymbals",
+   "wooden clappers"
+  ],
+  "referenceArtists": [
+   "Mei Lanfang"
+  ],
+  "keywords": [
+   "京剧",
+   "peking opera"
+  ],
+  "places": [
+   {
+    "placeId": "china_beijing",
+    "relationType": "origin",
+    "weight": 1.0
+   }
+  ]
+ },
+ {
+  "genreId": "shidaiqu",
+  "nameEn": "Shidaiqu",
+  "nameJa": "時代曲",
+  "parentGenreId": null,
+  "descriptionJa": "上海発の中国ポップの源流",
+  "descriptionEn": "The root of Chinese pop from Shanghai",
+  "energy": 3,
+  "mood": "ノスタルジック/退廃/上海",
+  "keyInstruments": [
+   "jazz band",
+   "strings",
+   "Chinese melody",
+   "vocals"
+  ],
+  "referenceArtists": [
+   "周璇",
+   "白光"
+  ],
+  "keywords": [
+   "时代曲",
+   "shidaiqu shanghai"
+  ],
+  "places": [
+   {
+    "placeId": "china_shanghai",
+    "relationType": "origin",
+    "weight": 1.0
+   }
+  ]
+ },
+ {
+  "genreId": "chinese_rock",
+  "nameEn": "Chinese Rock",
+  "nameJa": "中国ロック",
+  "parentGenreId": null,
+  "descriptionJa": "北京を中心に育った中国語ロック",
+  "descriptionEn": "Chinese-language rock centered on Beijing",
+  "energy": 4,
+  "mood": "反骨/熱情/ロック",
+  "keyInstruments": [
+   "electric guitar",
+   "bass",
+   "drums",
+   "vocals"
+  ],
+  "referenceArtists": [
+   "崔健",
+   "唐朝"
+  ],
+  "keywords": [
+   "中国摇滚",
+   "chinese rock"
+  ],
+  "places": [
+   {
+    "placeId": "china_beijing",
+    "relationType": "origin",
+    "weight": 1.0
+   }
+  ]
+ },
+ {
+  "genreId": "kpop",
+  "nameEn": "K-Pop",
+  "nameJa": "K-POP",
+  "parentGenreId": null,
+  "descriptionJa": "韓国発の世界的ポップ",
+  "descriptionEn": "Global pop from South Korea",
+  "energy": 4,
+  "mood": "モダン/キャッチー/プロダクション",
+  "keyInstruments": [
+   "crisp synth",
+   "808",
+   "layered vocals",
+   "EDM drops"
+  ],
+  "referenceArtists": [
+   "BTS",
+   "BLACKPINK",
+   "SEVENTEEN"
+  ],
+  "keywords": [
+   "k-pop",
+   "kpop hits"
+  ],
+  "places": [
+   {
+    "placeId": "korea_seoul",
+    "relationType": "origin",
+    "weight": 1.0
+   }
+  ]
+ },
+ {
+  "genreId": "trot",
+  "nameEn": "Trot",
+  "nameJa": "トロット",
+  "parentGenreId": null,
+  "descriptionJa": "韓国最古のポピュラー歌謡",
+  "descriptionEn": "Korea oldest popular song genre",
+  "energy": 3,
+  "mood": "哀愁/こぶし/レトロ",
+  "keyInstruments": [
+   "brass",
+   "strings",
+   "electronic beat",
+   "vocals"
+  ],
+  "referenceArtists": [
+   "이미자",
+   "나훈아"
+  ],
+  "keywords": [
+   "트로트",
+   "korean trot"
+  ],
+  "places": [
+   {
+    "placeId": "korea_seoul",
+    "relationType": "origin",
+    "weight": 1.0
+   }
+  ]
+ },
+ {
+  "genreId": "city_pop",
+  "nameEn": "City Pop",
+  "nameJa": "シティ・ポップ",
+  "parentGenreId": null,
+  "descriptionJa": "80年代東京の都会的でメロウなポップス",
+  "descriptionEn": "Mellow urban Tokyo pop of the 1980s",
+  "energy": 3,
+  "mood": "おしゃれ/レトロ/メロウ",
+  "keyInstruments": [
+   "chorus guitar",
+   "slap bass",
+   "electric piano",
+   "LinnDrum"
+  ],
+  "referenceArtists": [
+   "山下達郎",
+   "竹内まりや",
+   "大貫妙子"
+  ],
+  "keywords": [
+   "japanese city pop",
+   "city pop 80s",
+   "シティポップ"
+  ],
+  "places": [
+   {
+    "placeId": "japan_tokyo",
+    "relationType": "origin",
+    "weight": 1.0
+   }
+  ]
+ },
+ {
+  "genreId": "jp_jazz_fusion",
+  "nameEn": "Japanese Jazz Fusion",
+  "nameJa": "和ジャズ・フュージョン",
+  "parentGenreId": "jazz_fusion",
+  "descriptionJa": "70〜80年代日本のクロスオーバー",
+  "descriptionEn": "Japanese crossover-fusion of the 70s and 80s",
+  "energy": 4,
+  "mood": "技巧/疾走/都会",
+  "keyInstruments": [
+   "electric piano",
+   "guitar",
+   "synth",
+   "funk bass"
+  ],
+  "referenceArtists": [
+   "Casiopea",
+   "T-Square",
+   "渡辺香津美"
+  ],
+  "keywords": [
+   "japanese jazz fusion",
+   "和ジャズ フュージョン"
+  ],
+  "places": [
+   {
+    "placeId": "japan_tokyo",
+    "relationType": "important",
+    "weight": 0.8
+   }
+  ]
+ },
+ {
+  "genreId": "shibuya_kei",
+  "nameEn": "Shibuya-kei",
+  "nameJa": "渋谷系",
+  "parentGenreId": null,
+  "descriptionJa": "90年代渋谷発のおしゃれな折衷ポップ",
+  "descriptionEn": "Stylish eclectic pop from 1990s Shibuya",
+  "energy": 3,
+  "mood": "おしゃれ/折衷/レトロ",
+  "keyInstruments": [
+   "bossa samples",
+   "strings",
+   "vintage synth",
+   "breakbeat"
+  ],
+  "referenceArtists": [
+   "Pizzicato Five",
+   "Cornelius",
+   "Flipper's Guitar"
+  ],
+  "keywords": [
+   "shibuya-kei",
+   "渋谷系"
+  ],
+  "places": [
+   {
+    "placeId": "japan_tokyo",
+    "relationType": "origin",
+    "weight": 1.0
+   }
+  ]
+ },
+ {
+  "genreId": "kayokyoku",
+  "nameEn": "Kayōkyoku",
+  "nameJa": "歌謡曲",
+  "parentGenreId": null,
+  "descriptionJa": "昭和の日本ポピュラー歌謡",
+  "descriptionEn": "Shōwa-era Japanese popular song",
+  "energy": 3,
+  "mood": "歌謡/メロディ/昭和",
+  "keyInstruments": [
+   "strings",
+   "brass",
+   "band",
+   "vocals"
+  ],
+  "referenceArtists": [
+   "美空ひばり",
+   "山口百恵",
+   "沢田研二"
+  ],
+  "keywords": [
+   "昭和 歌謡曲",
+   "kayokyoku showa"
+  ],
+  "places": [
+   {
+    "placeId": "japan_osaka",
+    "relationType": "important",
+    "weight": 0.7
+   }
+  ]
+ },
+ {
+  "genreId": "jp_funk",
+  "nameEn": "Japanese Funk",
+  "nameJa": "和ファンク",
+  "parentGenreId": "funk",
+  "descriptionJa": "世界のディガーに人気の和モノ・ファンク",
+  "descriptionEn": "Japanese funk prized by global diggers",
+  "energy": 4,
+  "mood": "グルーヴ/和モノ/ファンキー",
+  "keyInstruments": [
+   "slap bass",
+   "wah guitar",
+   "horns",
+   "drums"
+  ],
+  "referenceArtists": [
+   "鈴木茂",
+   "久保田麻琴"
+  ],
+  "keywords": [
+   "japanese funk wamono",
+   "和モノ ファンク"
+  ],
+  "places": [
+   {
+    "placeId": "japan_osaka",
+    "relationType": "important",
+    "weight": 0.7
+   }
+  ]
+ },
+ {
+  "genreId": "enka",
+  "nameEn": "Enka",
+  "nameJa": "演歌",
+  "parentGenreId": null,
+  "descriptionJa": "こぶしと情念で日本の心を歌う大衆歌謡",
+  "descriptionEn": "Japanese ballad of vibrato and deep sentiment",
+  "energy": 3,
+  "mood": "こぶし/情念/日本的",
+  "keyInstruments": [
+   "shamisen",
+   "shakuhachi",
+   "strings",
+   "vocals"
+  ],
+  "referenceArtists": [
+   "美空ひばり",
+   "北島三郎",
+   "八代亜紀"
+  ],
+  "keywords": [
+   "演歌 名曲",
+   "enka japanese"
+  ],
+  "places": [
+   {
+    "placeId": "japan_osaka",
+    "relationType": "important",
+    "weight": 0.7
+   }
+  ]
+ },
+ {
+  "genreId": "gagaku",
+  "nameEn": "Gagaku",
+  "nameJa": "雅楽",
+  "parentGenreId": null,
+  "descriptionJa": "千年を超えて受け継がれる日本の宮廷雅楽",
+  "descriptionEn": "Japan millennium-old imperial court music",
+  "energy": 1,
+  "mood": "荘厳/古代/神聖",
+  "keyInstruments": [
+   "shō",
+   "hichiriki",
+   "ryūteki",
+   "biwa",
+   "kakko"
+  ],
+  "referenceArtists": [
+   "宮内庁式部職楽部"
+  ],
+  "keywords": [
+   "雅楽",
+   "gagaku japanese court music"
+  ],
+  "places": [
+   {
+    "placeId": "japan_kyoto",
+    "relationType": "origin",
+    "weight": 1.0
+   }
+  ]
+ },
+ {
+  "genreId": "okinawan_folk",
+  "nameEn": "Okinawan Folk",
+  "nameJa": "沖縄民謡",
+  "parentGenreId": null,
+  "descriptionJa": "三線と琉球音階が彩る沖縄の伝統音楽",
+  "descriptionEn": "Okinawan traditional music of sanshin and Ryukyu scales",
+  "energy": 2,
+  "mood": "海/島/郷愁",
+  "keyInstruments": [
+   "sanshin",
+   "island drum",
+   "Ryukyu scale",
+   "vocals"
+  ],
+  "referenceArtists": [
+   "嘉手苅林昌",
+   "りんけんバンド"
+  ],
+  "keywords": [
+   "沖縄民謡 三線",
+   "okinawan folk music"
+  ],
+  "places": [
+   {
+    "placeId": "japan_okinawa",
+    "relationType": "origin",
+    "weight": 1.0
+   }
+  ]
+ },
+ {
+  "genreId": "shimauta",
+  "nameEn": "Shimauta",
+  "nameJa": "島唄",
+  "parentGenreId": null,
+  "descriptionJa": "奄美・沖縄の島々に伝わる唄",
+  "descriptionEn": "Island songs of Amami and Okinawa",
+  "energy": 2,
+  "mood": "島/郷愁/祝祭",
+  "keyInstruments": [
+   "sanshin",
+   "hayashi",
+   "vocals"
+  ],
+  "referenceArtists": [
+   "朝崎郁恵",
+   "元ちとせ"
+  ],
+  "keywords": [
+   "島唄 奄美",
+   "shimauta okinawa"
+  ],
+  "places": [
+   {
+    "placeId": "japan_okinawa",
+    "relationType": "origin",
+    "weight": 1.0
+   }
+  ]
+ },
+ {
+  "genreId": "khoomei",
+  "nameEn": "Khoomei",
+  "nameJa": "ホーミー",
+  "parentGenreId": null,
+  "descriptionJa": "モンゴルの喉歌（倍音唱法）",
+  "descriptionEn": "Mongolian throat singing",
+  "energy": 2,
+  "mood": "原始的/自然/神秘",
+  "keyInstruments": [
+   "morin khuur",
+   "throat singing",
+   "drone"
+  ],
+  "referenceArtists": [
+   "Batzorig Vaanchig",
+   "Khusugtun"
+  ],
+  "keywords": [
+   "mongolian throat singing",
+   "khoomei khoomii"
+  ],
+  "places": [
+   {
+    "placeId": "mongolia_ulaanbaatar",
+    "relationType": "origin",
+    "weight": 1.0
+   }
+  ]
+ },
+ {
+  "genreId": "polynesian",
+  "nameEn": "Polynesian",
+  "nameJa": "ポリネシアン",
+  "parentGenreId": null,
+  "descriptionJa": "海と大地を讃える太平洋諸島の合唱",
+  "descriptionEn": "Pacific-island harmony praising sea and land",
+  "energy": 3,
+  "mood": "海洋/壮大/部族的",
+  "keyInstruments": [
+   "log drum",
+   "ukulele",
+   "group vocals",
+   "conch shell"
+  ],
+  "referenceArtists": [
+   "Te Vaka"
+  ],
+  "keywords": [
+   "polynesian music",
+   "samoan music"
+  ],
+  "places": [
+   {
+    "placeId": "samoa_apia",
+    "relationType": "origin",
+    "weight": 1.0
+   }
+  ]
+ },
+ {
+  "genreId": "maori_haka",
+  "nameEn": "Maori Haka",
+  "nameJa": "マオリ・ハカ",
+  "parentGenreId": null,
+  "descriptionJa": "大地を踏み鳴らすマオリの力の歌",
+  "descriptionEn": "Maori chant of power and unity",
+  "energy": 5,
+  "mood": "威嚇/力/団結",
+  "keyInstruments": [
+   "body percussion",
+   "foot stomping",
+   "group chant"
+  ],
+  "referenceArtists": [
+   "Kapa haka groups"
+  ],
+  "keywords": [
+   "maori haka",
+   "kapa haka"
+  ],
+  "places": [
+   {
+    "placeId": "nz_auckland",
+    "relationType": "origin",
+    "weight": 1.0
+   }
+  ]
+ },
+ {
+  "genreId": "aboriginal",
+  "nameEn": "Aboriginal",
+  "nameJa": "アボリジナル",
+  "parentGenreId": null,
+  "descriptionJa": "ディジュリドゥが鳴るオーストラリア先住民の音",
+  "descriptionEn": "Indigenous Australian sound of the didgeridoo",
+  "energy": 2,
+  "mood": "原始/大地/ドリームタイム",
+  "keyInstruments": [
+   "didgeridoo",
+   "clapsticks",
+   "body percussion",
+   "drone"
+  ],
+  "referenceArtists": [
+   "Yothu Yindi",
+   "Gurrumul"
+  ],
+  "keywords": [
+   "aboriginal didgeridoo music",
+   "yothu yindi"
+  ],
+  "places": [
+   {
+    "placeId": "australia_alice",
+    "relationType": "origin",
+    "weight": 1.0
+   }
+  ]
+ },
+ {
+  "genreId": "grime",
+  "nameEn": "Grime",
+  "nameJa": "グライム",
+  "parentGenreId": null,
+  "descriptionJa": "ロンドン発の高速エレクトロニック・ラップ",
+  "descriptionEn": "Fast electronic rap from London",
+  "energy": 4,
+  "mood": "アーバン/攻撃的/疾走",
+  "keyInstruments": [
+   "140bpm beats",
+   "sub-bass",
+   "synth stabs",
+   "MC vocals"
+  ],
+  "referenceArtists": [
+   "Wiley",
+   "Skepta",
+   "Stormzy"
+  ],
+  "keywords": [
+   "grime uk",
+   "london grime"
+  ],
+  "places": [
+   {
+    "placeId": "uk_london",
+    "relationType": "origin",
+    "weight": 1.0
+   }
+  ]
+ },
+ {
+  "genreId": "uk_garage",
+  "nameEn": "UK Garage",
+  "nameJa": "UKガラージ",
+  "parentGenreId": null,
+  "descriptionJa": "ロンドンのクラブ発の跳ねるダンス音楽",
+  "descriptionEn": "Bouncy London club dance music",
+  "energy": 4,
+  "mood": "アーバン/おしゃれ/跳ねる",
+  "keyInstruments": [
+   "2-step beats",
+   "sub-bass",
+   "soulful vocals",
+   "synth"
+  ],
+  "referenceArtists": [
+   "MJ Cole",
+   "Artful Dodger"
+  ],
+  "keywords": [
+   "uk garage",
+   "old school uk garage"
+  ],
+  "places": [
+   {
+    "placeId": "uk_london",
+    "relationType": "origin",
+    "weight": 1.0
+   }
+  ]
+ },
+ {
+  "genreId": "jungle",
+  "nameEn": "Jungle",
+  "nameJa": "ジャングル",
+  "parentGenreId": null,
+  "descriptionJa": "切り刻んだブレイクと重低音の英国ダンス",
+  "descriptionEn": "UK dance of chopped breaks and heavy bass",
+  "energy": 4,
+  "mood": "疾走/アーバン/ダーク",
+  "keyInstruments": [
+   "breakbeats",
+   "sub-bass",
+   "amen break",
+   "reggae samples"
+  ],
+  "referenceArtists": [
+   "Goldie",
+   "LTJ Bukem"
+  ],
+  "keywords": [
+   "jungle drum and bass",
+   "90s jungle uk"
+  ],
+  "places": [
+   {
+    "placeId": "uk_london",
+    "relationType": "origin",
+    "weight": 1.0
+   }
+  ]
+ },
+ {
+  "genreId": "trip_hop",
+  "nameEn": "Trip Hop",
+  "nameJa": "トリップ・ホップ",
+  "parentGenreId": null,
+  "descriptionJa": "ブリストル発の陰鬱でダウンテンポなサウンド",
+  "descriptionEn": "Moody downtempo sound from Bristol",
+  "energy": 2,
+  "mood": "ダーク/アーバン/けだるい",
+  "keyInstruments": [
+   "slow beats",
+   "turntablism",
+   "dark atmosphere",
+   "samples"
+  ],
+  "referenceArtists": [
+   "Massive Attack",
+   "Portishead",
+   "Tricky"
+  ],
+  "keywords": [
+   "trip hop",
+   "bristol trip hop"
+  ],
+  "places": [
+   {
+    "placeId": "uk_bristol",
+    "relationType": "origin",
+    "weight": 1.0
+   }
+  ]
+ },
+ {
+  "genreId": "berlin_techno",
+  "nameEn": "Berlin Techno",
+  "nameJa": "ベルリン・テクノ",
+  "parentGenreId": null,
+  "descriptionJa": "壁崩壊後のベルリンで育った硬派テクノ",
+  "descriptionEn": "Hard techno that grew in post-wall Berlin",
+  "energy": 4,
+  "mood": "硬質/反復/ダーク",
+  "keyInstruments": [
+   "driving kick",
+   "analog synth",
+   "hypnotic loops",
+   "hi-hats"
+  ],
+  "referenceArtists": [
+   "Ben Klock",
+   "Marcel Dettmann"
+  ],
+  "keywords": [
+   "berlin techno",
+   "techno berlin set"
+  ],
+  "places": [
+   {
+    "placeId": "germany_berlin",
+    "relationType": "important",
+    "weight": 0.9
+   }
+  ]
+ },
+ {
+  "genreId": "krautrock",
+  "nameEn": "Krautrock",
+  "nameJa": "クラウトロック",
+  "parentGenreId": null,
+  "descriptionJa": "反復と実験のドイツ実験ロック",
+  "descriptionEn": "German experimental rock of repetition",
+  "energy": 3,
+  "mood": "反復/実験/宇宙的",
+  "keyInstruments": [
+   "motorik drums",
+   "analog synth",
+   "electric guitar",
+   "sequencer"
+  ],
+  "referenceArtists": [
+   "Can",
+   "Neu!",
+   "Kraftwerk"
+  ],
+  "keywords": [
+   "krautrock",
+   "german krautrock 70s"
+  ],
+  "places": [
+   {
+    "placeId": "germany_berlin",
+    "relationType": "important",
+    "weight": 0.8
+   }
+  ]
+ },
+ {
+  "genreId": "quebecois_folk",
+  "nameEn": "Québécois Folk",
+  "nameJa": "ケベック伝統音楽",
+  "parentGenreId": null,
+  "descriptionJa": "フランス系カナダの足踊りとフィドルが弾む伝統音楽",
+  "descriptionEn": "Foot-tapping fiddle folk of French Canada",
+  "energy": 3,
+  "mood": "陽気/素朴/祝祭",
+  "keyInstruments": [
+   "fiddle",
+   "accordion",
+   "foot percussion",
+   "spoons"
+  ],
+  "referenceArtists": [
+   "La Bottine Souriante",
+   "Le Vent du Nord"
+  ],
+  "keywords": [
+   "musique traditionnelle québécoise",
+   "la bottine souriante"
+  ],
+  "places": [
+   {
+    "placeId": "canada_montreal",
+    "relationType": "origin",
+    "weight": 1.0
+   }
+  ]
+ },
+ {
+  "genreId": "inuit_throat_singing",
+  "nameEn": "Inuit Throat Singing",
+  "nameJa": "イヌイットの喉歌",
+  "parentGenreId": null,
+  "descriptionJa": "二人一組で息を交わすカナダ北極圏の喉歌",
+  "descriptionEn": "Inuit katajjaq throat-singing duets of the Arctic",
+  "energy": 2,
+  "mood": "原始的/遊戯的/親密",
+  "keyInstruments": [
+   "paired throat singing",
+   "breath rhythm",
+   "vocal games"
+  ],
+  "referenceArtists": [
+   "Tanya Tagaq"
+  ],
+  "keywords": [
+   "inuit throat singing katajjaq",
+   "tanya tagaq"
+  ],
+  "places": [
+   {
+    "placeId": "canada_iqaluit",
+    "relationType": "origin",
+    "weight": 1.0
+   }
+  ]
+ },
+ {
+  "genreId": "russian_rock",
+  "nameEn": "Russian Rock",
+  "nameJa": "ロシアン・ロック",
+  "parentGenreId": null,
+  "descriptionJa": "ソ連末期のレニングラードで燃えた詩的なロック",
+  "descriptionEn": "Poetic rock from late-Soviet Leningrad",
+  "energy": 4,
+  "mood": "反骨/詩的/哀愁",
+  "keyInstruments": [
+   "electric guitar",
+   "bass",
+   "drums",
+   "vocals"
+  ],
+  "referenceArtists": [
+   "Kino",
+   "Aquarium",
+   "DDT"
+  ],
+  "keywords": [
+   "русский рок",
+   "kino viktor tsoi"
+  ],
+  "places": [
+   {
+    "placeId": "russia_spb",
+    "relationType": "origin",
+    "weight": 1.0
+   }
+  ]
+ },
+ {
+  "genreId": "tuvan_throat_singing",
+  "nameEn": "Tuvan Throat Singing",
+  "nameJa": "トゥバ喉歌",
+  "parentGenreId": null,
+  "descriptionJa": "シベリア・トゥバの大地に響く倍音の喉歌",
+  "descriptionEn": "Harmonic throat singing of Siberian Tuva",
+  "energy": 2,
+  "mood": "原始的/大地的/神秘",
+  "keyInstruments": [
+   "igil",
+   "doshpuluur",
+   "throat singing",
+   "drone"
+  ],
+  "referenceArtists": [
+   "Huun-Huur-Tu",
+   "Yat-Kha"
+  ],
+  "keywords": [
+   "tuvan throat singing",
+   "huun huur tu"
+  ],
+  "places": [
+   {
+    "placeId": "russia_kyzyl",
+    "relationType": "origin",
+    "weight": 1.0
+   }
+  ]
+ },
+ {
+  "genreId": "yodel",
+  "nameEn": "Yodel",
+  "nameJa": "ヨーデル",
+  "parentGenreId": null,
+  "descriptionJa": "アルプスにこだまする裏声の切り替え唱法",
+  "descriptionEn": "Alpine falsetto-switching mountain song",
+  "energy": 3,
+  "mood": "牧歌/澄んだ/祝祭",
+  "keyInstruments": [
+   "yodeling vocals",
+   "alphorn",
+   "accordion",
+   "hand bells"
+  ],
+  "referenceArtists": [
+   "Swiss Naturjodel ensembles"
+  ],
+  "keywords": [
+   "swiss yodel jodel",
+   "alphorn naturjodel"
+  ],
+  "places": [
+   {
+    "placeId": "switzerland_appenzell",
+    "relationType": "origin",
+    "weight": 1.0
+   }
+  ]
+ },
+ {
+  "genreId": "scottish_folk",
+  "nameEn": "Scottish / Celtic",
+  "nameJa": "スコティッシュ/ケルト",
+  "parentGenreId": null,
+  "descriptionJa": "バグパイプが勇壮に鳴るスコットランドのケルト音楽",
+  "descriptionEn": "Stirring Scottish Celtic music of the bagpipes",
+  "energy": 3,
+  "mood": "勇壮/郷愁/祝祭",
+  "keyInstruments": [
+   "Highland bagpipes",
+   "fiddle",
+   "bodhrán",
+   "accordion"
+  ],
+  "referenceArtists": [
+   "Runrig",
+   "Capercaillie",
+   "Battlefield Band"
+  ],
+  "keywords": [
+   "scottish bagpipes music",
+   "scottish celtic folk"
+  ],
+  "places": [
+   {
+    "placeId": "uk_edinburgh",
+    "relationType": "origin",
+    "weight": 1.0
+   }
+  ]
+ },
+ {
+  "genreId": "breton_celtic",
+  "nameEn": "Breton Celtic",
+  "nameJa": "ブルトン/ケルト音楽",
+  "parentGenreId": null,
+  "descriptionJa": "ブルターニュのケルト復興とフェスト・ノーズの舞踏",
+  "descriptionEn": "Breton Celtic revival and fest-noz dance",
+  "energy": 3,
+  "mood": "郷愁/祝祭/神秘",
+  "keyInstruments": [
+   "bombarde",
+   "biniou",
+   "Celtic harp",
+   "fiddle"
+  ],
+  "referenceArtists": [
+   "Alan Stivell",
+   "Tri Yann"
+  ],
+  "keywords": [
+   "musique celtique bretonne",
+   "alan stivell"
+  ],
+  "places": [
+   {
+    "placeId": "france_brest",
+    "relationType": "origin",
+    "weight": 1.0
+   }
+  ]
+ },
+ {
+  "genreId": "galician_celtic",
+  "nameEn": "Galician Celtic",
+  "nameJa": "ガリシア/ケルト音楽",
+  "parentGenreId": null,
+  "descriptionJa": "スペイン北西部に残るガイタのケルト音楽",
+  "descriptionEn": "Galician bagpipe Celtic music of NW Spain",
+  "energy": 3,
+  "mood": "郷愁/祝祭/大地的",
+  "keyInstruments": [
+   "gaita",
+   "tamboril",
+   "hurdy-gurdy",
+   "pandeireta"
+  ],
+  "referenceArtists": [
+   "Carlos Núñez",
+   "Luar na Lubre"
+  ],
+  "keywords": [
+   "música celta galega",
+   "gaita gallega carlos núñez"
+  ],
+  "places": [
+   {
+    "placeId": "spain_santiago",
+    "relationType": "origin",
+    "weight": 1.0
+   }
+  ]
+ },
+ {
+  "genreId": "georgian_polyphony",
+  "nameEn": "Georgian Polyphony",
+  "nameJa": "ジョージア多声合唱",
+  "parentGenreId": null,
+  "descriptionJa": "男声が幾重にも重なるジョージアの古代多声合唱",
+  "descriptionEn": "Ancient Georgian polyphonic male choral singing",
+  "energy": 2,
+  "mood": "荘厳/神秘/大地的",
+  "keyInstruments": [
+   "a-cappella male choir",
+   "drone",
+   "close harmony"
+  ],
+  "referenceArtists": [
+   "Rustavi Choir",
+   "Ensemble Basiani"
+  ],
+  "keywords": [
+   "georgian polyphonic singing",
+   "rustavi choir"
+  ],
+  "places": [
+   {
+    "placeId": "georgia_tbilisi",
+    "relationType": "origin",
+    "weight": 1.0
+   }
+  ]
+ },
+ {
+  "genreId": "chanson_quebecoise",
+  "nameEn": "Chanson Québécoise",
+  "nameJa": "シャンソン・ケベコワ",
+  "parentGenreId": null,
+  "descriptionJa": "フランス語で歌うケベックの抒情的なシャンソン／ポップ。アイデンティティの象徴",
+  "descriptionEn": "French-language Québécois chanson and song — an emblem of identity",
+  "energy": 3,
+  "mood": "抒情/郷愁/誇り",
+  "keyInstruments": [
+   "acoustic guitar",
+   "piano",
+   "accordion",
+   "strings"
+  ],
+  "referenceArtists": [
+   "Félix Leclerc",
+   "Gilles Vigneault",
+   "Robert Charlebois"
+  ],
+  "keywords": [
+   "chanson québécoise",
+   "robert charlebois félix leclerc"
+  ],
+  "places": [
+   {
+    "placeId": "canada_quebec_city",
+    "relationType": "origin",
+    "weight": 1.0
+   }
+  ]
+ }
+]

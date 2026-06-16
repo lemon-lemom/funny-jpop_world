@@ -1,0 +1,107 @@
+place_id,country_code,country_name_en,country_name_ja,city_name_en,city_name_ja,lat,lon,description_ja,is_active
+cuba_havana,CU,Cuba,キューバ,Havana,ハバナ,23.1136,-82.3666,キューバの首都。ルンバとソンの中心地,1
+cuba_matanzas,CU,Cuba,キューバ,Matanzas,マタンサス,23.0411,-81.5775,アフロキューバン・ルンバの発祥地,1
+cuba_santiago,CU,Cuba,キューバ,Santiago de Cuba,サンティアゴ・デ・クーバ,20.0247,-75.8219,ソンとトローバを育んだ東部の都市,1
+usa_new_orleans,US,United States,アメリカ,New Orleans,ニューオーリンズ,29.9511,-90.0715,ジャズ発祥の地,1
+usa_new_york,US,United States,アメリカ,New York,ニューヨーク,40.7128,-74.0060,ビバップとラテン音楽の交差点,1
+usa_chicago,US,United States,アメリカ,Chicago,シカゴ,41.8781,-87.6298,シカゴ・ブルースとハウスの街,1
+usa_detroit,US,United States,アメリカ,Detroit,デトロイト,42.3314,-83.0458,モータウンとテクノを生んだ工業都市,1
+usa_nashville,US,United States,アメリカ,Nashville,ナッシュビル,36.1627,-86.7816,カントリーの首都,1
+usa_los_angeles,US,United States,アメリカ,Los Angeles,ロサンゼルス,34.0522,-118.2437,ウェストコースト・ジャズとファンクの拠点,1
+usa_memphis,US,United States,アメリカ,Memphis,メンフィス,35.1495,-90.0490,ソウルとブルースの聖地ビール・ストリート,1
+usa_honolulu,US,United States,アメリカ,Honolulu,ホノルル,21.3069,-157.8583,ハワイアン・ミュージックの中心,1
+brazil_rio,BR,Brazil,ブラジル,Rio de Janeiro,リオデジャネイロ,-22.9068,-43.1729,サンバとボサノヴァの故郷,1
+brazil_bahia,BR,Brazil,ブラジル,Salvador (Bahia),サルヴァドール（バイーア）,-12.9777,-38.5016,アフロ・ブラジル音楽の核,1
+brazil_recife,BR,Brazil,ブラジル,Recife,レシフェ,-8.0476,-34.8770,フレーヴォとマラカトゥの街,1
+brazil_sao_paulo,BR,Brazil,ブラジル,São Paulo,サンパウロ,-23.5505,-46.6333,MPBの一大拠点,1
+brazil_fortaleza,BR,Brazil,ブラジル,Fortaleza,フォルタレザ,-3.7319,-38.5267,北東部フォホーの拠点,1
+jamaica_kingston,JM,Jamaica,ジャマイカ,Kingston,キングストン,17.9714,-76.7920,レゲエ・ダブ・スカの首都,1
+japan_tokyo,JP,Japan,日本,Tokyo,東京,35.6762,139.6503,シティ・ポップと渋谷系の発信地,1
+japan_osaka,JP,Japan,日本,Osaka,大阪,34.6937,135.5023,歌謡曲と和ファンクの街,1
+japan_okinawa,JP,Japan,日本,Naha (Okinawa),那覇（沖縄）,26.2124,127.6809,琉球音階の島唄・沖縄民謡,1
+argentina_buenos,AR,Argentina,アルゼンチン,Buenos Aires,ブエノスアイレス,-34.6037,-58.3816,タンゴの故郷,1
+colombia_cartagena,CO,Colombia,コロンビア,Cartagena,カルタヘナ,10.3910,-75.4794,クンビアのカリブ沿岸,1
+colombia_cali,CO,Colombia,コロンビア,Cali,カリ,3.4516,-76.5320,世界のサルサ首都,1
+mexico_veracruz,MX,Mexico,メキシコ,Veracruz,ベラクルス,19.1738,-96.1342,ソン・ハローチョの港町,1
+nigeria_lagos,NG,Nigeria,ナイジェリア,Lagos,ラゴス,6.5244,3.3792,アフロビートの発信地,1
+ghana_accra,GH,Ghana,ガーナ,Accra,アクラ,5.6037,-0.1870,ハイライフの故郷,1
+mali_bamako,ML,Mali,マリ,Bamako,バマコ,12.6392,-8.0029,デザート・ブルースの拠点,1
+senegal_dakar,SN,Senegal,セネガル,Dakar,ダカール,14.7167,-17.4677,ンバラの中心,1
+capeverde_mindelo,CV,Cape Verde,カーボベルデ,Mindelo,ミンデロ,16.8866,-24.9956,モルナの島,1
+morocco_essaouira,MA,Morocco,モロッコ,Essaouira,エッサウィラ,31.5085,-9.7595,グナワ音楽の港町,1
+egypt_cairo,EG,Egypt,エジプト,Cairo,カイロ,30.0444,31.2357,マハラガナートとアラブ古典の都,1
+ethiopia_addis,ET,Ethiopia,エチオピア,Addis Ababa,アディスアベバ,9.0300,38.7400,エチオ・ジャズの中心,1
+congo_kinshasa,CD,DR Congo,コンゴ民主共和国,Kinshasa,キンシャサ,-4.4419,15.2663,スークースの発信地,1
+angola_luanda,AO,Angola,アンゴラ,Luanda,ルアンダ,-8.8390,13.2894,センバとクドゥーロの首都,1
+southafrica_johannesburg,ZA,South Africa,南アフリカ,Johannesburg,ヨハネスブルグ,-26.2041,28.0473,クワイトとアマピアノの街,1
+southafrica_durban,ZA,South Africa,南アフリカ,Durban,ダーバン,-29.8587,31.0218,ゴムの発祥地,1
+portugal_lisbon,PT,Portugal,ポルトガル,Lisbon,リスボン,38.7223,-9.1393,ファドの都,1
+spain_seville,ES,Spain,スペイン,Seville,セビリア,37.3891,-5.9845,フラメンコの中心アンダルシア,1
+france_paris,FR,France,フランス,Paris,パリ,48.8566,2.3522,シャンソンとミュゼットの街,1
+germany_berlin,DE,Germany,ドイツ,Berlin,ベルリン,52.5200,13.4050,テクノとクラウトロックの都市,1
+italy_naples,IT,Italy,イタリア,Naples,ナポリ,40.8518,14.2681,カンツォーネ・ナポレターナの街,1
+greece_athens,GR,Greece,ギリシャ,Athens,アテネ,37.9838,23.7275,レベティコの都市,1
+ireland_dublin,IE,Ireland,アイルランド,Dublin,ダブリン,53.3498,-6.2603,アイリッシュ・フォークの拠点,1
+uk_london,GB,United Kingdom,イギリス,London,ロンドン,51.5074,-0.1278,グライムとUKガラージの発信地,1
+uk_bristol,GB,United Kingdom,イギリス,Bristol,ブリストル,51.4545,-2.5879,トリップ・ホップの街,1
+turkey_istanbul,TR,Türkiye,トルコ,Istanbul,イスタンブール,41.0082,28.9784,アナトリアン・ロックの都市,1
+trinidad_pos,TT,Trinidad and Tobago,トリニダード・トバゴ,Port of Spain,ポートオブスペイン,10.6549,-61.5019,カリプソとスティールパンの故郷,1
+dominican_santo_domingo,DO,Dominican Republic,ドミニカ共和国,Santo Domingo,サントドミンゴ,18.4861,-69.9312,メレンゲとバチャータの首都,1
+puertorico_san_juan,PR,Puerto Rico,プエルトリコ,San Juan,サンファン,18.4655,-66.1057,レゲトン・ボンバ・プレーナの街,1
+peru_lima,PE,Peru,ペルー,Lima,リマ,-12.0464,-77.0428,アフロ・ペルー音楽とチチャ,1
+india_mumbai,IN,India,インド,Mumbai,ムンバイ,19.0760,72.8777,ボリウッド映画音楽の都,1
+india_chennai,IN,India,インド,Chennai,チェンナイ,13.0827,80.2707,南インド古典カルナーティックの中心,1
+india_kolkata,IN,India,インド,Kolkata,コルカタ,22.5726,88.3639,バウルとベンガル音楽の街,1
+india_amritsar,IN,India,インド,Amritsar,アムリトサル,31.6340,74.8723,パンジャブ・バングラーの故郷,1
+india_varanasi,IN,India,インド,Varanasi,ワーラーナシー,25.3176,82.9739,北インド古典ヒンドゥスターニーの聖地,1
+india_goa,IN,India,インド,Panaji (Goa),パナジ（ゴア）,15.4909,73.8278,ゴア・トランス発祥のビーチ,1
+pakistan_lahore,PK,Pakistan,パキスタン,Lahore,ラホール,31.5497,74.3436,カッワーリーの中心,1
+indonesia_jakarta,ID,Indonesia,インドネシア,Jakarta,ジャカルタ,-6.2088,106.8456,ダンドゥットの大衆音楽都市,1
+indonesia_bali,ID,Indonesia,インドネシア,Denpasar (Bali),デンパサール（バリ）,-8.6705,115.2126,ガムランの島,1
+korea_seoul,KR,South Korea,韓国,Seoul,ソウル,37.5665,126.9780,K-POPとトロットの中心,1
+china_shanghai,CN,China,中国,Shanghai,上海,31.2304,121.4737,時代曲が生まれた都市,1
+china_beijing,CN,China,中国,Beijing,北京,39.9042,116.4074,中国ロックの拠点,1
+mongolia_ulaanbaatar,MN,Mongolia,モンゴル,Ulaanbaatar,ウランバートル,47.8864,106.9057,ホーミー（喉歌）の国,1
+cameroon_douala,CM,Cameroon,カメルーン,Douala,ドゥアラ,4.0511,9.7679,マコッサの発信地,1
+kenya_nairobi,KE,Kenya,ケニア,Nairobi,ナイロビ,-1.2921,36.8219,ベンガの中心,1
+zimbabwe_harare,ZW,Zimbabwe,ジンバブエ,Harare,ハラレ,-17.8252,31.0335,チムレンガとムビラの街,1
+mexico_guadalajara,MX,Mexico,メキシコ,Guadalajara,グアダラハラ,20.6597,-103.3496,マリアッチの故郷,1
+mexico_monterrey,MX,Mexico,メキシコ,Monterrey,モンテレイ,25.6866,-100.3161,ノルテーニョの拠点,1
+bolivia_lapaz,BO,Bolivia,ボリビア,La Paz,ラパス,-16.5000,-68.1193,アンデス・フォルクローレの高原都市,1
+usa_lafayette,US,United States,アメリカ,Lafayette,ラファイエット,30.2241,-92.0198,ザイデコとケイジャンの中心,1
+usa_clarksdale,US,United States,アメリカ,Clarksdale,クラークスデール,34.2001,-90.5712,デルタ・ブルースの聖地,1
+usa_asheville,US,United States,アメリカ,Asheville,アッシュビル,35.5951,-82.5515,アパラチアン・フォークの拠点,1
+czech_prague,CZ,Czechia,チェコ,Prague,プラハ,50.0755,14.4378,中欧ポルカの街,1
+serbia_belgrade,RS,Serbia,セルビア,Belgrade,ベオグラード,44.7866,20.4489,バルカン・ブラスの拠点,1
+poland_krakow,PL,Poland,ポーランド,Kraków,クラクフ,50.0647,19.9450,東欧クレズマーゆかりの街,1
+romania_bucharest,RO,Romania,ルーマニア,Bucharest,ブカレスト,44.4268,26.1025,ロマ音楽の拠点,1
+bulgaria_sofia,BG,Bulgaria,ブルガリア,Sofia,ソフィア,42.6977,23.3219,ブルガリアン・ヴォイスの国,1
+russia_moscow,RU,Russia,ロシア,Moscow,モスクワ,55.7558,37.6173,ロシア民謡と合唱の都,1
+norway_oslo,NO,Norway,ノルウェー,Oslo,オスロ,59.9139,10.7522,北欧フォークの拠点,1
+norway_tromso,NO,Norway,ノルウェー,Tromsø,トロムソ,69.6492,18.9553,サーミ・ヨイクの北極圏,1
+estonia_tallinn,EE,Estonia,エストニア,Tallinn,タリン,59.4370,24.7536,バルト合唱の都,1
+hungary_budapest,HU,Hungary,ハンガリー,Budapest,ブダペスト,47.4979,19.0402,チャールダーシュの街,1
+uae_dubai,AE,United Arab Emirates,アラブ首長国連邦,Dubai,ドバイ,25.2048,55.2708,ハリージの拠点,1
+iran_tehran,IR,Iran,イラン,Tehran,テヘラン,35.6892,51.3890,ペルシャ古典音楽の都,1
+israel_telaviv,IL,Israel,イスラエル,Tel Aviv,テルアビブ,32.0853,34.7818,中東フュージョンの拠点,1
+turkey_konya,TR,Türkiye,トルコ,Konya,コンヤ,37.8746,32.4932,スーフィー旋舞の聖地,1
+india_jaisalmer,IN,India,インド,Jaisalmer,ジャイサルメール,26.9157,70.9083,ラジャスタン民謡の砂漠都市,1
+thailand_bangkok,TH,Thailand,タイ,Bangkok,バンコク,13.7563,100.5018,ルークトゥンの中心,1
+vietnam_hanoi,VN,Vietnam,ベトナム,Hanoi,ハノイ,21.0285,105.8542,ベトナム伝統音楽の都,1
+china_xian,CN,China,中国,Xi'an,西安,34.3416,108.9398,中国伝統音楽の古都,1
+japan_kyoto,JP,Japan,日本,Kyoto,京都,35.0116,135.7681,雅楽の古都,1
+samoa_apia,WS,Samoa,サモア,Apia,アピア,-13.8333,-171.7667,ポリネシアン音楽の島,1
+nz_auckland,NZ,New Zealand,ニュージーランド,Auckland,オークランド,-36.8485,174.7633,マオリ・ハカの街,1
+australia_alice,AU,Australia,オーストラリア,Alice Springs,アリススプリングス,-23.6980,133.8807,アボリジナル音楽の中心,1
+canada_montreal,CA,Canada,カナダ,Montreal,モントリオール,45.5019,-73.5674,ケベック伝統音楽の中心,1
+canada_iqaluit,CA,Canada,カナダ,Iqaluit,イカルイット,63.7467,-68.5170,イヌイットの喉歌の地,1
+russia_spb,RU,Russia,ロシア,Saint Petersburg,サンクトペテルブルク,59.9311,30.3609,ロシアン・ロックの拠点,1
+russia_kyzyl,RU,Russia,ロシア,Kyzyl,クズル,51.7191,94.4378,トゥバ喉歌の地,1
+switzerland_appenzell,CH,Switzerland,スイス,Appenzell,アッペンツェル,47.3300,9.4100,アルプスのヨーデルの里,1
+uk_edinburgh,GB,United Kingdom,イギリス,Edinburgh,エディンバラ,55.9533,-3.1883,スコティッシュ・ケルトの都,1
+france_brest,FR,France,フランス,Brest,ブレスト,48.3904,-4.4861,ブルターニュ・ケルト音楽の街,1
+spain_santiago,ES,Spain,スペイン,Santiago de Compostela,サンティアゴ・デ・コンポステーラ,42.8782,-8.5448,ガリシア・ケルト音楽の街,1
+georgia_tbilisi,GE,Georgia,ジョージア,Tbilisi,トビリシ,41.7151,44.8271,ジョージア多声合唱の都,1
+panama_city,PA,Panama,パナマ,Panama City,パナマシティ,8.9824,-79.5199,レゲトン誕生の地,1
+usa_owensboro,US,United States,アメリカ,Owensboro,オーウェンズボロ,37.7742,-87.1133,ブルーグラス発祥の地（殿堂所在地）,1
+canada_quebec_city,CA,Canada,カナダ,Quebec City,ケベックシティ,46.8139,-71.2080,フランス語圏ケベックの中心,1
