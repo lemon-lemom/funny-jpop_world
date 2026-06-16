@@ -1366,5 +1366,89 @@
   "lat": 18.5204,
   "lon": 73.8567,
   "descriptionJa": "ラーヴァニーの拠点"
+ },
+ {
+  "placeId": "philippines_manila",
+  "countryCode": "PH",
+  "countryNameEn": "Philippines",
+  "countryNameJa": "フィリピン",
+  "cityNameEn": "Manila",
+  "cityNameJa": "マニラ",
+  "flag": "🇵🇭",
+  "lat": 14.5995,
+  "lon": 120.9842,
+  "descriptionJa": "クンディマンとOPMの都"
+ },
+ {
+  "placeId": "cambodia_phnompenh",
+  "countryCode": "KH",
+  "countryNameEn": "Cambodia",
+  "countryNameJa": "カンボジア",
+  "cityNameEn": "Phnom Penh",
+  "cityNameJa": "プノンペン",
+  "flag": "🇰🇭",
+  "lat": 11.5564,
+  "lon": 104.9282,
+  "descriptionJa": "クメール・ロックの街"
+ },
+ {
+  "placeId": "mozambique_maputo",
+  "countryCode": "MZ",
+  "countryNameEn": "Mozambique",
+  "countryNameJa": "モザンビーク",
+  "cityNameEn": "Maputo",
+  "cityNameJa": "マプート",
+  "flag": "🇲🇿",
+  "lat": -25.9692,
+  "lon": 32.5732,
+  "descriptionJa": "マラベンタの街"
+ },
+ {
+  "placeId": "algeria_oran",
+  "countryCode": "DZ",
+  "countryNameEn": "Algeria",
+  "countryNameJa": "アルジェリア",
+  "cityNameEn": "Oran",
+  "cityNameJa": "オラン",
+  "flag": "🇩🇿",
+  "lat": 35.6976,
+  "lon": -0.6337,
+  "descriptionJa": "ライ発祥の地"
+ },
+ {
+  "placeId": "lebanon_beirut",
+  "countryCode": "LB",
+  "countryNameEn": "Lebanon",
+  "countryNameJa": "レバノン",
+  "cityNameEn": "Beirut",
+  "cityNameJa": "ベイルート",
+  "flag": "🇱🇧",
+  "lat": 33.8938,
+  "lon": 35.5018,
+  "descriptionJa": "レヴァント音楽の中心"
+ },
+ {
+  "placeId": "iraq_baghdad",
+  "countryCode": "IQ",
+  "countryNameEn": "Iraq",
+  "countryNameJa": "イラク",
+  "cityNameEn": "Baghdad",
+  "cityNameJa": "バグダード",
+  "flag": "🇮🇶",
+  "lat": 33.3152,
+  "lon": 44.3661,
+  "descriptionJa": "イラク・マカームの都"
+ },
+ {
+  "placeId": "tunisia_tunis",
+  "countryCode": "TN",
+  "countryNameEn": "Tunisia",
+  "countryNameJa": "チュニジア",
+  "cityNameEn": "Tunis",
+  "cityNameJa": "チュニス",
+  "flag": "🇹🇳",
+  "lat": 36.8065,
+  "lon": 10.1815,
+  "descriptionJa": "メズウェドの街"
  }
 ]
