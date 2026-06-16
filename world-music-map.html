@@ -1,0 +1,763 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>World Music Map — 世界の音楽を、地図で掘る。</title>
+<meta name="description" content="世界地図上の都市を起点に、その土地に紐づく音楽ジャンルを発見し、YouTubeで掘れる音楽ディスカバリーマップ。">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=RocknRoll+One&family=Zen+Maru+Gothic:wght@400;500;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+  integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="">
+<link rel="stylesheet" href="https://unpkg.com/leaflet.markercluster@1.5.3/dist/MarkerCluster.css">
+<style>
+:root{
+  --bg:#0e1b22;
+  --bg2:#13262f;
+  --acc1:#ff6b35;
+  --acc2:#f5c04e;
+  --teal:#36c5b0;
+  --cream:#f4ede0;
+  --ink:#0a1217;
+  --card:#16303a;
+  --line:#2a4651;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{
+  font-family:'Zen Maru Gothic',sans-serif;
+  background:
+    radial-gradient(1200px 700px at 85% -10%, var(--bg2), transparent 60%),
+    var(--bg);
+  color:var(--cream);
+  overflow-x:hidden;
+}
+h1,h2,h3,.disp{font-family:'RocknRoll One',sans-serif;font-weight:400}
+a{color:inherit}
+::selection{background:var(--teal);color:var(--ink)}
+
+/* ---------- header ---------- */
+header{
+  display:flex;align-items:center;justify-content:space-between;gap:12px;
+  padding:14px clamp(14px,4vw,40px);
+  position:sticky;top:0;z-index:1100;
+  background:color-mix(in srgb, var(--bg) 86%, transparent);
+  backdrop-filter:blur(10px);
+  border-bottom:1px solid var(--line);
+}
+.logo{display:flex;align-items:center;gap:11px;font-family:'RocknRoll One';font-size:clamp(15px,2.3vw,21px);letter-spacing:.03em}
+.logo .globe{
+  width:30px;height:30px;border-radius:50%;flex:none;
+  background:
+    radial-gradient(circle at 35% 30%, #4be0c8 0 18%, transparent 19%),
+    radial-gradient(circle at 70% 65%, var(--acc2) 0 14%, transparent 15%),
+    conic-gradient(from 0deg, var(--teal), #1c5a63, var(--teal));
+  border:3px solid var(--cream);
+  box-shadow:0 0 0 2px var(--ink) inset;
+  animation:spin 14s linear infinite;
+}
+@keyframes spin{to{transform:rotate(360deg)}}
+.nav-links{display:flex;gap:8px;align-items:center;flex-wrap:wrap}
+.btn{
+  display:inline-flex;align-items:center;gap:7px;
+  font-family:'RocknRoll One';font-size:13px;
+  background:var(--acc1);color:var(--ink);
+  padding:9px 16px;border-radius:999px;text-decoration:none;
+  border:2px solid var(--ink);box-shadow:0 3px 0 var(--ink);
+  transition:transform .12s,box-shadow .12s,background .2s;cursor:pointer;
+}
+.btn:hover{transform:translateY(-2px);box-shadow:0 5px 0 var(--ink)}
+.btn:active{transform:translateY(2px);box-shadow:0 1px 0 var(--ink)}
+.btn.ghost{background:transparent;color:var(--cream);border-color:var(--cream);box-shadow:0 3px 0 color-mix(in srgb,var(--cream) 45%,transparent)}
+.btn.teal{background:var(--teal)}
+
+/* ---------- hero ---------- */
+.hero{
+  max-width:1180px;margin:0 auto;
+  padding:clamp(26px,5vw,52px) clamp(14px,4vw,40px) clamp(14px,3vw,26px);
+  text-align:center;
+}
+.kicker{
+  display:inline-block;font-size:12px;letter-spacing:.2em;
+  color:var(--teal);border:2px solid var(--teal);border-radius:999px;
+  padding:5px 14px;margin-bottom:16px;font-family:'RocknRoll One';
+}
+.hero h1{
+  font-size:clamp(26px,4.6vw,48px);line-height:1.3;
+  text-shadow:3px 3px 0 color-mix(in srgb, var(--teal) 40%, transparent);
+}
+.hero h1 .en{display:block;font-size:.4em;letter-spacing:.14em;color:var(--acc2);margin-top:12px}
+.hero p.lead{margin:18px auto 0;font-size:clamp(13px,1.5vw,16px);line-height:1.95;max-width:60ch;color:color-mix(in srgb,var(--cream) 85%, transparent)}
+.hero .chips{margin-top:18px;display:flex;gap:8px;justify-content:center;flex-wrap:wrap}
+.hero .chips span{
+  font-size:12px;font-family:'RocknRoll One';letter-spacing:.06em;
+  background:var(--card);border:1px solid var(--line);border-radius:999px;padding:6px 13px;color:var(--acc2);
+}
+.hero .stat{margin-top:16px;font-size:12px;color:color-mix(in srgb,var(--cream) 65%,transparent);letter-spacing:.05em}
+.hero .stat b{color:var(--teal);font-family:'RocknRoll One'}
+
+/* ---------- map + panel layout ---------- */
+.explorer{
+  max-width:1180px;margin:0 auto clamp(40px,6vw,72px);
+  padding:0 clamp(14px,4vw,40px);
+  display:grid;grid-template-columns:1.35fr .9fr;gap:18px;align-items:start;
+}
+.map-wrap{
+  position:relative;
+  border:3px solid var(--cream);border-radius:20px;overflow:hidden;
+  box-shadow:8px 8px 0 color-mix(in srgb, var(--teal) 45%, transparent);
+}
+#map{height:min(74vh,640px);width:100%;background:#0b171d}
+.leaflet-container{font-family:'Zen Maru Gothic',sans-serif}
+.map-legend{
+  position:absolute;left:12px;bottom:12px;z-index:500;
+  background:color-mix(in srgb,var(--ink) 82%,transparent);
+  border:1px solid var(--line);border-radius:12px;padding:9px 13px;
+  font-size:11px;line-height:1.9;color:var(--cream);backdrop-filter:blur(6px);
+  pointer-events:none;
+}
+.map-legend b{font-family:'RocknRoll One';color:var(--acc2);font-size:11px}
+.map-legend i{display:inline-block;width:11px;height:11px;border-radius:50%;margin-right:6px;vertical-align:-1px;background:var(--acc1);border:2px solid var(--cream)}
+
+/* custom marker */
+.city-pin{
+  width:18px;height:18px;border-radius:50%;
+  background:var(--acc1);border:3px solid var(--cream);
+  box-shadow:0 0 0 2px var(--ink), 0 4px 8px rgba(0,0,0,.5);
+  transition:transform .15s;cursor:pointer;
+}
+.city-pin:hover{transform:scale(1.25)}
+.city-pin.active{background:var(--teal);transform:scale(1.35)}
+
+/* cluster marker */
+.cluster-pin{
+  width:36px;height:36px;border-radius:50%;
+  display:flex;align-items:center;justify-content:center;
+  font-family:'RocknRoll One';font-size:13px;color:var(--ink);
+  background:radial-gradient(circle at 35% 30%, var(--acc2), var(--acc1));
+  border:3px solid var(--cream);box-shadow:0 0 0 2px var(--ink),0 4px 9px rgba(0,0,0,.5);
+}
+.marker-cluster{background:transparent}
+
+/* map search */
+.map-search{position:absolute;top:12px;left:12px;right:12px;z-index:600;max-width:360px}
+.map-search input{
+  width:100%;font-family:'Zen Maru Gothic';font-size:13px;font-weight:700;
+  background:color-mix(in srgb,var(--ink) 88%,transparent);color:var(--cream);
+  border:2px solid var(--cream);border-radius:999px;padding:10px 16px;outline:none;
+  backdrop-filter:blur(6px);box-shadow:0 4px 12px rgba(0,0,0,.4);
+}
+.map-search input::placeholder{color:color-mix(in srgb,var(--cream) 55%,transparent)}
+.map-search input:focus{border-color:var(--teal)}
+.search-results{
+  margin-top:6px;background:color-mix(in srgb,var(--ink) 93%,transparent);
+  border:1px solid var(--line);border-radius:14px;
+  backdrop-filter:blur(8px);box-shadow:0 8px 24px rgba(0,0,0,.55);
+  max-height:min(52vh,340px);overflow-y:auto;
+}
+.search-results[hidden]{display:none}
+.search-row{
+  display:flex;align-items:center;gap:9px;width:100%;text-align:left;cursor:pointer;
+  background:none;border:none;border-bottom:1px solid color-mix(in srgb,var(--line) 55%,transparent);
+  color:var(--cream);padding:9px 13px;font-family:'Zen Maru Gothic';
+}
+.search-row:last-child{border-bottom:none}
+.search-row:hover,.search-row.sel{background:color-mix(in srgb,var(--teal) 18%,transparent)}
+.search-row .sr-ico{flex:none;font-size:15px;width:20px;text-align:center}
+.search-row .sr-txt{flex:1;min-width:0}
+.search-row .sr-txt b{display:block;font-size:13px;font-weight:700;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.search-row .sr-txt small{display:block;font-size:10.5px;color:color-mix(in srgb,var(--cream) 60%,transparent);white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.search-row .sr-tag{flex:none;font-size:9px;font-family:'RocknRoll One';letter-spacing:.06em;color:var(--ink);background:var(--acc2);border-radius:6px;padding:2px 7px}
+.search-row .sr-tag.city{background:var(--teal)}
+.search-empty{padding:12px 14px;font-size:12px;color:color-mix(in srgb,var(--cream) 55%,transparent)}
+
+/* ---------- side panel ---------- */
+.panel{
+  border:3px solid var(--cream);border-radius:20px;
+  background:var(--card);
+  box-shadow:8px 8px 0 color-mix(in srgb, var(--acc1) 40%, transparent);
+  min-height:320px;display:flex;flex-direction:column;overflow:hidden;
+}
+.panel-head{
+  padding:16px 20px;border-bottom:1px solid var(--line);
+  display:flex;align-items:center;justify-content:space-between;gap:10px;
+  background:color-mix(in srgb,var(--ink) 35%,transparent);
+}
+.panel-head h2{font-size:16px;letter-spacing:.04em;color:var(--acc2)}
+.panel-body{padding:18px 20px;overflow-y:auto;flex:1}
+.back-link{
+  background:none;border:none;color:var(--teal);cursor:pointer;
+  font-family:'RocknRoll One';font-size:12px;letter-spacing:.05em;
+  padding:0;display:inline-flex;align-items:center;gap:5px;
+}
+.back-link:hover{color:var(--cream)}
+.back-link[hidden]{display:none}
+
+/* welcome state */
+.welcome{text-align:center;padding:24px 6px;color:color-mix(in srgb,var(--cream) 80%,transparent);line-height:2;font-size:14px}
+.welcome .big{font-family:'RocknRoll One';font-size:42px;display:block;margin-bottom:6px}
+.country-jump{margin-top:18px;text-align:left}
+.country-jump h3{font-size:12px;letter-spacing:.14em;color:var(--acc2);margin-bottom:10px;font-family:'RocknRoll One'}
+.country-jump .cj{display:flex;flex-wrap:wrap;gap:7px}
+.country-jump button{
+  font-family:'Zen Maru Gothic';font-weight:700;font-size:12px;cursor:pointer;
+  background:color-mix(in srgb,var(--ink) 30%,transparent);color:var(--cream);
+  border:1px solid var(--line);border-radius:999px;padding:6px 12px;
+  transition:background .15s,border-color .15s;
+}
+.country-jump button:hover{background:var(--teal);color:var(--ink);border-color:var(--teal)}
+
+/* city view */
+.city-meta{font-size:12.5px;color:color-mix(in srgb,var(--cream) 72%,transparent);margin:6px 0 18px;line-height:1.8}
+.city-meta .flag{font-size:15px}
+.genre-list{display:flex;flex-direction:column;gap:9px}
+.genre-item{
+  display:flex;align-items:center;gap:11px;text-align:left;cursor:pointer;
+  background:color-mix(in srgb,var(--ink) 28%,transparent);
+  border:1px solid var(--line);border-radius:13px;padding:11px 13px;
+  transition:transform .12s,border-color .15s,background .15s;
+}
+.genre-item:hover{transform:translateX(3px);border-color:var(--teal);background:color-mix(in srgb,var(--teal) 14%,transparent)}
+.genre-item .gi-rel{
+  flex:none;font-size:9px;font-family:'RocknRoll One';letter-spacing:.08em;
+  border-radius:6px;padding:3px 7px;border:1px solid currentColor;
+}
+.rel-origin{color:var(--acc1)}
+.rel-important{color:var(--acc2)}
+.rel-current{color:var(--teal)}
+.genre-item .gi-txt{flex:1;min-width:0}
+.genre-item .gi-txt b{display:block;font-family:'RocknRoll One';font-size:14px;letter-spacing:.02em}
+.genre-item .gi-txt small{display:block;font-size:11px;color:color-mix(in srgb,var(--cream) 65%,transparent);margin-top:2px}
+.genre-item .gi-arrow{color:var(--teal);font-size:17px;flex:none}
+
+/* genre view */
+.genre-title{font-size:22px;line-height:1.3}
+.genre-title small{display:block;font-size:13px;color:var(--acc2);margin-top:3px;font-family:'Zen Maru Gothic';font-weight:700}
+.genre-tags{display:flex;flex-wrap:wrap;gap:7px;align-items:center;margin:12px 0 4px}
+.energy-badge{font-size:12px;letter-spacing:1px;color:var(--acc1);background:color-mix(in srgb,var(--acc1) 12%,transparent);border:1px solid var(--acc1);border-radius:999px;padding:3px 11px;font-family:'RocknRoll One'}
+.mood-tag{font-size:11px;color:var(--acc2);background:color-mix(in srgb,var(--acc2) 12%,transparent);border:1px solid color-mix(in srgb,var(--acc2) 55%,transparent);border-radius:999px;padding:3px 10px}
+.genre-desc{font-size:13.5px;line-height:1.95;margin:14px 0 14px;color:color-mix(in srgb,var(--cream) 90%,transparent)}
+.genre-meta{margin:0 0 14px}
+.genre-meta h4{font-size:11px;letter-spacing:.14em;color:var(--teal);font-family:'RocknRoll One';margin-bottom:5px}
+.genre-meta p{font-size:12.5px;line-height:1.85;color:color-mix(in srgb,var(--cream) 82%,transparent)}
+.genre-meta.artists p{color:var(--cream);font-weight:700}
+.genre-places{display:flex;flex-wrap:wrap;gap:7px;margin:4px 0 18px}
+.genre-places button{
+  font-size:11px;font-family:'Zen Maru Gothic';font-weight:700;cursor:pointer;
+  background:color-mix(in srgb,var(--ink) 30%,transparent);color:var(--cream);
+  border:1px solid var(--line);border-radius:999px;padding:5px 11px;
+  display:inline-flex;align-items:center;gap:5px;transition:background .15s;
+}
+.genre-places button:hover{background:var(--teal);color:var(--ink)}
+
+.tabs{display:flex;gap:6px;margin-bottom:14px;background:color-mix(in srgb,var(--ink) 35%,transparent);padding:5px;border-radius:12px}
+.tabs button{
+  flex:1;font-family:'RocknRoll One';font-size:12px;letter-spacing:.03em;cursor:pointer;
+  background:none;border:none;color:color-mix(in srgb,var(--cream) 70%,transparent);
+  padding:9px 4px;border-radius:8px;transition:background .15s,color .15s;line-height:1.4;
+}
+.tabs button small{display:block;font-family:'Zen Maru Gothic';font-size:9px;font-weight:700;opacity:.7;margin-top:2px}
+.tabs button.active{background:var(--acc1);color:var(--ink)}
+.tabs button.active small{opacity:.85}
+
+.ranking{display:flex;flex-direction:column;gap:10px;min-height:120px}
+.rank-card{
+  display:flex;gap:11px;align-items:center;text-decoration:none;color:var(--cream);
+  background:color-mix(in srgb,var(--ink) 28%,transparent);
+  border:1px solid var(--line);border-radius:12px;padding:8px 11px 8px 8px;
+  transition:transform .12s,border-color .15s;
+}
+.rank-card:hover{transform:translateY(-2px);border-color:var(--teal)}
+.rank-card .rk{font-family:'RocknRoll One';font-size:15px;color:var(--acc2);flex:none;min-width:24px;text-align:center}
+.rank-card .tmb{width:84px;aspect-ratio:16/9;flex:none;border-radius:6px;object-fit:cover;background:#0a1217;border:1px solid var(--line)}
+.rank-card .rc-txt{flex:1;min-width:0}
+.rank-card .rc-txt b{display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden;font-size:12.5px;font-weight:700;line-height:1.5}
+.rank-card .rc-txt small{display:block;font-size:11px;color:color-mix(in srgb,var(--cream) 62%,transparent);margin-top:3px}
+
+.search-cta{
+  display:flex;align-items:center;gap:11px;text-decoration:none;
+  background:linear-gradient(135deg, color-mix(in srgb,var(--acc1) 30%,var(--card)), var(--card));
+  border:2px solid var(--acc1);border-radius:14px;padding:14px 16px;color:var(--cream);
+  transition:transform .12s;
+}
+.search-cta:hover{transform:translateY(-2px)}
+.search-cta .yt{font-size:26px;flex:none}
+.search-cta b{display:block;font-family:'RocknRoll One';font-size:14px}
+.search-cta small{display:block;font-size:11px;color:color-mix(in srgb,var(--cream) 70%,transparent);margin-top:2px}
+.search-cta .go{margin-left:auto;font-size:20px;color:var(--acc2);flex:none}
+
+.kw-block{margin-top:16px}
+.kw-block h3{font-size:11px;letter-spacing:.14em;color:var(--acc2);margin-bottom:9px;font-family:'RocknRoll One'}
+.kw-chips{display:flex;flex-wrap:wrap;gap:6px}
+.kw-chips a{
+  font-size:11px;text-decoration:none;
+  background:color-mix(in srgb,var(--ink) 30%,transparent);color:var(--cream);
+  border:1px solid var(--line);border-radius:999px;padding:5px 11px;
+  transition:background .15s,border-color .15s;
+}
+.kw-chips a:hover{background:var(--teal);color:var(--ink);border-color:var(--teal)}
+
+.note{
+  margin-top:18px;font-size:11px;line-height:1.85;
+  background:color-mix(in srgb,var(--acc2) 12%,transparent);
+  border:1px dashed var(--acc2);border-radius:11px;padding:11px 13px;color:color-mix(in srgb,var(--cream) 85%,transparent);
+}
+.note b{color:var(--acc2)}
+
+/* ---------- featured genres strip ---------- */
+.featured{max-width:1180px;margin:0 auto clamp(30px,5vw,56px);padding:0 clamp(14px,4vw,40px)}
+.featured h2{font-size:clamp(18px,2.6vw,26px);margin-bottom:6px;display:flex;align-items:center;gap:10px}
+.featured h2::before{content:"🔥"}
+.featured p{font-size:13px;color:color-mix(in srgb,var(--cream) 70%,transparent);margin-bottom:18px;line-height:1.8}
+.feat-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(150px,1fr));gap:11px}
+.feat-card{
+  text-align:left;cursor:pointer;
+  background:var(--card);border:1px solid var(--line);border-radius:14px;padding:14px;
+  transition:transform .12s,border-color .15s;
+}
+.feat-card:hover{transform:translateY(-3px);border-color:var(--teal)}
+.feat-card b{display:block;font-family:'RocknRoll One';font-size:15px}
+.feat-card small{display:block;font-size:11px;color:var(--acc2);margin-top:3px}
+.feat-card span{display:block;font-size:11px;color:color-mix(in srgb,var(--cream) 60%,transparent);margin-top:8px;line-height:1.7}
+
+/* ---------- footer ---------- */
+footer{
+  border-top:1px solid var(--line);
+  background:color-mix(in srgb, var(--ink) 45%, var(--bg));
+  padding:clamp(30px,5vw,56px) clamp(14px,4vw,40px);text-align:center;
+}
+footer h2{font-size:clamp(20px,3vw,30px);margin-bottom:12px}
+footer p{font-size:13px;line-height:1.95;color:color-mix(in srgb,var(--cream) 78%, transparent);margin-bottom:20px;max-width:60ch;margin-inline:auto}
+footer .cta{display:flex;gap:12px;justify-content:center;flex-wrap:wrap}
+footer .fine{margin-top:22px;font-size:11px;opacity:.5;line-height:1.9}
+.disclaimer{max-width:760px;margin:0 auto;text-align:left;background:color-mix(in srgb,var(--acc2) 9%,transparent);border:1px dashed color-mix(in srgb,var(--acc2) 55%,transparent);border-radius:14px;padding:16px 18px}
+.disclaimer h3{font-size:13px;letter-spacing:.1em;color:var(--acc2);font-family:'RocknRoll One';margin-bottom:9px}
+.disclaimer ul{list-style:none;margin:0;padding:0}
+.disclaimer li{font-size:12px;line-height:1.85;color:color-mix(in srgb,var(--cream) 82%,transparent);padding-left:15px;position:relative;margin-bottom:5px;text-align:left}
+.disclaimer li:last-child{margin-bottom:0}
+.disclaimer li::before{content:"・";position:absolute;left:0;color:var(--acc2)}
+
+@media (max-width:880px){
+  .explorer{grid-template-columns:1fr}
+  #map{height:58vh}
+  .panel{box-shadow:6px 6px 0 color-mix(in srgb, var(--acc1) 40%, transparent)}
+}
+@media (prefers-reduced-motion:reduce){
+  .logo .globe{animation:none}
+}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="logo"><span class="globe"></span>WORLD MUSIC MAP</div>
+  <div class="nav-links">
+    <a class="btn ghost" href="index.html">← Funny J-POP</a>
+    <a class="btn teal" href="#explorer">🗺 地図を見る</a>
+  </div>
+</header>
+
+<!-- ================= HERO ================= -->
+<div class="hero">
+  <span class="kicker">DISCOVERY MAP × YOUTUBE</span>
+  <h1>世界の音楽を、地図で掘る。
+    <span class="en">WORLD MUSIC DISCOVERY MAP</span>
+  </h1>
+  <p class="lead">国ではなく <b>都市・地域</b> を起点に音楽ジャンルを発見するマップ。ハバナでワワンコ、ニューオーリンズでブラスバンド、キングストンでダブ──ピンを押して、土地に根ざしたジャンルからYouTubeを掘り進めましょう。</p>
+  <div class="chips">
+    <span>都市</span><span>×</span><span>音楽ジャンル</span><span>×</span><span>YouTube動画</span><span>×</span><span>独自ランキング</span>
+  </div>
+  <p class="stat" id="heroStat"></p>
+</div>
+
+<!-- ================= EXPLORER ================= -->
+<div class="explorer" id="explorer">
+  <div class="map-wrap">
+    <div id="map"></div>
+    <div class="map-search">
+      <input id="searchInput" type="text" autocomplete="off" spellcheck="false"
+        placeholder="🔎 都市・ジャンルを検索（例: サンバ / Havana / fado）">
+      <div class="search-results" id="searchResults" hidden></div>
+    </div>
+    <div class="map-legend">
+      <b>HOW TO</b><br>
+      <i></i>ピンをクリック → 都市のジャンル一覧<br>
+      ジャンルをクリック → 説明・代表アーティスト・ランキング
+    </div>
+  </div>
+
+  <div class="panel">
+    <div class="panel-head">
+      <h2 id="panelTitle">🌍 都市を選ぶ</h2>
+      <button class="back-link" id="backBtn" hidden>← もどる</button>
+    </div>
+    <div class="panel-body" id="panelBody"><!-- rendered by JS --></div>
+  </div>
+</div>
+
+<!-- ================= FEATURED ================= -->
+<section class="featured">
+  <h2>注目ジャンル — まずはここから掘る</h2>
+  <p>メジャーからマニアックまで。クリックすると地図がその都市に飛び、ジャンルの詳細が開きます。</p>
+  <div class="feat-grid" id="featGrid"><!-- rendered by JS --></div>
+</section>
+
+<!-- ================= FOOTER ================= -->
+<footer>
+  <h2>あなたの知らないグルーヴが、まだ世界にある。</h2>
+  <p>World Music Map は、都市・ジャンル・検索キーワードを独自に設計した音楽ディスカバリープロジェクトです。</p>
+  <div class="cta">
+    <a class="btn" href="#explorer">🗺 マップに戻る</a>
+    <a class="btn ghost" href="index.html">← Funny J-POP トップへ</a>
+  </div>
+  <div class="disclaimer">
+    <h3>ℹ️ ご利用にあたって</h3>
+    <ul>
+      <li>ランキングは YouTube 公式のものではなく、各ジャンルに設定した検索キーワードから独自に集計した参考値です。再生数などは取得時点の数値で、現在の値と異なる場合があります。</li>
+      <li>掲載しているジャンルの発祥地・関連都市・代表アーティストは、音楽を発見するための編集情報です。多くのジャンルは複数の地域・国にまたがり、起源には諸説あります。簡略化や誤りを含む場合があります。</li>
+      <li>情報は随時見直しています。お気づきの点があればぜひお知らせください。</li>
+    </ul>
+  </div>
+  <p class="fine">World Music Map — World Music Discovery Map powered by YouTube data.</p>
+</footer>
+
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+  integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
+<script src="https://unpkg.com/leaflet.markercluster@1.5.3/dist/leaflet.markercluster.js"></script>
+<script>
+/* ============================================================
+   DATA — data_master/*.csv から scripts/export_static_json.py で生成した
+   静的JSON（data/places.json, data/genres.json）を読み込んで構築する。
+   ランキング（data/rankings/{id}.json）は YouTube API バッチが生成。
+   ============================================================ */
+const REL_LABEL = {origin:'発祥', important:'重要', current:'活動'};
+let PLACES = {};         // placeId -> {ja,en,country,flag,lat,lon}
+let genreById = {};      // genreId -> {id,en,ja,desc,energy,mood,instruments,refs,keywords,kw,places:[[pid,rel]]}
+let genresByPlace = {};  // placeId -> [{g,rel}]
+let FEATURED = [];
+
+function esc(s){ return String(s==null?'':s).replace(/[&<>"]/g, c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c])); }
+function ytSearch(query, sort){
+  const sp = {classic:'CAMSAhAB', fresh:'CAISAhAB', hot:'EgQIAhAB'}[sort] || '';
+  return 'https://www.youtube.com/results?search_query=' + encodeURIComponent(query) + (sp?('&sp='+sp):'');
+}
+
+/* ============ Leaflet map ============ */
+const map = L.map('map', {worldCopyJump:true, minZoom:2, zoomControl:false}).setView([18, -40], 2.4);
+L.control.zoom({position:'topright'}).addTo(map);
+L.tileLayer('https://{s}.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}{r}.png', {
+  attribution:'&copy; OpenStreetMap &copy; CARTO',
+  subdomains:'abcd', maxZoom:19
+}).addTo(map);
+
+const markers = {};
+const clusterGroup = L.markerClusterGroup({
+  maxClusterRadius: 40,
+  showCoverageOnHover: false,
+  spiderfyOnMaxZoom: true,
+  iconCreateFunction: c => L.divIcon({
+    html: '<div class="cluster-pin">' + c.getChildCount() + '</div>',
+    className: '', iconSize: [36,36]
+  })
+});
+function buildMarkers(){
+  Object.entries(PLACES).forEach(([pid,p])=>{
+    if(!genresByPlace[pid]) return;
+    const icon = L.divIcon({className:'', html:'<div class="city-pin" data-pid="'+pid+'"></div>', iconSize:[18,18], iconAnchor:[9,9]});
+    const m = L.marker([p.lat,p.lon], {icon, title:p.ja});
+    const count = genresByPlace[pid].length;
+    m.bindTooltip(p.flag+' '+p.ja+' <b>('+count+')</b>', {direction:'top', offset:[0,-8]});
+    m.on('click', ()=> showCity(pid));
+    clusterGroup.addLayer(m);
+    markers[pid] = m;
+  });
+  map.addLayer(clusterGroup);
+}
+function setActiveMarker(pid){
+  document.querySelectorAll('.city-pin').forEach(el=>el.classList.toggle('active', el.dataset.pid===pid));
+}
+
+/* ============ panel rendering ============ */
+const panelBody = document.getElementById('panelBody');
+const panelTitle = document.getElementById('panelTitle');
+const backBtn = document.getElementById('backBtn');
+let viewStack = [];
+
+function showWelcome(){
+  viewStack = [];
+  setActiveMarker(null);
+  panelTitle.textContent = '🌍 都市を選ぶ';
+  backBtn.hidden = true;
+  const countries = {};
+  Object.entries(PLACES).forEach(([pid,p])=>{ if(genresByPlace[pid]) (countries[p.country] ||= {flag:p.flag, ids:[]}).ids.push(pid); });
+  panelBody.innerHTML =
+    '<div class="welcome">'+
+      '<span class="big">🗺️</span>'+
+      '地図のピンをクリックすると、その都市に根ざした音楽ジャンルが表示されます。<br>ジャンルを選ぶと、説明・代表アーティスト・YouTubeランキングへ。'+
+      '<div class="country-jump"><h3>国から飛ぶ</h3><div class="cj">'+
+        Object.entries(countries).map(([c,o])=>'<button data-pid="'+o.ids[0]+'">'+o.flag+' '+esc(c)+'</button>').join('')+
+      '</div></div>'+
+    '</div>';
+  panelBody.querySelectorAll('.country-jump button').forEach(b=>b.addEventListener('click', ()=>flyTo(b.dataset.pid)));
+}
+
+let _flyToken = 0;
+function flyTo(pid){
+  const p = PLACES[pid];
+  if(!p) return;
+  showCity(pid);
+  const m = markers[pid];
+  const token = ++_flyToken;
+  // 移動完了後にハイライト。まだクラスタ内ならさらに寄って必ずピンを露出させる
+  const finish = ()=>{
+    if(token !== _flyToken) return;            // 別の都市に移った場合は無視
+    if(m && clusterGroup.hasLayer(m) && !m._icon && map.getZoom() < 12){
+      map.setView([p.lat,p.lon], Math.min(map.getZoom() + 2, 12));
+      setTimeout(()=>{ if(token===_flyToken) setActiveMarker(pid); }, 350);
+    } else {
+      setActiveMarker(pid);
+    }
+  };
+  map.flyTo([p.lat,p.lon], Math.max(map.getZoom(), 7), {duration:.8});
+  map.once('moveend', finish);
+  setTimeout(finish, 1300);                     // アニメ無効環境でも確実に実行
+}
+
+function showCity(pid){
+  const p = PLACES[pid];
+  if(!p) return;
+  viewStack = [{type:'city', pid}];
+  setActiveMarker(pid);
+  panelTitle.textContent = p.flag+' '+p.ja;
+  backBtn.hidden = false;
+  backBtn.onclick = showWelcome;
+  const order = {origin:0, important:1, current:2};
+  const list = (genresByPlace[pid]||[]).slice().sort((a,b)=> order[a.rel]-order[b.rel]);
+  panelBody.innerHTML =
+    '<div class="city-meta"><span class="flag">'+p.flag+'</span> '+esc(p.country)+' / '+esc(p.en)+' ・ '+list.length+' ジャンル</div>'+
+    '<div class="genre-list">'+
+      list.map(({g,rel})=>
+        '<button class="genre-item" data-gid="'+g.id+'">'+
+          '<span class="gi-rel rel-'+rel+'">'+REL_LABEL[rel]+'</span>'+
+          '<span class="gi-txt"><b>'+esc(g.ja)+'</b><small>'+esc(g.en)+'</small></span>'+
+          '<span class="gi-arrow">›</span>'+
+        '</button>'
+      ).join('')+
+    '</div>';
+  panelBody.querySelectorAll('.genre-item').forEach(b=>b.addEventListener('click', ()=>showGenre(b.dataset.gid, pid)));
+  panelBody.scrollTop = 0;
+}
+
+let activeTab = 'classic';
+function showGenre(gid, fromPid){
+  const g = genreById[gid];
+  if(!g) return;
+  viewStack.push({type:'genre', gid, fromPid});
+  panelTitle.textContent = '🎵 ' + g.ja;
+  backBtn.hidden = false;
+  backBtn.onclick = ()=>{ if(fromPid) showCity(fromPid); else showWelcome(); };
+  activeTab = 'classic';
+
+  const placeBtns = g.places.map(([pid,rel])=>{
+    const p = PLACES[pid]; if(!p) return '';
+    return '<button data-pid="'+pid+'">'+p.flag+' '+esc(p.ja)+' <span class="rel-'+rel+'" style="font-size:10px;font-family:RocknRoll One">'+REL_LABEL[rel]+'</span></button>';
+  }).join('');
+
+  const energyBadge = g.energy ? '<span class="energy-badge">⚡ '+'●'.repeat(g.energy)+'○'.repeat(Math.max(0,5-g.energy))+'</span>' : '';
+  const moodTags = (g.mood||'').split('/').map(m=>m.trim()).filter(Boolean)
+    .map(m=>'<span class="mood-tag">'+esc(m)+'</span>').join('');
+
+  panelBody.innerHTML =
+    '<h2 class="genre-title disp">'+esc(g.en)+'<small>'+esc(g.ja)+'</small></h2>'+
+    '<div class="genre-tags">'+energyBadge+moodTags+'</div>'+
+    '<p class="genre-desc">'+esc(g.desc)+'</p>'+
+    (g.refs && g.refs.length ? '<div class="genre-meta artists"><h4>🎤 代表アーティスト</h4><p>'+g.refs.map(esc).join(' ・ ')+'</p></div>' : '')+
+    (g.instruments && g.instruments.length ? '<div class="genre-meta"><h4>🔑 主な楽器</h4><p>'+g.instruments.map(esc).join(' ・ ')+'</p></div>' : '')+
+    '<div class="genre-places">'+placeBtns+'</div>'+
+    '<div class="tabs">'+
+      '<button data-tab="classic" class="active">CLASSIC<small>定番・再生数順</small></button>'+
+      '<button data-tab="fresh">FRESH<small>新着90日</small></button>'+
+      '<button data-tab="hot">HOT<small>今週の急上昇</small></button>'+
+    '</div>'+
+    '<div class="ranking" id="rankBox"></div>'+
+    '<div class="kw-block"><h3>検索キーワード</h3><div class="kw-chips" id="kwChips"></div></div>'+
+    '<p class="note"><b>※ 独自集計について：</b> 本ランキングは YouTube 公式ランキングではなく、各ジャンルに設定した検索キーワードに基づく独自集計です。数値は取得時点のもので、現在のYouTube上の値と異なる場合があります。</p>';
+
+  panelBody.querySelectorAll('.genre-places button').forEach(b=>b.addEventListener('click', ()=>flyTo(b.dataset.pid)));
+  panelBody.querySelectorAll('.tabs button').forEach(b=>b.addEventListener('click', ()=>{
+    activeTab = b.dataset.tab;
+    panelBody.querySelectorAll('.tabs button').forEach(x=>x.classList.toggle('active', x===b));
+    renderRanking(g);
+  }));
+
+  // keyword chips -> real YouTube searches
+  const kws = (g.keywords && g.keywords.length ? g.keywords.slice(0,5) : [g.en]);
+  document.getElementById('kwChips').innerHTML = kws.map(k=>
+    '<a href="'+esc(ytSearch(k,'classic'))+'" target="_blank" rel="noopener">'+esc(k)+' ↗</a>').join('');
+
+  renderRanking(g);
+  panelBody.scrollTop = 0;
+}
+
+/* Try to load batch-generated static ranking JSON (要件§15.4).
+   If absent (= バッチ未実行), fall back to a working YouTube deep-link by tab. */
+const rankingCache = {};
+function renderRanking(g){
+  const box = document.getElementById('rankBox');
+  if(!box) return;
+  const tab = activeTab;
+  const tabJa = {classic:'定番（再生数順）', fresh:'新着（直近90日）', hot:'今週の急上昇'}[tab];
+  const query = g.kw || g.en;
+
+  const fallback = ()=>{
+    box.innerHTML =
+      '<a class="search-cta" href="'+esc(ytSearch(query, tab))+'" target="_blank" rel="noopener">'+
+        '<span class="yt">▶️</span>'+
+        '<span><b>YouTubeで「'+esc(g.en)+'」を掘る</b><small>'+esc(tabJa)+'で検索結果を開く</small></span>'+
+        '<span class="go">↗</span>'+
+      '</a>'+
+      '<p style="font-size:11px;line-height:1.85;color:color-mix(in srgb,var(--cream) 60%,transparent);margin-top:4px">'+
+        '※ 週次バッチ（YouTube Data API）が <code style="color:var(--teal)">data/rankings/'+g.id+'.json</code> を生成すると、ここに動画カードのTop10が直接表示されます。それまでは上のボタンから本物のYouTube検索を開けます。'+
+      '</p>';
+  };
+
+  const data = rankingCache[g.id];
+  if(data === undefined){
+    box.innerHTML = '<p style="font-size:12px;color:color-mix(in srgb,var(--cream) 60%,transparent);padding:8px 2px">読み込み中…</p>';
+    fetch('data/rankings/'+g.id+'.json')
+      .then(r=> r.ok ? r.json() : Promise.reject())
+      .then(d=>{ rankingCache[g.id]=d; if(activeTab===tab) renderRanking(g); })
+      .catch(()=>{ rankingCache[g.id]=null; if(activeTab===tab) renderRanking(g); });
+    return;
+  }
+  if(!data || !data.rankings || !(data.rankings[tab]||[]).length){ fallback(); return; }
+
+  const items = data.rankings[tab];
+  box.innerHTML =
+    items.map(v=>
+      '<a class="rank-card" href="'+esc(v.url)+'" target="_blank" rel="noopener">'+
+        '<span class="rk">'+v.rank+'</span>'+
+        '<img class="tmb" src="'+esc(v.thumbnailUrl)+'" alt="" loading="lazy" onerror="this.style.visibility=\'hidden\'">'+
+        '<span class="rc-txt"><b>'+esc(v.title)+'</b><small>'+esc(v.channelTitle||'')+
+          (v.views!=null?' ・ '+Number(v.views).toLocaleString()+' 回':'')+
+          (tab==='hot'&&v.weeklyGrowth!=null?' ・ +'+Number(v.weeklyGrowth).toLocaleString():'')+
+        '</small></span>'+
+      '</a>'
+    ).join('') +
+    '<a class="search-cta" style="margin-top:4px" href="'+esc(ytSearch(query, tab))+'" target="_blank" rel="noopener">'+
+      '<span class="yt">🔎</span><span><b>もっと探す</b><small>YouTubeで'+esc(tabJa)+'</small></span><span class="go">↗</span>'+
+    '</a>';
+}
+
+/* ============ featured strip ============ */
+function buildFeatured(){
+  document.getElementById('featGrid').innerHTML = FEATURED.map(id=>{
+    const g = genreById[id]; if(!g || !g.places.length) return '';
+    const [pid] = g.places[0];
+    const p = PLACES[pid]; if(!p) return '';
+    return '<button class="feat-card" data-gid="'+id+'" data-pid="'+pid+'">'+
+      '<b>'+esc(g.ja)+'</b><small>'+esc(g.en)+'</small>'+
+      '<span>'+p.flag+' '+esc(p.ja)+' / '+esc(p.country)+'</span></button>';
+  }).join('');
+  document.querySelectorAll('.feat-card').forEach(b=>b.addEventListener('click', ()=>{
+    document.getElementById('explorer').scrollIntoView({behavior:'smooth'});
+    flyTo(b.dataset.pid);
+    setTimeout(()=>showGenre(b.dataset.gid, b.dataset.pid), 850);
+  }));
+}
+
+/* ============ data load ============ */
+async function loadData(){
+  const [places, genres] = await Promise.all([
+    fetch('data/places.json').then(r=>r.json()),
+    fetch('data/genres.json').then(r=>r.json()),
+  ]);
+  places.forEach(p=>{
+    PLACES[p.placeId] = {ja:p.cityNameJa, en:p.cityNameEn, country:p.countryNameJa, flag:p.flag, lat:p.lat, lon:p.lon};
+  });
+  genres.forEach(g=>{
+    genreById[g.genreId] = {
+      id:g.genreId, en:g.nameEn, ja:g.nameJa, desc:g.descriptionJa,
+      energy:g.energy, mood:g.mood,
+      instruments:g.keyInstruments||[], refs:g.referenceArtists||[],
+      keywords:g.keywords||[], kw:(g.keywords&&g.keywords[0])||g.nameEn,
+      places:(g.places||[]).map(pl=>[pl.placeId, pl.relationType]),
+    };
+  });
+  Object.values(genreById).forEach(g=>{
+    g.places.forEach(([pid,rel])=>{ (genresByPlace[pid] ||= []).push({g, rel}); });
+  });
+  const want = ['guaguanco','dub','city_pop','afrobeat','amapiano','gnawa','tango','fado','bhangra','mariachi','rebetiko','khoomei'];
+  FEATURED = want.filter(id=>genreById[id]);
+  const heroStat = document.getElementById('heroStat');
+  if(heroStat) heroStat.innerHTML = '現在 <b>'+genres.length+'</b> ジャンル / <b>'+places.length+'</b> 都市を収録';
+}
+
+/* ============ search (cities + genres) ============ */
+let searchIndex = [];
+function buildSearch(){
+  searchIndex = [];
+  Object.entries(PLACES).forEach(([id,p])=>{
+    if(genresByPlace[id]) searchIndex.push({type:'city', id, label:p.ja, en:p.en, sub:p.flag+' '+p.country});
+  });
+  Object.values(genreById).forEach(g=>{
+    if(!g.places.length) return;
+    const p = PLACES[g.places[0][0]];
+    searchIndex.push({type:'genre', id:g.id, pid:g.places[0][0], label:g.ja, en:g.en, sub:(p?p.flag+' '+p.ja:'')});
+  });
+
+  const input = document.getElementById('searchInput');
+  const box = document.getElementById('searchResults');
+  let cur = [], sel = -1;
+
+  function render(q){
+    q = q.trim().toLowerCase();
+    if(!q){ box.hidden = true; cur = []; return; }
+    cur = searchIndex.filter(it =>
+      it.label.toLowerCase().includes(q) || (it.en||'').toLowerCase().includes(q)
+    ).sort((a,b)=> (a.label.toLowerCase().indexOf(q)) - (b.label.toLowerCase().indexOf(q))).slice(0,12);
+    sel = -1;
+    if(!cur.length){ box.innerHTML = '<div class="search-empty">該当なし</div>'; box.hidden = false; return; }
+    box.innerHTML = cur.map((it,i)=>
+      '<button class="search-row" data-i="'+i+'">'+
+        '<span class="sr-ico">'+(it.type==='city'?'📍':'🎵')+'</span>'+
+        '<span class="sr-txt"><b>'+esc(it.label)+'</b><small>'+esc(it.en||'')+(it.sub?' ・ '+esc(it.sub):'')+'</small></span>'+
+        '<span class="sr-tag '+(it.type==='city'?'city':'')+'">'+(it.type==='city'?'都市':'ジャンル')+'</span>'+
+      '</button>').join('');
+    box.hidden = false;
+    box.querySelectorAll('.search-row').forEach(b=>
+      b.addEventListener('mousedown', e=>{ e.preventDefault(); choose(cur[+b.dataset.i]); }));
+  }
+  function choose(it){
+    if(!it) return;
+    input.value = ''; box.hidden = true; input.blur();
+    document.getElementById('explorer').scrollIntoView({behavior:'smooth'});
+    if(it.type==='city'){ flyTo(it.id); }
+    else { flyTo(it.pid); setTimeout(()=>showGenre(it.id, it.pid), 850); }
+  }
+  input.addEventListener('input', ()=> render(input.value));
+  input.addEventListener('focus', ()=>{ if(input.value) render(input.value); });
+  input.addEventListener('keydown', e=>{
+    if(box.hidden) return;
+    if(e.key==='ArrowDown'){ e.preventDefault(); sel = Math.min(sel+1, cur.length-1); }
+    else if(e.key==='ArrowUp'){ e.preventDefault(); sel = Math.max(sel-1, 0); }
+    else if(e.key==='Enter'){ e.preventDefault(); choose(cur[sel<0?0:sel]); return; }
+    else if(e.key==='Escape'){ box.hidden = true; return; }
+    else return;
+    box.querySelectorAll('.search-row').forEach((b,i)=>b.classList.toggle('sel', i===sel));
+    const s = box.querySelector('.search-row.sel'); if(s) s.scrollIntoView({block:'nearest'});
+  });
+  document.addEventListener('click', e=>{ if(!e.target.closest('.map-search')) box.hidden = true; });
+}
+
+/* ============ init ============ */
+loadData()
+  .then(()=>{ buildMarkers(); buildFeatured(); buildSearch(); showWelcome(); })
+  .catch(err=>{
+    console.error(err);
+    panelBody.innerHTML = '<div class="welcome">⚠️ データの読み込みに失敗しました。<br>このページは <b>data/places.json</b> と <b>data/genres.json</b> を読み込みます。<br>file:// で直接開いた場合は読み込めないので、Webサーバー経由（GitHub Pages や http://localhost）で開いてください。</div>';
+  });
+</script>
+</body>
+</html>

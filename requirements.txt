@@ -1,0 +1,7 @@
+# World Music Map - Python deps
+#
+# export_static_json.py uses only the stdlib (csv/json/os) - no deps needed.
+# The deps below are for the YouTube fetch batch (fetch_youtube.py / build_rankings.py).
+
+google-api-python-client>=2.0
+python-dotenv>=1.0

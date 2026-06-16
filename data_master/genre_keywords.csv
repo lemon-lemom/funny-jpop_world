@@ -1,0 +1,346 @@
+keyword_id,genre_id,keyword,language,priority,is_active,search_note
+kw_0001,guaguanco,guaguancó rumba cubana,es,1,1,low-noise compound
+kw_0002,guaguanco,guaguanco,en,2,1,basic spelling
+kw_0003,guaguanco,ルンバ ワワンコ,ja,3,1,japanese query
+kw_0004,rumba_cubana,rumba cubana tradicional,es,1,1,low-noise compound
+kw_0005,rumba_cubana,cuban rumba,en,2,1,english
+kw_0006,afro_cuban_jazz,afro cuban jazz,en,1,1,basic
+kw_0007,afro_cuban_jazz,latin jazz cuba,en,2,1,broader
+kw_0008,rumba_columbia,rumba columbia cuba,es,1,1,disambiguate from Colombia country
+kw_0009,rumba_columbia,columbia rumba matanzas,es,2,1,place qualifier
+kw_0010,son_cubano,son cubano tradicional,es,1,1,low-noise
+kw_0011,son_cubano,son cubano,en,2,1,basic
+kw_0012,son_cubano,ソン・クバーノ,ja,3,1,japanese
+kw_0013,trova,trova cubana,es,1,1,basic
+kw_0014,trova,nueva trova,es,2,1,subgenre
+kw_0015,salsa_cubana,salsa cubana,es,1,1,basic
+kw_0016,salsa_cubana,timba cuba,es,2,1,subgenre
+kw_0017,bolero_cubano,bolero cubano clásico,es,1,1,low-noise
+kw_0018,bolero_cubano,bolero cuba,es,2,1,basic
+kw_0019,new_orleans_jazz,new orleans jazz traditional,en,1,1,low-noise
+kw_0020,new_orleans_jazz,new orleans jazz,en,2,1,basic
+kw_0021,dixieland,dixieland jazz,en,1,1,basic
+kw_0022,dixieland,traditional dixieland,en,2,1,low-noise
+kw_0023,brass_band,new orleans brass band,en,1,1,basic
+kw_0024,brass_band,second line brass band,en,2,1,context
+kw_0025,bebop,bebop jazz,en,1,1,basic
+kw_0026,bebop,charlie parker bebop,en,2,1,artist
+kw_0027,bebop,dizzy gillespie bebop,en,3,1,artist
+kw_0028,hard_bop,hard bop jazz,en,1,1,basic
+kw_0029,hard_bop,art blakey hard bop,en,2,1,artist
+kw_0030,salsa_ny,salsa new york fania,en,1,1,label qualifier
+kw_0031,salsa_ny,nuyorican salsa,en,2,1,context
+kw_0032,chicago_blues,chicago blues,en,1,1,basic
+kw_0033,chicago_blues,electric chicago blues,en,2,1,low-noise
+kw_0034,house,chicago house music,en,1,1,disambiguate
+kw_0035,house,classic house chicago,en,2,1,low-noise
+kw_0036,motown,motown classics,en,1,1,basic
+kw_0037,motown,motown soul,en,2,1,broader
+kw_0038,detroit_techno,detroit techno,en,1,1,basic
+kw_0039,detroit_techno,classic detroit techno,en,2,1,low-noise
+kw_0040,country,classic country music,en,1,1,low-noise
+kw_0041,country,nashville country,en,2,1,place
+kw_0042,west_coast_jazz,west coast jazz,en,1,1,basic
+kw_0043,west_coast_jazz,cool jazz west coast,en,2,1,context
+kw_0044,funk,funk music 70s,en,1,1,low-noise
+kw_0045,funk,classic funk,en,2,1,basic
+kw_0046,soul,memphis soul stax,en,1,1,label qualifier
+kw_0047,soul,southern soul,en,2,1,broader
+kw_0048,memphis_blues,memphis blues,en,1,1,basic
+kw_0049,memphis_blues,beale street blues,en,2,1,place
+kw_0050,hawaiian,hawaiian slack key guitar,en,1,1,low-noise
+kw_0051,hawaiian,traditional hawaiian music,en,2,1,basic
+kw_0052,samba,samba de roda,pt,1,1,low-noise traditional
+kw_0053,samba,samba brasil,pt,2,1,basic
+kw_0054,samba,サンバ,ja,3,1,japanese
+kw_0055,bossa_nova,bossa nova,en,1,1,basic
+kw_0056,bossa_nova,bossa nova classics,en,2,1,low-noise
+kw_0057,choro,choro brasileiro,pt,1,1,basic
+kw_0058,choro,choro instrumental,pt,2,1,low-noise
+kw_0059,axe,axé music bahia,pt,1,1,place
+kw_0060,axe,axé brasil,pt,2,1,basic
+kw_0061,samba_reggae,samba reggae olodum,pt,1,1,artist qualifier
+kw_0062,samba_reggae,samba-reggae bahia,pt,2,1,place
+kw_0063,frevo,frevo pernambuco,pt,1,1,place
+kw_0064,frevo,frevo recife,pt,2,1,place
+kw_0065,maracatu,maracatu nação,pt,1,1,subgenre
+kw_0066,maracatu,maracatu recife,pt,2,1,place
+kw_0067,mpb,mpb música popular brasileira,pt,1,1,full term
+kw_0068,mpb,mpb clássicos,pt,2,1,low-noise
+kw_0069,forro,forró pé de serra,pt,1,1,low-noise traditional
+kw_0070,forro,forró tradicional,pt,2,1,basic
+kw_0071,reggae,roots reggae,en,1,1,low-noise
+kw_0072,reggae,reggae classics,en,2,1,basic
+kw_0073,reggae,レゲエ,ja,3,1,japanese
+kw_0074,dub,dub reggae,en,1,1,basic
+kw_0075,dub,king tubby dub,en,2,1,artist
+kw_0076,ska,ska jamaica,en,1,1,disambiguate
+kw_0077,ska,skatalites ska,en,2,1,artist
+kw_0078,rocksteady,rocksteady jamaica,en,1,1,basic
+kw_0079,rocksteady,rocksteady classics,en,2,1,low-noise
+kw_0080,dancehall,dancehall classic,en,1,1,low-noise
+kw_0081,dancehall,jamaican dancehall,en,2,1,basic
+kw_0082,calypso,calypso trinidad,en,1,1,place
+kw_0083,calypso,classic calypso,en,2,1,low-noise
+kw_0084,soca,soca music,en,1,1,basic
+kw_0085,soca,trinidad soca,en,2,1,place
+kw_0086,steelpan,steelpan trinidad,en,1,1,place
+kw_0087,steelpan,steelband panorama,en,2,1,context
+kw_0088,merengue,merengue dominicano,es,1,1,low-noise
+kw_0089,merengue,merengue clásico,es,2,1,basic
+kw_0090,bachata,bachata dominicana,es,1,1,low-noise
+kw_0091,bachata,bachata clásica,es,2,1,basic
+kw_0092,reggaeton,reggaeton clásico,es,1,1,low-noise old school
+kw_0093,reggaeton,reggaeton old school,es,2,1,era qualifier
+kw_0094,bomba,bomba puerto rico,es,1,1,disambiguate
+kw_0095,bomba,bomba y plena,es,2,1,context
+kw_0096,plena,plena puerto rico,es,1,1,place
+kw_0097,plena,plena tradicional,es,2,1,low-noise
+kw_0098,afro_peruvian,música afroperuana,es,1,1,basic
+kw_0099,afro_peruvian,afro peruvian music,en,2,1,english
+kw_0100,chicha,chicha peruana cumbia,es,1,1,low-noise
+kw_0101,chicha,cumbia amazónica,es,2,1,subgenre
+kw_0102,tango,tango argentino,es,1,1,low-noise
+kw_0103,tango,tango clásico,es,2,1,basic
+kw_0104,tango,タンゴ,ja,3,1,japanese
+kw_0105,cumbia,cumbia colombiana,es,1,1,origin qualifier
+kw_0106,cumbia,cumbia clásica,es,2,1,low-noise
+kw_0107,salsa_calena,salsa caleña,es,1,1,basic
+kw_0108,salsa_calena,salsa cali colombia,es,2,1,place
+kw_0109,son_jarocho,son jarocho veracruz,es,1,1,place
+kw_0110,son_jarocho,son jarocho tradicional,es,2,1,low-noise
+kw_0111,afrobeat,afrobeat fela kuti,en,1,1,artist disambiguate from afrobeats
+kw_0112,afrobeat,classic afrobeat,en,2,1,low-noise
+kw_0113,highlife,highlife ghana,en,1,1,place
+kw_0114,highlife,classic highlife,en,2,1,low-noise
+kw_0115,soukous,soukous congo,fr,1,1,place
+kw_0116,soukous,congolese rumba soukous,en,2,1,context
+kw_0117,mbalax,mbalax senegal,fr,1,1,place
+kw_0118,mbalax,youssou ndour mbalax,en,2,1,artist
+kw_0119,desert_blues,desert blues mali,en,1,1,place
+kw_0120,desert_blues,tuareg desert blues,en,2,1,context
+kw_0121,ethio_jazz,ethio jazz,en,1,1,basic
+kw_0122,ethio_jazz,mulatu astatke ethio jazz,en,2,1,artist
+kw_0123,gnawa,gnawa music morocco,en,1,1,place
+kw_0124,gnawa,gnawa essaouira,en,2,1,place
+kw_0125,mahraganat,مهرجانات,ar,1,1,arabic
+kw_0126,mahraganat,electro shaabi egypt,en,2,1,english
+kw_0127,kwaito,kwaito south africa,en,1,1,place
+kw_0128,kwaito,classic kwaito,en,2,1,low-noise
+kw_0129,amapiano,amapiano,en,1,1,basic
+kw_0130,amapiano,amapiano mix south africa,en,2,1,place
+kw_0131,gqom,gqom durban,en,1,1,place
+kw_0132,gqom,gqom south africa,en,2,1,broader
+kw_0133,kuduro,kuduro angola,pt,1,1,place
+kw_0134,kuduro,kuduro music,en,2,1,basic
+kw_0135,semba,semba angola,pt,1,1,place
+kw_0136,semba,semba angolano,pt,2,1,basic
+kw_0137,morna,morna cabo verde,pt,1,1,place
+kw_0138,morna,cesária évora morna,pt,2,1,artist
+kw_0139,city_pop,japanese city pop,en,1,1,basic
+kw_0140,city_pop,city pop 80s,en,2,1,era
+kw_0141,city_pop,シティポップ,ja,3,1,japanese
+kw_0142,jp_jazz_fusion,japanese jazz fusion,en,1,1,basic
+kw_0143,jp_jazz_fusion,和ジャズ フュージョン,ja,2,1,japanese
+kw_0144,shibuya_kei,shibuya-kei,en,1,1,basic
+kw_0145,shibuya_kei,渋谷系,ja,2,1,japanese
+kw_0146,kayokyoku,昭和 歌謡曲,ja,1,1,japanese
+kw_0147,kayokyoku,kayokyoku showa,en,2,1,romaji
+kw_0148,jp_funk,japanese funk wamono,en,1,1,digger term
+kw_0149,jp_funk,和モノ ファンク,ja,2,1,japanese
+kw_0150,okinawan_folk,沖縄民謡 三線,ja,1,1,japanese
+kw_0151,okinawan_folk,okinawan folk music,en,2,1,english
+kw_0152,shimauta,島唄 奄美,ja,1,1,japanese
+kw_0153,shimauta,shimauta okinawa,en,2,1,romaji
+kw_0154,kpop,k-pop,en,1,1,basic
+kw_0155,kpop,kpop hits,en,2,1,broader
+kw_0156,trot,트로트,ko,1,1,korean
+kw_0157,trot,korean trot,en,2,1,english
+kw_0158,shidaiqu,时代曲,zh,1,1,chinese
+kw_0159,shidaiqu,shidaiqu shanghai,en,2,1,romanized
+kw_0160,chinese_rock,中国摇滚,zh,1,1,chinese
+kw_0161,chinese_rock,chinese rock,en,2,1,english
+kw_0162,khoomei,mongolian throat singing,en,1,1,descriptive
+kw_0163,khoomei,khoomei khoomii,en,2,1,romanized
+kw_0164,filmi,bollywood songs,en,1,1,popular term
+kw_0165,filmi,हिंदी फ़िल्मी गीत,hi,2,1,hindi
+kw_0166,hindustani,hindustani classical music,en,1,1,basic
+kw_0167,hindustani,north indian classical raga,en,2,1,descriptive
+kw_0168,carnatic,carnatic music,en,1,1,basic
+kw_0169,carnatic,south indian classical kacheri,en,2,1,context
+kw_0170,bhangra,punjabi bhangra,en,1,1,basic
+kw_0171,bhangra,ਭੰਗੜਾ,pa,2,1,punjabi
+kw_0172,baul,baul gaan,bn,1,1,bengali term
+kw_0173,baul,baul song bengal,en,2,1,english
+kw_0174,goa_trance,goa trance,en,1,1,basic
+kw_0175,goa_trance,classic goa trance,en,2,1,low-noise
+kw_0176,qawwali,qawwali sufi,en,1,1,context
+kw_0177,qawwali,nusrat fateh ali khan qawwali,en,2,1,artist
+kw_0178,dangdut,dangdut koplo,id,1,1,subgenre
+kw_0179,dangdut,dangdut indonesia,id,2,1,basic
+kw_0180,gamelan,gamelan bali,id,1,1,place
+kw_0181,gamelan,javanese gamelan,en,2,1,place
+kw_0182,grime,grime uk,en,1,1,disambiguate
+kw_0183,grime,london grime,en,2,1,place
+kw_0184,uk_garage,uk garage,en,1,1,basic
+kw_0185,uk_garage,old school uk garage,en,2,1,era
+kw_0186,jungle,jungle drum and bass,en,1,1,disambiguate
+kw_0187,jungle,90s jungle uk,en,2,1,era
+kw_0188,trip_hop,trip hop,en,1,1,basic
+kw_0189,trip_hop,bristol trip hop,en,2,1,place
+kw_0190,chanson,chanson française,fr,1,1,basic
+kw_0191,chanson,chanson classique,fr,2,1,low-noise
+kw_0192,musette,musette accordéon,fr,1,1,instrument
+kw_0193,musette,valse musette,fr,2,1,subgenre
+kw_0194,berlin_techno,berlin techno,en,1,1,basic
+kw_0195,berlin_techno,techno berlin set,en,2,1,context
+kw_0196,krautrock,krautrock,en,1,1,basic
+kw_0197,krautrock,german krautrock 70s,en,2,1,era
+kw_0198,canzone_napoletana,canzone napoletana,it,1,1,basic
+kw_0199,canzone_napoletana,napoli classica,it,2,1,low-noise
+kw_0200,rebetiko,ρεμπέτικο,el,1,1,greek
+kw_0201,rebetiko,rebetiko,en,2,1,romanized
+kw_0202,fado,fado português,pt,1,1,basic
+kw_0203,fado,fado de lisboa,pt,2,1,place
+kw_0204,fado,ファド,ja,3,1,japanese
+kw_0205,flamenco,flamenco puro,es,1,1,low-noise
+kw_0206,flamenco,flamenco sevilla,es,2,1,place
+kw_0207,flamenco,フラメンコ,ja,3,1,japanese
+kw_0208,irish_folk,irish traditional music,en,1,1,basic
+kw_0209,irish_folk,irish folk session,en,2,1,context
+kw_0210,anatolian_rock,anadolu rock,tr,1,1,turkish
+kw_0211,anatolian_rock,anatolian rock,en,2,1,english
+kw_0212,mambo,mambo cubano,es,1,1,basic
+kw_0213,mambo,perez prado mambo,en,2,1,artist
+kw_0214,chacha,cha cha cha cuba,es,1,1,disambiguate
+kw_0215,chacha,orquesta aragón cha cha chá,es,2,1,artist
+kw_0216,new_orleans_funk,new orleans funk,en,1,1,basic
+kw_0217,new_orleans_funk,the meters funk,en,2,1,artist
+kw_0218,zydeco,zydeco louisiana,en,1,1,place
+kw_0219,zydeco,clifton chenier zydeco,en,2,1,artist
+kw_0220,swing_big_band,big band swing,en,1,1,basic
+kw_0221,swing_big_band,duke ellington swing,en,2,1,artist
+kw_0222,gypsy_jazz,gypsy jazz manouche,en,1,1,low-noise
+kw_0223,gypsy_jazz,django reinhardt,en,2,1,artist
+kw_0224,acid_jazz,acid jazz,en,1,1,basic
+kw_0225,acid_jazz,jamiroquai acid jazz,en,2,1,artist
+kw_0226,smooth_jazz,smooth jazz,en,1,1,basic
+kw_0227,smooth_jazz,grover washington jr,en,2,1,artist
+kw_0228,jazz_fusion,jazz fusion,en,1,1,basic
+kw_0229,jazz_fusion,weather report fusion,en,2,1,artist
+kw_0230,delta_blues,delta blues,en,1,1,basic
+kw_0231,delta_blues,robert johnson delta blues,en,2,1,artist
+kw_0232,disco,disco 70s,en,1,1,era
+kw_0233,disco,classic disco,en,2,1,low-noise
+kw_0234,gospel,gospel choir,en,1,1,basic
+kw_0235,gospel,traditional gospel music,en,2,1,low-noise
+kw_0236,rnb_neo_soul,neo soul,en,1,1,basic
+kw_0237,rnb_neo_soul,d'angelo neo soul,en,2,1,artist
+kw_0238,bluegrass,bluegrass music,en,1,1,basic
+kw_0239,bluegrass,bill monroe bluegrass,en,2,1,artist
+kw_0240,appalachian_folk,appalachian folk,en,1,1,basic
+kw_0241,appalachian_folk,old time appalachian music,en,2,1,low-noise
+kw_0242,surf_rock,surf rock instrumental,en,1,1,low-noise
+kw_0243,surf_rock,dick dale surf,en,2,1,artist
+kw_0244,doo_wop,doo wop 50s,en,1,1,era
+kw_0245,doo_wop,doo wop classics,en,2,1,low-noise
+kw_0246,boogaloo,latin boogaloo,en,1,1,disambiguate
+kw_0247,boogaloo,joe cuba boogaloo,en,2,1,artist
+kw_0248,baiao,baião nordeste,pt,1,1,place
+kw_0249,baiao,luiz gonzaga baião,pt,2,1,artist
+kw_0250,milonga,milonga argentina,es,1,1,place
+kw_0251,milonga,milonga criolla,es,2,1,low-noise
+kw_0252,champeta,champeta cartagena,es,1,1,place
+kw_0253,champeta,champeta africana,es,2,1,context
+kw_0254,mariachi,mariachi mexicano,es,1,1,basic
+kw_0255,mariachi,mariachi vargas,es,2,1,artist
+kw_0256,ranchera,ranchera mexicana,es,1,1,basic
+kw_0257,ranchera,josé alfredo jiménez ranchera,es,2,1,artist
+kw_0258,norteno,música norteña,es,1,1,basic
+kw_0259,norteno,norteño acordeón,es,2,1,instrument
+kw_0260,andean_folk,música andina,es,1,1,basic
+kw_0261,andean_folk,folklore andino charango,es,2,1,instrument
+kw_0262,juju,juju music nigeria,en,1,1,disambiguate
+kw_0263,juju,king sunny ade juju,en,2,1,artist
+kw_0264,makossa,makossa cameroun,fr,1,1,place
+kw_0265,makossa,manu dibango makossa,en,2,1,artist
+kw_0266,benga,benga kenya,en,1,1,place
+kw_0267,benga,benga guitar,en,2,1,context
+kw_0268,chimurenga,chimurenga zimbabwe,en,1,1,place
+kw_0269,chimurenga,thomas mapfumo mbira,en,2,1,artist
+kw_0270,isicathamiya,isicathamiya,en,1,1,basic
+kw_0271,isicathamiya,ladysmith black mambazo,en,2,1,artist
+kw_0272,arabic_tarab,طرب أم كلثوم,ar,1,1,arabic
+kw_0273,arabic_tarab,umm kulthum tarab,en,2,1,artist
+kw_0274,khaleeji,خليجي طرب,ar,1,1,arabic
+kw_0275,khaleeji,khaleeji music,en,2,1,english
+kw_0276,ottoman_classical,osmanlı klasik müziği,tr,1,1,turkish
+kw_0277,ottoman_classical,ottoman classical music,en,2,1,english
+kw_0278,persian,موسیقی سنتی ایرانی,fa,1,1,persian
+kw_0279,persian,persian classical shajarian,en,2,1,artist
+kw_0280,sufi,sufi music whirling,en,1,1,context
+kw_0281,sufi,mevlana sufi ney,tr,2,1,context
+kw_0282,israeli_fusion,middle eastern fusion music,en,1,1,low-noise
+kw_0283,israeli_fusion,idan raichel,en,2,1,artist
+kw_0284,tarantella,tarantella napoletana,it,1,1,place
+kw_0285,tarantella,pizzica salento,it,2,1,subgenre
+kw_0286,polka,polka music,en,1,1,basic
+kw_0287,polka,böhmische polka,de,2,1,german
+kw_0288,balkan_brass,balkan brass band,en,1,1,basic
+kw_0289,balkan_brass,fanfare ciocarlia,en,2,1,artist
+kw_0290,klezmer,klezmer music,en,1,1,basic
+kw_0291,klezmer,klezmer clarinet,en,2,1,instrument
+kw_0292,gypsy_romani,romani gypsy music,en,1,1,basic
+kw_0293,gypsy_romani,taraf de haidouks,en,2,1,artist
+kw_0294,csardas,csárdás hungarian,hu,1,1,basic
+kw_0295,csardas,hungarian gypsy csardas,en,2,1,context
+kw_0296,bulgarian_voices,bulgarian women's choir,en,1,1,descriptive
+kw_0297,bulgarian_voices,le mystere des voix bulgares,en,2,1,artist
+kw_0298,russian_folk,russian folk music,en,1,1,basic
+kw_0299,russian_folk,русская народная песня,ru,2,1,russian
+kw_0300,nordic_folk,nordic folk music,en,1,1,basic
+kw_0301,nordic_folk,scandinavian folk,en,2,1,broader
+kw_0302,estonian_choral,estonian choral music,en,1,1,basic
+kw_0303,estonian_choral,arvo pärt choir,en,2,1,artist
+kw_0304,sami_joik,sami joik,en,1,1,basic
+kw_0305,sami_joik,joik mari boine,en,2,1,artist
+kw_0306,rajasthani,rajasthani folk music,en,1,1,basic
+kw_0307,rajasthani,manganiyar rajasthan,en,2,1,context
+kw_0308,thai_luk_thung,ลูกทุ่ง,th,1,1,thai
+kw_0309,thai_luk_thung,luk thung thai,en,2,1,romanized
+kw_0310,vietnamese,nhạc dân tộc việt nam,vi,1,1,vietnamese
+kw_0311,vietnamese,vietnamese traditional music,en,2,1,english
+kw_0312,chinese_traditional,中国传统音乐 二胡,zh,1,1,chinese
+kw_0313,chinese_traditional,guzheng traditional,en,2,1,instrument
+kw_0314,peking_opera,京剧,zh,1,1,chinese
+kw_0315,peking_opera,peking opera,en,2,1,english
+kw_0316,enka,演歌 名曲,ja,1,1,japanese
+kw_0317,enka,enka japanese,en,2,1,romanized
+kw_0318,gagaku,雅楽,ja,1,1,japanese
+kw_0319,gagaku,gagaku japanese court music,en,2,1,english
+kw_0320,polynesian,polynesian music,en,1,1,basic
+kw_0321,polynesian,samoan music,en,2,1,context
+kw_0322,maori_haka,maori haka,en,1,1,basic
+kw_0323,maori_haka,kapa haka,en,2,1,context
+kw_0324,aboriginal,aboriginal didgeridoo music,en,1,1,descriptive
+kw_0325,aboriginal,yothu yindi,en,2,1,artist
+kw_0326,quebecois_folk,musique traditionnelle québécoise,fr,1,1,basic
+kw_0327,quebecois_folk,la bottine souriante,en,2,1,artist
+kw_0328,inuit_throat_singing,inuit throat singing katajjaq,en,1,1,basic
+kw_0329,inuit_throat_singing,tanya tagaq,en,2,1,artist
+kw_0330,russian_rock,русский рок,ru,1,1,russian
+kw_0331,russian_rock,kino viktor tsoi,en,2,1,artist
+kw_0332,tuvan_throat_singing,tuvan throat singing,en,1,1,basic
+kw_0333,tuvan_throat_singing,huun huur tu,en,2,1,artist
+kw_0334,yodel,swiss yodel jodel,de,1,1,basic
+kw_0335,yodel,alphorn naturjodel,de,2,1,context
+kw_0336,scottish_folk,scottish bagpipes music,en,1,1,basic
+kw_0337,scottish_folk,scottish celtic folk,en,2,1,broader
+kw_0338,breton_celtic,musique celtique bretonne,fr,1,1,basic
+kw_0339,breton_celtic,alan stivell,en,2,1,artist
+kw_0340,galician_celtic,música celta galega,es,1,1,basic
+kw_0341,galician_celtic,gaita gallega carlos núñez,es,2,1,artist
+kw_0342,georgian_polyphony,georgian polyphonic singing,en,1,1,basic
+kw_0343,georgian_polyphony,rustavi choir,en,2,1,artist
+kw_0344,chanson_quebecoise,chanson québécoise,fr,1,1,basic
+kw_0345,chanson_quebecoise,robert charlebois félix leclerc,fr,2,1,artist
