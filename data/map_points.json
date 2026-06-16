@@ -361,6 +361,7 @@
   "lat": 16.8866,
   "lon": -24.9956,
   "genreIds": [
+   "coladeira",
    "morna"
   ]
  },
@@ -1232,6 +1233,40 @@
   "lon": -71.208,
   "genreIds": [
    "chanson_quebecoise"
+  ]
+ },
+ {
+  "placeId": "capeverde_praia",
+  "label": "Praia",
+  "labelJa": "プライア",
+  "flag": "🇨🇻",
+  "lat": 14.933,
+  "lon": -23.5133,
+  "genreIds": [
+   "batuku",
+   "funana"
+  ]
+ },
+ {
+  "placeId": "frenchpolynesia_papeete",
+  "label": "Papeete",
+  "labelJa": "パペーテ",
+  "flag": "🇵🇫",
+  "lat": -17.5516,
+  "lon": -149.5585,
+  "genreIds": [
+   "tahitian"
+  ]
+ },
+ {
+  "placeId": "fiji_suva",
+  "label": "Suva",
+  "labelJa": "スバ",
+  "flag": "🇫🇯",
+  "lat": -18.1416,
+  "lon": 178.4419,
+  "genreIds": [
+   "fijian"
   ]
  }
 ]

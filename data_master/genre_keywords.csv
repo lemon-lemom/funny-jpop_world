@@ -344,3 +344,13 @@ kw_0342,georgian_polyphony,georgian polyphonic singing,en,1,1,basic
 kw_0343,georgian_polyphony,rustavi choir,en,2,1,artist
 kw_0344,chanson_quebecoise,chanson québécoise,fr,1,1,basic
 kw_0345,chanson_quebecoise,robert charlebois félix leclerc,fr,2,1,artist
+kw_0346,funana,funaná cabo verde,pt,1,1,basic
+kw_0347,funana,ferro gaita funaná,pt,2,1,artist
+kw_0348,coladeira,coladeira cabo verde,pt,1,1,basic
+kw_0349,coladeira,coladeira morabeza,pt,2,1,context
+kw_0350,batuku,batuku cabo verde,pt,1,1,basic
+kw_0351,batuku,batuko santiago,pt,2,1,place
+kw_0352,tahitian,tahitian ote'a drums,en,1,1,basic
+kw_0353,tahitian,musique tahitienne,fr,2,1,french
+kw_0354,fijian,fijian meke,en,1,1,basic
+kw_0355,fijian,fiji vude music,en,2,1,subgenre
