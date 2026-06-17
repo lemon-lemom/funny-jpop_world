@@ -31,7 +31,8 @@ motown,Motown,モータウン,,デトロイトのレーベルが量産した洗�
 detroit_techno,Detroit Techno,デトロイト・テクノ,,機械都市発の未来志向エレクトロニック・ダンス,Futuristic electronic dance music born in Detroit,4,未来的/反復/硬質,drum machine / synth / sequencer / pads,Juan Atkins / Derrick May / Underground Resistance,1,300
 soul,Soul,ソウル,,ゴスペルとR&Bが融合した黒人音楽,Black music fusing gospel and R&B,4,感情的/力強い/温かい,horns / organ / electric piano / bass / strings,Otis Redding / Aretha Franklin / Al Green,1,310
 gospel,Gospel,ゴスペル,,教会から生まれた荘厳で高揚する合唱音楽,Soaring church-born choral music,4,荘厳/感動/希望,organ / piano / choir / tambourine / bass,Mahalia Jackson / Kirk Franklin / Andraé Crouch,1,320
-rnb_neo_soul,R&B / Neo Soul,R&B/ネオソウル,soul,ソウルを現代的に更新した都会的でセクシーな音,Soul updated into smooth modern urban sound,2,おしゃれ/セクシー/都会,Rhodes piano / muted guitar / programmed drums / warm pads,D'Angelo / Erykah Badu / Frank Ocean,1,330
+rnb_neo_soul,R&B,R&B,soul,ソウルから発展した都会的でセクシーなブラック・ポップ,Urban black pop evolved from soul,2,おしゃれ/セクシー/都会,programmed drums / synth / bass / smooth vocals,Usher / Beyoncé / Mary J. Blige,1,330
+neo_soul,Neo Soul,ネオソウル,soul,生演奏とヒップホップ感覚でソウルを現代化した有機的でメロウなサウンド,Organic mellow soul modernized with live grooves and a hip-hop feel,2,おしゃれ/オーガニック/内省,Rhodes piano / live drums / warm bass / muted guitar,D'Angelo / Erykah Badu / Jill Scott,1,331
 funk,Funk,ファンク,,グルーヴ最優先のリズム革命,A groove-first rhythm revolution,5,グルーヴ/ファンキー/パワフル,slap bass / wah guitar / clavinet / horn stabs,James Brown / Parliament-Funkadelic / Earth Wind & Fire,1,340
 country,Country,カントリー,,ナッシュビルを中心とするアメリカン・ルーツ音楽,American roots music centered on Nashville,3,素朴/物語/牧歌,acoustic guitar / fiddle / pedal steel / banjo,Hank Williams / Johnny Cash / Dolly Parton,1,350
 bluegrass,Bluegrass,ブルーグラス,country,バンジョーが疾走するアパラチア由来の弦楽,Fast Appalachian string-band music,3,素朴/疾走/牧歌,banjo / fiddle / mandolin / dobro / upright bass,Bill Monroe / Flatt & Scruggs / Alison Krauss,1,360

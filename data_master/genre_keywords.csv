@@ -234,8 +234,11 @@ kw_0232,disco,disco 70s,en,1,1,era
 kw_0233,disco,classic disco,en,2,1,low-noise
 kw_0234,gospel,gospel choir,en,1,1,basic
 kw_0235,gospel,traditional gospel music,en,2,1,low-noise
-kw_0236,rnb_neo_soul,neo soul,en,1,1,basic
-kw_0237,rnb_neo_soul,d'angelo neo soul,en,2,1,artist
+kw_0236,neo_soul,neo soul,en,1,1,basic
+kw_0237,neo_soul,d'angelo neo soul,en,2,1,artist
+kw_0388,rnb_neo_soul,r&b music,en,1,1,basic
+kw_0389,rnb_neo_soul,90s r&b,en,2,1,subgenre
+kw_0390,neo_soul,erykah badu neo soul,en,3,1,artist
 kw_0238,bluegrass,bluegrass music,en,1,1,basic
 kw_0239,bluegrass,bill monroe bluegrass,en,2,1,artist
 kw_0240,appalachian_folk,appalachian folk,en,1,1,basic
