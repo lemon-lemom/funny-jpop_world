@@ -709,14 +709,6 @@
    "publishedAt": "2026-03-09T10:00:00Z"
   },
   {
-   "videoId": "c981VZsPFuc",
-   "song": "Automatic",
-   "artist": "宇多田ヒカル",
-   "style": "インド古典",
-   "url": "https://www.youtube.com/watch?v=c981VZsPFuc",
-   "publishedAt": "2025-10-11T10:00:56Z"
-  },
-  {
    "videoId": "3_ByvG0IJvg",
    "song": "Automatic",
    "artist": "宇多田ヒカル",
@@ -743,89 +735,7 @@
    "publishedAt": "2025-10-15T10:00:54Z"
   }
  ],
- "afrobeat": [
-  {
-   "videoId": "7s5th3NIHVE",
-   "song": "茶摘み",
-   "artist": "Traditional",
-   "style": "West African Work Song",
-   "url": "https://www.youtube.com/watch?v=7s5th3NIHVE",
-   "publishedAt": "2026-05-02T10:00:00Z"
-  },
-  {
-   "videoId": "T7GnE9G2J68",
-   "song": "TRUE BLUE",
-   "artist": "LUNA SEA",
-   "style": "Village Afrobeat",
-   "url": "https://www.youtube.com/watch?v=T7GnE9G2J68",
-   "publishedAt": "2026-04-23T10:00:00Z"
-  },
-  {
-   "videoId": "6mB9BMaUfDM",
-   "song": "RIDE ON TIME",
-   "artist": "山下達郎",
-   "style": "70s Afrobeat",
-   "url": "https://www.youtube.com/watch?v=6mB9BMaUfDM",
-   "publishedAt": "2026-04-03T10:00:00Z"
-  },
-  {
-   "videoId": "SD_F7BUHPcg",
-   "song": "END OF SORROW",
-   "artist": "LUNA SEA",
-   "style": "Ecstatic Afrobeat Drive",
-   "url": "https://www.youtube.com/watch?v=SD_F7BUHPcg",
-   "publishedAt": "2026-02-28T10:00:00Z"
-  },
-  {
-   "videoId": "UpkNU_6iGSE",
-   "song": "プリプリスキャット",
-   "artist": "スキャットマン・ジョン",
-   "style": "Afrobeat Scat Ritual",
-   "url": "https://www.youtube.com/watch?v=UpkNU_6iGSE",
-   "publishedAt": "2026-02-18T10:00:00Z"
-  },
-  {
-   "videoId": "iCPkv5Ev32g",
-   "song": "鬼のパンツ",
-   "artist": "Traditional",
-   "style": "Afrobeat Body Circle",
-   "url": "https://www.youtube.com/watch?v=iCPkv5Ev32g",
-   "publishedAt": "2026-02-02T10:00:00Z"
-  },
-  {
-   "videoId": "Qs4tm39iCmM",
-   "song": "ポリリズム",
-   "artist": "Perfume",
-   "style": "Afrobeat / World Groove",
-   "url": "https://www.youtube.com/watch?v=Qs4tm39iCmM",
-   "publishedAt": "2025-10-30T10:01:00Z"
-  },
-  {
-   "videoId": "vNEi55NmPe8",
-   "song": "故郷(ふるさと)",
-   "artist": "Traditional",
-   "style": "Afrobeat Festival Groove",
-   "url": "https://www.youtube.com/watch?v=vNEi55NmPe8",
-   "publishedAt": "2025-10-22T10:01:34Z"
-  },
-  {
-   "videoId": "zxFZMc-8Zxk",
-   "song": "ROSIER",
-   "artist": "LUNA SEA",
-   "style": "African",
-   "url": "https://www.youtube.com/watch?v=zxFZMc-8Zxk",
-   "publishedAt": "2025-10-10T10:04:09Z"
-  },
-  {
-   "videoId": "7C0gHK-hxMs",
-   "song": "ROSIER",
-   "artist": "LUNA SEA",
-   "style": "African",
-   "url": "https://www.youtube.com/watch?v=7C0gHK-hxMs",
-   "publishedAt": "2025-10-10T10:03:03Z"
-  }
- ],
- "rnb_neo_soul": [
+ "neo_soul": [
   {
    "videoId": "GfZDMf6gKP8",
    "song": "思い過ごしも恋のうち",
@@ -857,14 +767,6 @@
    "style": "Mellow Neo-Soul",
    "url": "https://www.youtube.com/watch?v=ibACpr-wvn8",
    "publishedAt": "2025-12-14T10:01:14Z"
-  },
-  {
-   "videoId": "4PjBxxMljfE",
-   "song": "ラブリー",
-   "artist": "小沢健二",
-   "style": "Motown R&B Soul",
-   "url": "https://www.youtube.com/watch?v=4PjBxxMljfE",
-   "publishedAt": "2025-10-27T10:00:07Z"
   },
   {
    "videoId": "EXVPaQ9ywBY",
@@ -1009,6 +911,72 @@
    "style": "Motown Soul",
    "url": "https://www.youtube.com/watch?v=PKfs6P2bhkQ",
    "publishedAt": "2025-10-20T10:00:46Z"
+  }
+ ],
+ "afrobeat": [
+  {
+   "videoId": "T7GnE9G2J68",
+   "song": "TRUE BLUE",
+   "artist": "LUNA SEA",
+   "style": "Village Afrobeat",
+   "url": "https://www.youtube.com/watch?v=T7GnE9G2J68",
+   "publishedAt": "2026-04-23T10:00:00Z"
+  },
+  {
+   "videoId": "6mB9BMaUfDM",
+   "song": "RIDE ON TIME",
+   "artist": "山下達郎",
+   "style": "70s Afrobeat",
+   "url": "https://www.youtube.com/watch?v=6mB9BMaUfDM",
+   "publishedAt": "2026-04-03T10:00:00Z"
+  },
+  {
+   "videoId": "SD_F7BUHPcg",
+   "song": "END OF SORROW",
+   "artist": "LUNA SEA",
+   "style": "Ecstatic Afrobeat Drive",
+   "url": "https://www.youtube.com/watch?v=SD_F7BUHPcg",
+   "publishedAt": "2026-02-28T10:00:00Z"
+  },
+  {
+   "videoId": "UpkNU_6iGSE",
+   "song": "プリプリスキャット",
+   "artist": "スキャットマン・ジョン",
+   "style": "Afrobeat Scat Ritual",
+   "url": "https://www.youtube.com/watch?v=UpkNU_6iGSE",
+   "publishedAt": "2026-02-18T10:00:00Z"
+  },
+  {
+   "videoId": "iCPkv5Ev32g",
+   "song": "鬼のパンツ",
+   "artist": "Traditional",
+   "style": "Afrobeat Body Circle",
+   "url": "https://www.youtube.com/watch?v=iCPkv5Ev32g",
+   "publishedAt": "2026-02-02T10:00:00Z"
+  },
+  {
+   "videoId": "Qs4tm39iCmM",
+   "song": "ポリリズム",
+   "artist": "Perfume",
+   "style": "Afrobeat / World Groove",
+   "url": "https://www.youtube.com/watch?v=Qs4tm39iCmM",
+   "publishedAt": "2025-10-30T10:01:00Z"
+  },
+  {
+   "videoId": "vNEi55NmPe8",
+   "song": "故郷(ふるさと)",
+   "artist": "Traditional",
+   "style": "Afrobeat Festival Groove",
+   "url": "https://www.youtube.com/watch?v=vNEi55NmPe8",
+   "publishedAt": "2025-10-22T10:01:34Z"
+  },
+  {
+   "videoId": "7C0gHK-hxMs",
+   "song": "ROSIER",
+   "artist": "LUNA SEA",
+   "style": "African",
+   "url": "https://www.youtube.com/watch?v=7C0gHK-hxMs",
+   "publishedAt": "2025-10-10T10:03:03Z"
   }
  ],
  "jazz_fusion": [
@@ -1167,14 +1135,6 @@
    "publishedAt": "2025-10-19T10:01:21Z"
   },
   {
-   "videoId": "ozi_zem6wFw",
-   "song": "勝手にシンドバッド",
-   "artist": "",
-   "style": "Cosmic Funk",
-   "url": "https://www.youtube.com/watch?v=ozi_zem6wFw",
-   "publishedAt": "2025-10-16T10:15:07Z"
-  },
-  {
    "videoId": "EP5S0QDgwGM",
    "song": "勝手にシンドバッド",
    "artist": "サザンオールスターズ",
@@ -1189,14 +1149,6 @@
    "style": "Funky Soul",
    "url": "https://www.youtube.com/watch?v=xHljJE0FjAA",
    "publishedAt": "2025-10-13T10:01:28Z"
-  },
-  {
-   "videoId": "CkjDS631HvM",
-   "song": "夏色/ゆず Natsuiro",
-   "artist": "Yuzu",
-   "style": "Funky World",
-   "url": "https://www.youtube.com/watch?v=CkjDS631HvM",
-   "publishedAt": "2025-10-09T10:00:17Z"
   },
   {
    "videoId": "oW5gUsfIAxg",
@@ -1305,14 +1257,6 @@
    "style": "Straight Samba / Live Funk",
    "url": "https://www.youtube.com/watch?v=HHqSmEMTNys",
    "publishedAt": "2025-11-06T10:00:27Z"
-  },
-  {
-   "videoId": "oApeMkvXtiI",
-   "song": "チェリー/スピッツ Cherry",
-   "artist": "Spitz",
-   "style": "samba World",
-   "url": "https://www.youtube.com/watch?v=oApeMkvXtiI",
-   "publishedAt": "2025-10-09T10:01:24Z"
   },
   {
    "videoId": "OShDDwaC59A",
@@ -1619,14 +1563,6 @@
    "style": "Cuban",
    "url": "https://www.youtube.com/watch?v=xAgZxxF6Szg",
    "publishedAt": "2025-10-12T10:01:32Z"
-  },
-  {
-   "videoId": "EyfuKSCubgw",
-   "song": "Tomorrow Never Knows",
-   "artist": "Mr.Children",
-   "style": "Cuban",
-   "url": "https://www.youtube.com/watch?v=EyfuKSCubgw",
-   "publishedAt": "2025-10-12T10:00:32Z"
   }
  ],
  "ethio_jazz": [
@@ -1917,6 +1853,16 @@
    "style": "Brazilian Choro Acoustic",
    "url": "https://www.youtube.com/watch?v=k1q4gx8aJWM",
    "publishedAt": "2025-11-04T10:01:18Z"
+  }
+ ],
+ "rnb_neo_soul": [
+  {
+   "videoId": "4PjBxxMljfE",
+   "song": "ラブリー",
+   "artist": "小沢健二",
+   "style": "Motown R&B Soul",
+   "url": "https://www.youtube.com/watch?v=4PjBxxMljfE",
+   "publishedAt": "2025-10-27T10:00:07Z"
   }
  ]
 }

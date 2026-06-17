@@ -1025,33 +1025,66 @@
  },
  {
   "genreId": "rnb_neo_soul",
-  "nameEn": "R&B / Neo Soul",
-  "nameJa": "R&B/ネオソウル",
+  "nameEn": "R&B",
+  "nameJa": "R&B",
   "parentGenreId": "soul",
-  "descriptionJa": "ソウルを現代的に更新した都会的でセクシーな音",
-  "descriptionEn": "Soul updated into smooth modern urban sound",
+  "descriptionJa": "ソウルから発展した都会的でセクシーなブラック・ポップ",
+  "descriptionEn": "Urban black pop evolved from soul",
   "energy": 2,
   "mood": "おしゃれ/セクシー/都会",
   "keyInstruments": [
-   "Rhodes piano",
-   "muted guitar",
    "programmed drums",
-   "warm pads"
+   "synth",
+   "bass",
+   "smooth vocals"
   ],
   "referenceArtists": [
-   "D'Angelo",
-   "Erykah Badu",
-   "Frank Ocean"
+   "Usher",
+   "Beyoncé",
+   "Mary J. Blige"
   ],
   "keywords": [
-   "neo soul",
-   "d'angelo neo soul"
+   "r&b music",
+   "90s r&b"
   ],
   "places": [
    {
     "placeId": "usa_new_york",
     "relationType": "important",
     "weight": 0.8
+   }
+  ]
+ },
+ {
+  "genreId": "neo_soul",
+  "nameEn": "Neo Soul",
+  "nameJa": "ネオソウル",
+  "parentGenreId": "soul",
+  "descriptionJa": "生演奏とヒップホップ感覚でソウルを現代化した有機的でメロウなサウンド",
+  "descriptionEn": "Organic mellow soul modernized with live grooves and a hip-hop feel",
+  "energy": 2,
+  "mood": "おしゃれ/オーガニック/内省",
+  "keyInstruments": [
+   "Rhodes piano",
+   "live drums",
+   "warm bass",
+   "muted guitar"
+  ],
+  "referenceArtists": [
+   "D'Angelo",
+   "Erykah Badu",
+   "Jill Scott"
+  ],
+  "keywords": [
+   "neo soul",
+   "d'angelo neo soul",
+   "erykah badu neo soul"
+  ],
+  "places": [
+   {
+    "placeId": "usa_new_york",
+    "relationType": "origin",
+    "weight": 0.9
    }
   ]
  },

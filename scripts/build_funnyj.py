@@ -84,8 +84,8 @@ RULES = [
     # --- Gospel (before soul) ---
     ("gospel", "gospel"), ("soul prayer", "gospel"), ("testimony", "gospel"),
     ("soul choir", "gospel"), ("soul-gospel", "gospel"),
-    # --- Neo-soul / R&B (before soul) ---
-    ("neo-soul", "rnb_neo_soul"), ("neo soul", "rnb_neo_soul"), ("r&b", "rnb_neo_soul"),
+    # --- Neo-soul (own genre) / R&B (before soul) ---
+    ("neo-soul", "neo_soul"), ("neo soul", "neo_soul"), ("r&b", "rnb_neo_soul"),
     # --- Jazz (specific first) ---
     ("acid jazz", "acid_jazz"), ("hard bop", "hard_bop"), ("bebop", "bebop"),
     ("gypsy jazz", "gypsy_jazz"), ("manouche", "gypsy_jazz"),
@@ -164,40 +164,57 @@ def match_genre(style):
             return gid
     return None
 
-# ---------- run ----------
-valid_ids = {r["genre_id"] for r in csv.DictReader(open(ROOT/"data_master"/"genres.csv", encoding="utf-8"))}
-data = json.load(open(SRC, encoding="utf-8"))
+MIN_DURATION = 120   # ショート動画(クイズ等)を尺で除外する閾値(秒)。本編は概ね2分以上。
 
-by_genre = defaultdict(list)
-unmapped = []
-for v in data["videos"]:
-    t = v["title"]
-    if is_quiz(t) or is_medley(t):
-        continue
-    p = parse(t)
-    if not p:
-        continue
-    gid = match_genre(p["style"])
-    if not gid:
-        unmapped.append(p["style"]); continue
-    assert gid in valid_ids, f"bad genre_id {gid} for style {p['style']}"
-    by_genre[gid].append({
-        "videoId": v["video_id"], "song": p["song"], "artist": p["artist"],
-        "style": p["style"], "url": v["url"], "publishedAt": v["published_at"],
-    })
+def load_durations():
+    f = ROOT/"data_runtime"/"funnyj_durations.json"
+    return json.loads(f.read_text(encoding="utf-8")) if f.exists() else {}
 
-# newest first within each genre
-for gid in by_genre:
-    by_genre[gid].sort(key=lambda x: x["publishedAt"], reverse=True)
+def build():
+    valid_ids = {r["genre_id"] for r in csv.DictReader(open(ROOT/"data_master"/"genres.csv", encoding="utf-8"))}
+    data = json.load(open(SRC, encoding="utf-8"))
+    durations = load_durations()
 
-out = ROOT/"data"/"funnyj.json"
-out.write_text(json.dumps(by_genre, ensure_ascii=False, indent=1), encoding="utf-8")
+    by_genre = defaultdict(list)
+    unmapped, dropped_short = [], []
+    for v in data["videos"]:
+        t = v["title"]
+        if is_quiz(t) or is_medley(t):
+            continue
+        dur = durations.get(v["video_id"])
+        if dur is not None and dur <= MIN_DURATION:
+            dropped_short.append((dur, t)); continue
+        p = parse(t)
+        if not p:
+            continue
+        gid = match_genre(p["style"])
+        if not gid:
+            unmapped.append(p["style"]); continue
+        assert gid in valid_ids, f"bad genre_id {gid} for style {p['style']}"
+        by_genre[gid].append({
+            "videoId": v["video_id"], "song": p["song"], "artist": p["artist"],
+            "style": p["style"], "url": v["url"], "publishedAt": v["published_at"],
+        })
 
-total = sum(len(v) for v in by_genre.values())
-print(f"mapped {total} videos into {len(by_genre)} genres  -> {out}")
-print(f"unmapped: {len(unmapped)}")
-for s in sorted(set(unmapped)):
-    print("   ??", s)
-print("\n=== videos per genre ===")
-for gid, vids in sorted(by_genre.items(), key=lambda x: -len(x[1])):
-    print(f"{len(vids):2d}  {gid}")
+    for gid in by_genre:                          # newest first within each genre
+        by_genre[gid].sort(key=lambda x: x["publishedAt"], reverse=True)
+    return by_genre, unmapped, dropped_short
+
+def main():
+    by_genre, unmapped, dropped_short = build()
+    out = ROOT/"data"/"funnyj.json"
+    out.write_text(json.dumps(by_genre, ensure_ascii=False, indent=1), encoding="utf-8")
+    total = sum(len(v) for v in by_genre.values())
+    print(f"mapped {total} videos into {len(by_genre)} genres  -> {out}")
+    print(f"dropped as shorts (<= {MIN_DURATION}s, non-quiz): {len(dropped_short)}")
+    for d, t in sorted(dropped_short):
+        print(f"   {d:4d}s  {t}")
+    print(f"unmapped: {len(unmapped)}")
+    for s in sorted(set(unmapped)):
+        print("   ??", s)
+    print("\n=== videos per genre ===")
+    for gid, vids in sorted(by_genre.items(), key=lambda x: -len(x[1])):
+        print(f"{len(vids):2d}  {gid}")
+
+if __name__ == "__main__":
+    main()

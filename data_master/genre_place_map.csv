@@ -119,6 +119,7 @@ delta_blues,usa_clarksdale,origin,1.0
 disco,usa_new_york,origin,1.0
 gospel,usa_chicago,origin,1.0
 rnb_neo_soul,usa_new_york,important,0.8
+neo_soul,usa_new_york,origin,0.9
 bluegrass,usa_owensboro,origin,1.0
 bluegrass,usa_nashville,important,0.8
 appalachian_folk,usa_asheville,origin,1.0
