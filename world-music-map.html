@@ -225,6 +225,10 @@ header{
   transition:background .15s,border-color .15s;
 }
 .country-jump button:hover{background:var(--teal);color:var(--ink);border-color:var(--teal)}
+.country-jump button .cj-n{display:inline-block;min-width:16px;text-align:center;font-size:10px;line-height:16px;
+  margin-left:3px;padding:0 4px;border-radius:999px;background:var(--acc2);color:var(--ink)}
+.country-jump button:hover .cj-n{background:var(--ink);color:var(--cream)}
+.country-hint{font-size:11.5px;color:color-mix(in srgb,var(--cream) 62%,transparent);margin:-8px 0 14px;line-height:1.7}
 
 /* city view */
 .city-meta{font-size:12.5px;color:color-mix(in srgb,var(--cream) 72%,transparent);margin:6px 0 18px;line-height:1.8}
@@ -556,10 +560,49 @@ function showWelcome(){
       '<span class="big">🗺️</span>'+
       '地図のピンをクリックすると、その都市に根ざした音楽ジャンルが表示されます。<br>ジャンルを選ぶと、説明・代表アーティスト・YouTubeランキングへ。'+
       '<div class="country-jump"><h3>国から飛ぶ</h3><div class="cj">'+
-        Object.entries(countries).map(([c,o])=>'<button data-pid="'+o.ids[0]+'">'+o.flag+' '+esc(c)+'</button>').join('')+
+        Object.entries(countries).map(([c,o])=>'<button data-country="'+esc(c)+'">'+o.flag+' '+esc(c)+
+          (o.ids.length>1?' <span class="cj-n">'+o.ids.length+'</span>':'')+'</button>').join('')+
       '</div></div>'+
     '</div>';
-  panelBody.querySelectorAll('.country-jump button').forEach(b=>b.addEventListener('click', ()=>flyTo(b.dataset.pid)));
+  panelBody.querySelectorAll('.country-jump button').forEach(b=>b.addEventListener('click', ()=>showCountry(b.dataset.country)));
+}
+
+function citiesOfCountry(country){
+  return Object.keys(PLACES).filter(pid=> genresByPlace[pid] && PLACES[pid].country===country)
+    .sort((a,b)=> (genresByPlace[b]||[]).length - (genresByPlace[a]||[]).length);
+}
+
+/* 国を選んだら、その国の全都市が収まるように寄せて都市一覧を表示。
+   1都市の国はそのまま都市へ直行(従来動作)。 */
+function showCountry(country){
+  const pids = citiesOfCountry(country);
+  if(!pids.length) return;
+  if(pids.length === 1){ flyTo(pids[0]); return; }
+
+  const latlngs = pids.map(pid=>[PLACES[pid].lat, PLACES[pid].lon]);
+  map.flyToBounds(L.latLngBounds(latlngs), {padding:[60,60], maxZoom:7, duration:.8});
+
+  viewStack = [{type:'country', country}];
+  setActiveMarker(null);
+  const p0 = PLACES[pids[0]];
+  panelTitle.textContent = p0.flag+' '+country;
+  backBtn.hidden = false;
+  backBtn.onclick = showWelcome;
+  panelBody.innerHTML =
+    '<div class="city-meta"><span class="flag">'+p0.flag+'</span> '+esc(country)+' ・ '+pids.length+' 都市</div>'+
+    '<p class="country-hint">この国には複数の都市があります。都市を選んでください。</p>'+
+    '<div class="genre-list">'+
+      pids.map(pid=>{ const p=PLACES[pid]; const n=(genresByPlace[pid]||[]).length;
+        return '<button class="genre-item" data-pid="'+pid+'">'+
+          '<span class="gi-txt"><b>'+esc(p.ja)+'</b><small>'+esc(p.en)+' ・ '+n+' ジャンル</small></span>'+
+          '<span class="gi-arrow">›</span></button>';
+      }).join('')+
+    '</div>';
+  panelBody.querySelectorAll('.genre-item').forEach(b=>b.addEventListener('click', ()=>{
+    flyTo(b.dataset.pid);
+    backBtn.onclick = ()=>showCountry(country);   // 都市→戻るで国一覧へ
+  }));
+  panelBody.scrollTop = 0;
 }
 
 let _flyToken = 0;
