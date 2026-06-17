@@ -288,6 +288,9 @@ header{
 .tabs button small{display:block;font-family:'Zen Maru Gothic';font-size:9px;font-weight:700;opacity:.7;margin-top:2px}
 .tabs button.active{background:var(--acc1);color:var(--ink)}
 .tabs button.active small{opacity:.85}
+.tabs button.fj-tab{color:var(--teal)}
+.tabs button.fj-tab.active{background:var(--teal);color:var(--ink)}
+.rank-card .rk.fj{font-size:15px}
 
 .ranking{display:flex;flex-direction:column;gap:10px;min-height:120px}
 .rank-card{
@@ -478,6 +481,7 @@ let genreById = {};      // genreId -> {id,en,ja,desc,energy,mood,instruments,re
 let genresByPlace = {};  // placeId -> [{g,rel}]
 let FEATURED = [];
 let rankedSet = new Set();   // ランキングを持つジャンルID(data/rankings/index.json)
+let FUNNYJ = {};             // genreId -> [{videoId,song,artist,style,url,publishedAt}] (data/funnyj.json)
 
 function esc(s){ return String(s==null?'':s).replace(/[&<>"]/g, c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c])); }
 function ytSearch(query, sort){
@@ -701,6 +705,7 @@ function showGenre(gid, fromPid){
       '<button data-tab="classic" class="active">CLASSIC<small>定番・再生数順</small></button>'+
       '<button data-tab="fresh">FRESH<small>新着90日</small></button>'+
       '<button data-tab="hot">HOT<small>今週の急上昇</small></button>'+
+      ((FUNNYJ[gid]&&FUNNYJ[gid].length) ? '<button data-tab="funnyj" class="fj-tab">Funny J-POP<small>'+FUNNYJ[gid].length+'曲のアレンジ</small></button>' : '')+
     '</div>'+
     '<div class="ranking" id="rankBox"></div>'+
     '<div class="kw-block"><h3>検索キーワード</h3><div class="kw-chips" id="kwChips"></div></div>'+
@@ -733,6 +738,7 @@ function renderRanking(g){
   const box = document.getElementById('rankBox');
   if(!box) return;
   const tab = activeTab;
+  if(tab==='funnyj'){ renderFunnyj(g, box); return; }
   const tabJa = {classic:'定番（再生数順）', fresh:'新着（直近90日）', hot:'今週の急上昇'}[tab];
   const query = g.kw || g.en;
 
@@ -777,6 +783,38 @@ function renderRanking(g){
       '<span class="yt">🔎</span><span><b>もっと探す</b><small>YouTubeで'+esc(tabJa)+'</small></span><span class="go">↗</span>'+
     '</a>';
 
+  bindRankCards(box);
+}
+
+/* Funny J-POP: このジャンル風にアレンジされたJ-POPカバー(data/funnyj.json) */
+function renderFunnyj(g, box){
+  const items = FUNNYJ[g.id] || [];
+  if(!items.length){
+    box.innerHTML = '<p style="font-size:12px;color:color-mix(in srgb,var(--cream) 60%,transparent);padding:8px 2px">このジャンルのFunny J-POPアレンジはまだありません。</p>';
+    return;
+  }
+  box.innerHTML =
+    '<p style="font-size:11px;line-height:1.8;color:color-mix(in srgb,var(--cream) 68%,transparent);margin:0 2px 4px">'+
+      'J-POPの名曲を <b>'+esc(g.en)+'</b> 風にアレンジした <a href="https://www.youtube.com/@FunnyJ-POP" target="_blank" rel="noopener" style="color:var(--teal)">Funny J-POP</a> のカバー。曲をタップでそのまま再生。</p>'+
+    items.map(v=>{
+      const title = v.song+(v.artist?' / '+v.artist:'')+' – '+v.style;
+      return '<div class="rank-card'+(v.videoId===currentVid?' playing':'')+'" role="button" tabindex="0" '+
+        'data-vid="'+esc(v.videoId)+'" data-url="'+esc(v.url)+'" data-title="'+esc(title)+'">'+
+        '<span class="rk fj">🎵</span>'+
+        '<img class="tmb" src="https://i.ytimg.com/vi/'+esc(v.videoId)+'/mqdefault.jpg" alt="" loading="lazy" onerror="this.style.visibility=\'hidden\'">'+
+        '<span class="rc-txt"><b>'+esc(v.song)+(v.artist?' <span style="opacity:.7;font-weight:400">/ '+esc(v.artist)+'</span>':'')+'</b>'+
+          '<small>🎚 '+esc(v.style)+'</small></span>'+
+        '<a class="rc-ext" href="'+esc(v.url)+'" target="_blank" rel="noopener" title="YouTubeで開く" aria-label="YouTubeで開く">↗</a>'+
+      '</div>';
+    }).join('') +
+    '<a class="search-cta" style="margin-top:4px" href="https://www.youtube.com/@FunnyJ-POP/videos" target="_blank" rel="noopener">'+
+      '<span class="yt">🎤</span><span><b>Funny J-POP チャンネル</b><small>他のアレンジも見る</small></span><span class="go">↗</span>'+
+    '</a>';
+  bindRankCards(box);
+}
+
+/* rank-card 共通のクリック/キーボードでインライン再生 */
+function bindRankCards(box){
   box.querySelectorAll('.rank-card').forEach(c=>{
     const play = ()=> playVideo(c.dataset.vid, c.dataset.url, c.dataset.title);
     c.addEventListener('click', e=>{ if(e.target.closest('.rc-ext')) return; play(); });
@@ -826,6 +864,7 @@ async function loadData(){
   const want = ['guaguanco','dub','city_pop','afrobeat','amapiano','gnawa','tango','fado','bhangra','mariachi','rebetiko','khoomei'];
   FEATURED = want.filter(id=>genreById[id]);
   try{ rankedSet = new Set(await fetch('data/rankings/index.json').then(r=> r.ok ? r.json() : [])); }catch(e){ rankedSet = new Set(); }
+  try{ FUNNYJ = await fetch('data/funnyj.json').then(r=> r.ok ? r.json() : {}); }catch(e){ FUNNYJ = {}; }
   const heroStat = document.getElementById('heroStat');
   if(heroStat) heroStat.innerHTML = '現在 <b>'+genres.length+'</b> ジャンル / <b>'+places.length+'</b> 都市を収録';
 }
