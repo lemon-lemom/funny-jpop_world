@@ -84,12 +84,18 @@ def main():
     out.mkdir(parents=True, exist_ok=True)
 
     n = hot_total = 0
+    written = []
     for gid, c in cur.items():
         r = build(c, prev.get(gid))
+        if not r["rankings"]["classic"]:
+            continue   # skip genres with no usable videos
         (out / f"{gid}.json").write_text(json.dumps(r, ensure_ascii=False, indent=1), encoding="utf-8")
+        written.append(gid)
         n += 1
         hot_total += len(r["rankings"]["hot"])
-    print(f"wrote {n} ranking files to data/rankings/ (hot entries: {hot_total})")
+    # index of genres that have a ranking (used by the site's random/preview features)
+    (out / "index.json").write_text(json.dumps(sorted(written), ensure_ascii=False, indent=1), encoding="utf-8")
+    print(f"wrote {n} ranking files + index.json to data/rankings/ (hot entries: {hot_total})")
 
 
 if __name__ == "__main__":
