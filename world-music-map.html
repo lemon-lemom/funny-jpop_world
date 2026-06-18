@@ -5,6 +5,9 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>World Music Map — 世界の音楽を、地図で掘る。</title>
 <meta name="description" content="世界地図上の都市を起点に、その土地に紐づく音楽ジャンルを発見し、YouTubeで掘れる音楽ディスカバリーマップ。">
+<link rel="icon" href="assets/favicon.ico" sizes="any">
+<link rel="icon" type="image/png" sizes="32x32" href="assets/funnyjpop-icon-32.png">
+<link rel="apple-touch-icon" sizes="180x180" href="assets/funnyjpop-icon-180.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=RocknRoll+One&family=Zen+Maru+Gothic:wght@400;500;700&display=swap" rel="stylesheet">
@@ -904,10 +907,17 @@ async function loadData(){
   Object.values(genreById).forEach(g=>{
     g.places.forEach(([pid,rel])=>{ (genresByPlace[pid] ||= []).push({g, rel}); });
   });
-  const want = ['guaguanco','dub','city_pop','afrobeat','amapiano','gnawa','tango','fado','bhangra','mariachi','rebetiko','khoomei'];
-  FEATURED = want.filter(id=>genreById[id]);
   try{ rankedSet = new Set(await fetch('data/rankings/index.json').then(r=> r.ok ? r.json() : [])); }catch(e){ rankedSet = new Set(); }
   try{ FUNNYJ = await fetch('data/funnyj.json').then(r=> r.ok ? r.json() : {}); }catch(e){ FUNNYJ = {}; }
+  // 注目ジャンル: なるべく Funny J-POP アレンジのあるジャンルから多様に選ぶ
+  const hasFunny = id => genreById[id] && FUNNYJ[id] && FUNNYJ[id].length;
+  const want = ['samba','bossa_nova','flamenco','fado','tango','afrobeat','hindustani','gamelan','reggae','salsa_ny','city_pop','soul'];
+  FEATURED = want.filter(hasFunny);
+  if(FEATURED.length < 12){   // 不足時は他の funnyj ジャンルで補完
+    Object.keys(FUNNYJ).filter(id=>genreById[id] && !FEATURED.includes(id))
+      .sort((a,b)=> FUNNYJ[b].length - FUNNYJ[a].length)
+      .forEach(id=>{ if(FEATURED.length < 12) FEATURED.push(id); });
+  }
   const heroStat = document.getElementById('heroStat');
   if(heroStat) heroStat.innerHTML = '現在 <b>'+genres.length+'</b> ジャンル / <b>'+places.length+'</b> 都市を収録';
 }
