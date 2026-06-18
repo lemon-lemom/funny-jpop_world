@@ -263,8 +263,9 @@ kw_0258,norteno,música norteña,es,1,1,basic
 kw_0259,norteno,norteño acordeón,es,2,1,instrument
 kw_0260,andean_folk,música andina,es,1,1,basic
 kw_0261,andean_folk,folklore andino charango,es,2,1,instrument
-kw_0262,juju,juju music nigeria,en,1,1,disambiguate
-kw_0263,juju,king sunny ade juju,en,2,1,artist
+kw_0262,juju,king sunny ade,en,1,1,artist
+kw_0263,juju,ebenezer obey,en,2,1,artist
+kw_0391,juju,juju music yoruba,en,3,1,disambiguate
 kw_0264,makossa,makossa cameroun,fr,1,1,place
 kw_0265,makossa,manu dibango makossa,en,2,1,artist
 kw_0266,benga,benga kenya,en,1,1,place

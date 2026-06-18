@@ -750,7 +750,7 @@ function showGenre(gid, fromPid){
     '<div class="tabs">'+
       '<button data-tab="classic" class="active">CLASSIC<small>定番・再生数順</small></button>'+
       '<button data-tab="fresh">FRESH<small>新着90日</small></button>'+
-      '<button data-tab="hot">HOT<small>今週の急上昇</small></button>'+
+      '<button data-tab="hot" hidden>HOT<small>今週の急上昇</small></button>'+
       ((FUNNYJ[gid]&&FUNNYJ[gid].length) ? '<button data-tab="funnyj" class="fj-tab">Funny J-POP<small>'+FUNNYJ[gid].length+'曲のアレンジ</small></button>' : '')+
     '</div>'+
     '<div class="ranking" id="rankBox"></div>'+
@@ -780,6 +780,13 @@ function showGenre(gid, fromPid){
 /* Try to load batch-generated static ranking JSON (要件§15.4).
    If absent (= バッチ未実行), fall back to a working YouTube deep-link by tab. */
 const rankingCache = {};
+/* HOTは前回比の再生数増加なので、エントリがある時だけタブを出す(無い方が多い) */
+function syncHotTab(gid){
+  const d = rankingCache[gid];
+  const has = !!(d && d.rankings && d.rankings.hot && d.rankings.hot.length);
+  const btn = panelBody.querySelector('.tabs button[data-tab="hot"]');
+  if(btn) btn.hidden = !has;
+}
 function renderRanking(g){
   const box = document.getElementById('rankBox');
   if(!box) return;
@@ -805,10 +812,11 @@ function renderRanking(g){
     box.innerHTML = '<p style="font-size:12px;color:color-mix(in srgb,var(--cream) 60%,transparent);padding:8px 2px">読み込み中…</p>';
     fetch('data/rankings/'+g.id+'.json')
       .then(r=> r.ok ? r.json() : Promise.reject())
-      .then(d=>{ rankingCache[g.id]=d; if(activeTab===tab) renderRanking(g); })
+      .then(d=>{ rankingCache[g.id]=d; syncHotTab(g.id); if(activeTab===tab) renderRanking(g); })
       .catch(()=>{ rankingCache[g.id]=null; if(activeTab===tab) renderRanking(g); });
     return;
   }
+  syncHotTab(g.id);
   if(!data || !data.rankings || !(data.rankings[tab]||[]).length){ fallback(); return; }
 
   const items = data.rankings[tab];
