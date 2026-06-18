@@ -166,6 +166,15 @@ def match_genre(style):
 
 MIN_DURATION = 120   # ショート動画(クイズ等)を尺で除外する閾値(秒)。本編は概ね2分以上。
 
+# スナップショット(取得日時点)に未収録の動画を手動で追加する(公開前/公開直後など)。
+MANUAL_VIDEOS = {
+    "soul": [
+        {"videoId": "pJSJag12qC4", "song": "未来予想図II", "artist": "DREAMS COME TRUE",
+         "style": "Deep Soul", "url": "https://youtu.be/pJSJag12qC4",
+         "publishedAt": "2026-06-19T10:00:00Z"},   # 6/19 19:00 JST
+    ],
+}
+
 def load_durations():
     f = ROOT/"data_runtime"/"funnyj_durations.json"
     return json.loads(f.read_text(encoding="utf-8")) if f.exists() else {}
@@ -195,6 +204,13 @@ def build():
             "videoId": v["video_id"], "song": p["song"], "artist": p["artist"],
             "style": p["style"], "url": v["url"], "publishedAt": v["published_at"],
         })
+
+    for gid, vids in MANUAL_VIDEOS.items():        # スナップショット外の手動追加
+        assert gid in valid_ids, f"bad genre_id {gid} in MANUAL_VIDEOS"
+        have = {v["videoId"] for v in by_genre[gid]}
+        for v in vids:
+            if v["videoId"] not in have:
+                by_genre[gid].append(v)
 
     for gid in by_genre:                          # newest first within each genre
         by_genre[gid].sort(key=lambda x: x["publishedAt"], reverse=True)
