@@ -699,9 +699,13 @@ const jukeLights = document.getElementById('jukeLights');
 for(let i=0;i<18;i++) jukeLights.appendChild(document.createElement('i'));
 
 const jukeVideos = [
-  'qEd7D2Fej5M','eNlH5WDQiQM','4M1VCcnZ854','8r59SW1rpeM','aEhMkWyGGyg',
+  'pJSJag12qC4','qEd7D2Fej5M','4M1VCcnZ854','8r59SW1rpeM','aEhMkWyGGyg',
   'oW5gUsfIAxg','C1FkX_6CE7w','HHqSmEMTNys','CtJQ-ZzQ5UE','JtGeDQa-OTI'
 ];
+/* 公開前(noembed未取得)でもタイトルを出すための既知タイトル */
+const knownTitles = {
+  'pJSJag12qC4': '未来予想図II / DREAMS COME TRUE – Deep Soul ver.｜Funny J-POP'
+};
 const jukeRack = document.getElementById('jukeRack');
 const ytPlayer = document.getElementById('ytPlayer');
 const nowTitle = document.getElementById('nowTitle');
@@ -731,6 +735,11 @@ jukeVideos.forEach((id,i)=>{
   b.addEventListener('click', ()=> loadVideo(id, true));
   (i < 5 ? document.getElementById('rackColA') : document.getElementById('rackColB')).appendChild(b);
   trackEls[id] = b;
+  if(knownTitles[id]){            // 既知タイトルを先に表示（公開前でも出る）
+    titleCache[id] = knownTitles[id];
+    b.querySelector('.tt').textContent = knownTitles[id];
+    b.setAttribute('aria-label', knownTitles[id]);
+  }
   /* タイトルをページ表示時に自動取得（取得できない場合はスロット番号のまま） */
   fetch('https://noembed.com/embed?url=' + encodeURIComponent('https://www.youtube.com/watch?v=' + id))
     .then(r=>r.json())
