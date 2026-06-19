@@ -169,8 +169,8 @@ MIN_DURATION = 120   # ショート動画(クイズ等)を尺で除外する閾�
 # スナップショット(取得日時点)に未収録の動画を手動で追加する(公開前/公開直後など)。
 MANUAL_VIDEOS = {
     "soul": [
-        {"videoId": "VW2UYjid7ss", "song": "未来予想図II", "artist": "DREAMS COME TRUE",
-         "style": "Deep Soul", "url": "https://youtu.be/VW2UYjid7ss",
+        {"videoId": "4TgmM9R9zUU", "song": "未来予想図II", "artist": "DREAMS COME TRUE",
+         "style": "Deep Soul", "url": "https://youtu.be/4TgmM9R9zUU",
          "publishedAt": "2026-06-19T10:00:00Z"},   # 6/19 19:00 JST
     ],
 }
