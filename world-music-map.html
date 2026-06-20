@@ -77,10 +77,19 @@ header{
 
 /* ---------- hero ---------- */
 .hero{
+  position:relative;
   max-width:1180px;margin:0 auto;
   padding:clamp(26px,5vw,52px) clamp(14px,4vw,40px) clamp(14px,3vw,26px);
   text-align:center;
 }
+.lang-toggle{
+  position:absolute;top:14px;right:14px;z-index:5;cursor:pointer;
+  font-family:'RocknRoll One';font-size:12px;letter-spacing:.08em;
+  background:color-mix(in srgb,var(--ink) 35%,transparent);color:var(--cream);
+  border:2px solid var(--teal);border-radius:999px;padding:6px 14px;
+  transition:background .15s,color .15s;
+}
+.lang-toggle:hover{background:var(--teal);color:var(--ink)}
 .kicker{
   display:inline-block;font-size:12px;letter-spacing:.2em;
   color:var(--teal);border:2px solid var(--teal);border-radius:999px;
@@ -410,16 +419,17 @@ footer .fine{margin-top:22px;font-size:11px;opacity:.5;line-height:1.9}
 
 <!-- ================= HERO ================= -->
 <div class="hero">
+  <button class="lang-toggle" id="langToggle" type="button" aria-label="Switch language">EN</button>
   <span class="kicker">DISCOVERY MAP × YOUTUBE</span>
-  <h1>世界の音楽を、地図で掘る。
+  <h1><span data-i18n="hero_h1">世界の音楽を、地図で掘る。</span>
     <span class="en">WORLD MUSIC DISCOVERY MAP</span>
   </h1>
-  <p class="lead">国ではなく <b>都市・地域</b> を起点に音楽ジャンルを発見するマップ。ハバナでワワンコ、ニューオーリンズでブラスバンド、キングストンでダブ──ピンを押して、土地に根ざしたジャンルからYouTubeを掘り進めましょう。</p>
-  <div class="chips">
+  <p class="lead" data-i18n="hero_lead">国ではなく <b>都市・地域</b> を起点に音楽ジャンルを発見するマップ。ハバナでワワンコ、ニューオーリンズでブラスバンド、キングストンでダブ──ピンを押して、土地に根ざしたジャンルからYouTubeを掘り進めましょう。</p>
+  <div class="chips" data-i18n="chips_html">
     <span>都市</span><span class="x">×</span><span>音楽ジャンル</span><span class="x">×</span><span>YouTube動画</span><span class="x">×</span><span>独自ランキング</span>
   </div>
   <p class="stat" id="heroStat"></p>
-  <div class="quickplay"><button class="btn-random" id="randomPlay">🎲 ランダムで1曲</button></div>
+  <div class="quickplay"><button class="btn-random" id="randomPlay" data-i18n="random_btn">🎲 ランダムで1曲</button></div>
 </div>
 
 <!-- ================= EXPLORER ================= -->
@@ -428,10 +438,10 @@ footer .fine{margin-top:22px;font-size:11px;opacity:.5;line-height:1.9}
     <div id="map"></div>
     <div class="map-search">
       <input id="searchInput" type="text" autocomplete="off" spellcheck="false"
-        placeholder="🔎 都市・ジャンルを検索（例: サンバ / Havana / fado）">
+        data-i18n-ph="search_ph" placeholder="🔎 都市・ジャンルを検索（例: サンバ / Havana / fado）">
       <div class="search-results" id="searchResults" hidden></div>
     </div>
-    <div class="map-legend">
+    <div class="map-legend" data-i18n="legend_html">
       <b>HOW TO</b><br>
       <i></i>ピンをクリック → 都市のジャンル一覧<br>
       ジャンルをクリック → 説明・代表アーティスト・ランキング
@@ -440,8 +450,8 @@ footer .fine{margin-top:22px;font-size:11px;opacity:.5;line-height:1.9}
 
   <div class="panel">
     <div class="panel-head">
-      <h2 id="panelTitle">🌍 都市を選ぶ</h2>
-      <button class="back-link" id="backBtn" hidden>← もどる</button>
+      <h2 id="panelTitle" data-i18n="panelWelcome">🌍 都市を選ぶ</h2>
+      <button class="back-link" id="backBtn" hidden data-i18n="back">← もどる</button>
     </div>
     <div class="panel-body" id="panelBody"><!-- rendered by JS --></div>
   </div>
@@ -449,22 +459,22 @@ footer .fine{margin-top:22px;font-size:11px;opacity:.5;line-height:1.9}
 
 <!-- ================= FEATURED ================= -->
 <section class="featured">
-  <h2>注目ジャンル — まずはここから掘る</h2>
-  <p>メジャーからマニアックまで。クリックすると地図がその都市に飛び、ジャンルの詳細が開きます。</p>
+  <h2 data-i18n="feat_h2">注目ジャンル — まずはここから掘る</h2>
+  <p data-i18n="feat_p">メジャーからマニアックまで。クリックすると地図がその都市に飛び、ジャンルの詳細が開きます。</p>
   <div class="feat-grid" id="featGrid"><!-- rendered by JS --></div>
 </section>
 
 <!-- ================= FOOTER ================= -->
 <footer>
-  <h2>あなたの知らないグルーヴが、まだ世界にある。</h2>
-  <p>World Music Map は、都市・ジャンル・検索キーワードを独自に設計した音楽ディスカバリープロジェクトです。</p>
+  <h2 data-i18n="footer_h2">あなたの知らないグルーヴが、まだ世界にある。</h2>
+  <p data-i18n="footer_p">World Music Map は、都市・ジャンル・検索キーワードを独自に設計した音楽ディスカバリープロジェクトです。</p>
   <div class="cta">
-    <a class="btn" href="#explorer">🗺 マップに戻る</a>
-    <a class="btn ghost" href="index.html">← Funny J-POP トップへ</a>
+    <a class="btn" href="#explorer" data-i18n="foot_btn_map">🗺 マップに戻る</a>
+    <a class="btn ghost" href="index.html" data-i18n="foot_btn_home">← Funny J-POP トップへ</a>
   </div>
   <div class="disclaimer">
-    <h3>ℹ️ ご利用にあたって</h3>
-    <ul>
+    <h3 data-i18n="disc_h3">ℹ️ ご利用にあたって</h3>
+    <ul data-i18n="disc_html">
       <li>ランキングは YouTube 公式のものではなく、各ジャンルに設定した検索キーワードから独自に集計した参考値です。再生数などは取得時点の数値で、現在の値と異なる場合があります。</li>
       <li>掲載しているジャンルの発祥地・関連都市・代表アーティストは、音楽を発見するための編集情報です。多くのジャンルは複数の地域・国にまたがり、起源には諸説あります。簡略化や誤りを含む場合があります。</li>
       <li>情報は随時見直しています。お気づきの点があればぜひお知らせください。</li>
@@ -482,7 +492,6 @@ footer .fine{margin-top:22px;font-size:11px;opacity:.5;line-height:1.9}
    静的JSON（data/places.json, data/genres.json）を読み込んで構築する。
    ランキング（data/rankings/{id}.json）は YouTube API バッチが生成。
    ============================================================ */
-const REL_LABEL = {origin:'発祥', important:'重要', current:'活動'};
 let PLACES = {};         // placeId -> {ja,en,country,flag,lat,lon}
 let genreById = {};      // genreId -> {id,en,ja,desc,energy,mood,instruments,refs,keywords,kw,places:[[pid,rel]]}
 let genresByPlace = {};  // placeId -> [{g,rel}]
@@ -494,6 +503,91 @@ function esc(s){ return String(s==null?'':s).replace(/[&<>"]/g, c=>({'&':'&amp;'
 function ytSearch(query, sort){
   const sp = {classic:'CAMSAhAB', fresh:'CAISAhAB', hot:'EgQIAhAB'}[sort] || '';
   return 'https://www.youtube.com/results?search_query=' + encodeURIComponent(query) + (sp?('&sp='+sp):'');
+}
+
+/* ============ i18n ============ */
+let LANG = localStorage.getItem('wm_lang') || 'ja';
+const T = {
+  hero_h1:   {ja:'世界の音楽を、地図で掘る。', en:'Dig into world music, on a map.'},
+  hero_lead: {ja:'国ではなく <b>都市・地域</b> を起点に音楽ジャンルを発見するマップ。ハバナでワワンコ、ニューオーリンズでブラスバンド、キングストンでダブ──ピンを押して、土地に根ざしたジャンルからYouTubeを掘り進めましょう。',
+              en:'A map that surfaces music genres from <b>cities and regions</b>, not countries. Guaguancó in Havana, brass bands in New Orleans, dub in Kingston — tap a pin and dig into YouTube through genres rooted in each place.'},
+  chips_html:{ja:'<span>都市</span><span class="x">×</span><span>音楽ジャンル</span><span class="x">×</span><span>YouTube動画</span><span class="x">×</span><span>独自ランキング</span>',
+              en:'<span>Cities</span><span class="x">×</span><span>Genres</span><span class="x">×</span><span>YouTube</span><span class="x">×</span><span>Rankings</span>'},
+  random_btn:{ja:'🎲 ランダムで1曲', en:'🎲 Play a random track'},
+  search_ph: {ja:'🔎 都市・ジャンルを検索（例: サンバ / Havana / fado）', en:'🔎 Search cities or genres (e.g. samba / Havana / fado)'},
+  legend_html:{ja:'<b>HOW TO</b><br><i></i>ピンをクリック → 都市のジャンル一覧<br>ジャンルをクリック → 説明・代表アーティスト・ランキング',
+               en:'<b>HOW TO</b><br><i></i>Click a pin → city’s genre list<br>Click a genre → notes, key artists, rankings'},
+  feat_h2:   {ja:'注目ジャンル — まずはここから掘る', en:'Featured genres — start digging here'},
+  feat_p:    {ja:'メジャーからマニアックまで。クリックすると地図がその都市に飛び、ジャンルの詳細が開きます。',
+              en:'From the mainstream to the obscure. Click one and the map flies to its city and opens the details.'},
+  footer_h2: {ja:'あなたの知らないグルーヴが、まだ世界にある。', en:'There are still grooves out there you haven’t heard.'},
+  footer_p:  {ja:'World Music Map は、都市・ジャンル・検索キーワードを独自に設計した音楽ディスカバリープロジェクトです。',
+              en:'World Music Map is a music-discovery project with a hand-built set of cities, genres and search keywords.'},
+  foot_btn_map: {ja:'🗺 マップに戻る', en:'🗺 Back to the map'},
+  foot_btn_home:{ja:'← Funny J-POP トップへ', en:'← Funny J-POP home'},
+  disc_h3:   {ja:'ℹ️ ご利用にあたって', en:'ℹ️ About this site'},
+  disc_html: {ja:'<li>ランキングは YouTube 公式のものではなく、各ジャンルに設定した検索キーワードから独自に集計した参考値です。再生数などは取得時点の数値で、現在の値と異なる場合があります。</li>'+
+                 '<li>掲載しているジャンルの発祥地・関連都市・代表アーティストは、音楽を発見するための編集情報です。多くのジャンルは複数の地域・国にまたがり、起源には諸説あります。簡略化や誤りを含む場合があります。</li>'+
+                 '<li>情報は随時見直しています。お気づきの点があればぜひお知らせください。</li>',
+              en:'<li>Rankings are not official YouTube charts; they are our own tallies from the search keywords set for each genre. View counts are from capture time and may differ from current values.</li>'+
+                 '<li>Origins, related cities and key artists are editorial pointers for discovery. Many genres span several regions and countries, and origins are debated. Some entries may be simplified or imperfect.</li>'+
+                 '<li>We revise the information regularly — if you spot something, please let us know.</li>'},
+  panelWelcome: {ja:'🌍 都市を選ぶ', en:'🌍 Choose a city'},
+  back:      {ja:'← もどる', en:'← Back'},
+  welcome_body:{ja:'地図のピンをクリックすると、その都市に根ざした音楽ジャンルが表示されます。<br>ジャンルを選ぶと、説明・代表アーティスト・YouTubeランキングへ。',
+                en:'Click a pin on the map to see the music genres rooted in that city.<br>Pick a genre for notes, key artists and YouTube rankings.'},
+  country_jump:{ja:'国から飛ぶ', en:'Jump by country'},
+  country_hint:{ja:'この国には複数の都市があります。都市を選んでください。', en:'This country has several cities. Pick one.'},
+  pin_play:  {ja:'この街の代表曲を聴く', en:'Play this city’s top track'},
+  pin_list:  {ja:'ジャンル一覧を見る →', en:'See all genres →'},
+  related_h: {ja:'🔗 関連ジャンル', en:'🔗 Related genres'},
+  artists_h: {ja:'🎤 代表アーティスト', en:'🎤 Key artists'},
+  instruments_h:{ja:'🔑 主な楽器', en:'🔑 Key instruments'},
+  kw_h:      {ja:'検索キーワード', en:'Search keywords'},
+  note_html: {ja:'<b>※ 独自集計について：</b> 本ランキングは YouTube 公式ランキングではなく、各ジャンルに設定した検索キーワードに基づく独自集計です。数値は取得時点のもので、現在のYouTube上の値と異なる場合があります。',
+              en:'<b>* About these rankings:</b> these are not official YouTube charts but our own tallies based on the search keywords set for each genre. Figures are from capture time and may differ from current YouTube values.'},
+  loading:   {ja:'読み込み中…', en:'Loading…'},
+  more:      {ja:'もっと探す', en:'Find more'},
+  funny_empty:{ja:'このジャンルのFunny J-POPアレンジはまだありません。', en:'No Funny J-POP arrangements for this genre yet.'},
+  funny_channel:{ja:'Funny J-POP チャンネル', en:'Funny J-POP channel'},
+  funny_channel_sub:{ja:'他のアレンジも見る', en:'See more arrangements'},
+  search_empty:{ja:'該当なし', en:'No results'},
+  tag_city:  {ja:'都市', en:'City'},
+  tag_genre: {ja:'ジャンル', en:'Genre'},
+  open_yt:   {ja:'YouTubeで開く', en:'Open on YouTube'},
+  rel_origin:{ja:'発祥', en:'Origin'}, rel_important:{ja:'重要', en:'Key'}, rel_current:{ja:'活動', en:'Active'},
+  rel_parent:{ja:'親', en:'Parent'}, rel_sibling:{ja:'系統', en:'Sibling'}, rel_derived:{ja:'派生', en:'Derived'}, rel_samecity:{ja:'同郷', en:'Same city'},
+  unit_genres:{ja:'ジャンル', en:'genres'}, unit_cities:{ja:'都市', en:'cities'}, unit_views:{ja:'回', en:'views'},
+  tab_sub_classic:{ja:'定番・再生数順', en:'Top by views'}, tab_sub_fresh:{ja:'新着90日', en:'Last 90 days'}, tab_sub_hot:{ja:'今週の急上昇', en:'Trending'},
+  tabname_classic:{ja:'定番（再生数順）', en:'Classic (by views)'}, tabname_fresh:{ja:'新着（直近90日）', en:'Fresh (last 90 days)'}, tabname_hot:{ja:'今週の急上昇', en:'Hot (trending)'},
+  error_load:{ja:'⚠️ データの読み込みに失敗しました。<br>このページは <b>data/places.json</b> と <b>data/genres.json</b> を読み込みます。<br>file:// で直接開いた場合は読み込めないので、Webサーバー経由（GitHub Pages や http://localhost）で開いてください。',
+              en:'⚠️ Failed to load data.<br>This page loads <b>data/places.json</b> and <b>data/genres.json</b>.<br>Opening it directly via file:// won’t work — use a web server (GitHub Pages or http://localhost).'},
+};
+function t(k){ const e=T[k]; return e ? (e[LANG] ?? e.ja) : k; }
+function relLabel(rel){ return t('rel_'+rel); }
+function gName(g){ return LANG==='en' ? (g.en||g.ja) : g.ja; }
+function gSub(g){ return LANG==='en' ? g.ja : g.en; }
+function gDesc(g){ return LANG==='en' ? (g.descEn||g.desc) : g.desc; }
+function pName(p){ return LANG==='en' ? (p.en||p.ja) : p.ja; }
+function pSub(p){ return LANG==='en' ? p.ja : p.en; }
+function pCountry(p){ return LANG==='en' ? (p.countryEn||p.country) : p.country; }
+
+function applyLang(){
+  document.documentElement.lang = LANG;
+  document.querySelectorAll('[data-i18n]').forEach(el=>{ el.innerHTML = t(el.dataset.i18n); });
+  document.querySelectorAll('[data-i18n-ph]').forEach(el=>{ el.placeholder = t(el.dataset.i18nPh); });
+  const lt = document.getElementById('langToggle'); if(lt) lt.textContent = LANG==='ja' ? 'EN' : '日本語';
+  if(typeof buildFeatured==='function' && Object.keys(genreById).length) buildFeatured();
+  rerenderPanel();
+}
+function setLang(l){ LANG = l; localStorage.setItem('wm_lang', l); applyLang(); }
+function rerenderPanel(){
+  const v = viewStack[viewStack.length-1];
+  if(!v){ if(document.getElementById('panelBody')) showWelcome(); return; }
+  if(v.type==='genre'){ viewStack.pop(); showGenre(v.gid, v.fromPid); }
+  else if(v.type==='city'){ showCity(v.pid); }
+  else if(v.type==='country'){ showCountry(v.country); }
+  else showWelcome();
 }
 
 /* ============ Leaflet map ============ */
@@ -520,7 +614,7 @@ function buildMarkers(){
     const icon = L.divIcon({className:'', html:'<div class="city-pin" data-pid="'+pid+'"></div>', iconSize:[18,18], iconAnchor:[9,9]});
     const m = L.marker([p.lat,p.lon], {icon, title:p.ja});
     const count = genresByPlace[pid].length;
-    m.bindTooltip(p.flag+' '+p.ja+' <b>('+count+')</b>', {direction:'top', offset:[0,-8]});
+    m.bindTooltip(()=> p.flag+' '+esc(pName(p))+' <b>('+count+')</b>', {direction:'top', offset:[0,-8]});
     m.bindPopup(()=> pinPopupHtml(pid), {closeButton:true, offset:[0,-6]});
     m.on('popupopen', e=>{
       const el = e.popup.getElement();
@@ -536,10 +630,10 @@ function pinPopupHtml(pid){
   const p = PLACES[pid]; if(!p) return '';
   const n = (genresByPlace[pid]||[]).length;
   const hasTop = (genresByPlace[pid]||[]).some(x=> rankedSet.has(x.g.id));
-  return '<div class="pin-pop"><b>'+p.flag+' '+esc(p.ja)+'</b>'+
-    '<div class="pp-sub">'+esc(p.country)+' ・ '+n+' ジャンル</div>'+
-    (hasTop ? '<button class="pp-play">▶ この街の代表曲を聴く</button>' : '')+
-    '<button class="pp-list">ジャンル一覧を見る →</button></div>';
+  return '<div class="pin-pop"><b>'+p.flag+' '+esc(pName(p))+'</b>'+
+    '<div class="pp-sub">'+esc(pCountry(p))+' ・ '+n+' '+t('unit_genres')+'</div>'+
+    (hasTop ? '<button class="pp-play">▶ '+esc(t('pin_play'))+'</button>' : '')+
+    '<button class="pp-list">'+esc(t('pin_list'))+'</button></div>';
 }
 function setActiveMarker(pid){
   document.querySelectorAll('.city-pin').forEach(el=>el.classList.toggle('active', el.dataset.pid===pid));
@@ -554,15 +648,15 @@ let viewStack = [];
 function showWelcome(){
   viewStack = [];
   setActiveMarker(null);
-  panelTitle.textContent = '🌍 都市を選ぶ';
+  panelTitle.textContent = t('panelWelcome');
   backBtn.hidden = true;
   const countries = {};
-  Object.entries(PLACES).forEach(([pid,p])=>{ if(genresByPlace[pid]) (countries[p.country] ||= {flag:p.flag, ids:[]}).ids.push(pid); });
+  Object.entries(PLACES).forEach(([pid,p])=>{ if(genresByPlace[pid]) (countries[pCountry(p)] ||= {flag:p.flag, ids:[]}).ids.push(pid); });
   panelBody.innerHTML =
     '<div class="welcome">'+
       '<span class="big">🗺️</span>'+
-      '地図のピンをクリックすると、その都市に根ざした音楽ジャンルが表示されます。<br>ジャンルを選ぶと、説明・代表アーティスト・YouTubeランキングへ。'+
-      '<div class="country-jump"><h3>国から飛ぶ</h3><div class="cj">'+
+      t('welcome_body')+
+      '<div class="country-jump"><h3>'+esc(t('country_jump'))+'</h3><div class="cj">'+
         Object.entries(countries).map(([c,o])=>'<button data-country="'+esc(c)+'">'+o.flag+' '+esc(c)+
           (o.ids.length>1?' <span class="cj-n">'+o.ids.length+'</span>':'')+'</button>').join('')+
       '</div></div>'+
@@ -571,7 +665,7 @@ function showWelcome(){
 }
 
 function citiesOfCountry(country){
-  return Object.keys(PLACES).filter(pid=> genresByPlace[pid] && PLACES[pid].country===country)
+  return Object.keys(PLACES).filter(pid=> genresByPlace[pid] && pCountry(PLACES[pid])===country)
     .sort((a,b)=> (genresByPlace[b]||[]).length - (genresByPlace[a]||[]).length);
 }
 
@@ -592,12 +686,12 @@ function showCountry(country){
   backBtn.hidden = false;
   backBtn.onclick = showWelcome;
   panelBody.innerHTML =
-    '<div class="city-meta"><span class="flag">'+p0.flag+'</span> '+esc(country)+' ・ '+pids.length+' 都市</div>'+
-    '<p class="country-hint">この国には複数の都市があります。都市を選んでください。</p>'+
+    '<div class="city-meta"><span class="flag">'+p0.flag+'</span> '+esc(country)+' ・ '+pids.length+' '+t('unit_cities')+'</div>'+
+    '<p class="country-hint">'+esc(t('country_hint'))+'</p>'+
     '<div class="genre-list">'+
       pids.map(pid=>{ const p=PLACES[pid]; const n=(genresByPlace[pid]||[]).length;
         return '<button class="genre-item" data-pid="'+pid+'">'+
-          '<span class="gi-txt"><b>'+esc(p.ja)+'</b><small>'+esc(p.en)+' ・ '+n+' ジャンル</small></span>'+
+          '<span class="gi-txt"><b>'+esc(pName(p))+'</b><small>'+esc(pSub(p))+' ・ '+n+' '+t('unit_genres')+'</small></span>'+
           '<span class="gi-arrow">›</span></button>';
       }).join('')+
     '</div>';
@@ -635,18 +729,18 @@ function showCity(pid){
   if(!p) return;
   viewStack = [{type:'city', pid}];
   setActiveMarker(pid);
-  panelTitle.textContent = p.flag+' '+p.ja;
+  panelTitle.textContent = p.flag+' '+pName(p);
   backBtn.hidden = false;
   backBtn.onclick = showWelcome;
   const order = {origin:0, important:1, current:2};
   const list = (genresByPlace[pid]||[]).slice().sort((a,b)=> order[a.rel]-order[b.rel]);
   panelBody.innerHTML =
-    '<div class="city-meta"><span class="flag">'+p.flag+'</span> '+esc(p.country)+' / '+esc(p.en)+' ・ '+list.length+' ジャンル</div>'+
+    '<div class="city-meta"><span class="flag">'+p.flag+'</span> '+esc(pCountry(p))+' / '+esc(pSub(p))+' ・ '+list.length+' '+t('unit_genres')+'</div>'+
     '<div class="genre-list">'+
       list.map(({g,rel})=>
         '<button class="genre-item" data-gid="'+g.id+'">'+
-          '<span class="gi-rel rel-'+rel+'">'+REL_LABEL[rel]+'</span>'+
-          '<span class="gi-txt"><b>'+esc(g.ja)+'</b><small>'+esc(g.en)+'</small></span>'+
+          '<span class="gi-rel rel-'+rel+'">'+esc(relLabel(rel))+'</span>'+
+          '<span class="gi-txt"><b>'+esc(gName(g))+'</b><small>'+esc(gSub(g))+'</small></span>'+
           '<span class="gi-arrow">›</span>'+
         '</button>'
       ).join('')+
@@ -660,11 +754,11 @@ function relatedGenres(g){
   const seen = new Set([g.id]);
   const out = [];
   const add = (id, kind)=>{ if(id && !seen.has(id) && genreById[id]){ seen.add(id); out.push({g:genreById[id], kind}); } };
-  if(g.parentGenreId) add(g.parentGenreId, '親');
-  if(g.parentGenreId) Object.values(genreById).forEach(o=>{ if(o.parentGenreId === g.parentGenreId) add(o.id, '系統'); });
-  Object.values(genreById).forEach(o=>{ if(o.parentGenreId === g.id) add(o.id, '派生'); });
+  if(g.parentGenreId) add(g.parentGenreId, 'parent');
+  if(g.parentGenreId) Object.values(genreById).forEach(o=>{ if(o.parentGenreId === g.parentGenreId) add(o.id, 'sibling'); });
+  Object.values(genreById).forEach(o=>{ if(o.parentGenreId === g.id) add(o.id, 'derived'); });
   const pid = g.places.length ? g.places[0][0] : null;
-  if(pid && genresByPlace[pid]) genresByPlace[pid].forEach(x=> add(x.g.id, '同郷'));
+  if(pid && genresByPlace[pid]) genresByPlace[pid].forEach(x=> add(x.g.id, 'samecity'));
   return out.slice(0, 8);
 }
 
@@ -681,7 +775,7 @@ function playVideo(videoId, url, title){
         'title="'+esc(title||'')+'" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" '+
         'allowfullscreen referrerpolicy="origin"></iframe></div>'+
       '<div class="pf-now"><span class="nt">▶ '+esc(title||'')+'</span>'+
-        '<a href="'+esc(url||('https://www.youtube.com/watch?v='+videoId))+'" target="_blank" rel="noopener">YouTubeで開く ↗</a></div>';
+        '<a href="'+esc(url||('https://www.youtube.com/watch?v='+videoId))+'" target="_blank" rel="noopener">'+esc(t('open_yt'))+' ↗</a></div>';
     pl.scrollIntoView({block:'nearest'});
   }
   document.querySelectorAll('#rankBox .rank-card').forEach(c=>c.classList.toggle('playing', c.dataset.vid===videoId));
@@ -718,7 +812,7 @@ function showGenre(gid, fromPid){
   const g = genreById[gid];
   if(!g) return;
   viewStack.push({type:'genre', gid, fromPid});
-  panelTitle.textContent = '🎵 ' + g.ja;
+  panelTitle.textContent = '🎵 ' + gName(g);
   backBtn.hidden = false;
   backBtn.onclick = ()=>{ if(fromPid) showCity(fromPid); else showWelcome(); };
   activeTab = 'classic';
@@ -726,7 +820,7 @@ function showGenre(gid, fromPid){
 
   const placeBtns = g.places.map(([pid,rel])=>{
     const p = PLACES[pid]; if(!p) return '';
-    return '<button data-pid="'+pid+'">'+p.flag+' '+esc(p.ja)+' <span class="rel-'+rel+'" style="font-size:10px;font-family:RocknRoll One">'+REL_LABEL[rel]+'</span></button>';
+    return '<button data-pid="'+pid+'">'+p.flag+' '+esc(pName(p))+' <span class="rel-'+rel+'" style="font-size:10px;font-family:RocknRoll One">'+esc(relLabel(rel))+'</span></button>';
   }).join('');
 
   const energyBadge = g.energy ? '<span class="energy-badge">⚡ '+'●'.repeat(g.energy)+'○'.repeat(Math.max(0,5-g.energy))+'</span>' : '';
@@ -734,28 +828,28 @@ function showGenre(gid, fromPid){
     .map(m=>'<span class="mood-tag">'+esc(m)+'</span>').join('');
 
   const rel = relatedGenres(g);
-  const relHtml = rel.length ? ('<div class="genre-meta"><h4>🔗 関連ジャンル</h4><div class="related">'+
-    rel.map(r=>'<button data-gid="'+r.g.id+'">'+esc(r.g.ja)+'<small>'+r.kind+'</small></button>').join('')+
+  const relHtml = rel.length ? ('<div class="genre-meta"><h4>'+esc(t('related_h'))+'</h4><div class="related">'+
+    rel.map(r=>'<button data-gid="'+r.g.id+'">'+esc(gName(r.g))+'<small>'+esc(t('rel_'+r.kind))+'</small></button>').join('')+
     '</div></div>') : '';
 
   panelBody.innerHTML =
-    '<h2 class="genre-title disp">'+esc(g.en)+'<small>'+esc(g.ja)+'</small></h2>'+
+    '<h2 class="genre-title disp">'+esc(gName(g))+'<small>'+esc(gSub(g))+'</small></h2>'+
     '<div class="genre-tags">'+energyBadge+moodTags+'</div>'+
-    '<p class="genre-desc">'+esc(g.desc)+'</p>'+
-    (g.refs && g.refs.length ? '<div class="genre-meta artists"><h4>🎤 代表アーティスト</h4><p>'+g.refs.map(esc).join(' ・ ')+'</p></div>' : '')+
-    (g.instruments && g.instruments.length ? '<div class="genre-meta"><h4>🔑 主な楽器</h4><p>'+g.instruments.map(esc).join(' ・ ')+'</p></div>' : '')+
+    '<p class="genre-desc">'+esc(gDesc(g))+'</p>'+
+    (g.refs && g.refs.length ? '<div class="genre-meta artists"><h4>'+esc(t('artists_h'))+'</h4><p>'+g.refs.map(esc).join(' ・ ')+'</p></div>' : '')+
+    (g.instruments && g.instruments.length ? '<div class="genre-meta"><h4>'+esc(t('instruments_h'))+'</h4><p>'+g.instruments.map(esc).join(' ・ ')+'</p></div>' : '')+
     '<div class="genre-places">'+placeBtns+'</div>'+
     relHtml+
     '<div class="genre-player" id="genrePlayer" hidden></div>'+
     '<div class="tabs">'+
-      '<button data-tab="classic" class="active">CLASSIC<small>定番・再生数順</small></button>'+
-      '<button data-tab="fresh">FRESH<small>新着90日</small></button>'+
-      '<button data-tab="hot" hidden>HOT<small>今週の急上昇</small></button>'+
-      ((FUNNYJ[gid]&&FUNNYJ[gid].length) ? '<button data-tab="funnyj" class="fj-tab">Funny J-POP<small>'+FUNNYJ[gid].length+'曲のアレンジ</small></button>' : '')+
+      '<button data-tab="classic" class="active">CLASSIC<small>'+esc(t('tab_sub_classic'))+'</small></button>'+
+      '<button data-tab="fresh">FRESH<small>'+esc(t('tab_sub_fresh'))+'</small></button>'+
+      '<button data-tab="hot" hidden>HOT<small>'+esc(t('tab_sub_hot'))+'</small></button>'+
+      ((FUNNYJ[gid]&&FUNNYJ[gid].length) ? '<button data-tab="funnyj" class="fj-tab">Funny J-POP<small>'+FUNNYJ[gid].length+(LANG==='en'?' arrangements':'曲のアレンジ')+'</small></button>' : '')+
     '</div>'+
     '<div class="ranking" id="rankBox"></div>'+
-    '<div class="kw-block"><h3>検索キーワード</h3><div class="kw-chips" id="kwChips"></div></div>'+
-    '<p class="note"><b>※ 独自集計について：</b> 本ランキングは YouTube 公式ランキングではなく、各ジャンルに設定した検索キーワードに基づく独自集計です。数値は取得時点のもので、現在のYouTube上の値と異なる場合があります。</p>';
+    '<div class="kw-block"><h3>'+esc(t('kw_h'))+'</h3><div class="kw-chips" id="kwChips"></div></div>'+
+    '<p class="note">'+t('note_html')+'</p>';
 
   panelBody.querySelectorAll('.genre-places button').forEach(b=>b.addEventListener('click', ()=>flyTo(b.dataset.pid)));
   panelBody.querySelectorAll('.related button').forEach(b=>b.addEventListener('click', ()=>{
@@ -792,24 +886,27 @@ function renderRanking(g){
   if(!box) return;
   const tab = activeTab;
   if(tab==='funnyj'){ renderFunnyj(g, box); return; }
-  const tabJa = {classic:'定番（再生数順）', fresh:'新着（直近90日）', hot:'今週の急上昇'}[tab];
+  const tabName = t('tabname_'+tab);
   const query = g.kw || g.en;
 
   const fallback = ()=>{
     box.innerHTML =
       '<a class="search-cta" href="'+esc(ytSearch(query, tab))+'" target="_blank" rel="noopener">'+
         '<span class="yt">▶️</span>'+
-        '<span><b>YouTubeで「'+esc(g.en)+'」を掘る</b><small>'+esc(tabJa)+'で検索結果を開く</small></span>'+
+        '<span><b>'+(LANG==='en'?('Dig “'+esc(g.en)+'” on YouTube'):('YouTubeで「'+esc(g.en)+'」を掘る'))+'</b><small>'+
+          (LANG==='en'?('Open '+esc(tabName)+' results'):(esc(tabName)+'で検索結果を開く'))+'</small></span>'+
         '<span class="go">↗</span>'+
       '</a>'+
       '<p style="font-size:11px;line-height:1.85;color:color-mix(in srgb,var(--cream) 60%,transparent);margin-top:4px">'+
-        '※ 週次バッチ（YouTube Data API）が <code style="color:var(--teal)">data/rankings/'+g.id+'.json</code> を生成すると、ここに動画カードのTop10が直接表示されます。それまでは上のボタンから本物のYouTube検索を開けます。'+
+        (LANG==='en'
+          ? 'When the weekly batch (YouTube Data API) generates <code style="color:var(--teal)">data/rankings/'+g.id+'.json</code>, the Top 10 video cards appear here. Until then, use the button above for a real YouTube search.'
+          : '※ 週次バッチ（YouTube Data API）が <code style="color:var(--teal)">data/rankings/'+g.id+'.json</code> を生成すると、ここに動画カードのTop10が直接表示されます。それまでは上のボタンから本物のYouTube検索を開けます。')+
       '</p>';
   };
 
   const data = rankingCache[g.id];
   if(data === undefined){
-    box.innerHTML = '<p style="font-size:12px;color:color-mix(in srgb,var(--cream) 60%,transparent);padding:8px 2px">読み込み中…</p>';
+    box.innerHTML = '<p style="font-size:12px;color:color-mix(in srgb,var(--cream) 60%,transparent);padding:8px 2px">'+esc(t('loading'))+'</p>';
     fetch('data/rankings/'+g.id+'.json')
       .then(r=> r.ok ? r.json() : Promise.reject())
       .then(d=>{ rankingCache[g.id]=d; syncHotTab(g.id); if(activeTab===tab) renderRanking(g); })
@@ -827,14 +924,14 @@ function renderRanking(g){
         '<span class="rk">'+v.rank+'</span>'+
         '<img class="tmb" src="'+esc(v.thumbnailUrl)+'" alt="" loading="lazy" onerror="this.style.visibility=\'hidden\'">'+
         '<span class="rc-txt"><b>'+esc(v.title)+'</b><small>'+esc(v.channelTitle||'')+
-          (v.views!=null?' ・ '+Number(v.views).toLocaleString()+' 回':'')+
+          (v.views!=null?' ・ '+Number(v.views).toLocaleString()+' '+t('unit_views'):'')+
           (tab==='hot'&&v.weeklyGrowth!=null?' ・ +'+Number(v.weeklyGrowth).toLocaleString():'')+
         '</small></span>'+
-        '<a class="rc-ext" href="'+esc(v.url)+'" target="_blank" rel="noopener" title="YouTubeで開く" aria-label="YouTubeで開く">↗</a>'+
+        '<a class="rc-ext" href="'+esc(v.url)+'" target="_blank" rel="noopener" title="'+esc(t('open_yt'))+'" aria-label="'+esc(t('open_yt'))+'">↗</a>'+
       '</div>'
     ).join('') +
     '<a class="search-cta" style="margin-top:4px" href="'+esc(ytSearch(query, tab))+'" target="_blank" rel="noopener">'+
-      '<span class="yt">🔎</span><span><b>もっと探す</b><small>YouTubeで'+esc(tabJa)+'</small></span><span class="go">↗</span>'+
+      '<span class="yt">🔎</span><span><b>'+esc(t('more'))+'</b><small>'+(LANG==='en'?('YouTube · '+esc(tabName)):('YouTubeで'+esc(tabName)))+'</small></span><span class="go">↗</span>'+
     '</a>';
 
   bindRankCards(box);
@@ -844,12 +941,14 @@ function renderRanking(g){
 function renderFunnyj(g, box){
   const items = FUNNYJ[g.id] || [];
   if(!items.length){
-    box.innerHTML = '<p style="font-size:12px;color:color-mix(in srgb,var(--cream) 60%,transparent);padding:8px 2px">このジャンルのFunny J-POPアレンジはまだありません。</p>';
+    box.innerHTML = '<p style="font-size:12px;color:color-mix(in srgb,var(--cream) 60%,transparent);padding:8px 2px">'+esc(t('funny_empty'))+'</p>';
     return;
   }
   box.innerHTML =
     '<p style="font-size:11px;line-height:1.8;color:color-mix(in srgb,var(--cream) 68%,transparent);margin:0 2px 4px">'+
-      'J-POPの名曲を <b>'+esc(g.en)+'</b> 風にアレンジした <a href="https://www.youtube.com/@FunnyJ-POP" target="_blank" rel="noopener" style="color:var(--teal)">Funny J-POP</a> のカバー。曲をタップでそのまま再生。</p>'+
+      (LANG==='en'
+        ? 'J-POP classics re-arranged in a <b>'+esc(g.en)+'</b> style by <a href="https://www.youtube.com/@FunnyJ-POP" target="_blank" rel="noopener" style="color:var(--teal)">Funny J-POP</a>. Tap a track to play it here.'
+        : 'J-POPの名曲を <b>'+esc(g.ja)+'</b> 風にアレンジした <a href="https://www.youtube.com/@FunnyJ-POP" target="_blank" rel="noopener" style="color:var(--teal)">Funny J-POP</a> のカバー。曲をタップでそのまま再生。')+'</p>'+
     items.map(v=>{
       const title = v.song+(v.artist?' / '+v.artist:'')+' – '+v.style;
       return '<div class="rank-card'+(v.videoId===currentVid?' playing':'')+'" role="button" tabindex="0" '+
@@ -858,11 +957,11 @@ function renderFunnyj(g, box){
         '<img class="tmb" src="https://i.ytimg.com/vi/'+esc(v.videoId)+'/mqdefault.jpg" alt="" loading="lazy" onerror="this.style.visibility=\'hidden\'">'+
         '<span class="rc-txt"><b>'+esc(v.song)+(v.artist?' <span style="opacity:.7;font-weight:400">/ '+esc(v.artist)+'</span>':'')+'</b>'+
           '<small>🎚 '+esc(v.style)+'</small></span>'+
-        '<a class="rc-ext" href="'+esc(v.url)+'" target="_blank" rel="noopener" title="YouTubeで開く" aria-label="YouTubeで開く">↗</a>'+
+        '<a class="rc-ext" href="'+esc(v.url)+'" target="_blank" rel="noopener" title="'+esc(t('open_yt'))+'" aria-label="'+esc(t('open_yt'))+'">↗</a>'+
       '</div>';
     }).join('') +
     '<a class="search-cta" style="margin-top:4px" href="https://www.youtube.com/@FunnyJ-POP/videos" target="_blank" rel="noopener">'+
-      '<span class="yt">🎤</span><span><b>Funny J-POP チャンネル</b><small>他のアレンジも見る</small></span><span class="go">↗</span>'+
+      '<span class="yt">🎤</span><span><b>'+esc(t('funny_channel'))+'</b><small>'+esc(t('funny_channel_sub'))+'</small></span><span class="go">↗</span>'+
     '</a>';
   bindRankCards(box);
 }
@@ -883,8 +982,8 @@ function buildFeatured(){
     const [pid] = g.places[0];
     const p = PLACES[pid]; if(!p) return '';
     return '<button class="feat-card" data-gid="'+id+'" data-pid="'+pid+'">'+
-      '<b>'+esc(g.ja)+'</b><small>'+esc(g.en)+'</small>'+
-      '<span>'+p.flag+' '+esc(p.ja)+' / '+esc(p.country)+'</span></button>';
+      '<b>'+esc(gName(g))+'</b><small>'+esc(gSub(g))+'</small>'+
+      '<span>'+p.flag+' '+esc(pName(p))+' / '+esc(pCountry(p))+'</span></button>';
   }).join('');
   document.querySelectorAll('.feat-card').forEach(b=>b.addEventListener('click', ()=>{
     document.getElementById('explorer').scrollIntoView({behavior:'smooth'});
@@ -904,7 +1003,7 @@ async function loadData(){
   });
   genres.forEach(g=>{
     genreById[g.genreId] = {
-      id:g.genreId, en:g.nameEn, ja:g.nameJa, desc:g.descriptionJa,
+      id:g.genreId, en:g.nameEn, ja:g.nameJa, desc:g.descriptionJa, descEn:g.descriptionEn,
       parentGenreId:g.parentGenreId || null,
       energy:g.energy, mood:g.mood,
       instruments:g.keyInstruments||[], refs:g.referenceArtists||[],
@@ -927,7 +1026,9 @@ async function loadData(){
       .forEach(id=>{ if(FEATURED.length < 12) FEATURED.push(id); });
   }
   const heroStat = document.getElementById('heroStat');
-  if(heroStat) heroStat.innerHTML = '現在 <b>'+genres.length+'</b> ジャンル / <b>'+places.length+'</b> 都市を収録';
+  if(heroStat) heroStat.innerHTML = LANG==='en'
+    ? '<b>'+genres.length+'</b> genres / <b>'+places.length+'</b> cities'
+    : '現在 <b>'+genres.length+'</b> ジャンル / <b>'+places.length+'</b> 都市を収録';
 }
 
 /* ============ search (cities + genres) ============ */
@@ -935,12 +1036,12 @@ let searchIndex = [];
 function buildSearch(){
   searchIndex = [];
   Object.entries(PLACES).forEach(([id,p])=>{
-    if(genresByPlace[id]) searchIndex.push({type:'city', id, label:p.ja, en:p.en, country:p.country, countryEn:p.countryEn, sub:p.flag+' '+p.country});
+    if(genresByPlace[id]) searchIndex.push({type:'city', id, label:p.ja, en:p.en, country:p.country, countryEn:p.countryEn, flag:p.flag});
   });
   Object.values(genreById).forEach(g=>{
     if(!g.places.length) return;
     const p = PLACES[g.places[0][0]];
-    searchIndex.push({type:'genre', id:g.id, pid:g.places[0][0], label:g.ja, en:g.en, sub:(p?p.flag+' '+p.ja:'')});
+    searchIndex.push({type:'genre', id:g.id, pid:g.places[0][0], label:g.ja, en:g.en, flag:p?p.flag:'', cityJa:p?p.ja:'', cityEn:p?p.en:''});
   });
 
   const input = document.getElementById('searchInput');
@@ -958,13 +1059,19 @@ function buildSearch(){
       return (ai<0?99:ai) - (bi<0?99:bi);   // 名前先頭一致を優先(国ヒットは後ろ)
     }).slice(0,12);
     sel = -1;
-    if(!cur.length){ box.innerHTML = '<div class="search-empty">該当なし</div>'; box.hidden = false; return; }
-    box.innerHTML = cur.map((it,i)=>
-      '<button class="search-row" data-i="'+i+'">'+
+    if(!cur.length){ box.innerHTML = '<div class="search-empty">'+esc(t('search_empty'))+'</div>'; box.hidden = false; return; }
+    box.innerHTML = cur.map((it,i)=>{
+      const main = LANG==='en' ? (it.en||it.label) : it.label;
+      const alt  = LANG==='en' ? it.label : (it.en||'');
+      const loc  = it.type==='city'
+        ? (it.flag+' '+(LANG==='en'?(it.countryEn||it.country):it.country))
+        : (it.flag+' '+(LANG==='en'?(it.cityEn||it.cityJa):it.cityJa));
+      return '<button class="search-row" data-i="'+i+'">'+
         '<span class="sr-ico">'+(it.type==='city'?'📍':'🎵')+'</span>'+
-        '<span class="sr-txt"><b>'+esc(it.label)+'</b><small>'+esc(it.en||'')+(it.sub?' ・ '+esc(it.sub):'')+'</small></span>'+
-        '<span class="sr-tag '+(it.type==='city'?'city':'')+'">'+(it.type==='city'?'都市':'ジャンル')+'</span>'+
-      '</button>').join('');
+        '<span class="sr-txt"><b>'+esc(main)+'</b><small>'+esc(alt)+(loc.trim()?' ・ '+esc(loc):'')+'</small></span>'+
+        '<span class="sr-tag '+(it.type==='city'?'city':'')+'">'+esc(it.type==='city'?t('tag_city'):t('tag_genre'))+'</span>'+
+      '</button>';
+    }).join('');
     box.hidden = false;
     box.querySelectorAll('.search-row').forEach(b=>
       b.addEventListener('mousedown', e=>{ e.preventDefault(); choose(cur[+b.dataset.i]); }));
@@ -992,12 +1099,19 @@ function buildSearch(){
 }
 
 /* ============ init ============ */
+const _langToggle = document.getElementById('langToggle');
+if(_langToggle){ _langToggle.textContent = LANG==='ja' ? 'EN' : '日本語';
+  _langToggle.addEventListener('click', ()=> setLang(LANG==='ja' ? 'en' : 'ja')); }
+document.documentElement.lang = LANG;
+document.querySelectorAll('[data-i18n]').forEach(el=>{ el.innerHTML = t(el.dataset.i18n); });
+document.querySelectorAll('[data-i18n-ph]').forEach(el=>{ el.placeholder = t(el.dataset.i18nPh); });
+
 loadData()
   .then(()=>{ buildMarkers(); buildFeatured(); buildSearch(); showWelcome();
     const rb = document.getElementById('randomPlay'); if(rb) rb.addEventListener('click', randomPlay); })
   .catch(err=>{
     console.error(err);
-    panelBody.innerHTML = '<div class="welcome">⚠️ データの読み込みに失敗しました。<br>このページは <b>data/places.json</b> と <b>data/genres.json</b> を読み込みます。<br>file:// で直接開いた場合は読み込めないので、Webサーバー経由（GitHub Pages や http://localhost）で開いてください。</div>';
+    panelBody.innerHTML = '<div class="welcome">'+t('error_load')+'</div>';
   });
 </script>
 </body>
