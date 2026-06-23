@@ -4430,6 +4430,38 @@
   ]
  },
  {
+  "genreId": "jpop",
+  "nameEn": "J-POP",
+  "nameJa": "J-POP",
+  "parentGenreId": null,
+  "descriptionJa": "80年代以降に確立した日本のメインストリーム・ポップス全般",
+  "descriptionEn": "Japan's mainstream pop from the late 1980s onward",
+  "energy": 3,
+  "mood": "キャッチー/多彩/王道",
+  "keyInstruments": [
+   "synth",
+   "band",
+   "programmed drums",
+   "vocals"
+  ],
+  "referenceArtists": [
+   "宇多田ヒカル",
+   "Mr.Children",
+   "米津玄師"
+  ],
+  "keywords": [
+   "j-pop hits",
+   "j-pop playlist"
+  ],
+  "places": [
+   {
+    "placeId": "japan_tokyo",
+    "relationType": "origin",
+    "weight": 1.0
+   }
+  ]
+ },
+ {
   "genreId": "city_pop",
   "nameEn": "City Pop",
   "nameJa": "シティ・ポップ",
