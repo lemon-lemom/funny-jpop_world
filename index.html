@@ -432,6 +432,7 @@ footer .fine{margin-top:34px;font-size:11px;opacity:.55;line-height:1.9}
   <div class="logo"><span class="dot"></span>FUNNY J-POP</div>
   <nav style="display:flex;gap:10px;align-items:center;flex-wrap:wrap">
     <button class="btn ghost lang-toggle" id="langToggle" type="button" aria-label="Switch language">EN</button>
+    <a class="btn ghost" href="shindan.html" data-i18n="nav_shindan">🔮 リズム診断</a>
     <a class="btn ghost" href="world-music-map.html" data-i18n="nav_map">🗺 音楽マップ</a>
     <a class="btn" href="https://www.youtube.com/@FunnyJ-POP?sub_confirmation=1" target="_blank" rel="noopener" data-i18n="nav_sub">▶ チャンネル登録</a>
   </nav>
@@ -571,6 +572,7 @@ footer .fine{margin-top:34px;font-size:11px;opacity:.55;line-height:1.9}
   <div class="cta">
     <a class="btn" href="https://www.youtube.com/@FunnyJ-POP?sub_confirmation=1" target="_blank" rel="noopener" data-i18n="foot_sub">▶ YouTubeでチャンネル登録</a>
     <a class="btn ghost" href="world-music-map.html" data-i18n="foot_map">🗺 World Music Map で世界の音楽を掘る</a>
+    <a class="btn ghost" href="shindan.html" data-i18n="foot_shindan">🔮 30秒で“魂のリズム”を診断する</a>
     <a class="btn ghost" href="mailto:funny.jpop.funny@gmail.com" data-i18n="foot_collab">📩 コラボ・お仕事のご依頼</a>
   </div>
   <p class="fine">Funny J-POP — Japanese melodies, global grooves.<br>An experimental project reimagining classics through AI × human creativity.</p>
@@ -581,6 +583,8 @@ footer .fine{margin-top:34px;font-size:11px;opacity:.55;line-height:1.9}
 let LANG = localStorage.getItem('wm_lang') || 'ja';
 const T = {
   nav_map:{ja:'🗺 音楽マップ', en:'🗺 Music Map'},
+  nav_shindan:{ja:'🔮 リズム診断', en:'🔮 Rhythm Check'},
+  foot_shindan:{ja:'🔮 30秒で“魂のリズム”を診断する', en:'🔮 Find your soul rhythm in 30 seconds'},
   nav_sub:{ja:'▶ チャンネル登録', en:'▶ Subscribe'},
   hero_h1:{ja:'日本のメロディを、<br>世界のリズムで。', en:'Japanese melodies,<br>global grooves.'},
   hero_lead:{ja:'80\'s＆90\'sの名曲たちが、ソウル、ファンク、ゴスペル、アフロビートをまとって帰ってくる。Funny J-POPは、懐かしさと新しさを一枚のレコードに刻む実験的カバープロジェクトです。',
