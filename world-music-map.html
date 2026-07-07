@@ -1122,8 +1122,23 @@ document.documentElement.lang = LANG;
 document.querySelectorAll('[data-i18n]').forEach(el=>{ el.innerHTML = t(el.dataset.i18n); });
 document.querySelectorAll('[data-i18n-ph]').forEach(el=>{ el.placeholder = t(el.dataset.i18nPh); });
 
+// #genre=<genreId> で直接ジャンル詳細を開く(診断ページ等からの流入用)
+function openFromHash(){
+  const m = location.hash.match(/^#genre=([\w-]+)$/);
+  if(!m) return false;
+  const g = genreById[m[1]];
+  if(!g) return false;
+  const pid = g.places.length ? g.places[0][0] : null;
+  document.getElementById('explorer').scrollIntoView();
+  if(pid) flyTo(pid);
+  showGenre(m[1], pid);
+  return true;
+}
+
 loadData()
-  .then(()=>{ buildMarkers(); buildFeatured(); buildSearch(); showWelcome();
+  .then(()=>{ buildMarkers(); buildFeatured(); buildSearch();
+    if(!openFromHash()) showWelcome();
+    window.addEventListener('hashchange', openFromHash);
     const rb = document.getElementById('randomPlay'); if(rb) rb.addEventListener('click', randomPlay); })
   .catch(err=>{
     console.error(err);
