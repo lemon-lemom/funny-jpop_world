@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>MIDI → ベース/ギター タブ譜メーカー</title>
+    <link rel="icon" href="assets/favicon.ico" />
+    <style>
+      :root {
+        --bg: #f7f7f9;
+        --panel: #ffffff;
+        --ink: #1d1d21;
+        --sub: #6b6b73;
+        --accent: #4c6ef5;
+        --border: #e3e3e8;
+      }
+      * { box-sizing: border-box; }
+      body {
+        margin: 0;
+        font-family: system-ui, -apple-system, "Segoe UI", "Hiragino Kaku Gothic ProN", Meiryo, sans-serif;
+        background: var(--bg);
+        color: var(--ink);
+        line-height: 1.6;
+      }
+      header {
+        padding: 24px 20px 8px;
+        max-width: 1120px;
+        margin: 0 auto;
+      }
+      h1 { font-size: 1.4rem; margin: 0 0 4px; }
+      header p { color: var(--sub); margin: 0; font-size: 0.92rem; }
+      main { max-width: 1120px; margin: 0 auto; padding: 12px 20px 60px; }
+      .drop {
+        border: 2px dashed var(--border);
+        border-radius: 12px;
+        background: var(--panel);
+        padding: 36px 20px;
+        text-align: center;
+        cursor: pointer;
+        transition: border-color 0.15s, background 0.15s;
+      }
+      .drop:hover, .drop.over { border-color: var(--accent); background: #f0f3ff; }
+      .drop b { color: var(--accent); }
+      .drop small { display: block; color: var(--sub); margin-top: 6px; }
+      .status { margin: 12px 2px; color: var(--sub); font-size: 0.9rem; min-height: 1.2em; }
+      .status.error { color: #d6336c; }
+      .panel {
+        background: var(--panel);
+        border: 1px solid var(--border);
+        border-radius: 12px;
+        padding: 14px 16px;
+        margin: 14px 0;
+      }
+      .controls { display: flex; flex-wrap: wrap; gap: 14px 20px; align-items: end; }
+      .field { display: flex; flex-direction: column; gap: 4px; }
+      .field label { font-size: 0.78rem; color: var(--sub); }
+      select {
+        padding: 7px 10px;
+        border: 1px solid var(--border);
+        border-radius: 8px;
+        background: #fff;
+        font-size: 0.92rem;
+        min-width: 90px;
+      }
+      .track-field select { min-width: 260px; }
+      .exports { display: flex; gap: 10px; }
+      button {
+        padding: 8px 16px;
+        border: 1px solid var(--accent);
+        background: var(--accent);
+        color: #fff;
+        border-radius: 8px;
+        font-size: 0.9rem;
+        cursor: pointer;
+      }
+      button.ghost { background: #fff; color: var(--accent); }
+      #score {
+        background: #fff;
+        border: 1px solid var(--border);
+        border-radius: 12px;
+        margin-top: 14px;
+        overflow-x: auto;
+        min-height: 120px;
+      }
+      #score svg { display: block; }
+      .note {
+        font-size: 0.82rem;
+        color: var(--sub);
+        margin-top: 18px;
+        border-top: 1px solid var(--border);
+        padding-top: 12px;
+      }
+      .note code { background: #eef; padding: 1px 5px; border-radius: 4px; }
+      @media print {
+        header, .drop, .controls, .exports, .status, .note { display: none !important; }
+        #score { border: none; }
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <h1>🎸 MIDI → ベース/ギター タブ譜メーカー</h1>
+      <p>MIDIファイルを読み込むと、五線譜とタブ譜（TAB）を生成します。処理はすべてブラウザ内で完結し、ファイルはどこにも送信されません。</p>
+    </header>
+    <main>
+      <div id="drop" class="drop">
+        <b>MIDIファイルを選択</b> またはここにドラッグ&ドロップ
+        <small>.mid / .midi（ブラウザ内で処理・アップロードなし）</small>
+        <input id="file" type="file" accept=".mid,.midi,audio/midi" hidden />
+      </div>
+
+      <div id="status" class="status"></div>
+
+      <div id="controls" class="panel controls" hidden>
+        <div class="field">
+          <label for="instrument">楽器</label>
+          <select id="instrument">
+            <option value="guitar">ギター (6弦)</option>
+            <option value="bass4">ベース (4弦)</option>
+            <option value="bass5">ベース (5弦)</option>
+          </select>
+        </div>
+        <div class="field track-field">
+          <label for="track">トラック（パート）</label>
+          <select id="track"></select>
+        </div>
+        <div class="field">
+          <label for="grid">クオンタイズ</label>
+          <select id="grid">
+            <option value="16">1/16</option>
+            <option value="8">1/8</option>
+          </select>
+        </div>
+        <div class="field">
+          <label for="perRow">1行の小節数</label>
+          <select id="perRow">
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4" selected>4</option>
+            <option value="6">6</option>
+          </select>
+        </div>
+      </div>
+
+      <div id="exports" class="exports" hidden>
+        <button id="png" class="ghost">PNGで保存</button>
+        <button id="print" class="ghost">印刷 / PDF</button>
+      </div>
+
+      <div id="score"></div>
+
+      <div class="note">
+        <p><b>MVPの仕様（既知の割り切り）</b></p>
+        <ul>
+          <li>単声中心。同時発音は和音としてまとめて表示します。</li>
+          <li>可読性のため五線譜は<b>オクターブ上げ（8vb相当）</b>で表示します。タブ譜のフレットは実音ベースです。</li>
+          <li>小節をまたぐ音符・分解した音価はタイ記号なしで表示します（リズムは保持）。</li>
+          <li>運指は貪欲法（手の移動最小化）。三連符・複合拍子の自動判定は未対応です。</li>
+          <li>パート自動判定が外れる場合は「トラック」を手動で選び直してください。</li>
+        </ul>
+        <p>設計の詳細は <code>docs/midi-tab-design.md</code> を参照。</p>
+      </div>
+    </main>
+
+    <script type="module" src="assets/midi-tab/app.js"></script>
+  </body>
+</html>
