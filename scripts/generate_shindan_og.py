@@ -7,9 +7,12 @@ Outputs:
   share/shindan-<id>.html          (OGP stub that redirects to ../shindan.html)
 
 Run:  .\\.venv\\Scripts\\python.exe scripts\\generate_shindan_og.py
-NOTE: TYPES below must stay in sync with RESULTS in shindan.html.
+Types, names and rarity come from data/shindan64.json (built by build_shindan64.py).
 """
+import json
 import os
+import re
+
 from PIL import Image, ImageDraw, ImageFilter, ImageFont
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
@@ -26,25 +29,33 @@ INK = (28, 13, 8)
 GROOVE = (36, 21, 17)
 VINYL = (18, 10, 7)
 
-# (id, nameJa, nameEn, typeName, labelText)
-TYPES = [
-    ("samba", "サンバ", "SAMBA", "太陽のカーニバル魂", "SAMBA"),
-    ("salsa_ny", "サルサ", "SALSA (NY)", "眠らない街のダンサー", "SALSA"),
-    ("balkan_brass", "バルカン・ブラス", "BALKAN BRASS", "愛すべきカオスの指揮者", "BALKAN"),
-    ("afrobeat", "アフロビート", "AFROBEAT", "不屈のグルーヴ・エンジン", "AFROBEAT"),
-    ("gospel", "ゴスペル", "GOSPEL", "魂を持ち上げる合唱隊長", "GOSPEL"),
-    ("flamenco", "フラメンコ", "FLAMENCO", "情熱と哀愁の求道者", "FLAMENCO"),
-    ("tango", "タンゴ", "TANGO", "夜のドラマの主役", "TANGO"),
-    ("filmi", "フィルミー", "FILMI (BOLLYWOOD)", "感情ジェットコースターの主演", "FILMI"),
-    ("reggae", "レゲエ", "REGGAE", "動じないレイドバック賢者", "REGGAE"),
-    ("son_cubano", "ソン・クバーノ", "SON CUBANO", "夕暮れの人たらし", "SON"),
-    ("irish_folk", "アイリッシュ・フォーク", "IRISH FOLK", "酒場の吟遊詩人", "IRISH"),
-    ("city_pop", "シティ・ポップ", "CITY POP", "真夜中のシティ・クルーザー", "CITY POP"),
-    ("bossa_nova", "ボサノヴァ", "BOSSA NOVA", "囁きの美学者", "BOSSA"),
-    ("fado", "ファド", "FADO", "運命を歌う夜の詩人", "FADO"),
-    ("desert_blues", "デザート・ブルース", "DESERT BLUES", "地平線をゆく孤高の旅人", "DESERT"),
-    ("gamelan", "ガムラン", "GAMELAN", "異世界の周波数の持ち主", "GAMELAN"),
-]
+DATA = json.load(open(os.path.join(ROOT, "data", "shindan64.json"), encoding="utf-8"))
+
+
+def stars(n):
+    return "？？？" if n > 5 else "★" * n + "☆" * (5 - n)
+
+
+def load_types():
+    """One dict per shareable result (64 types + the secret), with display fields."""
+    tribes = {t["id"]: t for t in DATA["tribes"]}
+    lins = {l["id"]: l for l in DATA["lineages"]}
+    out = []
+    for t in DATA["types"] + [DATA["secret"]]:
+        if t is DATA["secret"]:
+            where = "？？族・こだまの系譜"
+        else:
+            lin = lins[t["lineage"]]
+            where = f"{tribes[lin['tribe']]['nameJa']}・{lin['nameJa']}"
+        en = re.sub(r"\s*\(.*\)", "", t["nameEn"])
+        one_in = int(DATA["totalPatterns"] / t["count"] + 0.5)  # same rounding as Math.round in shindan.html
+        out.append(dict(
+            gid=t["id"], name_ja=t["nameJa"], type_name=t["name"],
+            label=en if len(en) <= 10 else en.split()[0], where=where,
+            stars=stars(t["stars"]), rank=t["rank"],
+            rarity=f"{stars(t['stars'])} {t['rank']}  ・  約{one_in:,}人に1人",
+        ))
+    return out
 
 FONT_CANDIDATES = [
     r"C:\Windows\Fonts\YuGothB.ttc",
@@ -129,25 +140,25 @@ def header(d):
 
 
 def footer(d):
-    d.text((80, 556), "▶ あなたのリズムも、6つの質問・30秒で見つかる", font=load_font(24), fill=CREAM + (150,))
+    d.text((80, 556), "▶ あなたのリズムも、12の質問で見つかる(全64タイプ+隠し1)", font=load_font(24), fill=CREAM + (150,))
 
 
 def type_image(t):
-    gid, name_ja, name_en, type_name, label = t
     img = base_canvas()
-    draw_vinyl(img, 930, 320, 240, label)
+    draw_vinyl(img, 930, 320, 240, t["label"])
     d = ImageDraw.Draw(img)
     header(d)
-    d.text((80, 196), "私の魂のリズムは", font=load_font(34), fill=CREAM)
-    name = f"『{name_ja}』"
-    f_name = fit_font(d, name, 590, 92)
+    d.text((80, 186), "私の魂のリズムは", font=load_font(32), fill=CREAM)
+    d.text((80, 230), t["where"], font=fit_font(d, t["where"], 590, 26, 18), fill=ACC2)
+    name = f"『{t['name_ja']}』"
+    f_name = fit_font(d, name, 590, 84)
     # orange offset shadow, then cream text (site's h1 style)
-    ny = 250
+    ny = 268
     d.text((84, ny + 4), name, font=f_name, fill=ACC1 + (150,))
     d.text((80, ny), name, font=f_name, fill=CREAM)
-    ny2 = ny + f_name.size + 26
-    d.text((88, ny2), name_en, font=load_font(28), fill=ACC2)
-    badge(d, 84, ny2 + 52, type_name, load_font(32))
+    ny2 = ny + f_name.size + 20
+    badge(d, 84, ny2, t["type_name"], fit_font(d, t["type_name"], 540, 30, 20))
+    d.text((88, ny2 + 72), t["rarity"], font=load_font(24), fill=ACC2)
     footer(d)
     return img.convert("RGB")
 
@@ -157,10 +168,10 @@ def generic_image():
     draw_vinyl(img, 930, 320, 240, "?")
     d = ImageDraw.Draw(img)
     header(d)
-    d.text((80, 208), "あなたの魂は、", font=load_font(56), fill=CREAM)
-    d.text((84, 292), "どのリズムで打っている?", font=load_font(56), fill=ACC1 + (150,))
-    d.text((80, 288), "どのリズムで打っている?", font=load_font(56), fill=CREAM)
-    badge(d, 84, 396, "全16タイプ × 聴けるJ-POPアレンジ付き", load_font(30))
+    d.text((80, 208), "あなたのリズムは、", font=load_font(56), fill=CREAM)
+    d.text((84, 292), "体のどこで鳴っている?", font=load_font(56), fill=ACC1 + (150,))
+    d.text((80, 288), "体のどこで鳴っている?", font=load_font(56), fill=CREAM)
+    badge(d, 84, 396, "全64タイプ+隠し1 ・ レア度つき", load_font(30))
     footer(d)
     return img.convert("RGB")
 
@@ -174,14 +185,14 @@ STUB_TEMPLATE = """<!DOCTYPE html>
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="Funny J-POP">
 <meta property="og:locale" content="ja_JP">
-<meta property="og:title" content="私の魂のリズムは『{name_ja}』({type_name})">
-<meta property="og:description" content="知ってる歌が、知らない国のリズムで鳴る。6つの質問・全16タイプの「魂のリズム診断」— Funny J-POP">
+<meta property="og:title" content="私の魂のリズムは『{name_ja}』({type_name}) {stars} {rank}">
+<meta property="og:description" content="知ってる歌が、知らない国のリズムで鳴る。12の質問・全64タイプ+隠し1の「魂のリズム診断」— Funny J-POP">
 <meta property="og:url" content="{base}/share/shindan-{gid}.html">
 <meta property="og:image" content="{base}/assets/shindan-og/og-{gid}.png">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="私の魂のリズムは『{name_ja}』({type_name})">
+<meta name="twitter:title" content="私の魂のリズムは『{name_ja}』({type_name}) {stars} {rank}">
 <meta name="twitter:description" content="知ってる歌が、知らない国のリズムで鳴る。魂のリズム診断 — Funny J-POP">
 <meta name="twitter:image" content="{base}/assets/shindan-og/og-{gid}.png">
 <meta http-equiv="refresh" content="0; url=../shindan.html">
@@ -199,10 +210,10 @@ def main():
     os.makedirs(SHARE_DIR, exist_ok=True)
     generic_image().save(os.path.join(OG_DIR, "og-shindan.png"), optimize=True)
     print("og-shindan.png")
-    for t in TYPES:
-        gid, name_ja, _, type_name, _ = t
+    for t in load_types():
+        gid = t["gid"]
         type_image(t).save(os.path.join(OG_DIR, f"og-{gid}.png"), optimize=True)
-        stub = STUB_TEMPLATE.format(gid=gid, name_ja=name_ja, type_name=type_name, base=BASE_URL)
+        stub = STUB_TEMPLATE.format(base=BASE_URL, **t)
         with open(os.path.join(SHARE_DIR, f"shindan-{gid}.html"), "w", encoding="utf-8") as fp:
             fp.write(stub)
         print(f"og-{gid}.png + share/shindan-{gid}.html")
