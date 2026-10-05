@@ -5,3 +5,6 @@
 
 google-api-python-client>=2.0
 python-dotenv>=1.0
+
+# Soul Rhythm Check 64 rarity tuning (scripts/build_shindan64.py)
+numpy>=2.0
