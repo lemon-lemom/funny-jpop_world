@@ -1,0 +1,96 @@
+/* 全ページ共通ヘッダー。マークアップは site-header.js が生成する。
+   色は各ページの :root トークン(--bg など)があればそれに合わせ、無ければブランド既定色を使う。 */
+.site-header{
+  --sh-bg:var(--bg,#2a140e);
+  --sh-ink:var(--ink,#1c0d08);
+  --sh-cream:var(--cream,#f6e8d5);
+  --sh-acc1:var(--acc1,#ff6b35);
+  --sh-acc2:var(--acc2,#f5c04e);
+  position:sticky;top:0;z-index:1100;   /* Leaflet のコントロール(〜1000)より上 */
+  display:flex;align-items:center;justify-content:space-between;gap:12px;
+  min-height:64px;margin:0;
+  padding:10px clamp(16px,4vw,48px);
+  background:color-mix(in srgb, var(--sh-bg) 82%, transparent);
+  backdrop-filter:blur(10px);
+  border-bottom:2px dashed color-mix(in srgb, var(--sh-cream) 25%, transparent);
+  color:var(--sh-cream);
+  font-family:'RocknRoll One','Zen Maru Gothic',sans-serif;
+  font-size:13px;font-weight:400;line-height:1.2;font-feature-settings:normal;
+  box-sizing:border-box;
+}
+.site-header *{box-sizing:border-box}
+.site-header :focus-visible{outline:3px solid var(--sh-acc2);outline-offset:2px}
+
+.sh-logo{
+  display:flex;align-items:center;gap:10px;flex:none;
+  color:inherit;text-decoration:none;white-space:nowrap;
+  font-size:clamp(16px,2.2vw,20px);letter-spacing:.04em;
+}
+.sh-dot{
+  width:26px;height:26px;border-radius:50%;flex:none;position:relative;
+  background:repeating-radial-gradient(circle at 50% 50%, var(--sh-ink) 0 2px, #3a2a20 2px 3px);
+  border:3px solid var(--sh-acc2);
+  animation:sh-spin 4s linear infinite;
+}
+.sh-dot::after{content:"";position:absolute;inset:8px;border-radius:50%;background:var(--sh-acc1)}
+@keyframes sh-spin{to{transform:rotate(360deg)}}
+
+.sh-right{display:flex;align-items:center;gap:8px;min-width:0}
+.sh-menu{display:flex;align-items:center;gap:2px}
+.sh-link{
+  display:inline-flex;align-items:center;
+  color:inherit;text-decoration:none;white-space:nowrap;letter-spacing:.02em;
+  padding:8px 12px;border-radius:999px;border:2px solid transparent;
+  transition:background .15s,border-color .15s,color .15s;
+}
+.sh-ico{margin-right:.45em}
+.sh-link:hover{border-color:color-mix(in srgb, var(--sh-cream) 60%, transparent)}
+.sh-link[aria-current="page"]{background:var(--sh-cream);color:var(--sh-ink)}
+.sh-cta{
+  display:inline-flex;align-items:center;justify-content:center;
+  text-decoration:none;white-space:nowrap;
+  margin-left:8px;padding:8px 16px;border-radius:999px;
+  background:var(--sh-acc1);color:var(--sh-ink);
+  border:3px solid var(--sh-ink);box-shadow:0 4px 0 var(--sh-ink);
+  transition:transform .12s,box-shadow .12s,background .25s;
+}
+.sh-cta:hover{transform:translateY(-2px);box-shadow:0 6px 0 var(--sh-ink)}
+.sh-cta:active{transform:translateY(2px);box-shadow:0 1px 0 var(--sh-ink)}
+
+.sh-lang,.sh-burger{
+  font:inherit;color:inherit;background:transparent;cursor:pointer;
+  margin:0;height:40px;flex:none;
+  border:2px solid var(--sh-cream);border-radius:999px;
+  transition:background .15s;
+}
+.sh-lang:hover,.sh-burger:hover{background:color-mix(in srgb, var(--sh-cream) 14%, transparent)}
+.sh-lang{padding:0 13px;min-width:56px;font-size:12px;letter-spacing:.06em}
+.sh-burger{display:none;width:44px;padding:0;flex-direction:column;align-items:center;justify-content:center;gap:5px}
+.sh-burger span{display:block;width:18px;height:2px;border-radius:2px;background:currentColor;transition:transform .2s,opacity .2s}
+.site-header.open .sh-burger span:nth-child(1){transform:translateY(7px) rotate(45deg)}
+.site-header.open .sh-burger span:nth-child(2){opacity:0}
+.site-header.open .sh-burger span:nth-child(3){transform:translateY(-7px) rotate(-45deg)}
+
+/* 中くらいの幅: 1段に収めるため、メニューの絵文字だけ隠す */
+@media (min-width:1141px) and (max-width:1299px){
+  .sh-ico{display:none}
+}
+/* 狭い画面: メニューはボタンで開くパネルにまとめ、ヘッダーは常に1段 */
+@media (max-width:1140px){
+  .sh-burger{display:inline-flex}
+  .sh-menu{
+    display:none;position:absolute;top:100%;left:0;right:0;
+    flex-direction:column;align-items:stretch;gap:4px;
+    padding:12px clamp(16px,4vw,48px) 20px;
+    background:var(--sh-bg);
+    border-bottom:2px dashed color-mix(in srgb, var(--sh-cream) 25%, transparent);
+    box-shadow:0 18px 30px rgba(0,0,0,.4);
+  }
+  .site-header.open .sh-menu{display:flex}
+  .sh-link{font-size:15px;padding:13px 14px;border-radius:12px}
+  .sh-cta{font-size:15px;margin:10px 0 0;padding:12px 16px}
+}
+@media (prefers-reduced-motion:reduce){
+  .sh-dot{animation:none}
+  .sh-burger span{transition:none}
+}

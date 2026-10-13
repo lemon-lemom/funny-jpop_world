@@ -4,26 +4,26 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="google-site-verification" content="nl0cspf5ciKL93SbAO5aNcjcOphtOxAF95PD9csP0Gs" />
-<title>Funny J-POP — 日本のメロディを、世界のリズムで。</title>
+<title>Funny J-POP — 日本のメロディを、世界のグルーヴで。</title>
 <link rel="icon" href="assets/favicon.ico" sizes="any">
 <link rel="icon" type="image/png" sizes="32x32" href="assets/funnyjpop-icon-32.png">
 <link rel="apple-touch-icon" sizes="180x180" href="assets/funnyjpop-icon-180.png">
-<meta name="description" content="J-POPの名曲を世界のリズムでアレンジするFunny J-POP。ジュークボックスで遊び、世界地図から音楽を掘れるWebアプリ。日英対応・無料。">
+<meta name="description" content="おなじみのJ-POPを、Soul・Funk・Disco・Gospel・Afrobeat・Latinなど世界中の音楽と掛け合わせて再解釈する、音楽と映像のプロジェクト Funny J-POP。ジュークボックス、リズム診断、世界音楽マップで遊べます。日英対応・無料。">
 <link rel="canonical" href="https://lemon-lemom.github.io/funny-jpop_world/">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="Funny J-POP">
 <meta property="og:locale" content="ja_JP">
 <meta property="og:locale:alternate" content="en_US">
-<meta property="og:title" content="Funny J-POP — 日本のメロディを、世界のリズムで。">
-<meta property="og:description" content="J-POPの名曲を世界のリズムでアレンジ。ジュークボックスで遊んで、世界地図から音楽を掘れるWebアプリ。日英対応・無料。">
+<meta property="og:title" content="Funny J-POP — 日本のメロディを、世界のグルーヴで。">
+<meta property="og:description" content="おなじみのJ-POPを、世界中の音楽と掛け合わせて再解釈。ジュークボックス、リズム診断、世界音楽マップで遊べる Funny J-POP のサイト。日英対応・無料。">
 <meta property="og:url" content="https://lemon-lemom.github.io/funny-jpop_world/">
 <meta property="og:image" content="https://lemon-lemom.github.io/funny-jpop_world/assets/og-home.png">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
 <meta property="og:image:alt" content="Funny J-POP — Japanese melodies, global grooves.">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="Funny J-POP — 日本のメロディを、世界のリズムで。">
-<meta name="twitter:description" content="ジュークボックスで遊び、世界地図から音楽を掘れるWebアプリ。J-POP×世界の音楽。日英対応・無料。">
+<meta name="twitter:title" content="Funny J-POP — 日本のメロディを、世界のグルーヴで。">
+<meta name="twitter:description" content="おなじみのJ-POPを、世界中の音楽と掛け合わせて再解釈。ジュークボックス、リズム診断、世界音楽マップで遊べます。日英対応・無料。">
 <meta name="twitter:image" content="https://lemon-lemom.github.io/funny-jpop_world/assets/og-home.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -53,23 +53,6 @@ h1,h2,h3,.disp{font-family:'RocknRoll One',sans-serif;font-weight:400}
 a{color:inherit}
 ::selection{background:var(--acc1);color:var(--ink)}
 
-/* ---------- header ---------- */
-header{
-  display:flex;align-items:center;justify-content:space-between;
-  padding:18px clamp(16px,4vw,48px);
-  position:sticky;top:0;z-index:50;
-  background:color-mix(in srgb, var(--bg) 78%, transparent);
-  backdrop-filter:blur(10px);
-  border-bottom:2px dashed color-mix(in srgb, var(--cream) 25%, transparent);
-}
-.logo{display:flex;align-items:center;gap:10px;font-family:'RocknRoll One';font-size:clamp(16px,2.4vw,22px);letter-spacing:.04em}
-.logo .dot{
-  width:26px;height:26px;border-radius:50%;
-  background:repeating-radial-gradient(circle at 50% 50%, var(--ink) 0 2px, #3a2a20 2px 3px);
-  border:3px solid var(--acc2);position:relative;flex:none;
-  animation:spin 4s linear infinite;
-}
-.logo .dot::after{content:"";position:absolute;inset:8px;border-radius:50%;background:var(--acc1)}
 .btn{
   display:inline-flex;align-items:center;gap:8px;
   font-family:'RocknRoll One';font-size:14px;
@@ -100,7 +83,12 @@ header{
   text-shadow:3px 3px 0 color-mix(in srgb, var(--acc1) 45%, transparent);
 }
 .hero h1 .en{display:block;font-size:.42em;letter-spacing:.14em;color:var(--acc2);margin-top:14px}
-.hero p.lead{margin:20px 0 28px;font-size:clamp(14px,1.6vw,17px);line-height:2;max-width:46ch;color:color-mix(in srgb,var(--cream) 88%, transparent)}
+.hero .tagline{margin-top:22px;text-wrap:balance;font-family:'RocknRoll One';font-size:clamp(15px,1.9vw,19px);line-height:1.9}
+.hero .tagline span{
+  background:linear-gradient(transparent 60%, color-mix(in srgb, var(--acc1) 60%, transparent) 0);
+  padding:0 .2em;-webkit-box-decoration-break:clone;box-decoration-break:clone;
+}
+.hero p.lead{margin:14px 0 28px;font-size:clamp(14px,1.6vw,17px);line-height:2;max-width:32em;color:color-mix(in srgb,var(--cream) 88%, transparent)}
 .hero .cta{display:flex;gap:14px;flex-wrap:wrap}
 .hint{margin-top:18px;font-size:12px;color:var(--acc2);letter-spacing:.08em}
 
@@ -172,223 +160,6 @@ section{max-width:1200px;margin:0 auto;padding:clamp(44px,7vw,84px) clamp(16px,4
   background:repeating-radial-gradient(circle,var(--ink) 0 2px,var(--acc2) 2px 4px);border:3px solid var(--cream)}
 .sec-head p{margin-top:10px;color:color-mix(in srgb,var(--cream) 75%, transparent);font-size:14px;line-height:1.9}
 
-/* ---------- crossfader ---------- */
-.mixer{
-  background:var(--card);border:3px solid var(--cream);border-radius:24px;
-  padding:clamp(22px,4vw,40px);
-  box-shadow:8px 8px 0 color-mix(in srgb, var(--acc1) 55%, transparent);
-}
-.mixer-row{display:flex;align-items:center;gap:clamp(10px,3vw,28px);justify-content:space-between}
-.mix-side{font-family:'RocknRoll One';text-align:center;line-height:1.5;flex:none}
-.mix-side small{display:block;font-family:'Zen Maru Gothic';font-weight:700;font-size:11px;letter-spacing:.1em;opacity:.8}
-.mix-side.a{color:#f5c04e}.mix-side.b{color:#9ef01a}
-.fader-wrap{flex:1;position:relative;padding:8px 0}
-input[type=range].fader{
-  -webkit-appearance:none;appearance:none;width:100%;height:14px;border-radius:999px;
-  background:linear-gradient(90deg,#ff6b35,#ff4d6d 50%,#9ef01a);
-  border:3px solid var(--ink);outline-offset:4px;cursor:pointer;
-}
-input[type=range].fader::-webkit-slider-thumb{
-  -webkit-appearance:none;width:42px;height:42px;border-radius:12px;
-  background:var(--cream);border:4px solid var(--ink);
-  box-shadow:0 4px 0 var(--ink);cursor:grab;
-  background-image:linear-gradient(var(--ink),var(--ink)),linear-gradient(var(--ink),var(--ink)),linear-gradient(var(--ink),var(--ink));
-  background-size:3px 60%,3px 60%,3px 60%;background-repeat:no-repeat;
-  background-position:30% 50%,50% 50%,70% 50%;
-}
-input[type=range].fader::-moz-range-thumb{
-  width:42px;height:42px;border-radius:12px;background:var(--cream);
-  border:4px solid var(--ink);box-shadow:0 4px 0 var(--ink);cursor:grab;
-}
-.mix-now{text-align:center;margin-top:18px;font-size:13px;letter-spacing:.1em;color:var(--acc2);min-height:1.4em;font-weight:700}
-
-/* ---------- jam studio ---------- */
-.jam{display:grid;grid-template-columns:1.15fr .85fr;gap:clamp(18px,3vw,32px);align-items:stretch}
-.screen{display:flex;flex-direction:column;gap:12px;min-width:0}
-.screen-frame{
-  border:4px solid var(--ink);border-radius:18px;overflow:hidden;
-  background:#000;box-shadow:0 8px 0 var(--ink);
-  aspect-ratio:16/9;
-}
-.screen-frame iframe{width:100%;height:100%;display:block;border:0}
-.now{display:flex;justify-content:space-between;gap:12px;align-items:center;font-size:13px;font-weight:700;min-width:0}
-.now .nt{color:var(--acc2);overflow:hidden;text-overflow:ellipsis;white-space:nowrap;min-width:0}
-.now a{color:var(--cream);opacity:.8;white-space:nowrap;font-size:12px}
-.pads-wrap{display:flex;flex-direction:column;min-width:0}
-.pads{display:grid;grid-template-columns:repeat(5,1fr);gap:10px;flex:1}
-@media (max-width:560px){
-  .pads{grid-template-columns:repeat(2,1fr)}
-}
-.pad{
-  border:3px solid var(--ink);border-radius:14px;cursor:pointer;
-  min-height:76px;
-  font-family:'RocknRoll One';font-size:12px;color:var(--ink);
-  display:flex;flex-direction:column;align-items:center;justify-content:center;gap:5px;
-  box-shadow:0 5px 0 var(--ink);user-select:none;-webkit-user-select:none;touch-action:manipulation;
-  transition:transform .06s, box-shadow .06s, filter .06s;
-}
-.pad small{font-family:'Zen Maru Gothic';font-weight:700;font-size:10px;opacity:.75;border:2px solid currentColor;border-radius:6px;padding:0 7px;line-height:1.6}
-.pad svg{width:30px;height:30px;display:block}
-.pad.hit svg{animation:bonk .14s ease}
-@keyframes bonk{0%{transform:scale(1)}40%{transform:scale(1.25) rotate(-6deg)}100%{transform:scale(1)}}
-.pad.hit{transform:translateY(4px) scale(.96);box-shadow:0 1px 0 var(--ink);filter:brightness(1.18) saturate(1.2)}
-.pad-hint{margin-top:14px;font-size:12px;color:color-mix(in srgb,var(--cream) 78%,transparent);line-height:1.9}
-.scoreboard{
-  background:linear-gradient(135deg, color-mix(in srgb, var(--ink) 92%, transparent), color-mix(in srgb, var(--ink) 70%, var(--acc1)));
-  border:3px solid var(--cream);border-radius:14px;
-  padding:12px 16px;margin-bottom:14px;
-  display:grid;grid-template-columns:1fr auto;gap:6px 16px;align-items:center;
-  box-shadow:0 5px 0 var(--ink);
-  font-family:'RocknRoll One';color:var(--cream);
-}
-.score-main{display:flex;align-items:baseline;gap:10px;min-width:0}
-.score-label{font-size:11px;letter-spacing:.18em;color:var(--acc2)}
-.score-value{font-size:28px;line-height:1;color:var(--cream);font-variant-numeric:tabular-nums;
-  text-shadow:2px 2px 0 color-mix(in srgb, var(--acc1) 55%, transparent);
-  transition:transform .12s}
-.score-value.bump{transform:scale(1.12)}
-.score-meta{display:flex;gap:14px;font-size:10px;letter-spacing:.1em;text-align:center}
-.score-meta>div{display:flex;flex-direction:column;align-items:center;gap:2px;line-height:1}
-.score-meta span{font-size:18px;color:var(--acc2);font-variant-numeric:tabular-nums}
-.score-meta small{font-size:9px;letter-spacing:.14em;opacity:.7}
-.score-feedback{
-  grid-column:1/-1;text-align:center;
-  letter-spacing:.08em;color:var(--acc2);
-  min-height:1.4em;font-size:13px;
-  transition:transform .18s, color .18s;
-  white-space:nowrap;overflow:hidden;text-overflow:ellipsis;
-}
-.score-feedback.flash{transform:scale(1.08);color:var(--cream)}
-.combo-shout{
-  position:absolute;left:50%;top:38%;transform:translate(-50%,-50%);
-  font-family:'RocknRoll One';font-size:clamp(28px,5vw,56px);
-  color:var(--acc2);white-space:nowrap;
-  text-shadow:4px 4px 0 var(--ink),-2px -2px 0 var(--ink),2px -2px 0 var(--ink),-2px 2px 0 var(--ink);
-  z-index:60;pointer-events:none;
-  animation:shout 2.2s cubic-bezier(.2,1.4,.4,1) forwards;
-}
-@keyframes shout{
-  0%{opacity:0;transform:translate(-50%,-50%) scale(.3) rotate(-8deg)}
-  18%{opacity:1;transform:translate(-50%,-50%) scale(1.15) rotate(3deg)}
-  30%{transform:translate(-50%,-50%) scale(1) rotate(-1deg)}
-  75%{opacity:1}
-  100%{opacity:0;transform:translate(-50%,-58%) scale(1.05)}
-}
-/* ---------- audio visualizer (プレイヤー外・動画の下) ---------- */
-.viz{
-  display:flex;align-items:flex-end;
-  height:52px;padding:8px 12px;
-  border:3px solid var(--ink);border-radius:12px;
-  background:color-mix(in srgb, var(--ink) 72%, var(--bg2));
-  box-shadow:0 4px 0 var(--ink);
-  transition:opacity .35s;
-}
-.viz.idle{opacity:.5}
-.viz-spectrum{
-  width:100%;height:100%;
-  display:flex;align-items:flex-end;gap:2px;
-}
-.viz-spectrum i{
-  flex:1;height:3%;border-radius:2px 2px 0 0;
-  background:linear-gradient(180deg, var(--acc2), var(--acc1));
-  box-shadow:0 0 7px color-mix(in srgb, var(--acc1) 70%, transparent);
-  will-change:height;
-}
-.embed-warn{
-  font-size:12px;line-height:1.9;font-weight:700;
-  background:color-mix(in srgb, var(--acc2) 18%, transparent);
-  border:2px dashed var(--acc2);border-radius:12px;
-  padding:10px 14px;color:var(--acc2);
-}
-
-/* ---------- jukebox cabinet ---------- */
-.jukebox{
-  position:relative;
-  border:4px solid var(--ink);
-  border-radius:44px 44px 22px 22px;
-  background:
-    linear-gradient(180deg, color-mix(in srgb, var(--acc1) 16%, var(--bg2)), color-mix(in srgb, var(--ink) 38%, var(--bg)));
-  box-shadow:
-    10px 10px 0 color-mix(in srgb, var(--acc1) 45%, transparent),
-    inset 0 0 0 3px color-mix(in srgb, var(--cream) 28%, transparent),
-    inset 0 0 0 8px color-mix(in srgb, var(--ink) 60%, transparent);
-  padding:clamp(20px,3.4vw,38px);
-}
-.juke-lights{
-  display:flex;justify-content:center;flex-wrap:wrap;
-  gap:clamp(7px,1.4vw,14px);
-  margin:-2px 0 clamp(16px,2.6vw,26px);
-}
-.juke-lights i{
-  width:13px;height:13px;border-radius:50%;flex:none;
-  border:2px solid var(--ink);background:currentColor;
-  animation:bulb 1.6s ease-in-out infinite;
-}
-.juke-lights i:nth-child(4n+1){color:#ff6b35}
-.juke-lights i:nth-child(4n+2){color:#f5c04e;animation-delay:.4s}
-.juke-lights i:nth-child(4n+3){color:#4dd8ff;animation-delay:.8s}
-.juke-lights i:nth-child(4n){color:#ff4d8d;animation-delay:1.2s}
-@keyframes bulb{
-  0%,100%{filter:brightness(.5);box-shadow:none}
-  50%{filter:brightness(1.35);box-shadow:0 0 12px currentColor}
-}
-/* ---------- record rack (song strips) ---------- */
-.juke-rack{
-  margin-top:clamp(18px,3vw,28px);
-}
-.rack-title{
-  font-family:'RocknRoll One';font-size:13px;letter-spacing:.16em;
-  color:var(--acc2);text-align:center;
-  display:flex;align-items:center;gap:14px;
-  margin-bottom:14px;
-}
-.rack-title::before,.rack-title::after{
-  content:"";flex:1;height:2px;
-  background:repeating-linear-gradient(90deg, var(--acc2) 0 8px, transparent 8px 16px);
-}
-.rack-cols{display:flex;gap:18px}
-.rack-col{flex:1;display:flex;flex-direction:column;gap:10px}
-.rack-col-head{
-  font-family:'RocknRoll One';font-size:12px;letter-spacing:.2em;
-  color:var(--cream);text-align:center;opacity:.6;
-}
-.track{
-  display:flex;align-items:center;gap:12px;
-  background:var(--cream);color:var(--ink);
-  border:3px solid var(--ink);border-radius:10px;
-  padding:7px 12px 7px 8px;cursor:pointer;text-align:left;
-  box-shadow:0 4px 0 var(--ink);
-  font-family:'Zen Maru Gothic';
-  transition:transform .12s, box-shadow .12s, background .2s;
-}
-.track:hover{transform:translateY(-2px);box-shadow:0 6px 0 var(--ink)}
-.track:active{transform:translateY(2px);box-shadow:0 1px 0 var(--ink)}
-.track .no{
-  font-family:'RocknRoll One';font-size:13px;letter-spacing:.06em;
-  background:var(--ink);color:var(--acc2);
-  border-radius:7px;padding:5px 9px;flex:none;
-}
-.track .tmb{
-  width:72px;aspect-ratio:16/9;flex:none;
-  border:2px solid var(--ink);border-radius:6px;
-  object-fit:cover;background:#241511;display:block;
-}
-.track .tt{
-  flex:1;min-width:0;font-weight:700;font-size:12.5px;line-height:1.55;
-  display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden;
-}
-.track .pl{
-  flex:none;width:26px;height:26px;border-radius:50%;
-  border:2.5px solid var(--ink);
-  background:
-    radial-gradient(circle, var(--acc1) 0 28%, transparent 28%),
-    repeating-radial-gradient(circle at 50% 50%, #120a07 0 1.5px, #2c1a12 1.5px 3px);
-  opacity:.18;transition:opacity .2s;
-}
-.track.playing{background:var(--acc2)}
-.track.playing .no{background:var(--acc1);color:var(--ink)}
-.track.playing .pl{opacity:1;animation:spin 2.4s linear infinite}
-
 /* ---------- about ---------- */
 .about{display:grid;grid-template-columns:1fr 1fr;gap:clamp(20px,4vw,48px);align-items:start}
 .about-card{
@@ -399,6 +170,61 @@ input[type=range].fader::-moz-range-thumb{
 .about-card .big{font-family:'RocknRoll One';font-size:clamp(20px,2.6vw,26px);line-height:1.7;color:var(--cream)}
 .eq{display:flex;align-items:flex-end;gap:6px;height:64px;margin-top:22px}
 .eq i{flex:1;background:linear-gradient(180deg,var(--acc2),var(--acc1));border-radius:4px 4px 0 0;height:20%;transition:height .18s ease}
+
+.about-card p+p{margin-top:14px}
+.about-card b{color:var(--acc2)}
+.about-card .about-fine{
+  margin-top:18px;padding-top:14px;font-size:12px;line-height:1.8;
+  border-top:2px dashed color-mix(in srgb,var(--cream) 25%, transparent);
+  color:color-mix(in srgb,var(--cream) 65%, transparent);
+}
+
+/* ---------- explore (サイト内コンテンツへの入口) ---------- */
+.explore{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:clamp(14px,2vw,22px)}
+.ex-card{
+  display:flex;flex-direction:column;gap:8px;
+  background:var(--cream);color:var(--ink);text-decoration:none;
+  border:3px solid var(--ink);border-radius:18px;padding:20px 20px 18px;
+  box-shadow:0 6px 0 var(--ink);
+  transition:transform .12s, box-shadow .12s, background .2s;
+}
+.ex-card:hover{transform:translateY(-3px);box-shadow:0 9px 0 var(--ink);background:var(--acc2)}
+.ex-card:active{transform:translateY(3px);box-shadow:0 2px 0 var(--ink)}
+.ex-ico{
+  width:52px;height:52px;border-radius:50%;display:grid;place-items:center;font-size:24px;
+  background:var(--acc1);border:3px solid var(--ink);margin-bottom:4px;
+}
+.ex-card b{font-family:'RocknRoll One';font-weight:400;font-size:17px;line-height:1.4}
+.ex-d{flex:1;font-size:13px;line-height:1.8;font-weight:500}
+.ex-go{font-family:'RocknRoll One';font-size:12px;letter-spacing:.08em;margin-top:4px}
+
+/* ---------- message band ---------- */
+.message{background:var(--cream);color:var(--ink);border-top:3px solid var(--acc2)}
+.message-inner{max-width:860px;margin:0 auto;padding:clamp(40px,6vw,72px) clamp(16px,4vw,48px);text-align:center}
+.message .kicker{color:var(--ink);border-color:var(--ink);margin-bottom:16px}
+.message h2{font-size:clamp(22px,3.6vw,36px);line-height:1.45}
+.message p{margin-top:16px;font-size:clamp(14px,1.5vw,16px);line-height:2;font-weight:500}
+.stats{list-style:none;display:flex;justify-content:center;flex-wrap:wrap;gap:12px clamp(18px,4vw,48px);margin-top:28px}
+.stats li{display:flex;flex-direction:column;align-items:center;gap:2px}
+.stats b{font-family:'RocknRoll One';font-weight:400;font-size:clamp(20px,3vw,28px)}
+.stats span{font-size:11px;font-weight:700;letter-spacing:.14em;opacity:.75}
+.message + footer{margin-top:0}
+
+/* ---------- works (公開した作品から) ---------- */
+.works{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:clamp(14px,2vw,22px)}
+.work{
+  display:flex;flex-direction:column;text-decoration:none;
+  background:var(--cream);color:var(--ink);
+  border:3px solid var(--ink);border-radius:16px;overflow:hidden;
+  box-shadow:0 6px 0 var(--ink);
+  transition:transform .12s, box-shadow .12s;
+}
+.work:hover{transform:translateY(-3px);box-shadow:0 9px 0 var(--ink)}
+.work:active{transform:translateY(3px);box-shadow:0 2px 0 var(--ink)}
+.work img{display:block;width:100%;aspect-ratio:16/9;object-fit:cover;background:#241511;border-bottom:3px solid var(--ink)}
+.work-t{padding:12px 14px 14px;font-weight:700;font-size:13px;line-height:1.6}
+.work-t span{display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}
+.works-more{display:flex;justify-content:center;margin-top:clamp(22px,3vw,32px)}
 
 /* ---------- footer ---------- */
 footer{
@@ -417,38 +243,32 @@ footer .fine{margin-top:34px;font-size:11px;opacity:.55;line-height:1.9}
   .hero p.lead{margin-inline:auto}
   .deck{max-width:340px;margin-top:8px}
   .about{grid-template-columns:1fr}
-  .jam{grid-template-columns:1fr}
-  .rack-cols{flex-direction:column}
 }
 @media (prefers-reduced-motion:reduce){
-  .ticker-inner,.logo .dot{animation:none!important}
-  .juke-lights i,.track.playing .pl,.combo-shout{animation:none}
+  .ticker-inner{animation:none!important}
 }
 </style>
+<link rel="stylesheet" href="assets/site-header.css">
 </head>
 <body>
 
-<header>
-  <div class="logo"><span class="dot"></span>FUNNY J-POP</div>
-  <nav style="display:flex;gap:10px;align-items:center;flex-wrap:wrap">
-    <button class="btn ghost lang-toggle" id="langToggle" type="button" aria-label="Switch language">EN</button>
-    <a class="btn ghost" href="shindan.html" data-i18n="nav_shindan">🔮 リズム診断</a>
-    <a class="btn ghost" href="world-music-map.html" data-i18n="nav_map">🗺 音楽マップ</a>
-    <a class="btn" href="https://www.youtube.com/@FunnyJ-POP?sub_confirmation=1" target="_blank" rel="noopener" data-i18n="nav_sub">▶ チャンネル登録</a>
-  </nav>
+<header class="site-header" id="siteHeader" data-page="home" data-bilingual>
+  <a class="sh-logo" href="index.html"><span class="sh-dot"></span>FUNNY J-POP</a>
 </header>
+<script src="assets/site-header.js"></script>
 
 <!-- ================= HERO ================= -->
 <div class="hero">
   <div>
-    <span class="kicker">AI × HUMAN CREATIVITY</span>
-    <h1><span data-i18n="hero_h1">日本のメロディを、<br>世界のリズムで。</span>
+    <span class="kicker">J-POP × WORLD MUSIC</span>
+    <h1><span data-i18n="hero_h1">日本のメロディを、<br>世界のグルーヴで。</span>
       <span class="en">JAPANESE MELODIES, GLOBAL GROOVES.</span>
     </h1>
-    <p class="lead" data-i18n="hero_lead">80's＆90'sの名曲たちが、ソウル、ファンク、ゴスペル、アフロビートをまとって帰ってくる。Funny J-POPは、懐かしさと新しさを一枚のレコードに刻む実験的カバープロジェクトです。</p>
+    <p class="tagline"><span data-i18n="hero_tag">懐かしいあの曲が、まだ聴いたことのない音になる。</span></p>
+    <p class="lead" data-i18n="hero_lead">Soul、Funk、Disco、Gospel、Afrobeat、Latin……。<br>おなじみのJ-POPを、世界中の音楽と掛け合わせて再解釈。音だけでなく、ミュージシャンも、ステージも、映像も。想像した世界をまるごと形にする、音楽と映像のプロジェクト。</p>
     <div class="cta">
-      <a class="btn" href="#jam" data-i18n="cta_listen">🎧 ジュークボックスで聴く</a>
-      <a class="btn ghost" href="#mix" data-i18n="cta_mix">🎚 グルーヴを混ぜてみる</a>
+      <a class="btn" href="https://www.youtube.com/@FunnyJ-POP" target="_blank" rel="noopener" data-i18n="cta_watch">▶ YouTubeで観る</a>
+      <a class="btn ghost" href="jukebox.html" data-i18n="cta_listen">🎧 ジュークボックスで遊ぶ</a>
     </div>
     <p class="hint" data-i18n="hero_hint">👉 となりのレコード、回したりスクラッチしたりできます（触るとスクラッチ音が鳴ります🔊）</p>
   </div>
@@ -474,96 +294,91 @@ footer .fine{margin-top:34px;font-size:11px;opacity:.55;line-height:1.9}
 <!-- ================= TICKER ================= -->
 <div class="ticker"><div class="ticker-inner" id="tickerInner"></div></div>
 
-<!-- ================= JUKEBOX STUDIO ================= -->
-<section id="jam">
-  <div class="sec-head">
-    <h2 data-i18n="juke_h2">🎛 JUKEBOX STUDIO — 選んで、観ながら、叩く。</h2>
-    <p data-i18n="juke_p">下のラックからレコードを選ぶと、その場で針が落ちます。右のパッドでパーカッションを重ねて、あなただけのグルーヴに。</p>
-  </div>
-  <div class="jukebox">
-  <div class="juke-lights" id="jukeLights" aria-hidden="true"></div>
-  <div class="jam">
-    <div class="screen">
-      <div class="screen-frame">
-        <iframe id="ytPlayer"
-          src="https://www.youtube.com/embed/qEd7D2Fej5M"
-          title="Funny J-POP player"
-          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-          allowfullscreen referrerpolicy="origin"></iframe>
-      </div>
-      <div class="now">
-        <span class="nt" id="nowTitle" data-i18n="now_default">▶ 下のラックからレコードを選んでね</span>
-        <a id="openYt" href="https://www.youtube.com/watch?v=qEd7D2Fej5M" target="_blank" rel="noopener" data-i18n="open_yt">YouTubeで開く ↗</a>
-      </div>
-      <p class="embed-warn" id="embedWarn" hidden data-i18n="embed_warn_file">⚠️ このページをファイルとして直接開いているため、YouTubeの仕様（エラー153）で埋め込み再生がブロックされています。Webサーバー経由（ホスティング先や http://localhost）で開くと再生できます。それまでは「YouTubeで開く ↗」をご利用ください。</p>
-      <div class="viz idle" id="viz" aria-hidden="true">
-        <div class="viz-spectrum" id="beatSpectrum"><!-- bars by JS --></div>
-      </div>
-    </div>
-    <div class="pads-wrap">
-      <div class="scoreboard" aria-live="polite">
-        <div class="score-main">
-          <span class="score-label">SCORE</span>
-          <span class="score-value" id="scoreValue">0</span>
-        </div>
-        <div class="score-meta">
-          <div><span id="comboValue">0</span><small>COMBO</small></div>
-          <div><span id="maxComboValue">0</span><small>MAX COMBO</small></div>
-          <div><span id="varietyValue">0</span><small>/10 SOUNDS</small></div>
-        </div>
-        <div class="score-feedback" id="scoreFeedback" data-i18n="start_hint">🎵 パッドを叩いてセッション開始</div>
-      </div>
-      <div class="pads" id="pads"><!-- generated by JS --></div>
-      <p class="pad-hint" data-i18n="pad_hint">🥁 パッドをタップ、またはキーボードの <b>A S D F G H J K L ;</b> で演奏。リズムが合うほど、いろんな音を使うほど高得点！ 音はすべてブラウザ内で合成しています。</p>
-    </div>
-  </div>
-  <div class="juke-rack" id="jukeRack">
-    <div class="rack-title" data-i18n="rack_title">🔥 SELECT YOUR RECORD — 全10曲</div>
-    <div class="rack-cols">
-      <div class="rack-col" id="rackColA"><div class="rack-col-head">— SIDE A —</div></div>
-      <div class="rack-col" id="rackColB"><div class="rack-col-head">— SIDE B —</div></div>
-    </div>
-  </div>
-  </div><!-- /.jukebox -->
-</section>
-
-<!-- ================= MIXER ================= -->
-<section id="mix">
-  <div class="sec-head">
-    <h2>MIX IT YOURSELF</h2>
-    <p data-i18n="mix_p">フェーダーを左右にスライドすると、ページ全体のムードが「ソウルファンク」と「ラテングルーヴ」のあいだで混ざります。あなただけのバランスを見つけてください。</p>
-  </div>
-  <div class="mixer">
-    <div class="mixer-row">
-      <div class="mix-side a">SOUL FUNK<small data-i18n="mix_a_sub">うねるベースとホーン</small></div>
-      <div class="fader-wrap">
-        <input class="fader" id="fader" type="range" min="0" max="100" value="20" aria-label="crossfader">
-      </div>
-      <div class="mix-side b">LATIN GROOVE<small data-i18n="mix_b_sub">情熱のクラーベ</small></div>
-    </div>
-    <div class="mix-now" id="mixNow"></div>
-  </div>
-</section>
-
 <!-- ================= ABOUT ================= -->
-<section>
+<section id="about">
   <div class="sec-head">
-    <h2>ABOUT THE PROJECT</h2>
+    <h2>ABOUT FUNNY J-POP</h2>
   </div>
   <div class="about">
     <div class="about-card">
-      <p class="big" data-i18n="about_big">80's＆90'sの魂よ、<br>鳴り響け。</p>
-      <p style="margin-top:14px" data-i18n="about_p1">Funny J-POPは、名曲を「AI × 人の創造力」で再解釈する実験的プロジェクト。演奏・アレンジ・ミックスの一部にAI音楽生成ツールを活用しつつ、最終的な構成と表現は人間のディレクションと音楽的判断で仕上げています。</p>
+      <p class="big" data-i18n="about_big">知っている曲の、<br>知らない表情。</p>
+      <p data-i18n="about_p1">Funny J-POPは、日本のポップスをさまざまな音楽文化から見つめ直す、カバー＆リ・アレンジのプロジェクトです。</p>
       <div class="eq" id="eq" aria-hidden="true"></div>
     </div>
     <div class="about-card">
-      <h3 data-i18n="about_h3">たいせつにしていること</h3>
-      <p data-i18n="about_b1">🎵 原曲へのリスペクトを第一に、メロディの記憶はそのままに、リズムの景色だけを旅させること。</p>
-      <p data-i18n="about_b2">🤝 AIは楽器のひとつ。鳴らすのも、選ぶのも、仕上げるのも人間。</p>
-      <p data-i18n="about_b3">✅ 全作品はYouTubeのカバー／リミックスポリシーおよびAI透明性ガイドラインに準拠して運用しています。</p>
+      <p data-i18n="about_p2">90年代のJ-POPを中心に、昭和歌謡から時代を越えて愛される名曲まで。70年代のソウルやファンク、アフリカのリズム、ラテンやゴスペルなど、思いがけない組み合わせを楽しんでいます。</p>
+      <p data-i18n="about_p3">そして、曲を聴いたときに頭の中に現れる歌手やバンド、衣装やステージの風景も、映像として形にしています。AIを含むさまざまな制作ツールを使いながら、大切にしているのは<b>原曲への敬意、音楽への好奇心、そして遊び心。</b></p>
+      <p class="about-fine" data-i18n="about_fine">全作品は、YouTubeのカバー／リミックスポリシーおよびAI透明性ガイドラインに沿って運用しています。</p>
     </div>
   </div>
 </section>
+
+<!-- ================= WORKS ================= -->
+<section id="works">
+  <div class="sec-head">
+    <h2>WORKS</h2>
+    <p data-i18n="works_p">これまでに公開した作品から。気になった一本は、YouTubeでどうぞ。</p>
+  </div>
+  <div class="works" id="worksGrid"><!-- generated by JS --></div>
+  <div class="works-more">
+    <a class="btn" href="https://www.youtube.com/@FunnyJ-POP/videos" target="_blank" rel="noopener" data-i18n="works_more">▶ YouTubeで全作品を観る</a>
+  </div>
+</section>
+
+<!-- ================= EXPLORE ================= -->
+<section id="explore">
+  <div class="sec-head">
+    <h2>MORE TO PLAY</h2>
+    <p data-i18n="explore_p">ジュークボックスで叩いたり、診断したり、地図を旅したり。聴くだけじゃない遊び場です。</p>
+  </div>
+  <div class="explore">
+    <a class="ex-card" href="jukebox.html">
+      <span class="ex-ico" aria-hidden="true">🎧</span>
+      <b data-i18n="ex0_t">ジュークボックス</b>
+      <span class="ex-d" data-i18n="ex0_d">10曲から選んで、観ながらパッドを叩いてセッション。</span>
+      <span class="ex-go" data-i18n="ex_go">ひらく →</span>
+    </a>
+    <a class="ex-card" href="shindan.html">
+      <span class="ex-ico" aria-hidden="true">🔮</span>
+      <b data-i18n="ex1_t">魂のリズム診断</b>
+      <span class="ex-d" data-i18n="ex1_d">12の質問で、あなたの中で鳴っているリズムを診断。全64タイプ。</span>
+      <span class="ex-go" data-i18n="ex_go">ひらく →</span>
+    </a>
+    <a class="ex-card" href="world-music-map.html">
+      <span class="ex-ico" aria-hidden="true">🗺</span>
+      <b data-i18n="ex2_t">World Music Map</b>
+      <span class="ex-d" data-i18n="ex2_d">都市を起点に、土地に根ざした音楽ジャンルを地図で掘る。</span>
+      <span class="ex-go" data-i18n="ex_go">ひらく →</span>
+    </a>
+    <a class="ex-card" href="gallery.html">
+      <span class="ex-ico" aria-hidden="true">📷</span>
+      <b data-i18n="ex3_t">ギャラリー</b>
+      <span class="ex-d" data-i18n="ex3_d">Instagramに並べたビジュアルを、チラッと。</span>
+      <span class="ex-go" data-i18n="ex_go">ひらく →</span>
+    </a>
+    <a class="ex-card" href="pizza-time.html">
+      <span class="ex-ico" aria-hidden="true">🍕</span>
+      <b data-i18n="ex4_t">フリーBGM「PIZZA TIME」</b>
+      <span class="ex-d" data-i18n="ex4_d">動画、SNS、イベント、お店のBGMに自由に使えるオリジナル曲。</span>
+      <span class="ex-go" data-i18n="ex_go">ひらく →</span>
+    </a>
+  </div>
+</section>
+
+<!-- ================= MESSAGE ================= -->
+<div class="message">
+  <div class="message-inner">
+    <span class="kicker">ONE YEAR, AND BEYOND</span>
+    <h2 data-i18n="msg_h2">小さな実験から始まった、<br>音楽の旅。</h2>
+    <p data-i18n="msg_p1">2025年10月、「夏色」「負けないで」「HONEY」の3曲から始まったFunny J-POP。作品を聴いてくださる人が増え、思いがけない反応やつながりにも恵まれました。</p>
+    <p data-i18n="msg_p2">知っている曲には、まだ知らない面白さがある。<br>これからも、自由な発想で音楽の新しい表情を探していきます。</p>
+    <ul class="stats">
+      <li><b data-i18n="st1_n">2025年10月</b><span data-i18n="st1_l">スタート</span></li>
+      <li><b data-i18n="st2_n">300本+</b><span data-i18n="st2_l">公開した動画</span></li>
+      <li><b data-i18n="st3_n">6万人+</b><span data-i18n="st3_l">チャンネル登録</span></li>
+    </ul>
+  </div>
+</div>
 
 <!-- ================= FOOTER ================= -->
 <footer>
@@ -571,90 +386,76 @@ footer .fine{margin-top:34px;font-size:11px;opacity:.55;line-height:1.9}
   <p data-i18n="footer_p">新しいグルーヴは毎回チャンネルから。登録して、次の一曲を見逃さないでください。</p>
   <div class="cta">
     <a class="btn" href="https://www.youtube.com/@FunnyJ-POP?sub_confirmation=1" target="_blank" rel="noopener" data-i18n="foot_sub">▶ YouTubeでチャンネル登録</a>
-    <a class="btn ghost" href="world-music-map.html" data-i18n="foot_map">🗺 World Music Map で世界の音楽を掘る</a>
-    <a class="btn ghost" href="shindan.html" data-i18n="foot_shindan">🔮 30秒で“魂のリズム”を診断する</a>
+    <a class="btn ghost" href="https://note.com/funny_j_pop" target="_blank" rel="noopener">📝 note</a>
+    <a class="btn ghost" href="https://www.instagram.com/funny.jpop.funny/" target="_blank" rel="noopener">📷 Instagram</a>
     <a class="btn ghost" href="mailto:funny.jpop.funny@gmail.com" data-i18n="foot_collab">📩 コラボ・お仕事のご依頼</a>
   </div>
-  <p class="fine">Funny J-POP — Japanese melodies, global grooves.<br>An experimental project reimagining classics through AI × human creativity.</p>
+  <p class="fine">Funny J-POP — Japanese melodies, global grooves.<br>A cover &amp; re-arrangement project exploring Japanese pop through the world’s music.</p>
 </footer>
 
 <script>
 /* ============ i18n (language shared with the map via localStorage 'wm_lang') ============ */
 let LANG = localStorage.getItem('wm_lang') || 'ja';
 const T = {
-  nav_map:{ja:'🗺 音楽マップ', en:'🗺 Music Map'},
-  nav_shindan:{ja:'🔮 リズム診断', en:'🔮 Rhythm Check'},
-  foot_shindan:{ja:'🔮 30秒で“魂のリズム”を診断する', en:'🔮 Find your soul rhythm in 30 seconds'},
-  nav_sub:{ja:'▶ チャンネル登録', en:'▶ Subscribe'},
-  hero_h1:{ja:'日本のメロディを、<br>世界のリズムで。', en:'Japanese melodies,<br>global grooves.'},
-  hero_lead:{ja:'80\'s＆90\'sの名曲たちが、ソウル、ファンク、ゴスペル、アフロビートをまとって帰ってくる。Funny J-POPは、懐かしさと新しさを一枚のレコードに刻む実験的カバープロジェクトです。',
-             en:'\'80s and \'90s classics come back wrapped in soul, funk, gospel and Afrobeat. Funny J-POP is an experimental cover project pressing nostalgia and novelty onto a single record.'},
-  cta_listen:{ja:'🎧 ジュークボックスで聴く', en:'🎧 Listen on the jukebox'},
-  cta_mix:{ja:'🎚 グルーヴを混ぜてみる', en:'🎚 Mix the groove'},
+  hero_h1:{ja:'日本のメロディを、<br>世界のグルーヴで。', en:'Japanese melodies,<br>global grooves.'},
+  hero_tag:{ja:'懐かしいあの曲が、まだ聴いたことのない音になる。', en:'The songs you grew up with, in a sound you’ve never heard.'},
+  hero_lead:{ja:'Soul、Funk、Disco、Gospel、Afrobeat、Latin……。<br>おなじみのJ-POPを、世界中の音楽と掛け合わせて再解釈。音だけでなく、ミュージシャンも、ステージも、映像も。想像した世界をまるごと形にする、音楽と映像のプロジェクト。',
+             en:'Soul, Funk, Disco, Gospel, Afrobeat, Latin…<br>Familiar J-POP, reimagined by crossing it with music from around the world. Not just the sound — the musicians, the stage and the visuals, too. A music and video project that brings a whole imagined world to life.'},
+  cta_watch:{ja:'▶ YouTubeで観る', en:'▶ Watch on YouTube'},
+  cta_listen:{ja:'🎧 ジュークボックスで遊ぶ', en:'🎧 Play the jukebox'},
   hero_hint:{ja:'👉 となりのレコード、回したりスクラッチしたりできます（触るとスクラッチ音が鳴ります🔊）',
              en:'👉 Spin and scratch the record beside it (touch it for a scratch sound 🔊)'},
-  juke_h2:{ja:'🎛 JUKEBOX STUDIO — 選んで、観ながら、叩く。', en:'🎛 JUKEBOX STUDIO — pick it, watch it, drum on it.'},
-  juke_p:{ja:'下のラックからレコードを選ぶと、その場で針が落ちます。右のパッドでパーカッションを重ねて、あなただけのグルーヴに。',
-          en:'Pick a record from the rack and the needle drops on the spot. Layer percussion with the pads on the right to make the groove your own.'},
-  now_default:{ja:'▶ 下のラックからレコードを選んでね', en:'▶ Pick a record from the rack below'},
-  open_yt:{ja:'YouTubeで開く ↗', en:'Open on YouTube ↗'},
-  embed_warn_file:{ja:'⚠️ このページをファイルとして直接開いているため、YouTubeの仕様（エラー153）で埋め込み再生がブロックされています。Webサーバー経由（ホスティング先や http://localhost）で開くと再生できます。それまでは「YouTubeで開く ↗」をご利用ください。',
-                   en:'⚠️ Because this page is opened directly as a file, YouTube (error 153) blocks embedded playback. Open it via a web server (your host or http://localhost) to play. Until then, use “Open on YouTube ↗”.'},
-  start_hint:{ja:'🎵 パッドを叩いてセッション開始', en:'🎵 Tap a pad to start the session'},
-  pad_hint:{ja:'🥁 パッドをタップ、またはキーボードの <b>A S D F G H J K L ;</b> で演奏。リズムが合うほど、いろんな音を使うほど高得点！ 音はすべてブラウザ内で合成しています。',
-            en:'🥁 Tap the pads or play with keys <b>A S D F G H J K L ;</b>. The tighter your rhythm and the more sounds you use, the higher your score! All audio is synthesized in your browser.'},
-  rack_title:{ja:'🔥 SELECT YOUR RECORD — 全10曲', en:'🔥 SELECT YOUR RECORD — 10 tracks'},
-  mix_p:{ja:'フェーダーを左右にスライドすると、ページ全体のムードが「ソウルファンク」と「ラテングルーヴ」のあいだで混ざります。あなただけのバランスを見つけてください。',
-         en:'Slide the fader and the whole page’s mood blends between “Soul Funk” and “Latin Groove.” Find your own balance.'},
-  mix_a_sub:{ja:'うねるベースとホーン', en:'Rolling bass & horns'},
-  mix_b_sub:{ja:'情熱のクラーベ', en:'Passionate clave'},
-  about_big:{ja:'80\'s＆90\'sの魂よ、<br>鳴り響け。', en:'Souls of the ’80s & ’90s,<br>ring out.'},
-  about_p1:{ja:'Funny J-POPは、名曲を「AI × 人の創造力」で再解釈する実験的プロジェクト。演奏・アレンジ・ミックスの一部にAI音楽生成ツールを活用しつつ、最終的な構成と表現は人間のディレクションと音楽的判断で仕上げています。',
-            en:'Funny J-POP is an experimental project reinterpreting classics through “AI × human creativity.” AI music tools assist parts of the performance, arrangement and mix, while the final structure and expression are finished by human direction and musical judgment.'},
-  about_h3:{ja:'たいせつにしていること', en:'What we care about'},
-  about_b1:{ja:'🎵 原曲へのリスペクトを第一に、メロディの記憶はそのままに、リズムの景色だけを旅させること。',
-            en:'🎵 Respect for the original first — keep the memory of the melody intact, and let only the rhythmic scenery travel.'},
-  about_b2:{ja:'🤝 AIは楽器のひとつ。鳴らすのも、選ぶのも、仕上げるのも人間。',
-            en:'🤝 AI is just one instrument. Humans play it, choose, and finish the work.'},
-  about_b3:{ja:'✅ 全作品はYouTubeのカバー／リミックスポリシーおよびAI透明性ガイドラインに準拠して運用しています。',
-            en:'✅ All works follow YouTube’s cover/remix policy and AI-transparency guidelines.'},
+  about_big:{ja:'知っている曲の、<br>知らない表情。', en:'Songs you know,<br>sides you’ve never seen.'},
+  about_p1:{ja:'Funny J-POPは、日本のポップスをさまざまな音楽文化から見つめ直す、カバー＆リ・アレンジのプロジェクトです。',
+            en:'Funny J-POP is a cover and re-arrangement project that looks at Japanese pop anew through many different musical cultures.'},
+  about_p2:{ja:'90年代のJ-POPを中心に、昭和歌謡から時代を越えて愛される名曲まで。70年代のソウルやファンク、アフリカのリズム、ラテンやゴスペルなど、思いがけない組み合わせを楽しんでいます。',
+            en:'Centered on ’90s J-POP, from Showa-era kayokyoku to classics loved across generations. We enjoy unexpected pairings: ’70s soul and funk, African rhythms, Latin, gospel and more.'},
+  about_p3:{ja:'そして、曲を聴いたときに頭の中に現れる歌手やバンド、衣装やステージの風景も、映像として形にしています。AIを含むさまざまな制作ツールを使いながら、大切にしているのは<b>原曲への敬意、音楽への好奇心、そして遊び心。</b>',
+            en:'We also turn the singers and bands, the costumes and stages that appear in your mind as you listen into video. While using a range of production tools, including AI, what we care about most is <b>respect for the original songs, curiosity about music, and a sense of play.</b>'},
+  about_fine:{ja:'全作品は、YouTubeのカバー／リミックスポリシーおよびAI透明性ガイドラインに沿って運用しています。',
+              en:'All works are run in line with YouTube’s cover/remix policy and AI-transparency guidelines.'},
+  explore_p:{ja:'ジュークボックスで叩いたり、診断したり、地図を旅したり。聴くだけじゃない遊び場です。',
+             en:'Jam on the jukebox, take the quiz, travel the map. A playground for more than listening.'},
+  ex1_t:{ja:'魂のリズム診断', en:'Soul Rhythm Check'},
+  ex1_d:{ja:'12の質問で、あなたの中で鳴っているリズムを診断。全64タイプ。', en:'12 questions to find the rhythm playing inside you. 64 types. (Japanese only)'},
+  ex2_t:{ja:'World Music Map', en:'World Music Map'},
+  ex2_d:{ja:'都市を起点に、土地に根ざした音楽ジャンルを地図で掘る。', en:'Dig into locally rooted music genres, city by city, on a world map.'},
+  ex3_t:{ja:'ギャラリー', en:'Gallery'},
+  ex3_d:{ja:'Instagramに並べたビジュアルを、チラッと。', en:'A quick peek at our visuals on Instagram.'},
+  ex4_t:{ja:'フリーBGM「PIZZA TIME」', en:'Free BGM: PIZZA TIME'},
+  ex4_d:{ja:'動画、SNS、イベント、お店のBGMに自由に使えるオリジナル曲。', en:'An original track you can use freely in videos, social posts, events and shops.'},
+  ex_go:{ja:'ひらく →', en:'Open →'},
+  msg_h2:{ja:'小さな実験から始まった、<br>音楽の旅。', en:'A journey in music<br>that began as a small experiment.'},
+  msg_p1:{ja:'2025年10月、「夏色」「負けないで」「HONEY」の3曲から始まったFunny J-POP。作品を聴いてくださる人が増え、思いがけない反応やつながりにも恵まれました。',
+          en:'Funny J-POP began in October 2025 with three songs: “Natsuiro,” “Makenaide” and “HONEY.” More and more people have been listening, and we’ve been lucky to find unexpected reactions and connections along the way.'},
+  msg_p2:{ja:'知っている曲には、まだ知らない面白さがある。<br>これからも、自由な発想で音楽の新しい表情を探していきます。',
+          en:'The songs you know still hold fun you haven’t found yet.<br>We’ll keep looking for new sides of music, with free ideas.'},
+  st1_n:{ja:'2025年10月', en:'Oct 2025'}, st1_l:{ja:'スタート', en:'STARTED'},
+  st2_n:{ja:'300本+', en:'300+'},         st2_l:{ja:'公開した動画', en:'VIDEOS'},
+  st3_n:{ja:'6万人+', en:'60K+'},         st3_l:{ja:'チャンネル登録', en:'SUBSCRIBERS'},
   footer_h2:{ja:'さあ、針を落とそう。', en:'Now, drop the needle.'},
   footer_p:{ja:'新しいグルーヴは毎回チャンネルから。登録して、次の一曲を見逃さないでください。',
             en:'Every new groove drops on the channel. Subscribe so you don’t miss the next one.'},
   foot_sub:{ja:'▶ YouTubeでチャンネル登録', en:'▶ Subscribe on YouTube'},
-  foot_map:{ja:'🗺 World Music Map で世界の音楽を掘る', en:'🗺 Dig into world music on the World Music Map'},
   foot_collab:{ja:'📩 コラボ・お仕事のご依頼', en:'📩 Collaborations & inquiries'},
   sound_on:{ja:'🔊 サウンド ON', en:'🔊 Sound ON'},
   sound_off:{ja:'🔇 サウンド OFF', en:'🔇 Sound OFF'},
-  mix1:{ja:'NOW PLAYING: ホーン全開、ソウルファンク・モード 🎷', en:'NOW PLAYING: horns wide open, Soul-Funk mode 🎷'},
-  mix2:{ja:'NOW PLAYING: ファンク多めのあったかブレンド 🔥', en:'NOW PLAYING: a warm, funk-heavy blend 🔥'},
-  mix3:{ja:'NOW PLAYING: ちょうどいいクロスオーバー 🎚', en:'NOW PLAYING: a just-right crossover 🎚'},
-  mix4:{ja:'NOW PLAYING: クラーベが効いてきたラテン・ブレンド 🌴', en:'NOW PLAYING: a Latin blend with the clave kicking in 🌴'},
-  mix5:{ja:'NOW PLAYING: 情熱全開、ラテングルーヴ・モード 💃', en:'NOW PLAYING: full passion, Latin-Groove mode 💃'},
-  embed_warn_preview:{ja:'⚠️ このプレビュー環境はセキュリティ設定でYouTube埋め込みと外部画像がブロックされます。GitHub PagesやNetlifyなど通常のWebサーバーで公開すると、プレーヤーもサムネイルも正常に表示されます。それまでは「YouTubeで開く ↗」をご利用ください。',
-                      en:'⚠️ This preview environment blocks YouTube embeds and external images for security. On a normal web host (GitHub Pages, Netlify, etc.) the player and thumbnails work fine. Until then, use “Open on YouTube ↗”.'},
-  shout25:{ja:'🎶 いい感じ！', en:'🎶 Nice!'},
-  shout100:{ja:'🕺 GROOVY!!', en:'🕺 GROOVY!!'},
-  shout300:{ja:'🪩 SUPER FUNKY!!', en:'🪩 SUPER FUNKY!!'},
-  shout1000:{ja:'👑 GROOVE MASTER!!', en:'👑 GROOVE MASTER!!'},
-  shout3000:{ja:'🌋 リズム火山、噴火！！', en:'🌋 Rhythm volcano, erupting!!'},
-  shout10000:{ja:'🛸 GROOVE LEGEND ─ 人類卒業！！', en:'🛸 GROOVE LEGEND — beyond human!!'},
-  tag_quarter:{ja:'♩', en:'♩'}, tag_eighth:{ja:'♪8分', en:'♪8th'}, tag_sixteenth:{ja:'♬16分', en:'♬16th'},
-  full_set:{ja:' 🌈フルセット!', en:' 🌈Full set!'},
-  colorful:{ja:' 🎨カラフル', en:' 🎨Colorful'},
-  combo_unit:{ja:'コンボ', en:' combo'},
+  ex0_t:{ja:'ジュークボックス', en:'Jukebox'},
+  ex0_d:{ja:'10曲から選んで、観ながらパッドを叩いてセッション。', en:'Pick from 10 tracks, then jam along on the drum pads while you watch.'},
+  works_p:{ja:'これまでに公開した作品から。気になった一本は、YouTubeでどうぞ。', en:'A few of the works we’ve released. Watch any of them on YouTube.'},
+  works_more:{ja:'▶ YouTubeで全作品を観る', en:'▶ See all works on YouTube'},
 };
 function t(k){ const e=T[k]; return e ? (e[LANG] ?? e.ja) : k; }
 function applyLang(){
   document.documentElement.lang = LANG;
   document.querySelectorAll('[data-i18n]').forEach(el=>{ el.innerHTML = t(el.dataset.i18n); });
-  const lt = document.getElementById('langToggle'); if(lt) lt.textContent = LANG==='ja' ? 'EN' : '日本語';
+  if(window.FJHeader) FJHeader.setLang(LANG);
   if(typeof syncDynamicLang==='function') syncDynamicLang();
 }
 function setLang(l){ LANG=l; localStorage.setItem('wm_lang', l); applyLang(); }
 
 /* ============ ticker ============ */
-const genres = ['SOUL FUNK','NEO SOUL','GOSPEL','AFROBEAT','MOTOWN','CITY GROOVE','J-POP CLASSICS'];
+const genres = ['SOUL FUNK','DISCO','NEO SOUL','GOSPEL','AFROBEAT','LATIN','MOTOWN','CITY GROOVE','J-POP CLASSICS'];
 const tickerText = genres.map(g=>g+'　✦　').join('');
 document.getElementById('tickerInner').textContent = (tickerText.repeat(4));
 
@@ -667,7 +468,6 @@ let dragging = false, lastPointerAngle = 0, lastMoveTime = 0;
 
 /* ---- scratch sound (Web Audio で合成、音源ファイル不使用) ---- */
 let audioCtx = null, scratchGain = null, scratchFilter = null;
-let masterOut = null, analyser = null;   // 全音をここに集約 → 解析してビジュアライザを駆動
 let soundOn = true;
 const soundToggle = document.getElementById('soundToggle');
 
@@ -683,14 +483,6 @@ function initAudio(){
   if(!AC) return;
   audioCtx = new AC();
 
-  /* マスターバス → アナライザ → 出力。すべての音をここに集約してビジュアライザで解析する */
-  masterOut = audioCtx.createGain();
-  analyser = audioCtx.createAnalyser();
-  analyser.fftSize = 256;
-  analyser.smoothingTimeConstant = 0.7;
-  masterOut.connect(analyser);
-  analyser.connect(audioCtx.destination);
-
   /* スクラッチ: ホワイトノイズ → バンドパス。回す速さで音量と音程が変わる */
   const noise = audioCtx.createBufferSource();
   noise.buffer = makeNoiseBuffer(audioCtx, (d,len)=>{ for(let i=0;i<len;i++) d[i] = Math.random()*2-1; });
@@ -698,7 +490,7 @@ function initAudio(){
   scratchFilter = audioCtx.createBiquadFilter();
   scratchFilter.type = 'bandpass'; scratchFilter.frequency.value = 700; scratchFilter.Q.value = 1.4;
   scratchGain = audioCtx.createGain(); scratchGain.gain.value = 0;
-  noise.connect(scratchFilter); scratchFilter.connect(scratchGain); scratchGain.connect(masterOut);
+  noise.connect(scratchFilter); scratchFilter.connect(scratchGain); scratchGain.connect(audioCtx.destination);
   noise.start();
 }
 function updateScratchSound(){
@@ -763,368 +555,22 @@ function tick(){
 }
 requestAnimationFrame(tick);
 
-/* ============ crossfader: theme blend ============ */
-const themes = {
-  a: { bg:[42,20,14],  bg2:[58,29,18],  acc1:[255,107,53], acc2:[245,192,78], cream:[246,232,213] }, /* SOUL FUNK */
-  b: { bg:[10,38,30],  bg2:[18,62,43],  acc1:[255,77,109], acc2:[158,240,26], cream:[234,246,226] }  /* LATIN GROOVE */
-};
-const fader = document.getElementById('fader');
-const mixNow = document.getElementById('mixNow');
-const root = document.documentElement;
-function lerp(a,b,t){ return Math.round(a+(b-a)*t); }
-function rgb(a,b,t){ return 'rgb('+lerp(a[0],b[0],t)+','+lerp(a[1],b[1],t)+','+lerp(a[2],b[2],t)+')'; }
-function applyMix(){
-  const mv = fader.value/100;
-  for(const k of ['bg','bg2','acc1','acc2','cream']){
-    root.style.setProperty('--'+k, rgb(themes.a[k], themes.b[k], mv));
-  }
-  mixNow.textContent = t(
-    mv < 0.2 ? 'mix1' : mv < 0.45 ? 'mix2' : mv < 0.7 ? 'mix3' : mv < 0.9 ? 'mix4' : 'mix5'
-  );
-}
-fader.addEventListener('input', applyMix);
-applyMix();
-
-/* ============ jukebox: lights + record rack → embedded player ============ */
-const jukeLights = document.getElementById('jukeLights');
-for(let i=0;i<18;i++) jukeLights.appendChild(document.createElement('i'));
-
-const jukeVideos = [
-  '4TgmM9R9zUU','qEd7D2Fej5M','4M1VCcnZ854','8r59SW1rpeM','aEhMkWyGGyg',
-  'oW5gUsfIAxg','C1FkX_6CE7w','HHqSmEMTNys','CtJQ-ZzQ5UE','JtGeDQa-OTI'
-];
-/* 公開前(noembed未取得)でもタイトルを出すための既知タイトル */
-const knownTitles = {
-  '4TgmM9R9zUU': '未来予想図II / DREAMS COME TRUE – Deep Soul ver.｜Funny J-POP'
-};
-const jukeRack = document.getElementById('jukeRack');
-const ytPlayer = document.getElementById('ytPlayer');
-const nowTitle = document.getElementById('nowTitle');
-const openYt = document.getElementById('openYt');
-const titleCache = {};
-const trackEls = {};
-let currentVid = 'qEd7D2Fej5M';
-
-function loadVideo(id, autoplay){
-  currentVid = id;
-  ytPlayer.src = 'https://www.youtube.com/embed/' + id + (autoplay ? '?autoplay=1' : '');
-  openYt.href = 'https://www.youtube.com/watch?v=' + id;
-  nowTitle.textContent = titleCache[id] ? '▶ ' + titleCache[id] : '▶ NOW PLAYING';
-  for(const k in trackEls) trackEls[k].classList.toggle('playing', k === id);
-  resetRhythmScore();   // 曲が変わったらBPM推定の履歴もスコアもリセット
-}
-
-jukeVideos.forEach((id,i)=>{
-  const slot = (i < 5 ? 'A' : 'B') + (i % 5 + 1);   // ジュークボックス風スロット番号
-  const b = document.createElement('button');
-  b.className = 'track'; b.type = 'button';
-  b.innerHTML =
-    '<span class="no">'+slot+'</span>'+
-    '<img class="tmb" src="https://i.ytimg.com/vi/'+id+'/mqdefault.jpg" alt="" loading="lazy" onerror="this.remove()">'+
-    '<span class="tt" id="vt-'+id+'">TRACK '+slot+'</span>'+
-    '<span class="pl" aria-hidden="true"></span>';
-  b.addEventListener('click', ()=> loadVideo(id, true));
-  (i < 5 ? document.getElementById('rackColA') : document.getElementById('rackColB')).appendChild(b);
-  trackEls[id] = b;
-  if(knownTitles[id]){            // 既知タイトルを先に表示（公開前でも出る）
-    titleCache[id] = knownTitles[id];
-    b.querySelector('.tt').textContent = knownTitles[id];
-    b.setAttribute('aria-label', knownTitles[id]);
-  }
-  /* タイトルをページ表示時に自動取得（取得できない場合はスロット番号のまま） */
-  fetch('https://noembed.com/embed?url=' + encodeURIComponent('https://www.youtube.com/watch?v=' + id))
+/* ============ works: 公開作品のサムネイル(タイトルは表示時に取得) ============ */
+const workVideos = ['qEd7D2Fej5M','4M1VCcnZ854','8r59SW1rpeM','aEhMkWyGGyg'];
+const worksGrid = document.getElementById('worksGrid');
+workVideos.forEach(id=>{
+  const a = document.createElement('a');
+  a.className = 'work'; a.target = '_blank'; a.rel = 'noopener';
+  a.href = 'https://www.youtube.com/watch?v=' + id;
+  a.innerHTML =
+    '<img src="https://i.ytimg.com/vi/'+id+'/mqdefault.jpg" alt="" loading="lazy">'+
+    '<span class="work-t"><span>Funny J-POP</span></span>';
+  worksGrid.appendChild(a);
+  fetch('https://noembed.com/embed?url=' + encodeURIComponent(a.href))
     .then(r=>r.json())
-    .then(d=>{
-      if(d && d.title){
-        titleCache[id] = d.title;
-        document.getElementById('vt-'+id).textContent = d.title;
-        b.setAttribute('aria-label', d.title);
-        if(currentVid === id) nowTitle.textContent = '▶ ' + d.title;
-      }
-    })
+    .then(d=>{ if(d && d.title) a.querySelector('.work-t span').textContent = d.title.replace(/\s*[｜|]\s*Funny J-POP\s*$/, ''); })
     .catch(()=>{});
 });
-trackEls[currentVid].classList.add('playing');
-
-/* ============ drum pads (Web Audio 合成パーカッション) ============ */
-let whiteBuf = null;
-function ensureAudio(){
-  initAudio();
-  if(audioCtx && audioCtx.state === 'suspended') audioCtx.resume();
-  return audioCtx;
-}
-function noiseBurst(ctx, t, o){
-  if(!whiteBuf) whiteBuf = makeNoiseBuffer(ctx, (d,len)=>{ for(let i=0;i<len;i++) d[i]=Math.random()*2-1; });
-  const s = ctx.createBufferSource(); s.buffer = whiteBuf;
-  const f = ctx.createBiquadFilter(); f.type = o.type||'highpass'; f.frequency.value = o.freq||1000; f.Q.value = o.q||0.8;
-  const g = ctx.createGain();
-  g.gain.setValueAtTime(o.gain||0.8, t);
-  g.gain.exponentialRampToValueAtTime(0.001, t + (o.dur||0.2));
-  s.connect(f); f.connect(g); g.connect(masterOut || ctx.destination);
-  s.start(t); s.stop(t + (o.dur||0.2) + 0.05);
-}
-function tone(ctx, t, o){
-  const osc = ctx.createOscillator(), g = ctx.createGain();
-  osc.type = o.type||'sine';
-  osc.frequency.setValueAtTime(o.f0, t);
-  if(o.f1) osc.frequency.exponentialRampToValueAtTime(o.f1, t + (o.slide||0.1));
-  g.gain.setValueAtTime(o.gain||0.8, t);
-  g.gain.exponentialRampToValueAtTime(0.001, t + o.dur);
-  osc.connect(g); g.connect(masterOut || ctx.destination);
-  osc.start(t); osc.stop(t + o.dur + 0.02);
-}
-/* シンバル用: 不協和な6つの矩形波をハイパスに通す(TR-808方式)。
-   低い基音は捨てて上の倍音だけ残すと、金属板らしいシャリ感になる */
-function metalBurst(ctx, t, o){
-  const hp = ctx.createBiquadFilter(); hp.type='highpass'; hp.frequency.value = o.hp;
-  const bp = ctx.createBiquadFilter(); bp.type='bandpass'; bp.frequency.value = o.bp; bp.Q.value = o.q||0.6;
-  const g = ctx.createGain();
-  g.gain.setValueAtTime(o.gain, t);
-  g.gain.exponentialRampToValueAtTime(0.001, t + o.dur);
-  hp.connect(bp); bp.connect(g); g.connect(masterOut || ctx.destination);
-  [263,400,421,474,587,845].forEach(f=>{
-    const osc = ctx.createOscillator();
-    osc.type = 'square'; osc.frequency.value = f * (o.fmult||1);
-    osc.connect(hp);
-    osc.start(t); osc.stop(t + o.dur + 0.05);
-  });
-}
-const drums = {
-  kick(ctx,t){ tone(ctx,t,{f0:160,f1:45,slide:0.12,dur:0.3,gain:1}); },
-  snare(ctx,t){ noiseBurst(ctx,t,{type:'highpass',freq:1800,dur:0.18,gain:0.6}); tone(ctx,t,{type:'triangle',f0:190,dur:0.12,gain:0.5}); },
-  clap(ctx,t){ [0,0.014,0.028].forEach(d=>noiseBurst(ctx,t+d,{type:'bandpass',freq:1400,q:1.5,dur:0.12,gain:0.55})); },
-  hat(ctx,t){ noiseBurst(ctx,t,{type:'highpass',freq:7500,dur:0.05,gain:0.45}); },
-  openhat(ctx,t){ noiseBurst(ctx,t,{type:'highpass',freq:6800,dur:0.38,gain:0.4}); },
-  conga(ctx,t){ tone(ctx,t,{f0:380,f1:235,slide:0.02,dur:0.22,gain:0.7}); },
-  cowbell(ctx,t){
-    [556,845].forEach(f=>{
-      const osc=ctx.createOscillator(), bp=ctx.createBiquadFilter(), g=ctx.createGain();
-      osc.type='square'; osc.frequency.value=f;
-      bp.type='bandpass'; bp.frequency.value=780; bp.Q.value=2;
-      g.gain.setValueAtTime(0.45,t); g.gain.exponentialRampToValueAtTime(0.001,t+0.24);
-      osc.connect(bp); bp.connect(g); g.connect(masterOut || ctx.destination);
-      osc.start(t); osc.stop(t+0.26);
-    });
-  },
-  shaker(ctx,t){ noiseBurst(ctx,t,{type:'bandpass',freq:5600,q:1.2,dur:0.11,gain:0.4}); },
-  ride(ctx,t){
-    metalBurst(ctx,t,{hp:7500,bp:10500,q:0.5,gain:0.5,dur:0.1});   // チンッ(スティックのアタック)
-    metalBurst(ctx,t,{hp:6500,bp:9000,q:0.8,gain:0.16,dur:1.3});   // 余韻のシマー
-  },
-  crash(ctx,t){
-    metalBurst(ctx,t,{hp:5200,bp:8000,q:0.4,gain:0.65,dur:0.3,fmult:1.23});  // アタック
-    metalBurst(ctx,t,{hp:4500,bp:7500,q:0.5,gain:0.28,dur:2.3,fmult:1.23});  // ウォッシュ
-    noiseBurst(ctx,t,{type:'highpass',freq:6000,dur:1.5,gain:0.22});         // 空気感
-  },
-};
-/* パッド用ミニイラスト（手描き風SVG） */
-const padIcons = {
-  kick:    '<svg viewBox="0 0 40 40" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round"><circle cx="18" cy="21" r="12"/><circle cx="18" cy="21" r="4" fill="currentColor" stroke="none"/><path d="M33 9l-8 8"/><circle cx="34" cy="8" r="3.2" fill="currentColor" stroke="none"/></svg>',
-  snare:   '<svg viewBox="0 0 40 40" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round"><ellipse cx="20" cy="18" rx="13" ry="5"/><path d="M7 18v8c0 2.8 5.8 5 13 5s13-2.2 13-5v-8"/><path d="M5 6l9 9M35 6l-9 9"/></svg>',
-  clap:    '<svg viewBox="0 0 40 40" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round"><path d="M14 36c-4-3-7-8-7-13l5-3 4 5V14l4-2 3 6 2-10 4 1-1 12c0 8-5 13-9 15z" /><path d="M30 8l4-4M33 14l5-2M26 5l1-5" /></svg>',
-  hat:     '<svg viewBox="0 0 40 40" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round"><ellipse cx="20" cy="14" rx="14" ry="3.5"/><ellipse cx="20" cy="19" rx="14" ry="3.5"/><path d="M20 22v13M14 35h12"/></svg>',
-  openhat: '<svg viewBox="0 0 40 40" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round"><ellipse cx="20" cy="9" rx="14" ry="3.5" transform="rotate(-8 20 9)"/><ellipse cx="20" cy="21" rx="14" ry="3.5"/><path d="M20 24v11M14 35h12"/></svg>',
-  conga:   '<svg viewBox="0 0 40 40" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round"><ellipse cx="20" cy="8" rx="9" ry="3.5"/><path d="M11 8c0 10 1 20 4 27h10c3-7 4-17 4-27"/><path d="M12 18h16M13.5 27h13"/></svg>',
-  cowbell: '<svg viewBox="0 0 40 40" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M15 7h10l5 24H10z"/><path d="M17 7V4h6v3"/><path d="M16 36h8"/></svg>',
-  shaker:  '<svg viewBox="0 0 40 40" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round"><rect x="12" y="6" width="16" height="28" rx="8"/><circle cx="17" cy="14" r="1.4" fill="currentColor" stroke="none"/><circle cx="23" cy="18" r="1.4" fill="currentColor" stroke="none"/><circle cx="18" cy="24" r="1.4" fill="currentColor" stroke="none"/><path d="M4 12l4 2M4 20h5M4 28l4-2" opacity=".7"/></svg>',
-  ride:    '<svg viewBox="0 0 40 40" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round"><ellipse cx="20" cy="14" rx="16" ry="5"/><path d="M20 19v14M14 33h12"/><path d="M8 8l5 3M32 8l-5 3M20 4v6" opacity=".7"/><circle cx="20" cy="14" r="2.5" fill="currentColor" stroke="none"/></svg>',
-  crash:   '<svg viewBox="0 0 40 40" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round"><ellipse cx="20" cy="14" rx="16" ry="4.5" transform="rotate(-12 20 14)"/><path d="M20 19v14M14 33h12"/><path d="M33 3l-4 5M5 6l5 3M37 12l-6 1M12 2l2 5" opacity=".7"/></svg>',
-};
-const padDefs = [
-  { n:'KICK',    k:'a', f:'kick',    c:'#ff6b35' },
-  { n:'SNARE',   k:'s', f:'snare',   c:'#f5c04e' },
-  { n:'CLAP',    k:'d', f:'clap',    c:'#ff4d8d' },
-  { n:'HAT',     k:'f', f:'hat',     c:'#4dd8ff' },
-  { n:'OPEN HAT',k:'g', f:'openhat', c:'#8ee08e' },
-  { n:'CONGA',   k:'h', f:'conga',   c:'#e8a06a' },
-  { n:'COWBELL', k:'j', f:'cowbell', c:'#c9a6ff' },
-  { n:'SHAKER',  k:'k', f:'shaker',  c:'#f6e8d5' },
-  { n:'RIDE',    k:'l', f:'ride',    c:'#ffe066' },
-  { n:'CRASH',   k:';', f:'crash',   c:'#ff4d4d' },
-];
-const padsEl = document.getElementById('pads');
-const keyMap = {};
-padDefs.forEach(p=>{
-  const b = document.createElement('button');
-  b.className = 'pad'; b.type = 'button';
-  b.style.background = p.c;
-  b.innerHTML = padIcons[p.f] + p.n + '<small>' + p.k.toUpperCase() + '</small>';
-  b.addEventListener('pointerdown', e=>{ e.preventDefault(); hitPad(p, b); });
-  padsEl.appendChild(b);
-  keyMap[p.k] = { def:p, el:b };
-});
-
-/* file:// やClaudeのアーティファクト共有ページではYouTube埋め込み・外部画像がブロックされるため案内を表示 */
-const sandboxed = location.protocol === 'file:' ||
-  /claudeusercontent\.com|claude\.ai|claude\.site/i.test(location.hostname) ||
-  /claudeusercontent\.com|claude\.ai|claude\.site/i.test(document.referrer);
-if(sandboxed){
-  const w = document.getElementById('embedWarn');
-  w.hidden = false;
-  if(location.protocol !== 'file:'){
-    w.dataset.i18n = 'embed_warn_preview';   // applyLang が以後この文言を使う
-    w.innerHTML = t('embed_warn_preview');
-  }
-}
-function hitPad(p, el){
-  const ctx = ensureAudio();
-  if(ctx && soundOn) drums[p.f](ctx, ctx.currentTime);
-  el.classList.add('hit');
-  setTimeout(()=>el.classList.remove('hit'), 110);
-  scorePad(p.f);
-}
-
-/* ============ rhythm score (loose, music-game style) ============ */
-const scoreValueEl = document.getElementById('scoreValue');
-const comboValueEl = document.getElementById('comboValue');
-const maxComboValueEl = document.getElementById('maxComboValue');
-const varietyValueEl = document.getElementById('varietyValue');
-const feedbackEl = document.getElementById('scoreFeedback');
-const RHYTHM = { score:0, combo:0, best:0, hits:[], sounds:[], beatMs:0, phase:0 };
-
-/* コンボのマイルストーン演出 */
-const COMBO_SHOUTS = { 25:'shout25', 100:'shout100', 300:'shout300', 1000:'shout1000', 3000:'shout3000', 10000:'shout10000' };
-function showShout(text){
-  const el = document.createElement('div');
-  el.className = 'combo-shout';
-  el.textContent = text;
-  document.querySelector('.jukebox').appendChild(el);
-  setTimeout(()=>el.remove(), 2300);
-}
-
-function resetRhythmScore(){
-  const lastScore = RHYTHM.score;
-  RHYTHM.score = 0; RHYTHM.combo = 0; RHYTHM.best = 0;
-  RHYTHM.hits.length = 0; RHYTHM.sounds.length = 0;
-  RHYTHM.beatMs = 0; RHYTHM.phase = 0;
-  RHYTHM.lastLabel = RHYTHM.lastBase = undefined;
-  scoreValueEl.textContent = '0';
-  comboValueEl.textContent = '0';
-  maxComboValueEl.textContent = '0';
-  varietyValueEl.textContent = '0';
-  feedbackEl.textContent = lastScore > 0
-    ? (LANG==='en'
-        ? '🏁 Last track scored ' + lastScore.toLocaleString() + ' — restarting with a new record!'
-        : '🏁 前の曲のスコア ' + lastScore.toLocaleString() + ' ─ 新しいレコードでリスタート！')
-    : t('start_hint');
-  feedbackEl.classList.remove('flash');
-}
-
-function estimateBeatMs(){
-  if(RHYTHM.hits.length < 3) return null;
-  const recent = RHYTHM.hits.slice(-8);
-  const diffs = [];
-  for(let i=1;i<recent.length;i++) diffs.push(recent[i]-recent[i-1]);
-  diffs.sort((a,b)=>a-b);
-  let med = diffs[Math.floor(diffs.length/2)];
-  while(med < 250) med *= 2;     // ~240bpm 上限
-  while(med > 1200) med /= 2;    // ~50bpm 下限
-  return med;
-}
-
-function scorePad(soundName){
-  const now = performance.now();
-  const last = RHYTHM.hits[RHYTHM.hits.length-1];
-  if(last && now - last > 3000){ // 3秒沈黙でリセット
-    RHYTHM.hits.length = 0; RHYTHM.sounds.length = 0; RHYTHM.combo = 0;
-  }
-  RHYTHM.sounds.push(soundName);
-  if(RHYTHM.sounds.length > 10) RHYTHM.sounds.shift();
-
-  const prev = RHYTHM.hits[RHYTHM.hits.length-1];
-  /* 50ms以内の連打は「同時押し(コード)」: 1打目の判定を引き継ぎ、
-     BPM推定の履歴とコンボは進めない(間隔≈0msがOFF BEAT扱いになるのを防ぐ) */
-  const isChord = prev !== undefined && (now - prev) < 50;
-  let label = 'NICE!', base = 50, keepCombo = true;
-
-  if(isChord){
-    label = RHYTHM.lastLabel || label;
-    base = RHYTHM.lastBase || base;
-  }else{
-    RHYTHM.hits.push(now);
-    if(RHYTHM.hits.length > 16) RHYTHM.hits.shift();
-    const beat = estimateBeatMs();
-    if(beat && RHYTHM.hits.length >= 4){
-      const grid = beat / 4;                    // 16分音符のグリッドで判定
-      const k = Math.max(1, Math.round((now - prev) / grid));
-      const predicted = prev + k * grid;
-      const offset = Math.abs(now - predicted);
-      /* 4分(♩)はそのまま、8分・16分は少しだけ控えめに加点 */
-      const sub = (k % 4 === 0) ? {mult:1,   tag:t('tag_quarter')} :
-                  (k % 2 === 0) ? {mult:0.9, tag:t('tag_eighth')} :
-                                  {mult:0.8, tag:t('tag_sixteenth')};
-      /* 判定窓を全体的にシビアに。コンボはPERFECT/GOODのみ継続 */
-      const pTol = Math.min(38, grid*0.18), gTol = Math.min(80, grid*0.34), oTol = Math.min(140, grid*0.52);
-      if(offset < pTol){ label='PERFECT! ⭐ '+sub.tag; base=150*sub.mult; keepCombo=true; }
-      else if(offset < gTol){ label='GOOD! 🎯 '+sub.tag; base=80*sub.mult; keepCombo=true; }
-      else if(offset < oTol){ label='OK 👍 '+sub.tag; base=30*sub.mult; keepCombo=false; }
-      else { label='OFF BEAT 💥'; base=8; keepCombo=false; }
-      RHYTHM.beatMs = beat;                       // ビートインジケータ用にテンポを記録
-      if(keepCombo) RHYTHM.phase = predicted;     // 良い打点を拍の基準にする
-    }
-    RHYTHM.lastLabel = label; RHYTHM.lastBase = base;
-    if(keepCombo) RHYTHM.combo++; else RHYTHM.combo = 0;
-    if(RHYTHM.combo > RHYTHM.best) RHYTHM.best = RHYTHM.combo;
-    if(COMBO_SHOUTS[RHYTHM.combo]) showShout(t(COMBO_SHOUTS[RHYTHM.combo]));
-  }
-
-  const unique = new Set(RHYTHM.sounds).size;
-  const varietyMult = 1 + (unique - 1) * 0.15;          // 1.0x 〜 ~2.35x (10音)
-  const comboMult = 1 + Math.min(RHYTHM.combo, 40) * 0.025; // 1.0x 〜 2.0x
-  const points = Math.round(base * varietyMult * comboMult);
-  RHYTHM.score += points;
-
-  scoreValueEl.textContent = RHYTHM.score.toLocaleString();
-  comboValueEl.textContent = RHYTHM.combo;
-  maxComboValueEl.textContent = RHYTHM.best;
-  varietyValueEl.textContent = unique;
-
-  let extras = '';
-  if(unique === 10) extras += t('full_set');
-  else if(unique >= 6) extras += t('colorful');
-  if(RHYTHM.combo >= 20) extras += ' 🔥' + RHYTHM.combo + t('combo_unit') + '!!';
-  else if(RHYTHM.combo >= 8) extras += ' ✨' + RHYTHM.combo + t('combo_unit');
-
-  feedbackEl.textContent = label + ' +' + points + extras;
-  scoreValueEl.classList.remove('bump');
-  feedbackEl.classList.remove('flash');
-  void scoreValueEl.offsetWidth;
-  scoreValueEl.classList.add('bump');
-  feedbackEl.classList.add('flash');
-}
-addEventListener('keydown', e=>{
-  if(e.repeat || e.metaKey || e.ctrlKey || e.altKey) return;
-  const tag = (e.target.tagName||'').toLowerCase();
-  if(tag === 'input' || tag === 'textarea' || tag === 'select') return;
-  const hit = keyMap[e.key.toLowerCase()];
-  if(hit) hitPad(hit.def, hit.el);
-});
-
-/* ============ audio visualizer (実際に鳴っている音に反応・動画オーバーレイ) ============ */
-const viz = document.getElementById('viz');
-const beatSpectrum = document.getElementById('beatSpectrum');
-const SPEC_BARS = 40;
-const specBars = [];
-for(let i=0;i<SPEC_BARS;i++){ const b=document.createElement('i'); beatSpectrum.appendChild(b); specBars.push(b); }
-let freqData = null;
-function audioLoop(){
-  if(analyser){
-    const bins = analyser.frequencyBinCount;            // 128 (fftSize 256)
-    if(!freqData || freqData.length !== bins) freqData = new Uint8Array(bins);
-    analyser.getByteFrequencyData(freqData);
-    let overall = 0;
-    for(let i=0;i<bins;i++) overall += freqData[i];
-    overall /= bins;
-    for(let b=0;b<SPEC_BARS;b++){
-      const idx = Math.floor((b/SPEC_BARS) * bins * 0.72);
-      const v = freqData[idx] / 255;
-      specBars[b].style.height = (3 + v*v*97).toFixed(1) + '%';   // 二乗でメリハリ
-    }
-    viz.classList.toggle('idle', overall < 3);          // ほぼ無音なら控えめに
-  }
-  requestAnimationFrame(audioLoop);
-}
-if(!reduceMotion) requestAnimationFrame(audioLoop);
 
 /* ============ equalizer (pointer-reactive) ============ */
 const eq = document.getElementById('eq');
@@ -1151,10 +597,7 @@ eq.addEventListener('pointerleave', ()=>{ eqHover = false; if(!reduceMotion) req
 /* ============ language toggle wiring ============ */
 function syncDynamicLang(){
   if(typeof soundToggle!=='undefined' && soundToggle) soundToggle.textContent = soundOn ? t('sound_on') : t('sound_off');
-  if(typeof applyMix==='function') applyMix();
 }
-const _langToggle = document.getElementById('langToggle');
-if(_langToggle) _langToggle.addEventListener('click', ()=> setLang(LANG==='ja' ? 'en' : 'ja'));
 applyLang();
 </script>
 </body>

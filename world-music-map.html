@@ -56,28 +56,7 @@ h1,h2,h3,.disp{font-family:'RocknRoll One',sans-serif;font-weight:400}
 a{color:inherit}
 ::selection{background:var(--teal);color:var(--ink)}
 
-/* ---------- header ---------- */
-header{
-  display:flex;align-items:center;justify-content:space-between;gap:12px;
-  padding:14px clamp(14px,4vw,40px);
-  position:sticky;top:0;z-index:1100;
-  background:color-mix(in srgb, var(--bg) 86%, transparent);
-  backdrop-filter:blur(10px);
-  border-bottom:1px solid var(--line);
-}
-.logo{display:flex;align-items:center;gap:11px;font-family:'RocknRoll One';font-size:clamp(15px,2.3vw,21px);letter-spacing:.03em}
-.logo .globe{
-  width:30px;height:30px;border-radius:50%;flex:none;
-  background:
-    radial-gradient(circle at 35% 30%, #4be0c8 0 18%, transparent 19%),
-    radial-gradient(circle at 70% 65%, var(--acc2) 0 14%, transparent 15%),
-    conic-gradient(from 0deg, var(--teal), #1c5a63, var(--teal));
-  border:3px solid var(--cream);
-  box-shadow:0 0 0 2px var(--ink) inset;
-  animation:spin 14s linear infinite;
-}
 @keyframes spin{to{transform:rotate(360deg)}}
-.nav-links{display:flex;gap:8px;align-items:center;flex-wrap:wrap}
 .btn{
   display:inline-flex;align-items:center;gap:7px;
   font-family:'RocknRoll One';font-size:13px;
@@ -98,14 +77,6 @@ header{
   padding:clamp(26px,5vw,52px) clamp(14px,4vw,40px) clamp(14px,3vw,26px);
   text-align:center;
 }
-.lang-toggle{
-  position:absolute;top:14px;right:14px;z-index:5;cursor:pointer;
-  font-family:'RocknRoll One';font-size:12px;letter-spacing:.08em;
-  background:color-mix(in srgb,var(--ink) 35%,transparent);color:var(--cream);
-  border:2px solid var(--teal);border-radius:999px;padding:6px 14px;
-  transition:background .15s,color .15s;
-}
-.lang-toggle:hover{background:var(--teal);color:var(--ink)}
 .kicker{
   display:inline-block;font-size:12px;letter-spacing:.2em;
   color:var(--teal);border:2px solid var(--teal);border-radius:999px;
@@ -419,23 +390,19 @@ footer .fine{margin-top:22px;font-size:11px;opacity:.5;line-height:1.9}
   .panel{box-shadow:6px 6px 0 color-mix(in srgb, var(--acc1) 40%, transparent)}
 }
 @media (prefers-reduced-motion:reduce){
-  .logo .globe{animation:none}
 }
 </style>
+<link rel="stylesheet" href="assets/site-header.css">
 </head>
 <body>
 
-<header>
-  <div class="logo"><span class="globe"></span>WORLD MUSIC MAP</div>
-  <div class="nav-links">
-    <a class="btn ghost" href="index.html">← Funny J-POP</a>
-    <a class="btn teal" href="#explorer">🗺 地図を見る</a>
-  </div>
+<header class="site-header" id="siteHeader" data-page="map" data-bilingual>
+  <a class="sh-logo" href="index.html"><span class="sh-dot"></span>FUNNY J-POP</a>
 </header>
+<script src="assets/site-header.js"></script>
 
 <!-- ================= HERO ================= -->
 <div class="hero">
-  <button class="lang-toggle" id="langToggle" type="button" aria-label="Switch language">EN</button>
   <span class="kicker">DISCOVERY MAP × YOUTUBE</span>
   <h1><span data-i18n="hero_h1">世界の音楽を、地図で掘る。</span>
     <span class="en">WORLD MUSIC DISCOVERY MAP</span>
@@ -592,7 +559,7 @@ function applyLang(){
   document.documentElement.lang = LANG;
   document.querySelectorAll('[data-i18n]').forEach(el=>{ el.innerHTML = t(el.dataset.i18n); });
   document.querySelectorAll('[data-i18n-ph]').forEach(el=>{ el.placeholder = t(el.dataset.i18nPh); });
-  const lt = document.getElementById('langToggle'); if(lt) lt.textContent = LANG==='ja' ? 'EN' : '日本語';
+  if(window.FJHeader) FJHeader.setLang(LANG);
   if(typeof buildFeatured==='function' && Object.keys(genreById).length) buildFeatured();
   rerenderPanel();
 }
@@ -1117,9 +1084,6 @@ function buildSearch(){
 }
 
 /* ============ init ============ */
-const _langToggle = document.getElementById('langToggle');
-if(_langToggle){ _langToggle.textContent = LANG==='ja' ? 'EN' : '日本語';
-  _langToggle.addEventListener('click', ()=> setLang(LANG==='ja' ? 'en' : 'ja')); }
 document.documentElement.lang = LANG;
 document.querySelectorAll('[data-i18n]').forEach(el=>{ el.innerHTML = t(el.dataset.i18n); });
 document.querySelectorAll('[data-i18n-ph]').forEach(el=>{ el.placeholder = t(el.dataset.i18nPh); });

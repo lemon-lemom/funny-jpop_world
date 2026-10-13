@@ -26,7 +26,7 @@
 <meta name="twitter:image" content="https://lemon-lemom.github.io/funny-jpop_world/assets/pizza-time/og-pizza-time.jpg">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Dela+Gothic+One&family=Shrikhand&family=Zen+Maru+Gothic:wght@500;700;900&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Dela+Gothic+One&family=RocknRoll+One&family=Shrikhand&family=Zen+Maru+Gothic:wght@500;700;900&display=swap" rel="stylesheet">
 <style>
 :root{
   --crust:#2A140B;
@@ -59,14 +59,6 @@ a{color:var(--gold)}
 .wrap{max-width:var(--max);margin:0 auto;padding:0 var(--gutter)}
 .sr-only{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
 
-/* ───── top bar ───── */
-.bar{display:flex;align-items:center;justify-content:space-between;gap:12px;padding:14px var(--gutter);max-width:var(--max);margin:0 auto}
-.home{display:flex;align-items:center;gap:10px;color:var(--mozz);text-decoration:none;font-weight:700;font-size:15px}
-.home img{width:32px;height:32px;border-radius:8px}
-.lang{display:flex;border:2px solid var(--mozz-dim);border-radius:999px;overflow:hidden}
-.lang button{all:unset;cursor:pointer;padding:4px 14px;font-weight:700;font-size:14px;color:var(--mozz-dim)}
-.lang button[aria-pressed="true"]{background:var(--mozz);color:var(--ink)}
-.lang button:focus-visible{outline:3px solid var(--gold);outline-offset:-3px}
 
 /* ───── hero ───── */
 .hero{display:grid;grid-template-columns:minmax(0,5fr) minmax(0,6fr);gap:clamp(24px,4vw,56px);align-items:center;padding-top:clamp(12px,3vw,36px);padding-bottom:clamp(40px,6vw,72px)}
@@ -276,16 +268,14 @@ footer a{color:var(--mozz)}
   .btn,.knob,.toast{transition:none}
 }
 </style>
+<link rel="stylesheet" href="assets/site-header.css">
 </head>
 <body>
 
-<header class="bar">
-  <a class="home" href="index.html"><img src="assets/funnyjpop-icon-192.png" alt="" width="32" height="32">Funny J-POP</a>
-  <div class="lang" role="group" aria-label="Language">
-    <button type="button" data-set-lang="ja" aria-pressed="true">日本語</button>
-    <button type="button" data-set-lang="en" aria-pressed="false">EN</button>
-  </div>
+<header class="site-header" id="siteHeader" data-page="pizza" data-bilingual>
+  <a class="sh-logo" href="index.html"><span class="sh-dot"></span>FUNNY J-POP</a>
 </header>
+<script src="assets/site-header.js"></script>
 
 <main>
   <div class="wrap hero">
@@ -586,7 +576,7 @@ function applyLang(){
     if (v.includes("<br>")) el.innerHTML = v; else el.textContent = v;
   });
   document.querySelectorAll("[data-i18n-html]").forEach(el=>{ el.innerHTML = t(el.dataset.i18nHtml); });
-  document.querySelectorAll("[data-set-lang]").forEach(b=> b.setAttribute("aria-pressed", String(b.dataset.setLang===LANG)));
+  if(window.FJHeader) FJHeader.setLang(LANG);
   document.getElementById("ytFacade").setAttribute("aria-label", t("ytPlay"));
   renderStores();
   updateShare();
@@ -647,7 +637,6 @@ knob.addEventListener("click", ()=> setTvFull(!tvFull));
 facade.addEventListener("click", ()=> setTvFull(true));
 
 /* ── language ── */
-document.querySelectorAll("[data-set-lang]").forEach(b=> b.addEventListener("click", ()=> setLang(b.dataset.setLang)));
 (function initLang(){
   let saved = null;
   try{ saved = localStorage.getItem("wm_lang"); }catch(e){}
