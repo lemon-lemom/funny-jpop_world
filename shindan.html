@@ -54,27 +54,7 @@ h1,h2,h3,.disp{font-family:'RocknRoll One',sans-serif;font-weight:400}
 a{color:inherit}
 ::selection{background:var(--acc1);color:var(--ink)}
 
-/* ---------- header ---------- */
-header{
-  display:flex;align-items:center;justify-content:space-between;gap:12px;
-  padding:16px clamp(16px,4vw,48px);
-  position:sticky;top:0;z-index:50;
-  background:color-mix(in srgb, var(--bg) 78%, transparent);
-  backdrop-filter:blur(10px);
-  border-bottom:2px dashed color-mix(in srgb, var(--cream) 25%, transparent);
-}
-.logo{display:flex;align-items:center;gap:10px;font-family:'RocknRoll One';font-size:clamp(15px,2.4vw,20px);letter-spacing:.04em;text-decoration:none}
-.logo .dot{
-  width:26px;height:26px;border-radius:50%;
-  background:repeating-radial-gradient(circle at 50% 50%, var(--ink) 0 2px, #3a2a20 2px 3px);
-  border:3px solid var(--acc2);position:relative;flex:none;
-  animation:spin 4s linear infinite;
-}
-.logo .dot::after{content:"";position:absolute;inset:8px;border-radius:50%;background:var(--acc1)}
 @keyframes spin{to{transform:rotate(360deg)}}
-.logo .sub{font-size:.55em;color:var(--acc2);letter-spacing:.14em;display:block}
-.hnav{display:flex;gap:10px;align-items:center;flex-wrap:wrap}
-.hnav .btn{font-size:12.5px;padding:9px 16px}
 
 .btn{
   display:inline-flex;align-items:center;justify-content:center;gap:8px;
@@ -411,7 +391,6 @@ footer .fnav a:hover{color:var(--acc2)}
   .quiz-foot{flex-direction:column;gap:12px;align-items:flex-start}
   .key-hint{display:none}
   .thumb{width:96px}
-  .hnav .btn{font-size:11.5px;padding:8px 12px}
   .step{padding:12px 14px;gap:12px}
   .step .ic{font-size:30px}
 }
@@ -419,18 +398,14 @@ footer .fnav a:hover{color:var(--acc2)}
   *{animation:none !important;transition:none !important}
 }
 </style>
+<link rel="stylesheet" href="assets/site-header.css">
 </head>
 <body>
 
-<header>
-  <a class="logo" href="index.html">
-    <span class="dot"></span>
-    <span>魂のリズム診断<span class="sub">FUNNY J-POP</span></span>
-  </a>
-  <nav class="hnav">
-    <a class="btn ghost" href="world-music-map.html">🗺 世界音楽マップ</a>
-  </nav>
+<header class="site-header" id="siteHeader" data-page="shindan">
+  <a class="sh-logo" href="index.html"><span class="sh-dot"></span>FUNNY J-POP</a>
 </header>
+<script src="assets/site-header.js"></script>
 
 <main>
 
@@ -510,7 +485,7 @@ footer .fnav a:hover{color:var(--acc2)}
     <a href="world-music-map.html">🗺 世界音楽マップ</a>
     <a href="https://www.youtube.com/@FunnyJ-POP" target="_blank" rel="noopener">▶ YouTube</a>
   </div>
-  <p>© Funny J-POP — 日本のメロディを、世界のリズムで。</p>
+  <p>© Funny J-POP — 日本のメロディを、世界のグルーヴで。</p>
 </footer>
 
 <script>

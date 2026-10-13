@@ -46,7 +46,7 @@ def card(out, big_lines, jp_line, en_line, accent, icon_size=430):
 
 card(A/"og-home.png",
      ["FUNNY J-POP"],
-     "日本のメロディを、世界のリズムで。",
+     "日本のメロディを、世界のグルーヴで。",
      "Japanese melodies, global grooves.",
      "JUKEBOX STUDIO   ·   WORLD MUSIC MAP")
 
